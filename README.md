@@ -4,10 +4,17 @@ Scott W Viteri, Laura Gomezjurado Gonzalez, and Clark Barrett — Stanford Unive
 Contact: scottviteri@gmail.com.
 
 Repository: [what-is-exploration](https://github.com/scottviteri/what-is-exploration).
-Paper snapshot: [arxiv-v1](https://github.com/scottviteri/what-is-exploration/tree/arxiv-v1).
+Evidence snapshot: [arxiv-v1](https://github.com/scottviteri/what-is-exploration/tree/arxiv-v1).
 The tag identifies the companion snapshot prepared for the first arXiv submission;
 it does not assert that arXiv has announced the paper. Later paper versions will
 have their own tags in this same repository.
+
+The manuscript and source ZIP on `main` include the 1 October 2026 layout
+correction: appendix figures and captions fit within the page, the history
+formula is displayed, and the final paragraph flows into the acknowledgements
+without a nearly empty page. This reduces the PDF from 46 to 45 pages. Scientific
+content and the code/data supplement are unchanged. The already-published
+`arxiv-v1` tag retains its original manuscript and source ZIP.
 
 This companion artifact contains the manuscript, the Lean sources selected for
 its claims and their dependencies, and the experiment code and selected evidence.
