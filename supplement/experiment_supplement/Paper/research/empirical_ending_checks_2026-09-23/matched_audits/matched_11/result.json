@@ -1,0 +1,1572 @@
+{
+  "status": "complete",
+  "model": "Paper/research/empirical_ending_checks_2026-09-23/matched_results/matched_11/model.npz",
+  "policy": "Paper/research/empirical_ending_checks_2026-09-23/matched_results/matched_11/checkpoint_016/policy.npz",
+  "source_result": "Paper/research/empirical_ending_checks_2026-09-23/matched_results/matched_11/result.json",
+  "model_name": "fresh_hmm_2026096801_q4_s3_c0.2",
+  "input_sha256": {
+    "Paper/research/empirical_ending_checks_2026-09-23/matched_results/matched_11/checkpoint_016/policy.npz": "1dd18e8609a7b2a577a76ff61a32a398aa4239e73a15f4137e065514eaa0d945",
+    "Paper/research/empirical_ending_checks_2026-09-23/matched_results/matched_11/model.npz": "710339693772bbf1708cba5bcdc3046ce2c430c4fb861aa9cc4e21c9dec0b8e5",
+    "Paper/research/empirical_ending_checks_2026-09-23/matched_results/matched_11/result.json": "5d1a6b5208d43aaa742fa39a4d7a47d831511c347c20a9b4311c2e9c3d57cfa7",
+    "Paper/research/empirical_ending_checks_2026-09-23/audit.py": "a1053870ecc5e3684288451714b7e025f749cfe9612ccbdc7b5a7eefa255e10a",
+    "Paper/research/target_selection_followups_2026-09-23/common.py": "96e7600c41bae38a6e50088c6a65b0a2fef26b59d2b918e60b93df78b106e895",
+    "Paper/research/target_selection_followups_2026-09-23/recover_saved.py": "6e1ba22f023d0d382403a73d3a0cf536de993b53241130b86d5df874c525d6fd",
+    "Paper/research/target_selection_followups_2026-09-23/recovery_decoder.py": "18f85353c1515b668e7f96854dee8e02ab8fbd3b256b95c082bfa908732d388d"
+  },
+  "source_array_sha256": "83ae4ee67dd746b88a0d103f1472f869750137add838bb22ae7ac662f0fa06c9",
+  "selection_used": false,
+  "collection_horizon": 3,
+  "target_horizon": 4,
+  "target_count": 32768,
+  "completed_targets": 32768,
+  "batches": [
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_00000.npz",
+      "sha256": "a2186813cebe646dce01599562e278058aa2b82c75da5b915385a3d74cefed8a",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_00128.npz",
+      "sha256": "85931311595e86fba98895a3692fd81d9b283aafaa671b81f0cc2b2d88f8e706",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_00256.npz",
+      "sha256": "1581c5ea8e75b0c2844b31b5795dd93bf1bfddabedb68cecbf8e7407f4a892b6",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_00384.npz",
+      "sha256": "2e3bbeec7105b0f59d271f644b92062541dd70fefac5bbc7831894aabf2853c3",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_00512.npz",
+      "sha256": "6c5068af977212aa170fbb671aa5f17441cac4234c0388f2ff314da9365d7f18",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_00640.npz",
+      "sha256": "c70f20deac786e8ab0a5903dc87fa17f9df9cfa1cb40e195c22719c3e5516ffa",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_00768.npz",
+      "sha256": "036b9bfc0990e39cf152685e0c3057947245ea07f7900aea4565b3fdc680d2bb",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_00896.npz",
+      "sha256": "d8d75ce89135c1261785c7ab4073fbe1eba0a92ac916ad6491b535269a94b68e",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_01024.npz",
+      "sha256": "9f03e50f14c2c5c476faa175506138476776957654f032c7c45fd198b57b3111",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_01152.npz",
+      "sha256": "37105dd32665ca1e9ae2215f4fece9f9945c22c8ea12431badf5561708d6c130",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_01280.npz",
+      "sha256": "5ceb0809923333810988fe1b18ef7fcac85f1fcb0de97be5c2b0c1e5b442223c",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_01408.npz",
+      "sha256": "ba58c7d229a10de28d027656e687eba01410d1858cc8e1be78449ad303293d31",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_01536.npz",
+      "sha256": "41640dff7a963bf910efb8b3df01b3f202a75bcb3c43e7d315085f47c691e0bc",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_01664.npz",
+      "sha256": "5201ec19afb3be812a4809242d2b7498b64dd375bfe1f8943ed0710cc69313d1",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_01792.npz",
+      "sha256": "5c617d6ecae3ca91f4b404014d7481054975c6c2e8257d81966ef063114b752c",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_01920.npz",
+      "sha256": "f357c457e2a7b1c605d06f2f27489e64b04355068aafc21ee94d50704cd31b9a",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_02048.npz",
+      "sha256": "bd0bfa59b63f7588bc75a9d2ecb49e0e446793028fa6e058a7da30cc33460fc3",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_02176.npz",
+      "sha256": "77e8ab4203e68016d5bd50cb81361639d3a14426cdd77a95b0cd65d22d880be7",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_02304.npz",
+      "sha256": "f22f34e4efcfa0739e787f6005da36b57e9e2d447e7c25bf3d6014a28625413a",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_02432.npz",
+      "sha256": "c496e176808d76def030fda249b747fc770bc622254488a9437b4be0738a1833",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_02560.npz",
+      "sha256": "975473e8c51f0f2a8e415b1d917278f8f36eaaed5a1d533ba6e2891df3b23b04",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_02688.npz",
+      "sha256": "6af1aca4111922ef8a8330e7197df32ada7e2c7a155bd46d0f902eb6543b0b39",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_02816.npz",
+      "sha256": "02103eefabec8a76a37d8786228bdb7556d8eb94ad8cbfe68f02c6297a391efc",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_02944.npz",
+      "sha256": "d9330b2b1a9d34992f4d2358860e06661f47ca5173e4b06dca75461b8ca9edb1",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_03072.npz",
+      "sha256": "082fcb3c189e337aa3045eeb49ac87c2028f8b8b5fb68969c4de1fc606e77e54",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_03200.npz",
+      "sha256": "864d195b26fd1c1b667f9540d5da71535b6d8cc1d515fc81c2c605960400c3f6",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_03328.npz",
+      "sha256": "863bd17bf4fff72415c31e15a5453b194d7f7c304bd8b897dd89d9b18075fa16",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_03456.npz",
+      "sha256": "94b3e648ff9fddd293fbe747a1c83ffeea4591327aa4bd05741d432842c2ae22",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_03584.npz",
+      "sha256": "1099e45a9efd14d54e68207c4142133b7ce07f4756c9bb6bbec8d2eed1913974",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_03712.npz",
+      "sha256": "0ef6f955eeca209258a9db27e5f659ef38347cc40549976bd7ab214b79828a94",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_03840.npz",
+      "sha256": "710e84773d0c22b3d7666b908e16cdd2d4c97a774096c2af88660c933726e888",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_03968.npz",
+      "sha256": "64e8d20af7dbd744ab3ac8de9209d3e0c0d5ba652c7bf754a44946135776bd07",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_04096.npz",
+      "sha256": "78ef5997c0349bd2262048917154678ed9ef3b0f4b9a34d8c4240c6549b8efba",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_04224.npz",
+      "sha256": "280d93db503e95f76ce609b5b604a04dec063631d971cc076d8b963b553f34ef",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_04352.npz",
+      "sha256": "99cd4fac78d3d82dc833857f0c0cad2af3fdb611e5a70802eb9d15a1181a5b31",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_04480.npz",
+      "sha256": "414135eb34bad78a00257f6229fd05e0dcde1b810a17515374104c5257181bbe",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_04608.npz",
+      "sha256": "a76aafe67da0ddd0895ba86f77914fb40854633c544f07cc55e8d0eaac7a872d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_04736.npz",
+      "sha256": "579635a8425e1e9a32bfe9d77927448b54822c0ed990fca90e8e5423b4bcaaba",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_04864.npz",
+      "sha256": "bdd8b3b8c5041d8cf235f37ab9c9eee1a023b713907d1d6cc9304a5c4745a69d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_04992.npz",
+      "sha256": "ae8853aea2ea1036f46c959a9db988b47d928c4061c624f5fedc55438673cd2d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_05120.npz",
+      "sha256": "e42e3836fd6ea2609c3c11d7766e0da2ac41c375a346577f269559fa3c5907c6",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_05248.npz",
+      "sha256": "730d72e05e3206cc4ac5b0bbf24e478c6d366b45e8e5e5304a50e1a052da76c4",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_05376.npz",
+      "sha256": "b21b4b4f4a2bdbec585e39a64ff3df15087951abf17ef46b98f7574d55bbae33",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_05504.npz",
+      "sha256": "6fd48ecab231df6a88d6dd8d342b3017ec5fd89d2a00ba52a5fbd44ec7482df0",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_05632.npz",
+      "sha256": "5641b82cc5ec34760b4668c377d6315374d79d502e584d5f27f8e75903bf4d09",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_05760.npz",
+      "sha256": "c3147f0afad8b0c109690c4a45971fa904c4d62da9c25cc33c603abc6673adc2",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_05888.npz",
+      "sha256": "5ea55822ddaf415bc58b24da70d1d7fe3ffea395d47ee80b8c0c450a0029efaa",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_06016.npz",
+      "sha256": "24f6e0237c9933d187d3a8f500377e9e49f0e5f20bf72ed19d17575a865c3f7a",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_06144.npz",
+      "sha256": "d1d7a54932b1534596bbfefa56d27da63d1c685117c982677cbf8e876d1e681e",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_06272.npz",
+      "sha256": "98f9299ffe23a3ee758f753c430df7778549765daa50ad5a52a09369bade99e8",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_06400.npz",
+      "sha256": "e121418f247fdce1383b66001dd55c772689fbb3b4fb33eff0d16f9776d832b7",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_06528.npz",
+      "sha256": "fc79b472006617305733bdd11ee30461faaaaf5b6c07fbac2c078363c1f18439",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_06656.npz",
+      "sha256": "bab995619de6a7ba0836ee43b80d4cd8cf36b73305d3b7b0afd98f63bcce9b9c",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_06784.npz",
+      "sha256": "6dd7805c43243553b9418ce6e7031587a3db6ee42dfc374c5ad03712e0de738f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_06912.npz",
+      "sha256": "2100ce2c202e66e9e15d9204a56f7a8accf1a8843b864fd898300755463cfbc5",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_07040.npz",
+      "sha256": "082d3134a65eff45babe1bd702e2a04d25a05b87cd798af78ab60aaaa78460a3",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_07168.npz",
+      "sha256": "488eff265b49b2e96d400c4e04100dbbbb054db4cdf880b386e9d7b7a8db4bd1",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_07296.npz",
+      "sha256": "31c6bc2ed232df328f2427fca15af4960dcc278b86434668ab998a7fcd3b3ea3",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_07424.npz",
+      "sha256": "3b90de73d1728ab94c12583b864cacf03b45be140d442bac951b3d8ad8de16b3",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_07552.npz",
+      "sha256": "f1e143c1c753a5a6f8d4899f9e7f45326012a9bdf72c3694f7698ac6156f380e",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_07680.npz",
+      "sha256": "216316167a28d0ce0c404a902edc8c00642b69977c252ebe2e0f9b9871772c21",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_07808.npz",
+      "sha256": "45a4ee7d1a71d67f7210f7caa284eee4e6acae98acb781a6043c4f57ad07aa6b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_07936.npz",
+      "sha256": "570429899724643070f4a17639db7bccdb62a1dc1a465c9c80794cfda093c143",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_08064.npz",
+      "sha256": "f3a4863de04041b056e225c68aeb002fd8193124d1ca9d97b8f94899ef5ced31",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_08192.npz",
+      "sha256": "bacbd6b818906c8dbb9b78a92db8c52ce43e99665c4d7e14813f5f0df18c46f1",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_08320.npz",
+      "sha256": "bb72d49948104ed951bee38e925b99a6a2ef438e5c4d3cdc2225707c6eb2fb35",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_08448.npz",
+      "sha256": "6228f7669b01aeae69c281ef7417d93376d53fce06de142b95f43f1a6e90123f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_08576.npz",
+      "sha256": "bdaf154fdcc98cdaacce5ec33f086da92736c50d19793484dd2791397a7cdc3b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_08704.npz",
+      "sha256": "de9fffe16e6013445611c032f8a5b78790ede64e41cccc2ac16dc3c80eb0ad9f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_08832.npz",
+      "sha256": "bc91408d3f66d794069d4f0f88f8be8bcd9a1c37b4c3a7f962add68dec94f99b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_08960.npz",
+      "sha256": "55579f9dea7893b28c222f0af656d15d6fdde5242186daec63c9e134a5de16d8",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_09088.npz",
+      "sha256": "3a7246601ddbbaf2a3320e02b26e8cd88f7b341680633bdea8524c33d843edb5",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_09216.npz",
+      "sha256": "764f32390f7e3fb5237d6439d0d234d37df8e742038a89772c7acf675d8ef45a",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_09344.npz",
+      "sha256": "7da93d8621bbd8e93e27c177a44569de9f711d32132f3f7914adab196f2393c8",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_09472.npz",
+      "sha256": "b589645004bc18b9bfc5dc8b57eb017ffe7af07344de9b2e997884f2fa3d80ee",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_09600.npz",
+      "sha256": "063d0efd3ceef99d0992ac539f15bdfe1a54c6d7ea8453747d37d43ed8567aa7",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_09728.npz",
+      "sha256": "55beea5bdedb7dac5418441a34d3bfb522cbf361e3d2b2cce493fe43cf52a07a",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_09856.npz",
+      "sha256": "86178640d506978f269dbf821c20069b280b8eb0055b59fbdbb4417032dcb67f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_09984.npz",
+      "sha256": "d084dd73a90da557bce010ef56931dbd5caaf72d07b77caabdf274cc1ba64104",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_10112.npz",
+      "sha256": "cf65191aca34d95a3c6d4f9addefb989c4073397420a3070dddd1f707127fdd7",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_10240.npz",
+      "sha256": "b689881f3a672b3c85f99ce711a28d1e69ec5464cfe6abdd601d67a4d3aca026",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_10368.npz",
+      "sha256": "fffda653f431f29a580200a6da3753012ca2100be34a3a18ac0e0af97bc574f7",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_10496.npz",
+      "sha256": "bf883a98d4b2293b8226bab99fb59fb64dd377df0613bf14bc0541831e6f6f99",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_10624.npz",
+      "sha256": "8ad754e03a685068227ceb048508364718e11d4134952cc01498c382866fed41",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_10752.npz",
+      "sha256": "cd4ebd9df114cb0ffdd5dfd2353a44263cea2101e1ea7bfbd6fd7a05a22a5f0a",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_10880.npz",
+      "sha256": "aa5bbb0013ab36e007b4d0456e881771ebc2f490a0f8af7def80e7786ddd7e36",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_11008.npz",
+      "sha256": "3619010948f144d4556fe2eb9e0efa14cb71d48bf5ac5c23bfcc9a0438550037",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_11136.npz",
+      "sha256": "23ab521d68b47dd9315a52af5f204ea27fd3310bb85aa58ed831302f726dfaf8",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_11264.npz",
+      "sha256": "d8c9b5b35d11ee459409a6e3002a8a53f0a7901299a07019c0ef94059b5c18e2",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_11392.npz",
+      "sha256": "cd417fdf6b81cbacf64e56477e6ed7463d7159f4b556704eb1e3339dda52c318",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_11520.npz",
+      "sha256": "d60cf283e8d45eba156794bc3af312d51e0a9cb1a36e26e7f2986d239cc94a0b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_11648.npz",
+      "sha256": "0ef228efb00ee5e98689c43d63af98927a8e2e7e5fe322518f996ee41ae267a5",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_11776.npz",
+      "sha256": "878727dcbc7d469b034a1a4fa2506f25cda0a18d8fbaad8ce23a73ec66cfd8d5",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_11904.npz",
+      "sha256": "76e8493a9706e09567d8c625db0f92c0fe289c2cc286da757c17d0d2060bf122",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_12032.npz",
+      "sha256": "21dbc384c3ed241e708ffe5257d3865a133b936ca58beab4c03ab98126bd1241",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_12160.npz",
+      "sha256": "1765f5b31ae95bf18ec26f2413576cf370b8f36faacf21348efe2fb09ea067e9",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_12288.npz",
+      "sha256": "10014e957b51660af9a82459e8716fec7f0a8edb9b89d63b144e14220bb1bf09",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_12416.npz",
+      "sha256": "e3db53c083b7b6097f126c5c41f3f5538595bc742a0f9c7acd5abbae469f1a5a",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_12544.npz",
+      "sha256": "557ab8cccd618f24689157286c0c65f768cda7d67b9e5d1abe2e6b4daa8228b4",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_12672.npz",
+      "sha256": "2cc99dfc85dd231e43f140d6a045e92b9e0f80e1a60547bc4d2dad47f5e4eb26",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_12800.npz",
+      "sha256": "2842fbf541f772b96fe37872ff1c4fa4cdea3d56219faac10c8e150a5bf204c8",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_12928.npz",
+      "sha256": "10420fbf5a1ab71c9006dc79732b6c4fa2218a5b0bd6e16f437c415b89930f54",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_13056.npz",
+      "sha256": "f0e787112ab6939a41a33fe333119b7e5bf1ecdfcea136cd1a96e5dcbb438e01",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_13184.npz",
+      "sha256": "2fa2c053e1401ab5b48be171797776821fde0aefa3368f7ec5eeb88b35117c53",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_13312.npz",
+      "sha256": "a44ad028edd9a4621627b4c70bce2f8cd604e18623d4078c8e5fbb144aef1f64",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_13440.npz",
+      "sha256": "1553fcb943021a264e7f361ff5fcf6f38a5607fd7e0bb7ce742db721891154c7",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_13568.npz",
+      "sha256": "ca1cbcbcc22d2f2bbc310e4d8f450db0b564581a691a7fe036be84e61452cbe3",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_13696.npz",
+      "sha256": "b1bacca0b868a541ea7456a63d0fc05d7f7a9b1fa466d3d16627b495db4ec12f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_13824.npz",
+      "sha256": "2bdc5e51da432db02616221698c2a9dcf5e66233f4c19213032e22bd289e2888",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_13952.npz",
+      "sha256": "95d466a79f9e7f714f30cfb56f9cca0d7a58e2ebd4e35e09004bd972e6b14a63",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_14080.npz",
+      "sha256": "55accda594221557d2d7ab926ef0c861d08254976bb4329a59fe8e4428deb849",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_14208.npz",
+      "sha256": "e6d3b6f2575ce126923db574fcce119afec4a8d0c5bdaa50ba0fad99bb588a2d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_14336.npz",
+      "sha256": "e9b7760cb0bfc7e4da8bf5e2a7e84a3c5230c85901e1e9ee79bcd9af94729146",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_14464.npz",
+      "sha256": "1c408befa532f11091bfa6c61484ec9d6aec6c8b1193870081dece48f3ee0ee3",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_14592.npz",
+      "sha256": "71beace46ae05a71a7e7737c1ffae134d6436c9097159dc87505f8b4302ef1cb",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_14720.npz",
+      "sha256": "5ef557812ca9c6526415465d5f3e9cbac0e48472cb6f81b9a1edc9fc5607a6fa",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_14848.npz",
+      "sha256": "42528f8039a9bf8ea5dd12eb51ab481167c202036a8a2d073b35fc26b258bd5b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_14976.npz",
+      "sha256": "5fa923062edc23d9ee3141a5e624c707a5d11d226079ea9c25261912935cbae0",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_15104.npz",
+      "sha256": "829a72b6f5fffe053fdbdeba8e9e8a46d2a9ad2d74cd0649a59d099695803b09",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_15232.npz",
+      "sha256": "306969e2b52348b228650e164b7fbeb9a8f46eebce256a64ed8c28ad02e20639",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_15360.npz",
+      "sha256": "6a69d39c578c00769d5d6d5b52ce6ecf77c7d8c17dea78024b5126b4c5b8169f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_15488.npz",
+      "sha256": "c4a9f388bc61544838f5971f48e868648e5894fb15c6bd2805cce21a408f5e78",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_15616.npz",
+      "sha256": "cc936793473118bc2fc54cbfede657ee89dae800aea8fd9b96682b67511a36df",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_15744.npz",
+      "sha256": "3f5fee6c40691deeeea338380304153354d0c30789a043d604a48379265c7953",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_15872.npz",
+      "sha256": "b65367ae160affc948c12e7347d2d4ecfc3346e385a31b223ada6d731302db87",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_16000.npz",
+      "sha256": "af27e826bdba45ab7a48952099d3c340a0e12717a9bf3fd1aad322c9fb37e0a1",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_16128.npz",
+      "sha256": "cff06557468c67568c8bdd878ed963d354c95d06b1a197145679a661d52450b6",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_16256.npz",
+      "sha256": "8e9b01c08ce3ee0282a86239c7adc15b8f9509d79dded72852a86d35ef533c16",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_16384.npz",
+      "sha256": "59cad63e0041b2d350e6f43a35cd3439c2639d278b81ccf80c4e65db5f0cd402",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_16512.npz",
+      "sha256": "2da0457b8d4a73b547d25faaf886847cde145c56b6fe53c8f9291a4ffc58fe2a",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_16640.npz",
+      "sha256": "96c8cd516aa4eb90d2c2adb8d46ddd47bbd11407bed914c0aa2e1382148dfbaa",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_16768.npz",
+      "sha256": "5bdd7e67673f712e80bbd0e3516422e695b84adaba4c3c0466f21bec1c2fbecd",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_16896.npz",
+      "sha256": "7f9f3e9664592ba43b96f68e2300508b62a93e9e4f101298005aabbb3fc6064a",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_17024.npz",
+      "sha256": "47f68083c5c5f84a2cd3212e8e611af360c619f51665f8f5bbe45b295564ae00",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_17152.npz",
+      "sha256": "75880fa74113d54648b882d92fc33df8c6e067a0a0a26c6260f13dafe16bc79b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_17280.npz",
+      "sha256": "8bb6f6f9dc61d7c8fad5b7f59028439ca51296c123682c61f4b329913b5fcf2f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_17408.npz",
+      "sha256": "9127c266456d230932ec499eb7e36d10efb13ca2aa33a30d9b04cc7789cda014",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_17536.npz",
+      "sha256": "6d2b2b77dfc59e56a96e2e97c74380515cc3de5733dbaa6c284f4f5f69bda9fc",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_17664.npz",
+      "sha256": "3fe905cdb2a3a3b4008f0d9fc4db26fdddc48492793a98665ffa32ebf9d32ba3",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_17792.npz",
+      "sha256": "4f3b187a19b54282dda7b6497e58659bc340a7d973e75b08ff8134a7bacb1955",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_17920.npz",
+      "sha256": "fb4132b973e813398f189181a8c874b5ea7094e9c768b9b352c55a321fd04831",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_18048.npz",
+      "sha256": "a6644af30db971fe1f7b9173b8492c82ad9548c7cf39b7596ca1ae8eaf444b81",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_18176.npz",
+      "sha256": "17d1016cb7c33e88d2d1c3ea89fcd4ec1531c0deda295e397f8030e0f4667870",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_18304.npz",
+      "sha256": "2beb62ee4770e4a5cb6d67a1761718615588f8d81fb4872c7f6228f2fc087435",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_18432.npz",
+      "sha256": "1d214f773fc8028e31940993d4352d48dec8ac03cc3ea00c5c81e593cf00b005",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_18560.npz",
+      "sha256": "bbe88adaa87f19c0b435d7edabe942b3bc6b5ef84d6d7ed65d0b93eb48d0910c",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_18688.npz",
+      "sha256": "d1a33313100436bf2adf5654bfeda0ff92a47e920cadaab148f99631da6c9674",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_18816.npz",
+      "sha256": "8c25407f3b8cb0c9f02559ebd6adfc8ead7aeca135f1a99fc80809aef334c548",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_18944.npz",
+      "sha256": "60cd51b4d00a80c6cd5e72aaf9de163b969ab06849aecb75ba7ef34542c3f95e",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_19072.npz",
+      "sha256": "73a843a1867355d066d62161ff17a1f507b452dc36852ef3e390dfb76e335642",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_19200.npz",
+      "sha256": "711f60f9eb66b1c017b835de04dd62a81bf383de29fec0c1b0dabba61495f0fb",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_19328.npz",
+      "sha256": "05875a8bcb1c1b6b5fb9819cacedc8f21be6509b168a61f3a235f80bc2c6ccf6",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_19456.npz",
+      "sha256": "59736b25ed0ee4af48bd78f8deb8566bbf0105132750f695b14fbde611e43403",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_19584.npz",
+      "sha256": "81a6a72438b3ccec683bc8fe9db5f76d1ce3b26e37bf8c2eddfe6df0e52b6f55",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_19712.npz",
+      "sha256": "c9567e18f9b36dafd9e8919e2d97194e01f7593004170308e11b88350d72148b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_19840.npz",
+      "sha256": "548b13e6bb60117d7acccc747193c0f0d904890ab205d9b77d012c7fdac04206",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_19968.npz",
+      "sha256": "aac0aa5b496049b34f2c340a39d3c3da6b1fc601f61d2ac66845aa8da620eb40",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_20096.npz",
+      "sha256": "a7256a65715a8730a2cc935e7fc9b1a56a8bae8be67353d74be9a163fe43b580",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_20224.npz",
+      "sha256": "a8dae0b2444efb61ddcb806e5a456af9e5c869376c10fe4c56c967e66345f483",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_20352.npz",
+      "sha256": "08b6ab829c48b6f468226b9c04178c06b75caf6c4cd463abab18e0e333ec7c2d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_20480.npz",
+      "sha256": "7e0cd6f9045639aad318fecfa65509388818084eabdfd22daf72a0abc8aaac2f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_20608.npz",
+      "sha256": "4ecb17945a6680ff7c21b390c99ef21e947e3cfea32c8e5a48c6379c0f7b4ef3",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_20736.npz",
+      "sha256": "5c29ec4cc0bb618636b140e36aea8d609fdd726afdb2d39bf4351bb0a6afb30f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_20864.npz",
+      "sha256": "552faa7be1f53b6f24d69c997e1f7ebbf334d1c7b49980276c0f2ff436758b99",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_20992.npz",
+      "sha256": "f3bd205ce53821bc266f74c547abacc36b59fa72b6514eb5338da5d58b546664",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_21120.npz",
+      "sha256": "f20e07b70949721dfc9d53a395f17e3fe360d1dce07abe76d4fd14f9a968a393",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_21248.npz",
+      "sha256": "17bb353008047418c2331a06913f59906e8f2ce5477b4328975cd94695d9b45e",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_21376.npz",
+      "sha256": "516bedeaa165e62d8d0a18f22fdb887ebad320a354e3e87465c6765ec89d4b2d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_21504.npz",
+      "sha256": "699b02c8a4bd88ccfad102e0b00a9c644b66ee4185c00671f670698ff9cd207b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_21632.npz",
+      "sha256": "aa8d2ccde3378e6e968d66c172bb786ddb1adf9a18bd99d21d28a457587a1614",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_21760.npz",
+      "sha256": "db37e9a6b9c9fce3e687ffe4bc77032505646278ee38ee05f077f5231dc1da6b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_21888.npz",
+      "sha256": "f19bcb4b61413dc9784766acd4de00883735c6e7f41e6f1999821ba00d2d6b2c",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_22016.npz",
+      "sha256": "791dabd59b5fbbd4c8a02b17ff15f104a4e84aa18d11e1e23f5023a35a0ef946",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_22144.npz",
+      "sha256": "c582e789a217fb8061bdab3417891ae0f4405fa6cb6b9ccdf96da173056cfa82",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_22272.npz",
+      "sha256": "d3f287fe21427cad5b74d993c4049354559a7af5d33d890040cb33825a35e56f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_22400.npz",
+      "sha256": "fe4a9e895ea40c57c3dc67ee550f2c0fa6a77b74849a56a103fd12b52b0ffeca",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_22528.npz",
+      "sha256": "4d6a5af2aa5e2e43b221660b904ac3ff91b73a9adaea2c8b3e6b05415a15e387",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_22656.npz",
+      "sha256": "2b32f20d1d88f2dd93f3c368852a41cbf5dd1ac51154904d017793ec8582bbcc",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_22784.npz",
+      "sha256": "3b13f9357956a9d4093cf21227e668c0456455a85ca7c12c776406eda47f5bfe",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_22912.npz",
+      "sha256": "6f9ca8458fc21471ff1b44bee1b2306a9d7551e478dffb87d6bc32ca5ee2c982",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_23040.npz",
+      "sha256": "e1ffe77271fa72671f28f3bf25c09addb1a003ba85d63da22cf47dc24c527b62",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_23168.npz",
+      "sha256": "17304fd4caee7db3f3421f20379c63b3e06a7cbaf7e4a283ed1d888d274ee6d6",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_23296.npz",
+      "sha256": "7d449049f4ffbc665aa6657a9f582bd282edbfa8b22fef1bdab9bc8e2f87beb7",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_23424.npz",
+      "sha256": "04a6b014683a193af160f5ba2f773bf0e37bb76d697a707ec60162006042e54b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_23552.npz",
+      "sha256": "d283c2453079f151421c961da18aa0b79a891891b2b6c66ff7f75f14e54d5f19",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_23680.npz",
+      "sha256": "60b848c004eee10a334a548b72e88f89e7ec66bd4a62b42bf700f2c51cd57962",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_23808.npz",
+      "sha256": "8ddf4afee8c44d2bde73a38421fb995dcd3972cc4a8ff1c20fc16c1d41cb3dba",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_23936.npz",
+      "sha256": "25f48976710aa33ecbdb82e5a908e9bc508910521b3f3f04ad507a256fdf5daa",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_24064.npz",
+      "sha256": "57490bdc2b8d6245a34b4ae6d55b6ce30a5c4d1fa933a5eca79428ac08e1019f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_24192.npz",
+      "sha256": "07898d35eab4885fcfcb920c94b7db7a78dc53dab6926a5b483b2f577a7d8c69",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_24320.npz",
+      "sha256": "fbb3aae397d8feda8154b7b3d2f0ae54b1d8b2588d874e4e7b5ca1e293e23d85",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_24448.npz",
+      "sha256": "8629224319e282da38b00949de121b22840f4b968fbd268d94eafc16b0c26fdf",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_24576.npz",
+      "sha256": "332b952354f4aaf0fcbe16d931f53e3ae59b9f39912186d067ac9482f8d07f48",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_24704.npz",
+      "sha256": "15afddc9b19d32604426ff30e28eaa8d8a2afe01e31c1ad71b3c1947fb6cf106",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_24832.npz",
+      "sha256": "6616783333ba4f390029a997d3145599a9063a574facd043d0e1e8bc3dc3510f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_24960.npz",
+      "sha256": "bc007de66a347c538497540d31d7107ed8619972dcc6e5c78c9ca3560def6876",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_25088.npz",
+      "sha256": "1b06d253d606c10e8862956103dae474a1077541f9c0255306b3d775b0c0b6db",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_25216.npz",
+      "sha256": "e30933675a55425cab8413a70e1bef33b683ec9f23b5b2a25cb81fe92d1a88b5",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_25344.npz",
+      "sha256": "53c3c0e12330492c8d2a32d9a10a7312f502a36325f3f9b5c2cb83d64bbe29b2",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_25472.npz",
+      "sha256": "e63edf1235bf9e709bc89de8cf5d32a7843132564e23c9d1d18bda2e1427e46d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_25600.npz",
+      "sha256": "764c82a790ee501d4beb7f253f7721fca48d912634b148da6e98e75dd557df92",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_25728.npz",
+      "sha256": "4e40ad9c4b21bce8c6ca1d54e11cbcc9d5e591ab31aca43c2e64bc117405f21c",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_25856.npz",
+      "sha256": "72769e0456986116eed48d0d9bd6b3e8eeda009172054f5121fda5468ec70ed8",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_25984.npz",
+      "sha256": "5d0f6ddf1b7bf8c5405a75ae30f7c607234b8714b3c79e7e067f395b91fd91ea",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_26112.npz",
+      "sha256": "839c68b91ccd644b449900b38263eb98d932de30481adbb9bef907dcb1ab1790",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_26240.npz",
+      "sha256": "4a588f696dbd8d6a10bf5169c65c289132e78182ff41e9a39f25996200fc0d0d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_26368.npz",
+      "sha256": "7cc9905110ab2b71b2b6abbd5a642cc76e2355a3db0462a0f518f6e83f4dc6cd",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_26496.npz",
+      "sha256": "bebe5914a16b305f13bd5291a0fb3c72e9abcb80c73042be2d4c755ca3548326",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_26624.npz",
+      "sha256": "25a50047608c3429ae7eafae4c021430510422eeeb06ea6bdca03b7c8f71f820",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_26752.npz",
+      "sha256": "1fc60accb11e5d33b901f405c26a70cb57e9a4b616d46f444ec4ac1024695238",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_26880.npz",
+      "sha256": "24656e35ad17a5bb8d95302d09af0308ebf136990d490d8f5ccb5f04dba04551",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_27008.npz",
+      "sha256": "7b0b05e1283c78a60d44fe2ec1159820eea0a46c2537247260285ef9f0955523",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_27136.npz",
+      "sha256": "40a81fe3d5833c8080cbd6efb69e336ef10f8d55362ab6bca2135544e1404691",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_27264.npz",
+      "sha256": "c6d2c57bf786f425fc7d21a52c64042803ef8360545c668c8c6286f47e603351",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_27392.npz",
+      "sha256": "243da91eb0f72d33cfc9a600f14da6220c9c46a53d5256bc9ab07ca27eaf9554",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_27520.npz",
+      "sha256": "02b02183c1d5a4333bd3e51d6a4ab30c9aed7a03f77afd620fb5ae5b8be128e3",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_27648.npz",
+      "sha256": "3f89d304be8893b9abf3f70df432c425135de03221bab018183421e7c5b07985",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_27776.npz",
+      "sha256": "4a4aef84e68bd7b5665a7d63add57483e454c37e92e45d7d8da2032211fc1c13",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_27904.npz",
+      "sha256": "0398f6360a0b1b8f0e474a7d8687f167456a394bf16bc6b97e9036dbd8163b7e",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_28032.npz",
+      "sha256": "221fcbffbf91528591f10d939e46683208bf0786d2b58be582263e693bec7b4e",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_28160.npz",
+      "sha256": "f8862b5a648400e24255247115ed472192827af6ba7c67d1334c49f7a9c9e6dd",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_28288.npz",
+      "sha256": "6ff2b940817a1466e3cebb7277fce7ddc3d79cb40f4ac8197d39b3d322887e53",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_28416.npz",
+      "sha256": "ea65f8f1749fb4c0bc165d276e688ca9db7d59f9a55f98639b287de572b97e5c",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_28544.npz",
+      "sha256": "cdf9591fca8e70b9afc356c38ca7abbde5e3b2e2ed7e9ab884d90ce4daf3f84d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_28672.npz",
+      "sha256": "302bca7b23c65fa63c38e28ae1e6ad90affb1e926d9bdc135f1350d8abd20e3d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_28800.npz",
+      "sha256": "d4900497c334fecaf1055a61fc4f4bf5d4963c99abd014c0c4d07b013b0a1a73",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_28928.npz",
+      "sha256": "e81267217f025cb8eeac336b9bbc6632bfc355a53b217989df5aa9f35068290e",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_29056.npz",
+      "sha256": "a77289071cec0763640e09be92da2f5b4b6bce3a403504076e43441aa0a3c96b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_29184.npz",
+      "sha256": "6d7fc8c845b937472516c1118accab819ef1539d602580fbe594e353321ced21",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_29312.npz",
+      "sha256": "e54ae63aa23e9e800a0e280af56e5a9e27a37102bd173b4d8eb56a257c637156",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_29440.npz",
+      "sha256": "1a198a3af544000dc1be0d81bbea846f6da418846fcf89ab7a49a25eb0bbbb5e",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_29568.npz",
+      "sha256": "db8d375356d889c6b57eb1811f263c0644fa33b426eb8b00077834b8f55e6de0",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_29696.npz",
+      "sha256": "320d7e8848c601f3e1e4c10bf67f3e64f81e2e122bad3d4481a9d8ac023ec872",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_29824.npz",
+      "sha256": "0f4a12678f89eed8b30f746c4145fe9c222d5b5ebdd7d4fe17836281ecc62879",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_29952.npz",
+      "sha256": "da1e2e492c0fd1f75976156e84bcda882713dde072a5c97578349807d81b70f0",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_30080.npz",
+      "sha256": "937db78bb4eff1474a3d58a065c30c884739591537ebfbe51d519e1c0ce29bd0",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_30208.npz",
+      "sha256": "57f28362e3c152cfd838c2cf855d5369dce76854a21979d7aeaef2568fc80acb",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_30336.npz",
+      "sha256": "216d4551b5ce2d0c2e7315bd59c835531890f063577186a8b1cbb9ed865e7414",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_30464.npz",
+      "sha256": "6891ecc8ab7fbff5daf26cda9c7a55fe4050ae644ce62b83cae7dd31f1ed4dd2",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_30592.npz",
+      "sha256": "9599434b388e8c73189468accf4629e7097dbd06a4fe6e293bde1111d305278a",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_30720.npz",
+      "sha256": "20317de8b6b4805178f8c21a89bf5b586226210e0d59e31000a69909bb258d39",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_30848.npz",
+      "sha256": "8ebf3071752b6662f108729b792023e79fba1cfc4bd8ca0f334008eeb777527d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_30976.npz",
+      "sha256": "46b989cdd4612bd02d27a384ff4890d7d89089cf2da4ab53552565b01c2ccc11",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_31104.npz",
+      "sha256": "29a3b948c1b36ffc95f4795db590dc8a13da70f2f05d4b006193d1160252aec0",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_31232.npz",
+      "sha256": "f4d975f6ce420d1b6ed410b1a39b00b66decb6008e89ec04985acb869aa93152",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_31360.npz",
+      "sha256": "40e8e249f262d6ca5cdf2c5fc91a5207cbb498d9e8c2a9b3281a24de02fc0520",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_31488.npz",
+      "sha256": "b19b0c70855be2d601014c2a66ff3d3291a33237b2a65d0eaf816f793c0cfc49",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_31616.npz",
+      "sha256": "95626d61cde057401ecb19e60013c2ba2b97e2bb88ac4c6f62bf6a35b51289ba",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_31744.npz",
+      "sha256": "22a06510dfc4ab3c5a8009668a204e2e4e4c8bc4e0e7b169049590f65f1e872c",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_31872.npz",
+      "sha256": "53b3dc1ae46013456564f853c1e54aaa0b88aff873633536362641f334285d2d",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_32000.npz",
+      "sha256": "bcd1e2cc0d852c369da055b7718297d771d364233eec49ce360dbfdcf5fcb51f",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_32128.npz",
+      "sha256": "7bfaecd4ef929523e5521542992d2946846d942107c84ffc5f024dda126f4bed",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_32256.npz",
+      "sha256": "5f5a313e8acba76e916cfb45599fa3e22ac42f41b9a6db9d8c487d751558d524",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_32384.npz",
+      "sha256": "ffe22af0e2c71a3b6e5bb4f572058eaa4e60f5e97ca44736758f07e874b0ab52",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_32512.npz",
+      "sha256": "be0d263b47d1a93b8b13b2a50e543bd9cfbd379673a52da5be54c4e0205cc966",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/matched_audits/matched_11/witnesses_32640.npz",
+      "sha256": "5c5365b88daf80976db07fb7eda34dd42f34d0e352b98fbe8eb75e1761dc41df",
+      "reused": false,
+      "targets": 128
+    }
+  ],
+  "started_utc": "2026-09-23T23:48:22.862066+00:00",
+  "wall_seconds": 2400.0,
+  "seconds": 57.45890955347568,
+  "exhaustive": true,
+  "audit": {
+    "lower": 0.15715838322904474,
+    "upper": 0.15715838328567056,
+    "mean_lower": 0.08262797387921136,
+    "mean_upper": 0.08262797396506713,
+    "hardest_target": 32129
+  },
+  "finished_utc": "2026-09-23T23:49:20.315575+00:00"
+}

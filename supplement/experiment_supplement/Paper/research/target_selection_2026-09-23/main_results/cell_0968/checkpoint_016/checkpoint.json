@@ -1,0 +1,180 @@
+{
+  "status": "complete",
+  "k": 16,
+  "selected_targets": [
+    0,
+    15,
+    48,
+    63,
+    64,
+    79,
+    81,
+    82,
+    83,
+    87,
+    90,
+    91,
+    94,
+    95,
+    112,
+    127
+  ],
+  "planning": {
+    "primal": 0.2373293636137171,
+    "dual": 0.2373293636137164,
+    "raw_dual": 0.2373293636137186,
+    "residuals": {
+      "equality": 6.613598557692058e-13,
+      "inequality": 8.564243064723698e-14,
+      "lower": 0.0,
+      "upper": 0.0,
+      "inequality_dual_sign": 0.0,
+      "lower_dual_sign": 0.0,
+      "upper_dual_sign": 0.0,
+      "stationarity": 8.881784197001252e-16,
+      "gap": 1.4988010832439613e-15,
+      "repaired_gap": 6.938893903907228e-16
+    },
+    "iterations": 39,
+    "variables": 9275,
+    "equalities": 1045,
+    "inequalities": 2193,
+    "solve_seconds": 1.4289546441286802,
+    "method": "highs-ipm",
+    "warnings": [
+      "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+    ],
+    "certificate_path": "Paper/research/target_selection_2026-09-23/main_results/cell_0968/checkpoint_016/master_certificate.npz",
+    "build_seconds": 0.057793344371020794,
+    "nnz": 143614,
+    "matrix_bytes": 1736328,
+    "reward_face_repair": {
+      "fraction": 1e-08,
+      "before": 1.2397743266452568,
+      "after": 1.2397743268814165,
+      "threshold": 1.2397743266452568
+    },
+    "independent_library_upper": 0.23732936486831163,
+    "independent_replay_seconds": 0.0714494613930583,
+    "compact_certificate": "LP matrices deterministically reconstructed from frozen sources/model/targets; vectors and matrix hashes saved",
+    "achieved_constrained_reward": 1.2397743268814165,
+    "reward_constraint_threshold": 1.2397743266452568
+  },
+  "optimization_seconds": 1.5713121397420764,
+  "training_seconds": 3.0421721171587706,
+  "reward_face": {
+    "objective": "information",
+    "optimum": 1.2633903305235012,
+    "minimum": 0.7910702549586099,
+    "normalized_regret": 0.05,
+    "permitted_objective_gap": 0.023616003778244566,
+    "numerical_reward_slack": 1e-10,
+    "threshold": 1.2397743266452568
+  },
+  "actual_reward_gap": 0.023616003642084715,
+  "actual_normalized_regret": 0.049999999711721234,
+  "full_minimax_lower": 0.2373293636137164,
+  "full_minimax_gap": 1.2545936234342747e-09,
+  "full_minimax_certified": true,
+  "audit": {
+    "lower": 0.23732936486830702,
+    "upper": 0.23732936486831002,
+    "global_upper": 0.23732936486831002,
+    "full_revelation_upper": 0.5616250197221543,
+    "full_revelation_report": {
+      "primal": -0.561625019722154,
+      "dual": -0.5616250197221542,
+      "raw_dual": -0.5616250197221542,
+      "residuals": {
+        "equality": 0.0,
+        "inequality": 6.938893903907228e-18,
+        "lower": 0.0,
+        "upper": 0.0,
+        "inequality_dual_sign": 0.0,
+        "lower_dual_sign": 0.0,
+        "upper_dual_sign": 0.0,
+        "stationarity": 2.220446049250313e-16,
+        "gap": 2.220446049250313e-16,
+        "free_variable_reduced_cost": 0.0
+      },
+      "iterations": 66,
+      "variables": 88,
+      "equalities": 1,
+      "inequalities": 192,
+      "lower": 0.561625019722154,
+      "upper": 0.5616250197221543,
+      "bracket": 3.3306690738754696e-16,
+      "raw_decoder_row_residual": 2.220446049250313e-16,
+      "raw_decoder_negative": 0.0,
+      "decoder_repair_max": 1.1102230246251565e-16,
+      "alpha_repair_max": 5.551115123125783e-17,
+      "b_repair_max": 0.0,
+      "simplex_iterations": 66,
+      "ipm_iterations": 0,
+      "method": "native-simplex",
+      "solve_seconds": 0.0017047561705112457,
+      "update_seconds": 1.4821067452430725e-05,
+      "verify_seconds": 0.00044107530266046524,
+      "total_seconds": 0.0022140825167298317,
+      "attempts": [
+        {
+          "mode": "retained",
+          "solver": "simplex",
+          "update_seconds": 1.4821067452430725e-05,
+          "prior_solver_run_seconds": 0.0,
+          "solve_seconds": 0.0017047561705112457,
+          "status": "Optimal",
+          "success": true,
+          "verify_seconds": 0.00044107530266046524
+        }
+      ],
+      "fallback_used": false,
+      "call_index": 1,
+      "import_reports": [
+        {
+          "status": "HighsStatus.kOk",
+          "input_nonzeros": 1288,
+          "stored_nonzeros": 1288,
+          "small_matrix_value": 1e-12
+        }
+      ],
+      "backend_version": "1.15.1",
+      "coarse_lower": 0.561625019722154,
+      "coarse_upper": 0.5616250197221543,
+      "merged_source_columns": 0,
+      "coarsening_bound": 0.0,
+      "certificate_scope": "Decoder and dual evaluated on original nonzero source columns",
+      "residuals_scope": "KKT residuals refer to the coarsened numerical LP, not the original LP"
+    },
+    "bound_scope": "full_target_class",
+    "backend": "native-simplex",
+    "fallbacks": [],
+    "hardest_target": 91,
+    "source_coarsening": {
+      "merged_columns": 0,
+      "worldwise_mass_bound": 0.0,
+      "original_source_bounds": true
+    },
+    "lp_residual_scope": "KKT of the numerical coarsened LP; decoder and dual bounds checked on original source",
+    "model_imports": [
+      {
+        "status": "HighsStatus.kOk",
+        "input_nonzeros": 1288,
+        "stored_nonzeros": 1288,
+        "small_matrix_value": 1e-12
+      }
+    ],
+    "exhaustive": true,
+    "target_count": 128,
+    "evaluated": 128,
+    "seconds": 0.38004071824252605,
+    "solve_seconds": 0.29898627288639545,
+    "decoder_build_seconds": 0.0059914980083703995,
+    "max_lp_residual": 4.6065373737746995e-12,
+    "total_seconds": 0.3839866779744625,
+    "mean_lower": 0.19767885254561562,
+    "mean_upper": 0.1976788525456356
+  },
+  "offline_audit_seconds": 0.0,
+  "end_to_end_seconds": 3.046643193811178
+}

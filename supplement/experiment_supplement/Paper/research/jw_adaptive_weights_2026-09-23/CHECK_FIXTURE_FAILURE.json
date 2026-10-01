@@ -1,0 +1,37 @@
+{
+  "status": "failed",
+  "tests": 16,
+  "failures": 0,
+  "errors": 1,
+  "wall_seconds": 0.022380494512617588,
+  "cpu_seconds": 0.022999610000000004,
+  "peak_rss_kib": 23176,
+  "lifetime_ru_maxrss_kib": 862868,
+  "memory_measurement": "peak_rss_kib is current exec image /proc/self/status VmHWM; lifetime rusage may include launcher history",
+  "resource_caps": {
+    "wall_seconds": 10,
+    "cpu_soft_seconds": 9,
+    "address_space_mib": 256,
+    "threads": 1
+  },
+  "solver_calls": 0,
+  "numeric_backends_imported": false,
+  "training_runs": 0,
+  "scope": "exact fixtures, schema/cut/objective invariants, syntax, dependency hashes, dry-run",
+  "not_checked": [
+    "new bridge numerical equivalence",
+    "performance",
+    "full campaign",
+    "Lean",
+    "PDFs"
+  ],
+  "source_hashes": {
+    "adaptive_weights.py": "34a1942dfbc8e157414df59902a286c003bb0aea4bf35dd16c605daa59d4e787",
+    "check.py": "c63ab083cb0b8152fbdaf1bf854c332327b79ba7bcc99c900824412bfb7f52db",
+    "dry_run.py": "f85c82b94a785d2808c533ac122e00b784574a6fd4af7b8f7d62e762fd0dbfd0",
+    "frozen_adapter.py": "7acd98ff45a91d0a3aba3841201f93aa2db78bd4c76982bd52394f8a0f7a9239",
+    "target_oracle.py": "ebc52f092e5f9fd181fb1e6fcc322be8648c15b6820c489a6759bb80cf80924d",
+    "weight_updates.py": "b870d9b10adbedeaba7790f0b7bf2ae24eeb70e3c3ca7b6a61db02f7cfbc7160"
+  },
+  "diagnosis": "New nonconcavity test midpoint used integer zero divided by two, producing float0.0; exact-input guard correctly rejected it. Fixture corrected to Fraction arithmetic."
+}

@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "completed_utc": "2026-09-23T19:05:50.692926+00:00",
+  "sources": {
+    "audit_worker.py": "5c750f0ef8c47c042a74d6860665cde97a28c3bc975b1f0d538a6eaf38663dbf",
+    "validate_audits.py": "f79faa2848cdcf348297795edee057970b6c21dc6fdbcb0b124dfe0badcc1812",
+    "AUDIT_API.md": "df349b7966015aca18bb11e843268d27c3d2eff0690d6d24d540184cdc4da6d9"
+  },
+  "full_audits": {
+    "full_uniform": {
+      "status": "complete",
+      "completed_target_count": 32768,
+      "elapsed_seconds": 216.50411642435938,
+      "max_per_target_gap": 6.748946956847135e-10,
+      "max_witness_feasibility": 3.3306690738754696e-16,
+      "independent_validation": "passed",
+      "validation_seconds": 22.320157510228455,
+      "model_policy_replay_error": 0.0
+    },
+    "full_adaptive": {
+      "status": "complete",
+      "completed_target_count": 32768,
+      "elapsed_seconds": 134.24405714776367,
+      "max_per_target_gap": 9.46133893453549e-10,
+      "max_witness_feasibility": 4.440892098500626e-16,
+      "independent_validation": "passed",
+      "validation_seconds": 21.453653885051608,
+      "model_policy_replay_error": 0.0
+    }
+  },
+  "negative_controls": {
+    "timeout": {
+      "expected": "partial_timeout with certified global upper",
+      "actual": "partial_timeout",
+      "completed": 664,
+      "independent_validation": "passed"
+    },
+    "inconsistent_E": {
+      "expected": "reject before target solves",
+      "actual": {
+        "type": "ValueError",
+        "message": "Policy/model replay disagrees with supplied E or leaf"
+      }
+    },
+    "tampered_decoder_updated_hash": {
+      "expected": "independent witness replay rejects",
+      "actual": {
+        "status": "failed",
+        "error": "ValueError('Invalid original-probability witness or reported bracket')"
+      }
+    }
+  },
+  "exact_current_worker_full_audit": true,
+  "history": "Initial timeout was misclassified because backend caught TimeoutError. Dedicated AuditDeadline fixed reporting; all initial files and exact old source preserved. Numerical witness logic and tolerance unchanged.",
+  "resource_boundary": "All producer and validator processes finished; CPUs16\u201319 released. No GPU calls."
+}

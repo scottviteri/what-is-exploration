@@ -1,0 +1,54 @@
+{
+  "date_utc": "2026-09-23T21:17:12.980278+00:00",
+  "scope": "Provenance guard correction before any supplementary confirmation execution; no policies, objectives, primary code, metrics or numerical outcomes changed. Original waiting driver deliberately stopped with SIGTERM; no numerical job interrupted.",
+  "reason": "Independently checked endpoints.csv must be hash-bound and exactly matched to JSON endpoint rows consumed by supplementary reports. Require checker coverage explicitly.",
+  "original_sha256": {
+    "SUPPLEMENTARY_EXECUTION.json": "83087719bef996f97a0712c4264763f7cfdfdc1d89f348d3b010ef23b5692628",
+    "finish_supplementary.py": "e1493e921f01bb5d75c55dc6d950277004fe287611180eb48adca37c70562a7b",
+    "certificate_refinement/replay.py": "d25defc26f1d06b6fb3af0ab9089b199bc1bdf914a5841f8b5a9be1604045078",
+    "reward_diagnostics/diagnose.py": "413abccaee5f29ddf61c380f904f28588c09edcfbe7e8d3330be3b91e857791c",
+    "compare_reward_faces.py": "9fd5522539c847c1362b0505e2a3a6b391651e901cf7eb96ebc090c980cdfa3c"
+  },
+  "status": "passed_before_supplementary_execution",
+  "finished_utc": "2026-09-23T21:19:57.454590+00:00",
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "-B",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/supplementary_binding_correction/test_checked_summary.py"
+      ],
+      "exit": 0,
+      "log": "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/supplementary_binding_correction/check_0.log",
+      "log_sha256": "8d1f7ce9fcd94c862da2f10557997de54705e434d6dff9f45c465867847d0312"
+    },
+    {
+      "command": [
+        "/tmp/exploration-lp-cpu-venv/bin/python",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/certificate_refinement/replay.py",
+        "--self-test"
+      ],
+      "exit": 0,
+      "log": "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/supplementary_binding_correction/check_1.log",
+      "log_sha256": "04ab96bad6da788552f946e92470f28ce3008380a21075fc089eb2e6d28ac260"
+    },
+    {
+      "command": [
+        "/tmp/exploration-lp-cpu-venv/bin/python",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/reward_diagnostics/diagnose.py",
+        "--self-test"
+      ],
+      "exit": 0,
+      "log": "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/supplementary_binding_correction/check_2.log",
+      "log_sha256": "f5b2d338d90f0f1120b551b0acf6f0cdd6947309d32253f39e93f388439f8958"
+    }
+  ],
+  "review": "Independent read-only review confirmed all three analysis call sites close the binding and representation gaps. Nine synthetic guard tests include altered JSON with an updated hash but unchanged CSV.",
+  "current_sha256": {
+    "checked_summary.py": "5ad74027ff3cacef6f2d5433484d451b85187b6434c2f069762828b92d74c942",
+    "finish_supplementary.py": "1dcd1150d4d364ff8d1b807c0222442042ab00475a473ebb32069a0eb9730ff7",
+    "compare_reward_faces.py": "7fcd1c40ef045a7dafe37b64c2ed4334dbd32d06a39814c345cfe545ab50d82d",
+    "certificate_refinement/replay.py": "1481a297aca97176500f85bb764cc1dee4f2032d3dc1846301bab89960cd9a8a",
+    "reward_diagnostics/diagnose.py": "b3023344f89baba3aeecac8812530087711eb4f54a82ed59d37be56c3a32a68c"
+  }
+}

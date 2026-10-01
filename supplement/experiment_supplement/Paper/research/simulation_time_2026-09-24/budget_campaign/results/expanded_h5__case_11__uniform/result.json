@@ -1,0 +1,91 @@
+{
+  "status": "failed",
+  "phase": "failed",
+  "spec": {
+    "id": "expanded_h5__case_11__uniform",
+    "phase": "expanded_h5",
+    "case": "fresh_hmm_2026100801_q8_s3_c0.2",
+    "case_id": "case_11",
+    "t": 5,
+    "method": "uniform",
+    "mode": "plan",
+    "planning_seconds": 600,
+    "job_seconds": 2400
+  },
+  "started_utc": "2026-09-24T03:11:46.427310+00:00",
+  "sources_sha256": "4684f78b757300662b68c95163c77fd78aebeaa843761993d970ffe6deefb0b5",
+  "manifest_sha256": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4",
+  "model_sha256": "7877efe58303d6cb94cb181e4729b2d2fe5dc13d7142f54b1e0c3a9040860aee",
+  "pid": 4073309,
+  "cpu_affinity": [
+    10
+  ],
+  "audits": [
+    {
+      "reference": "information",
+      "reference_cell": "cell_0221",
+      "lower": 0.13533637949790844,
+      "upper": 0.13533637949790867,
+      "bracket": 2.220446049250313e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_information.npz",
+      "witness_sha256": "c699c111175e3a3606897dafee28aa92c45ea82e3962e3a9995d379f9f974afd",
+      "seconds": 2.6871923124417663,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "brier",
+      "reference_cell": "cell_0368",
+      "lower": 0.13533637949790844,
+      "upper": 0.13533637949790867,
+      "bracket": 2.220446049250313e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_brier.npz",
+      "witness_sha256": "c699c111175e3a3606897dafee28aa92c45ea82e3962e3a9995d379f9f974afd",
+      "seconds": 0.03516289871186018,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "pseudo_count",
+      "reference_cell": "cell_0948",
+      "lower": 0.16027689626703867,
+      "upper": 0.1602768962670393,
+      "bracket": 6.38378239159465e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_pseudo_count.npz",
+      "witness_sha256": "0913434fe01aafae453efbcc4501ccb60703e472b55bde2a0df703c6a7094ce9",
+      "seconds": 3.138225573115051,
+      "coarsening_bound": 0.0
+    }
+  ],
+  "planning": {
+    "method": "literal_uniform",
+    "seconds": 0,
+    "scope": "Control, not an optimized objective."
+  },
+  "policy_sha256": "a8c4c15518d331ec002f4716863ae9e11b74e4aabed5506900f33d3a95e3b874",
+  "rewards": {
+    "information": 1.3662528613190053,
+    "brier": 0.30092408835058915,
+    "pseudo_count": 3.8301023648268515
+  },
+  "planning_certified": true,
+  "planning_elapsed_seconds": 0.1656783102080226,
+  "error": "RuntimeError('Recovery decoder failed: [{\\'mode\\': \\'retained\\', \\'solver\\': \\'simplex\\', \\'status\\': \\'Time limit reached\\', \\'success\\': False, \\'error\\': \"RuntimeError(\\'Time limit reached\\')\", \\'seconds\\': 1.0126538686454296}, {\\'mode\\': \\'cold\\', \\'solver\\': \\'simplex\\', \\'status\\': \\'Time limit reached\\', \\'success\\': False, \\'error\\': \"RuntimeError(\\'Time limit reached\\')\", \\'seconds\\': 3.1161042116582394}, {\\'mode\\': \\'cold\\', \\'solver\\': \\'ipm\\', \\'status\\': \\'Time limit reached\\', \\'success\\': False, \\'error\\': \"RuntimeError(\\'Time limit reached\\')\", \\'seconds\\': 55.88301795441657}]')",
+  "traceback": "Traceback (most recent call last):\n  File \"Paper/research/simulation_time_2026-09-24/budget_campaign/worker.py\", line 74, in run\n    audits(E,refs,out,report)\n  File \"Paper/research/simulation_time_2026-09-24/budget_campaign/worker.py\", line 29, in audits\n    ts=time.monotonic();r,w=cache[Y].solve(F);lo,hi=check_witness(E,F,w)\n                            ^^^^^^^^^^^^^^^^^\n  File \"Paper/research/simulation_time_2026-09-24/budget_campaign/deps/recovery_decoder.py\", line 83, in solve\n    r,w=super().solve(F)\n        ^^^^^^^^^^^^^^^^\n  File \"Paper/research/simulation_time_2026-09-24/budget_campaign/deps/certified_decoder.py\", line 37, in solve\n    report,w=self.inner.solve(F)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"Paper/research/simulation_time_2026-09-24/budget_campaign/deps/recovery_decoder.py\", line 42, in solve\n    raise RuntimeError('Recovery decoder failed: '+repr(attempts))\nRuntimeError: Recovery decoder failed: [{'mode': 'retained', 'solver': 'simplex', 'status': 'Time limit reached', 'success': False, 'error': \"RuntimeError('Time limit reached')\", 'seconds': 1.0126538686454296}, {'mode': 'cold', 'solver': 'simplex', 'status': 'Time limit reached', 'success': False, 'error': \"RuntimeError('Time limit reached')\", 'seconds': 3.1161042116582394}, {'mode': 'cold', 'solver': 'ipm', 'status': 'Time limit reached', 'success': False, 'error': \"RuntimeError('Time limit reached')\", 'seconds': 55.88301795441657}]\n",
+  "seconds": 66.35728665813804,
+  "peak_rss_mib": 371.9921875,
+  "finished_utc": "2026-09-24T03:12:52.784606+00:00"
+}

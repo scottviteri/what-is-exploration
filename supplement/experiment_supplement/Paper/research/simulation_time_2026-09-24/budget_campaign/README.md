@@ -1,0 +1,19 @@
+# Budget-specific acquisition of fixed reference capabilities
+
+the lead author authorized this campaign on 24 September 2026. It implements the budget-specific option discussed after Commission 04: optimize each objective afresh for a total of four or five interactions, then ask how accurately that collector can reproduce fixed three-interaction reference records. It does not use one-step continuation or assert that collectors at different budgets share prefixes.
+
+Read [PROTOCOL.md](PROTOCOL.md) and [MANIFEST.json](MANIFEST.json) for the frozen scientific and resource choices. [REFERENCES.json](REFERENCES.json) binds 132 fixed references from all 22 existing classes. Each case has information, Brier, categorical pseudo-count, uniform, weighted native128 and native minimax references. The native objectives retain the entire 128-target depth-three library; these references lie in its mixture closure. This is a covered-capability comparison, not held-out-target transfer or eventual J_w optimization.
+
+[STATUS.md](STATUS.md) and [STATUS.json](STATUS.json) are live and include active jobs, accepted checks, failures, feasibility skips and remaining jobs. The primary manifest has 396 jobs: 132 reference replays, followed by up to 264 new budget/method/case combinations. Four mechanism cases run first, with later expansion gated by computational feasibility and numerical verification. One worker uses CPU 10; the whole queue has an eight-hour cap. No GPU is reserved. Creating a STOP file in this directory stops this supervisor and its own active child process group.
+
+[VALIDATION.json](VALIDATION.json) records the passed bounded integration checks before launch. They compare the smaller native LP to the original formulation on small problems, compare dynamic programming with realization LPs, check known deficiencies, and reject a corrupted decoder. They are not results of the new experiment. [ORIGIN.json](ORIGIN.json), [SOURCES.json](SOURCES.json), the local deps directory, and original copies in provenance retain source identity and adaptations. Old experiment archives are never rewritten.
+
+Each completed result has full policy arrays, planning evidence, six reference witnesses and an independent CHECK.json. Only completed numerical optimization with a passing independent check counts as a certified planned collector. An incomplete native solve may retain a useful feasible incumbent, distinctly labeled. Thresholds are 0.05, 0.02 and 0.01. These are float64 certificates, not new Lean or exact interval proofs. The t=3 controls retain their original selected-optimum qualification; their new checks replay their records rather than reprove all original optimization claims.
+
+The reward-sacrifice compatibility follow-up is registered separately in the manifest. Its numerical wrapper and dedicated checks remain to be implemented; the initial supervisor does not launch it. It will select favorable reference-aware policies and must not replace the primary objective-selected collectors. Source snapshots for that diagnostic will be separate from this live frozen queue.
+
+No manuscript, shared formal ledger, commit, push or Overleaf export is included. This launch is not a completed-result claim.
+
+## Registered compatibility follow-up, 24 September 03:09 UTC
+
+The wrapper is now implemented and its seven bounded known-answer/corruption checks passed. `compatibility/JOBS.json` includes all 34 eligible pilot comparisons; no cap exclusions. The separately frozen queue waits for the primary grid to finish and retains the original campaign deadline and combined resource limits. Read `compatibility/STATUS.json` for execution status and `compatibility/PROTOCOL.md` for reward-regret bounds and existential scope. The primary supervisor’s older compatibility-status string is part of its frozen code and is superseded by this separate status pointer. Primary sources and outputs are unchanged.

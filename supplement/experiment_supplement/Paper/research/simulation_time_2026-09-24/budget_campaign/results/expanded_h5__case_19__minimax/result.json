@@ -1,0 +1,275 @@
+{
+  "status": "complete",
+  "phase": "awaiting_independent_check",
+  "spec": {
+    "id": "expanded_h5__case_19__minimax",
+    "phase": "expanded_h5",
+    "case": "irreversible_0.1_0.3",
+    "case_id": "case_19",
+    "t": 5,
+    "method": "minimax",
+    "mode": "plan",
+    "planning_seconds": 600,
+    "job_seconds": 2400
+  },
+  "started_utc": "2026-09-24T03:55:29.879224+00:00",
+  "sources_sha256": "4684f78b757300662b68c95163c77fd78aebeaa843761993d970ffe6deefb0b5",
+  "manifest_sha256": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4",
+  "model_sha256": "cd8878c69bbcab6b97e6269efb70e1db73577727ccd1d0e0dbc51e9aca525a23",
+  "pid": 4076867,
+  "cpu_affinity": [
+    10
+  ],
+  "audits": [
+    {
+      "reference": "information",
+      "reference_cell": "cell_0696",
+      "lower": 0.16058143222753374,
+      "upper": 0.16058143222753396,
+      "bracket": 2.220446049250313e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_information.npz",
+      "witness_sha256": "3bb553c1c26d035eddc7d7f359252c7e95081ae2e3c078b2f0a47076fa433181",
+      "seconds": 0.03281966503709555,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "brier",
+      "reference_cell": "cell_0608",
+      "lower": 0.16058143222753374,
+      "upper": 0.16058143222753396,
+      "bracket": 2.220446049250313e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_brier.npz",
+      "witness_sha256": "3bb553c1c26d035eddc7d7f359252c7e95081ae2e3c078b2f0a47076fa433181",
+      "seconds": 0.0031582973897457123,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "pseudo_count",
+      "reference_cell": "cell_0024",
+      "lower": 0.16058143222753107,
+      "upper": 0.16058143222753463,
+      "bracket": 3.552713678800501e-15,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_pseudo_count.npz",
+      "witness_sha256": "8787eaed99bce1c77657745be2df1ae7f484d30fc147a30f8cff7098cced4ce4",
+      "seconds": 0.06148220971226692,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "uniform",
+      "reference_cell": "cell_0067",
+      "lower": 0.018581432227533834,
+      "upper": 0.01858143222753411,
+      "bracket": 2.7755575615628914e-16,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_uniform.npz",
+      "witness_sha256": "541d993aad977c99317559d31bfc3444fc8ad302fd676ef9b80ea199a71546e7",
+      "seconds": 0.07185648288577795,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "weighted128",
+      "reference_cell": "cell_0176",
+      "lower": 0.16058143222753207,
+      "upper": 0.1605814322275343,
+      "bracket": 2.220446049250313e-15,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_weighted128.npz",
+      "witness_sha256": "22af8d0105b4e1fc37c9e6b1fe0934c70dc7476f8d86edfff8abf634bdd11d28",
+      "seconds": 0.06929002329707146,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "minimax",
+      "reference_cell": "cell_0128",
+      "lower": 0.0,
+      "upper": 4.007394188623031e-15,
+      "bracket": 4.007394188623031e-15,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_minimax.npz",
+      "witness_sha256": "e28ed065476a15ad49e58776c6b7a4cb0fd213a25e4c1957b78994dbc8ce5809",
+      "seconds": 0.10891849920153618,
+      "coarsening_bound": 0.0
+    }
+  ],
+  "planning": {
+    "status": "converged",
+    "error": null,
+    "seconds": 0.5555516742169857,
+    "lower": 0.16058143222752963,
+    "upper": 0.1605814322275343,
+    "gap": 4.6629367034256575e-15,
+    "iterations": [
+      {
+        "iteration": 0,
+        "cut_count": 0,
+        "master": {
+          "primal": 0.0,
+          "dual": 0.0,
+          "raw_dual": 0.0,
+          "residuals": {
+            "equality": 0.0,
+            "inequality": 0.0,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 0.0,
+            "gap": 0.0,
+            "repaired_gap": 0.0
+          },
+          "iterations": 0,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 0,
+          "solve_seconds": 0.005938065238296986,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.0003217998892068863,
+          "total_seconds": 0.02164639625698328
+        },
+        "feasible_upper": 0.28400000000000003,
+        "best_upper": 0.28400000000000003,
+        "lower": 0.0,
+        "gap": 0.28400000000000003,
+        "oracle_seconds": 0.12324012629687786,
+        "oracle_solver_seconds": 0.049162923358380795,
+        "decoder_build_seconds": 0.006440990604460239,
+        "decoder_fallbacks": 0,
+        "cuts_added": 64
+      },
+      {
+        "iteration": 1,
+        "cut_count": 64,
+        "master": {
+          "primal": 0.0,
+          "dual": 0.0,
+          "raw_dual": 0.0,
+          "residuals": {
+            "equality": 2.220446049250313e-16,
+            "inequality": 0.0,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 0.0,
+            "gap": 0.0,
+            "repaired_gap": 0.0
+          },
+          "iterations": 5,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 64,
+          "solve_seconds": 0.03059381525963545,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.01398747693747282,
+          "total_seconds": 0.04823414608836174
+        },
+        "feasible_upper": 0.39480955479045515,
+        "best_upper": 0.28400000000000003,
+        "lower": 0.0,
+        "gap": 0.28400000000000003,
+        "oracle_seconds": 0.13701877649873495,
+        "oracle_solver_seconds": 0.06240608636289835,
+        "decoder_build_seconds": 0.0065554045140743256,
+        "decoder_fallbacks": 0,
+        "cuts_added": 64
+      },
+      {
+        "iteration": 2,
+        "cut_count": 128,
+        "master": {
+          "primal": 0.16058143222753382,
+          "dual": 0.16058143222752963,
+          "raw_dual": 0.16058143222753385,
+          "residuals": {
+            "equality": 0.0,
+            "inequality": 1.1102230246251565e-16,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 8.326672684688674e-17,
+            "upper_dual_sign": 0.0,
+            "stationarity": 9.71445146547012e-17,
+            "gap": 2.7755575615628914e-17,
+            "repaired_gap": 4.191091917959966e-15
+          },
+          "iterations": 18,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 128,
+          "solve_seconds": 0.05479744076728821,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.027211240492761135,
+          "total_seconds": 0.08575226832181215
+        },
+        "feasible_upper": 0.1605814322275343,
+        "best_upper": 0.1605814322275343,
+        "lower": 0.16058143222752963,
+        "gap": 4.6629367034256575e-15,
+        "oracle_seconds": 0.134822279214859,
+        "oracle_solver_seconds": 0.06076196301728487,
+        "decoder_build_seconds": 0.006453101523220539,
+        "decoder_fallbacks": 0
+      }
+    ],
+    "cut_count": 128,
+    "master_variables": 683,
+    "total_master_seconds": 0.15563281066715717,
+    "total_oracle_seconds": 0.3950811820104718,
+    "total_cut_insertion_seconds": 0.0025226371362805367,
+    "decoder_calls": 384,
+    "time_limit": 600,
+    "method": "full_library_dual_cut_LP",
+    "kind": "native_minimax",
+    "targets": 128,
+    "target_horizon": 3
+  },
+  "policy_sha256": "156d3f923b32e42e0c23829d519d5708f455ad4904555a1e9c699677010bfbf3",
+  "rewards": {
+    "information": 0.7699515245996791,
+    "brier": 0.20066033223649776,
+    "pseudo_count": 3.5871714061790394
+  },
+  "planning_certified": true,
+  "planning_elapsed_seconds": 0.7156021101400256,
+  "seconds": 1.084207657724619,
+  "peak_rss_mib": 100.98828125,
+  "finished_utc": "2026-09-24T03:55:30.963444+00:00"
+}

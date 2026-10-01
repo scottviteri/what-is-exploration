@@ -1,0 +1,381 @@
+{
+  "schema": "jw-adaptive-dry-run-v1",
+  "execution_enabled": false,
+  "synthetic_only": true,
+  "solver_modules_loaded": [],
+  "backend_lock": {
+    "schema": "jw-frozen-backend-v1",
+    "imports_from": "frozen decomposition/deps, not live target_selection files",
+    "files": [
+      {
+        "path": "Paper/research/target_selection_2026-09-23/decomposition_research/experiment.py",
+        "sha256": "26145ceb915194e9e2b4e88f9730e0765415ba8b2176e8b51de294a617281e10"
+      },
+      {
+        "path": "Paper/research/target_selection_2026-09-23/decomposition_research/audit.py",
+        "sha256": "0f5e765a4dc05059db16a1f6272b3579add8b8db88536fc562d6929fcb73228b"
+      },
+      {
+        "path": "Paper/research/target_selection_2026-09-23/decomposition_research/deps/scaling_core.py",
+        "sha256": "555d58fe145b78b004622d28d59cf3a3d0e1422245c5480da41c7e05e94d984e"
+      },
+      {
+        "path": "Paper/research/target_selection_2026-09-23/decomposition_research/deps/fast_decoder.py",
+        "sha256": "4402c535d3e84950b2c528e049984d610510ad0db215bf1c25aaf82deeb761f1"
+      },
+      {
+        "path": "Paper/research/target_selection_2026-09-23/decomposition_research/deps/certified_decoder.py",
+        "sha256": "64c66509ccab69fb66e5ba42fbb75b114e48e0a8c5ea247fc44a8bf568084fb5"
+      }
+    ],
+    "execution_enabled": false,
+    "fresh_process_required": true,
+    "external_versions": "Must record Python/NumPy/SciPy/HiGHS before future numeric validation; not imported here"
+  },
+  "background_id": "b7728d87e0c9e1af1f7dfc717468ffba703be081d749ab90c8dbd94f8ba9eafa",
+  "illustrative_objectives": {
+    "fixed": {
+      "objective": {
+        "context_id": "bd7acf631f91d535328783f7a35fd8896487477bf22ae8ac567e44ba10171b9b",
+        "targets": [
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r0",
+            "kernel_sha256": "2171677f69ea2de505902d317dd191049a302ea49c1298108e435b51606acab5",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r1",
+            "kernel_sha256": "e9db51e5e704b23b0b6dd25dd0897b980be75937bb0b8c30af0047e174c358e0",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d2/r1",
+            "kernel_sha256": "5abb5c381bb651b72a6e0b409fd8812ae5364da43e6938671b6464de4b801ea6",
+            "record": "full-action-observation-history-v1"
+          }
+        ],
+        "weights": [
+          "307/960",
+          "307/960",
+          "61/192"
+        ],
+        "omitted_mass": "41/960",
+        "interpretation": "rich-background-truncation",
+        "provenance": "86755d08cfb556d89d31688ddd136355ae01d60151bd9dc0459f1b815765392d",
+        "schema": "adaptive-native-v1",
+        "objective_id": "2239e3aa7b401656827ed533b211286daa13e378e729ef51811169ed3d67babe",
+        "bounds_scope": "finite-collection-time",
+        "eventual_regret_certified": false
+      },
+      "master": {
+        "schema": "jw-retained-master-v1",
+        "context_id": "bd7acf631f91d535328783f7a35fd8896487477bf22ae8ac567e44ba10171b9b",
+        "objective_id": "2239e3aa7b401656827ed533b211286daa13e378e729ef51811169ed3d67babe",
+        "costs": [
+          "307/960",
+          "307/960",
+          "61/192"
+        ],
+        "target_bindings": [
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r0",
+            "kernel_sha256": "2171677f69ea2de505902d317dd191049a302ea49c1298108e435b51606acab5",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r1",
+            "kernel_sha256": "e9db51e5e704b23b0b6dd25dd0897b980be75937bb0b8c30af0047e174c358e0",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d2/r1",
+            "kernel_sha256": "5abb5c381bb651b72a6e0b409fd8812ae5364da43e6938671b6464de4b801ea6",
+            "record": "full-action-observation-history-v1"
+          }
+        ],
+        "reused_cut_count": 0,
+        "cuts": [],
+        "required_fresh": [
+          "master-dual-bound",
+          "replayed-policy-target-intervals"
+        ],
+        "inherited_aggregate_lower": null,
+        "inherited_aggregate_upper": null,
+        "execution_enabled": false
+      }
+    },
+    "tractability": {
+      "objective": {
+        "context_id": "bd7acf631f91d535328783f7a35fd8896487477bf22ae8ac567e44ba10171b9b",
+        "targets": [
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r0",
+            "kernel_sha256": "2171677f69ea2de505902d317dd191049a302ea49c1298108e435b51606acab5",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r1",
+            "kernel_sha256": "e9db51e5e704b23b0b6dd25dd0897b980be75937bb0b8c30af0047e174c358e0",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d2/r1",
+            "kernel_sha256": "5abb5c381bb651b72a6e0b409fd8812ae5364da43e6938671b6464de4b801ea6",
+            "record": "full-action-observation-history-v1"
+          }
+        ],
+        "weights": [
+          "161/320",
+          "97/320",
+          "29/192"
+        ],
+        "omitted_mass": "41/960",
+        "interpretation": "rich-background-truncation",
+        "provenance": "c29f13a8d4adece9009cbe7691be9cca37d13c71db8a2abf36825ee880637dc7",
+        "schema": "adaptive-native-v1",
+        "objective_id": "c128bcd5adc3b5dba23ccab9d34760e822e49191cb69cfd024e3a2416aa22763",
+        "bounds_scope": "finite-collection-time",
+        "eventual_regret_certified": false
+      },
+      "master": {
+        "schema": "jw-retained-master-v1",
+        "context_id": "bd7acf631f91d535328783f7a35fd8896487477bf22ae8ac567e44ba10171b9b",
+        "objective_id": "c128bcd5adc3b5dba23ccab9d34760e822e49191cb69cfd024e3a2416aa22763",
+        "costs": [
+          "161/320",
+          "97/320",
+          "29/192"
+        ],
+        "target_bindings": [
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r0",
+            "kernel_sha256": "2171677f69ea2de505902d317dd191049a302ea49c1298108e435b51606acab5",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r1",
+            "kernel_sha256": "e9db51e5e704b23b0b6dd25dd0897b980be75937bb0b8c30af0047e174c358e0",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d2/r1",
+            "kernel_sha256": "5abb5c381bb651b72a6e0b409fd8812ae5364da43e6938671b6464de4b801ea6",
+            "record": "full-action-observation-history-v1"
+          }
+        ],
+        "reused_cut_count": 0,
+        "cuts": [],
+        "required_fresh": [
+          "master-dual-bound",
+          "replayed-policy-target-intervals"
+        ],
+        "inherited_aggregate_lower": null,
+        "inherited_aggregate_upper": null,
+        "execution_enabled": false
+      }
+    },
+    "hard-target": {
+      "objective": {
+        "context_id": "bd7acf631f91d535328783f7a35fd8896487477bf22ae8ac567e44ba10171b9b",
+        "targets": [
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r0",
+            "kernel_sha256": "2171677f69ea2de505902d317dd191049a302ea49c1298108e435b51606acab5",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r1",
+            "kernel_sha256": "e9db51e5e704b23b0b6dd25dd0897b980be75937bb0b8c30af0047e174c358e0",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d2/r1",
+            "kernel_sha256": "5abb5c381bb651b72a6e0b409fd8812ae5364da43e6938671b6464de4b801ea6",
+            "record": "full-action-observation-history-v1"
+          }
+        ],
+        "weights": [
+          "2380914984644347961/7722956328801257280",
+          "2762322811968765497/7722956328801257280",
+          "2249883938978923459/7722956328801257280"
+        ],
+        "omitted_mass": "41/960",
+        "interpretation": "rich-background-truncation",
+        "provenance": "058aaaec63d9a1f604c97471f82e78860f4bf5b41dcac8d9bc5625eecef13342",
+        "schema": "adaptive-native-v1",
+        "objective_id": "e6e71073bd8bc9078049d897b44f76a748da3e96bba921b5e9321b132b2a5284",
+        "bounds_scope": "finite-collection-time",
+        "eventual_regret_certified": false
+      },
+      "master": {
+        "schema": "jw-retained-master-v1",
+        "context_id": "bd7acf631f91d535328783f7a35fd8896487477bf22ae8ac567e44ba10171b9b",
+        "objective_id": "e6e71073bd8bc9078049d897b44f76a748da3e96bba921b5e9321b132b2a5284",
+        "costs": [
+          "2380914984644347961/7722956328801257280",
+          "2762322811968765497/7722956328801257280",
+          "2249883938978923459/7722956328801257280"
+        ],
+        "target_bindings": [
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r0",
+            "kernel_sha256": "2171677f69ea2de505902d317dd191049a302ea49c1298108e435b51606acab5",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d1/r1",
+            "kernel_sha256": "e9db51e5e704b23b0b6dd25dd0897b980be75937bb0b8c30af0047e174c358e0",
+            "record": "full-action-observation-history-v1"
+          },
+          {
+            "target_id": "rational-native-v1/a2o2/n1/d2/r1",
+            "kernel_sha256": "5abb5c381bb651b72a6e0b409fd8812ae5364da43e6938671b6464de4b801ea6",
+            "record": "full-action-observation-history-v1"
+          }
+        ],
+        "reused_cut_count": 0,
+        "cuts": [],
+        "required_fresh": [
+          "master-dual-bound",
+          "replayed-policy-target-intervals"
+        ],
+        "inherited_aggregate_lower": null,
+        "inherited_aggregate_upper": null,
+        "execution_enabled": false
+      }
+    }
+  },
+  "hard_update_arithmetic": {
+    "score_error_upper": "1/20",
+    "update_arithmetic": "floating log/exp; no certified rounding budget yet",
+    "last_iterate_minimax_guarantee": false
+  },
+  "future_model_specifications": [
+    {
+      "worlds": 4,
+      "hidden_states": 3,
+      "concentration": "0.2",
+      "model_seed": 926101
+    },
+    {
+      "worlds": 4,
+      "hidden_states": 3,
+      "concentration": "0.2",
+      "model_seed": 926102
+    },
+    {
+      "worlds": 4,
+      "hidden_states": 3,
+      "concentration": "1",
+      "model_seed": 926101
+    },
+    {
+      "worlds": 4,
+      "hidden_states": 3,
+      "concentration": "1",
+      "model_seed": 926102
+    },
+    {
+      "worlds": 4,
+      "hidden_states": 3,
+      "concentration": "5",
+      "model_seed": 926101
+    },
+    {
+      "worlds": 4,
+      "hidden_states": 3,
+      "concentration": "5",
+      "model_seed": 926102
+    },
+    {
+      "worlds": 8,
+      "hidden_states": 3,
+      "concentration": "0.2",
+      "model_seed": 926101
+    },
+    {
+      "worlds": 8,
+      "hidden_states": 3,
+      "concentration": "0.2",
+      "model_seed": 926102
+    },
+    {
+      "worlds": 8,
+      "hidden_states": 3,
+      "concentration": "1",
+      "model_seed": 926101
+    },
+    {
+      "worlds": 8,
+      "hidden_states": 3,
+      "concentration": "1",
+      "model_seed": 926102
+    },
+    {
+      "worlds": 8,
+      "hidden_states": 3,
+      "concentration": "5",
+      "model_seed": 926101
+    },
+    {
+      "worlds": 8,
+      "hidden_states": 3,
+      "concentration": "5",
+      "model_seed": 926102
+    }
+  ],
+  "future_design": {
+    "status": "proposed; not launched or preregistered",
+    "train_target_depth": 3,
+    "independent_audit_depth": 4,
+    "collection_horizons": [
+      3,
+      4
+    ],
+    "budget_seconds": [
+      2,
+      10,
+      40
+    ],
+    "emphasis_seeds": [
+      926201,
+      926202,
+      926203
+    ],
+    "primary_epsilon": "1/20",
+    "initial_library_size": 16,
+    "arms": [
+      "fixed",
+      "tractability",
+      "hard-target",
+      "direct-minimax"
+    ],
+    "baseline_arms": [
+      "information",
+      "posterior-brier"
+    ],
+    "favorable_return_regret": [
+      "0 with <=1e-10 slack",
+      "1 percent",
+      "5 percent"
+    ],
+    "required_before_launch": [
+      "resource allocation",
+      "new-bridge equivalence checks",
+      "randomized native-target compiler checks",
+      "reward-face implementation or pinned existing planner",
+      "audit-cost feasibility pilot",
+      "seed nonoverlap check",
+      "freeze source and exact queue"
+    ],
+    "gates": "Budget tiers or horizon tiers may be reduced by pre-outcome feasibility only"
+  },
+  "unsupported": [
+    "online trajectory adaptation",
+    "reward-face constraints in new bridge",
+    "robust background epigraph in new bridge",
+    "certified floating MW update error",
+    "efficient global hardest-target oracle",
+    "eventual regret from a finite gap alone"
+  ]
+}

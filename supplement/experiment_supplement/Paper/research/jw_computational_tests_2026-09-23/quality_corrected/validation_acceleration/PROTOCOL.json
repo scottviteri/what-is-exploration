@@ -1,0 +1,16 @@
+{
+  "scope": "Validation/backend acceleration only; no new objectives or scientific endpoint selection",
+  "selection": "First lexicographically completed/validated old audit in each fixed q4 concentration group0.2 and5.0; scores not inspected",
+  "audits": [
+    "Paper/research/jw_computational_tests_2026-09-23/quality/exhaustive_audits/audits/0000_q4_a0.2_s926103_013bd5e3d3b27d85",
+    "Paper/research/jw_computational_tests_2026-09-23/quality/exhaustive_audits/audits/0049_q4_a5.0_s926103_2fc8fb1dacba304e"
+  ],
+  "cpus": [
+    8,
+    9
+  ],
+  "max_concurrency": 2,
+  "model_for_exhaustive_target_equivalence": "Paper/research/jw_computational_tests_2026-09-23/quality/audit_design_check/model.npz",
+  "comparisons": "Old and new validator outputs must exactly match except validation_seconds. Both cached target generators must match their original functions at all32768 IDs on the archived design model. Witness functions and thresholds unchanged.",
+  "resource": "Container cgroupv1 quota10.2 CPUs; root corrected planning uses8 and these checks use2."
+}

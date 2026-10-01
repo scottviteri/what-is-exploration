@@ -1,0 +1,9 @@
+# Reward-matched diagnostic (post-design)
+
+Use all 22 original cases. Freeze the lexically first saved verified weighted128 cell per case before computing this diagnostic; do not select it using held-out errors. For its policy pi_N, minimize worst deficiency over all depth-three targets subject to R_B(rho) >= R_B(pi_N) - 1e-10 (up to the separately reported float arithmetic used to reconstruct that threshold). Implement the original reward-range constraint with the reference's attained normalized sacrifice. For zero attainable reward range, use the nominal zero-concession control and report normalization as undefined. This is a favorable constrained native planner, not a typical Brier learner.
+
+The collector has three interactions. Selection and early stopping use only the complete depth-three target audit and its optimizer certificates. Evaluate its final policy on all 32,768 deterministic depth-four targets and check every decoder/decision-loss witness; no held-out selection or weight adjustment. Compare the exact reference representative, not an envelope combining different references. Report all cases, failures, actual reward and training/audit computation. This tests reward matching on existing cases, not fresh-environment generalization or universal dominance. The finite native mean and the constrained finite maximum remain different objectives.
+
+Four CPU planners, three subsequent auditors, existing solver environment, one-hour planning cap and 40-minute per-policy audit cap. Preserve original data and earlier failures. All new outputs are local research artifacts.
+
+Both sides of the matched comparison will receive fresh full-witness depth-four audits. The 22 fixed native reference policies are replayed unchanged on three additional CPUs after planning finishes; their old results remain available for consistency checks. This strengthens witness retention without changing the policies or selection rule.

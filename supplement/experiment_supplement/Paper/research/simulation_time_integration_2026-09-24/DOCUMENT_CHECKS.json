@@ -1,0 +1,32 @@
+{
+  "checks": [
+    {
+      "command": [
+        "python3",
+        "scripts/check_citations.py",
+        "--strict",
+        "--aux",
+        "Paper/draft/paper.aux",
+        "--pdf",
+        "Paper/draft/paper.pdf"
+      ],
+      "exit_code": 0,
+      "output": "PDF bibliography URLs: 32/32 present as hyperlinks.\nCitation review: 51 uses, 32 sources; 0 integrity errors, 0 open items.\nThis checks review coverage and freshness, not semantic truth or current link availability.\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/check_documentation_freshness.py",
+        "--pdfs"
+      ],
+      "exit_code": 1,
+      "output": "Short paper (exploration_continuation.pdf): 9 main-text pages before references (allowance: 9).\nShort paper (main_short_native_capability.pdf): 9 main-text pages before references (allowance: 9).\nShort paper (exploration_native.pdf): 10 main-text pages before references (allowance: 10).\nexploration_decision.pdf: main text occupies 15 pages, exceeding its 9-page allowance\npaper.pdf: main text occupies 15 pages, exceeding its 9-page allowance\nDOCUMENTATION FRESHNESS CHECK FAILED\n"
+    }
+  ],
+  "selected_pdf_text_identical": true,
+  "final_latex_warnings": {
+    "paper": [],
+    "exploration_decision": []
+  },
+  "evidence_bindings_verified": 3818
+}

@@ -1,0 +1,3381 @@
+{
+  "reviewed_utc": "2026-09-23T08:36:54.028433+00:00",
+  "launch_authorized_by_checks": true,
+  "scope": "Numerical source snapshot, all accepted policies, complete profile aggregates, hardest/revelation original-source witnesses, reconstructed compact master KKT and paired CPU/GPU objective checks. Not exact arithmetic or a theorem.",
+  "pilot_manifest_sha256": "469640d97131cd3c06848f454d5994a1abe920ab464c43c1ed7faf95d43e0a4e",
+  "pilot_rows": [
+    {
+      "cell": "cell_0000",
+      "status": "complete",
+      "completed_k": [
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "wall_seconds": 45.08165256679058,
+      "peak_rss_kib": 249332,
+      "failure": null,
+      "training_seconds": 43.16482585482299
+    },
+    {
+      "cell": "cell_0001",
+      "status": "complete",
+      "completed_k": [
+        8,
+        16,
+        32,
+        64,
+        128
+      ],
+      "wall_seconds": 66.10303439199924,
+      "peak_rss_kib": 927656,
+      "failure": null,
+      "training_seconds": 63.92013256624341
+    },
+    {
+      "cell": "cell_0002",
+      "status": "failed",
+      "completed_k": [
+        8,
+        16,
+        32,
+        64
+      ],
+      "wall_seconds": 375.8953357087448,
+      "peak_rss_kib": 1513392,
+      "failure": "RuntimeError('GPU and CPU fallback failed; see Paper/research/target_selection_2026-09-23/pilot_results/cell_0002/gpu_attempts/20260923T081943_5e7f750696')",
+      "training_seconds": null
+    },
+    {
+      "cell": "cell_0003",
+      "status": "complete",
+      "completed_k": [
+        8,
+        16
+      ],
+      "wall_seconds": 7.524965058080852,
+      "peak_rss_kib": 161324,
+      "failure": null,
+      "training_seconds": 6.798779689706862
+    },
+    {
+      "cell": "cell_0004",
+      "status": "complete",
+      "completed_k": [
+        0
+      ],
+      "wall_seconds": 51.55807597562671,
+      "peak_rss_kib": 1361604,
+      "failure": null,
+      "training_seconds": 15.285941794514656
+    },
+    {
+      "cell": "cell_0005",
+      "status": "complete",
+      "completed_k": [
+        16,
+        32
+      ],
+      "wall_seconds": 171.2132456758991,
+      "peak_rss_kib": 163740,
+      "failure": null,
+      "training_seconds": 170.38712284248322
+    },
+    {
+      "cell": "cell_0006",
+      "status": "complete",
+      "completed_k": [
+        0
+      ],
+      "wall_seconds": 80.59136115200818,
+      "peak_rss_kib": 86144,
+      "failure": null,
+      "training_seconds": 0.0114466343075037
+    },
+    {
+      "cell": "cell_0007",
+      "status": "complete",
+      "completed_k": [
+        8
+      ],
+      "wall_seconds": 1.5068999528884888,
+      "peak_rss_kib": 93912,
+      "failure": null,
+      "training_seconds": 0.5239795353263617
+    }
+  ],
+  "checks": 644,
+  "reconstructed_master_certificates": 20,
+  "original_source_witnesses": 44,
+  "checked_profile_entries": 100736,
+  "cpu_gpu_parity": [
+    {
+      "k": 8,
+      "cpu_primal": 0.05435375311145667,
+      "gpu_primal": 0.054353752921215706,
+      "absolute_difference": 1.9024096187258976e-10
+    },
+    {
+      "k": 16,
+      "cpu_primal": 0.049222213715911366,
+      "gpu_primal": 0.0492222144034651,
+      "absolute_difference": 6.875537361672457e-10
+    },
+    {
+      "k": 32,
+      "cpu_primal": 0.0546344659545104,
+      "gpu_primal": 0.054634465983911515,
+      "absolute_difference": 2.94011134882588e-11
+    },
+    {
+      "k": 64,
+      "cpu_primal": 0.05586380872398074,
+      "gpu_primal": 0.05586380879122625,
+      "absolute_difference": 6.724551471215534e-11
+    },
+    {
+      "k": 128,
+      "cpu_primal": 0.05561346026487761,
+      "gpu_primal": 0.05561346020198319,
+      "absolute_difference": 6.289441883966518e-11
+    }
+  ],
+  "max_check_error": 1.6239252412668978e-08,
+  "bounds_tolerance": 2e-07,
+  "main_grid": {
+    "jobs": 1368,
+    "primary_jobs": 1188,
+    "cases": 22,
+    "hours": 8,
+    "t3_n3_max_targets": 128,
+    "t4_n3_max_targets": 64,
+    "t5_n3_max_targets": 16,
+    "t3_n4_max_targets": 128
+  },
+  "feasibility_decision": "Preserve K128/t4 timeout; cap t4 at64 and t5 at16 by master-size growth, keep n4 and six-step bounded extensions. No ranking-dependent model selection.",
+  "post_pilot_changes": "Original-source validity guards; expanded bounded validation; coverage metadata; timing-based tier caps. Pilot source snapshots unchanged.",
+  "check_details": [
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 3.787262170540373e-12,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 1.249000902703301e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 2.400857290751901e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -2.400857290751901e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": -5.551115123125783e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": 5.551115123125783e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 1.2878587085651816e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 9.819992041748549e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 6.938893903907228e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 1.6361911825413245e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -1.6361911825413245e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": -5.551115123125783e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": 5.551115123125783e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 7.549516567451064e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 6.520894935135857e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 2.7755575615628914e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 4.110600748674642e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -4.110600748674642e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 5.551115123125783e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -5.551115123125783e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 1.2420620087993939e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 2.4778790130852713e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 1.1796119636642288e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 1.1657341758564144e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -1.1657341758564144e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 3.6094358751848077e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 5.181965967437918e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 1.457167719820518e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 3.122502256758253e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -3.122502256758253e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 1.6653345369377348e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -1.6653345369377348e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 4.994558169824082e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 3.7876646263868e-12,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 2.400857290751901e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -2.400857290751901e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 1.8404656410009324e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 5.844600498017272e-11,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": -4.85722573273506e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 3.191891195797325e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -3.191891195797325e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 4.073600519405307e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 4.459072000528863e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 1.249000902703301e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 3.2508717939805365e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -3.2508717939805365e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 2.06546031666921e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 8.637673909461796e-12,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 3.372302437298913e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -3.372302437298913e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 1.6239252412668978e-08,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 2.2332830029725415e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 2.1510571102112408e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 2.8727020762175925e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -2.8727020762175925e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 2.7755575615628914e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -2.7755575615628914e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 1.25091695493771e-08,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 5.218762921810338e-12,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 3.8163916471489756e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 2.518818487118324e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -2.518818487118324e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 1.1907141939104804e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 2.7755575615628914e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 6.1184529664970455e-12,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 2.0816681711721685e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 1.3103060303443215e-12,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -1.3103060303443215e-12,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 1.5416487531005885e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 1.1757227136310888e-12,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 4.85722573273506e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 4.350686477749832e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -4.350686477749832e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 4.532832442727397e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 2.0676862999557954e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": -2.7755575615628914e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 1.6993351170668802e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -1.6993351170668802e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 4.440892098500626e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -4.440892098500626e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 3.7900199922891176e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "actual reward constraint",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "actual objective regret",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "per-target bracket",
+      "error": 3.585639563041809e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 2.7755575615628914e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 8.032463583163008e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -8.032463583163008e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 2.7755575615628914e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -2.7755575615628914e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 1.3933298959045715e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "actual reward constraint",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "actual objective regret",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "per-target bracket",
+      "error": 1.2565969098599084e-11,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 1.3183898417423734e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 5.828670879282072e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -5.828670879282072e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": -5.551115123125783e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": 5.551115123125783e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 4.277689313880728e-13,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 3.469446951953614e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 4.76977141594323e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": -2.8622937353617317e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 4.76977141594323e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -4.76977141594323e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 8.049116928532385e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -8.049116928532385e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 1.4054605652034924e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 5.551115123125783e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 1.3333915846458488e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 2.7755575615628914e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 1.1102230246251565e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -1.1102230246251565e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 5.88418203051333e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 2.1245328829522236e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 2.498001805406602e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 6.800116025829084e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -6.800116025829084e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": -5.551115123125783e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": 5.551115123125783e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 3.645224900388137e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "per-target bracket",
+      "error": 6.1183003108311595e-12,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": -2.0816681711721685e-17,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 6.541989172603735e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -6.541989172603735e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target bracket",
+      "error": 1.0551115536827638e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": 1.3877787807814457e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 4.296563105299356e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -4.296563105299356e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -3.3306690738754696e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector realization replay",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows normalized",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "collector action rows nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "raw controlled law to experiment",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "actual reward constraint",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "actual objective regret",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "per-target bracket",
+      "error": 4.7382392523442896e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "per-target ordering",
+      "error": -2.8206603719382883e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "aggregate upper",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate lower",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "aggregate mean",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "literal hardest target",
+      "error": 0.0,
+      "tolerance": 1e-14
+    },
+    {
+      "name": "decoder normalization",
+      "error": 2.220446049250313e-16,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 2.0263379862939246e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -2.0263379862939246e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "decoder nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual prior normalization",
+      "error": 0.0,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "dual nonnegative",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "dual bounded loss",
+      "error": 0.0,
+      "tolerance": 1e-15
+    },
+    {
+      "name": "witness upper replay",
+      "error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "name": "witness bracket",
+      "error": 1.633641111276063e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "witness lower ordering",
+      "error": -1.633641111276063e-09,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "master objective reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master bounds reconstruction",
+      "error": 0.0,
+      "tolerance": 0.0
+    },
+    {
+      "name": "master KKT replay",
+      "error": 1.8388068845354155e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "CPU/GPU selected-objective parity",
+      "error": 1.9024096187258976e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "CPU/GPU objective interval compatibility",
+      "error": 1.9023847080967826e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "CPU/GPU selected-objective parity",
+      "error": 6.875537361672457e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "CPU/GPU objective interval compatibility",
+      "error": -7.549516567451064e-15,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "CPU/GPU selected-objective parity",
+      "error": 2.94011134882588e-11,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "CPU/GPU objective interval compatibility",
+      "error": -1.2420620087993939e-14,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "CPU/GPU selected-objective parity",
+      "error": 6.724551471215534e-11,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "CPU/GPU objective interval compatibility",
+      "error": -1.9046660776345092e-10,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "CPU/GPU selected-objective parity",
+      "error": 6.289441883966518e-11,
+      "tolerance": 2e-07
+    },
+    {
+      "name": "CPU/GPU objective interval compatibility",
+      "error": 4.5786520408430675e-11,
+      "tolerance": 2e-07
+    }
+  ]
+}

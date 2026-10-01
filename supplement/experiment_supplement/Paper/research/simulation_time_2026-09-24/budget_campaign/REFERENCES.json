@@ -1,0 +1,2549 @@
+{
+  "status": "frozen",
+  "created_utc": "2026-09-24T02:22:45.983063+00:00",
+  "selection": "Lexically first already verified cell per case/method; selection ignores new directed results.",
+  "input": "Paper/research/empirical_ending_checks_2026-09-23/COMPLETE_REWARDS.json",
+  "input_sha256": "d118dfe6b4d1604f140cfefca0a6ee524e9c2eb098b035a033885099950113be",
+  "cases": [
+    "sensors_0.1_0.1",
+    "delayed_0.1_0.1",
+    "irreversible_0.1_0.1",
+    "fresh_hmm_2026096800_q4_s3_c0.2",
+    "delayed_0.25_0.1",
+    "fresh_hmm_2026096801_q4_s3_c0.2",
+    "fresh_hmm_2026096900_q4_s3_c1.0",
+    "fresh_hmm_2026096901_q4_s3_c1.0",
+    "fresh_hmm_2026097000_q4_s3_c5.0",
+    "fresh_hmm_2026097001_q4_s3_c5.0",
+    "fresh_hmm_2026100800_q8_s3_c0.2",
+    "fresh_hmm_2026100801_q8_s3_c0.2",
+    "fresh_hmm_2026100900_q8_s3_c1.0",
+    "fresh_hmm_2026100901_q8_s3_c1.0",
+    "fresh_hmm_2026101000_q8_s3_c5.0",
+    "fresh_hmm_2026101001_q8_s3_c5.0",
+    "hmm_91501_0.2",
+    "hmm_91502_1.0",
+    "hmm_91503_5.0",
+    "irreversible_0.1_0.3",
+    "sensors_0.1_0.3",
+    "sensors_0.25_0.25"
+  ],
+  "methods": [
+    "information",
+    "brier",
+    "pseudo_count",
+    "uniform",
+    "weighted128",
+    "minimax"
+  ],
+  "records": [
+    {
+      "case": "sensors_0.1_0.1",
+      "case_id": "case_00",
+      "method": "information",
+      "cell": "cell_0626",
+      "path": "references/case_00/information.npz",
+      "sha256": "edc6a92f512ee4577a35a5ed54cd319145db8bf31e7fa957c130879b0810e31d",
+      "model": "references/case_00/model.npz",
+      "model_sha256": "109da575632e07a90be0941ec41e8e997e87209e735db1fa17d85d6bbf1d29fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0626/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0626/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0626.json",
+      "replay_residual": 6.661338147750939e-16,
+      "rewards": {
+        "information": 1.273090264960436,
+        "brier": 0.4800000000000002,
+        "pseudo_count": 2.5338203915542943
+      }
+    },
+    {
+      "case": "sensors_0.1_0.1",
+      "case_id": "case_00",
+      "method": "brier",
+      "cell": "cell_0189",
+      "path": "references/case_00/brier.npz",
+      "sha256": "edc6a92f512ee4577a35a5ed54cd319145db8bf31e7fa957c130879b0810e31d",
+      "model": "references/case_00/model.npz",
+      "model_sha256": "109da575632e07a90be0941ec41e8e997e87209e735db1fa17d85d6bbf1d29fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0189/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0189/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0189.json",
+      "replay_residual": 6.661338147750939e-16,
+      "rewards": {
+        "information": 1.273090264960436,
+        "brier": 0.4800000000000002,
+        "pseudo_count": 2.5338203915542943
+      }
+    },
+    {
+      "case": "sensors_0.1_0.1",
+      "case_id": "case_00",
+      "method": "pseudo_count",
+      "cell": "cell_0382",
+      "path": "references/case_00/pseudo_count.npz",
+      "sha256": "2557f00e52552ee5415e5fd81829d2250395dc2f1397bce92473ce318225e72c",
+      "model": "references/case_00/model.npz",
+      "model_sha256": "109da575632e07a90be0941ec41e8e997e87209e735db1fa17d85d6bbf1d29fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0382/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0382/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0382.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 1.273090264960436,
+        "brier": 0.48,
+        "pseudo_count": 2.5338203915542943
+      }
+    },
+    {
+      "case": "sensors_0.1_0.1",
+      "case_id": "case_00",
+      "method": "uniform",
+      "cell": "cell_0856",
+      "path": "references/case_00/uniform.npz",
+      "sha256": "33c6a4aec3300ad6c7330e8835408a9a2883eebc29fad5f7647c4d6a8795e5c4",
+      "model": "references/case_00/model.npz",
+      "model_sha256": "109da575632e07a90be0941ec41e8e997e87209e735db1fa17d85d6bbf1d29fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0856/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0856/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0856.json",
+      "replay_residual": 1.3322676295501878e-15,
+      "rewards": {
+        "information": 1.1704221313790881,
+        "brier": 0.4161753424657535,
+        "pseudo_count": 2.500008413089464
+      }
+    },
+    {
+      "case": "sensors_0.1_0.1",
+      "case_id": "case_00",
+      "method": "weighted128",
+      "cell": "cell_0143",
+      "path": "references/case_00/weighted128.npz",
+      "sha256": "b89a337e84f44ad15d26f5ca8c77c1994db3353ab7e2104d64546a700d5716c3",
+      "model": "references/case_00/model.npz",
+      "model_sha256": "109da575632e07a90be0941ec41e8e997e87209e735db1fa17d85d6bbf1d29fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0143/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0143/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0143.json",
+      "replay_residual": 0.0,
+      "rewards": {
+        "information": 1.273090264960436,
+        "brier": 0.4800000000000001,
+        "pseudo_count": 2.5338203915542943
+      }
+    },
+    {
+      "case": "sensors_0.1_0.1",
+      "case_id": "case_00",
+      "method": "minimax",
+      "cell": "cell_0004",
+      "path": "references/case_00/minimax.npz",
+      "sha256": "526f10b942ffc022dd66cbcd417a28bc5c067d12f2d59f7e62df12f6db6a328f",
+      "model": "references/case_00/model.npz",
+      "model_sha256": "109da575632e07a90be0941ec41e8e997e87209e735db1fa17d85d6bbf1d29fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0004/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0004/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0004.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 1.273090264960436,
+        "brier": 0.4800000000000001,
+        "pseudo_count": 2.5338203915542943
+      }
+    },
+    {
+      "case": "delayed_0.1_0.1",
+      "case_id": "case_01",
+      "method": "information",
+      "cell": "cell_1015",
+      "path": "references/case_01/information.npz",
+      "sha256": "3105a3b4f0bc6879756224ab68d69be8512520cbe43d4fecbf7e6f3ce8478369",
+      "model": "references/case_01/model.npz",
+      "model_sha256": "bfacebf019137f34588e216b9ea1abe416e4d3077a483873ac01c14e06991772",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_1015/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_1015/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_1015.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 1.0620088128214376,
+        "brier": 0.4224000000000001,
+        "pseudo_count": 2.6014443484839536
+      }
+    },
+    {
+      "case": "delayed_0.1_0.1",
+      "case_id": "case_01",
+      "method": "brier",
+      "cell": "cell_1101",
+      "path": "references/case_01/brier.npz",
+      "sha256": "3105a3b4f0bc6879756224ab68d69be8512520cbe43d4fecbf7e6f3ce8478369",
+      "model": "references/case_01/model.npz",
+      "model_sha256": "bfacebf019137f34588e216b9ea1abe416e4d3077a483873ac01c14e06991772",
+      "original_policy": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1101/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1101/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/completion_audit/cell_1101.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 1.0620088128214376,
+        "brier": 0.4224000000000001,
+        "pseudo_count": 2.6014443484839536
+      }
+    },
+    {
+      "case": "delayed_0.1_0.1",
+      "case_id": "case_01",
+      "method": "pseudo_count",
+      "cell": "cell_0931",
+      "path": "references/case_01/pseudo_count.npz",
+      "sha256": "d7bc6b0688f82ade7efe3cc1498bec780d64c2a8169b016a165778cad523aeec",
+      "model": "references/case_01/model.npz",
+      "model_sha256": "bfacebf019137f34588e216b9ea1abe416e4d3077a483873ac01c14e06991772",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0931/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0931/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0931.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.8824647480514978,
+        "brier": 0.31638048780487815,
+        "pseudo_count": 2.601444348483954
+      }
+    },
+    {
+      "case": "delayed_0.1_0.1",
+      "case_id": "case_01",
+      "method": "uniform",
+      "cell": "cell_0130",
+      "path": "references/case_01/uniform.npz",
+      "sha256": "f9b739ca2ee470dfd541dd8eb2a3ab3780ce6890c4748393fc0d17a81c14b84a",
+      "model": "references/case_01/model.npz",
+      "model_sha256": "bfacebf019137f34588e216b9ea1abe416e4d3077a483873ac01c14e06991772",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0130/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0130/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0130.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.8107228996109384,
+        "brier": 0.25124864684263293,
+        "pseudo_count": 2.542273386170502
+      }
+    },
+    {
+      "case": "delayed_0.1_0.1",
+      "case_id": "case_01",
+      "method": "weighted128",
+      "cell": "cell_0329",
+      "path": "references/case_01/weighted128.npz",
+      "sha256": "30b18beb7829c77c6c3db522e03c53bc91b0068694c7a1d054263367b1dabb72",
+      "model": "references/case_01/model.npz",
+      "model_sha256": "bfacebf019137f34588e216b9ea1abe416e4d3077a483873ac01c14e06991772",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0329/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0329/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0329.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 1.0359292864686998,
+        "brier": 0.3986055338382889,
+        "pseudo_count": 2.5825822312094946
+      }
+    },
+    {
+      "case": "delayed_0.1_0.1",
+      "case_id": "case_01",
+      "method": "minimax",
+      "cell": "cell_0219",
+      "path": "references/case_01/minimax.npz",
+      "sha256": "1ba951b1e69cacb71259d386014572f6c40f9e4ace008363a4f1ef018356e18c",
+      "model": "references/case_01/model.npz",
+      "model_sha256": "bfacebf019137f34588e216b9ea1abe416e4d3077a483873ac01c14e06991772",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0219/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0219/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0219.json",
+      "replay_residual": 1.1102230246251565e-16,
+      "rewards": {
+        "information": 1.0309524243499584,
+        "brier": 0.3944574839057584,
+        "pseudo_count": 2.5825034960650326
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.1",
+      "case_id": "case_02",
+      "method": "information",
+      "cell": "cell_1174",
+      "path": "references/case_02/information.npz",
+      "sha256": "fec538903f9b2adf802b610bb5d15d74bcd541f88c248a73294d4b2801051455",
+      "model": "references/case_02/model.npz",
+      "model_sha256": "ae3780956405f6ecfe3695ae4dac4e725d7c8f69d2d798f713f402d61c5a14fc",
+      "original_policy": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1174/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1174/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/completion_audit/cell_1174.json",
+      "replay_residual": 1.3322676295501878e-15,
+      "rewards": {
+        "information": 0.862417730635044,
+        "brier": 0.2247013698630138,
+        "pseudo_count": 2.398572477694975
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.1",
+      "case_id": "case_02",
+      "method": "brier",
+      "cell": "cell_0350",
+      "path": "references/case_02/brier.npz",
+      "sha256": "fec538903f9b2adf802b610bb5d15d74bcd541f88c248a73294d4b2801051455",
+      "model": "references/case_02/model.npz",
+      "model_sha256": "ae3780956405f6ecfe3695ae4dac4e725d7c8f69d2d798f713f402d61c5a14fc",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0350/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0350/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0350.json",
+      "replay_residual": 1.3322676295501878e-15,
+      "rewards": {
+        "information": 0.862417730635044,
+        "brier": 0.2247013698630138,
+        "pseudo_count": 2.398572477694975
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.1",
+      "case_id": "case_02",
+      "method": "pseudo_count",
+      "cell": "cell_0751",
+      "path": "references/case_02/pseudo_count.npz",
+      "sha256": "fec538903f9b2adf802b610bb5d15d74bcd541f88c248a73294d4b2801051455",
+      "model": "references/case_02/model.npz",
+      "model_sha256": "ae3780956405f6ecfe3695ae4dac4e725d7c8f69d2d798f713f402d61c5a14fc",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0751/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0751/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0751.json",
+      "replay_residual": 1.3322676295501878e-15,
+      "rewards": {
+        "information": 0.862417730635044,
+        "brier": 0.2247013698630138,
+        "pseudo_count": 2.398572477694975
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.1",
+      "case_id": "case_02",
+      "method": "uniform",
+      "cell": "cell_0783",
+      "path": "references/case_02/uniform.npz",
+      "sha256": "161968e4dbc7e86c06f69d733bb8c20dce31e0df9952de9d7038645d7289f341",
+      "model": "references/case_02/model.npz",
+      "model_sha256": "ae3780956405f6ecfe3695ae4dac4e725d7c8f69d2d798f713f402d61c5a14fc",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0783/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0783/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0783.json",
+      "replay_residual": 1.3322676295501878e-15,
+      "rewards": {
+        "information": 0.862417730635044,
+        "brier": 0.2247013698630138,
+        "pseudo_count": 2.398572477694975
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.1",
+      "case_id": "case_02",
+      "method": "weighted128",
+      "cell": "cell_0268",
+      "path": "references/case_02/weighted128.npz",
+      "sha256": "80d17106b1eb6e7e4100fc6954ca8d2a9405c1fe4b110e36fb4519a36a1aeb0c",
+      "model": "references/case_02/model.npz",
+      "model_sha256": "ae3780956405f6ecfe3695ae4dac4e725d7c8f69d2d798f713f402d61c5a14fc",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0268/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0268/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0268.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.8624177306350438,
+        "brier": 0.2247013698630138,
+        "pseudo_count": 2.398572477694975
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.1",
+      "case_id": "case_02",
+      "method": "minimax",
+      "cell": "cell_0202",
+      "path": "references/case_02/minimax.npz",
+      "sha256": "b75cc63d64273b482f1fa241c098bf08db53daf0743dc072e62ffb9addf0abf0",
+      "model": "references/case_02/model.npz",
+      "model_sha256": "ae3780956405f6ecfe3695ae4dac4e725d7c8f69d2d798f713f402d61c5a14fc",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0202/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0202/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0202.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.8624177306350438,
+        "brier": 0.2247013698630138,
+        "pseudo_count": 2.398572477694975
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096800_q4_s3_c0.2",
+      "case_id": "case_03",
+      "method": "information",
+      "cell": "cell_0835",
+      "path": "references/case_03/information.npz",
+      "sha256": "a5e9b5b47f71b794193caf0c657abb72a6c3f7932663f0d66d97bcef7bd91aee",
+      "model": "references/case_03/model.npz",
+      "model_sha256": "ea7003c1f15f882dfe0dcdf13428021c5ca47c687fb5365bf82dd2c2c4768736",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0835/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0835/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0835.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.0154441642687404,
+        "brier": 0.3388713557262566,
+        "pseudo_count": 2.475295506580828
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096800_q4_s3_c0.2",
+      "case_id": "case_03",
+      "method": "brier",
+      "cell": "cell_1186",
+      "path": "references/case_03/brier.npz",
+      "sha256": "0a81f4275ebe210282c3cf96ad71e1fa1521e199f1e925f4a04ef1e3ede160a8",
+      "model": "references/case_03/model.npz",
+      "model_sha256": "ea7003c1f15f882dfe0dcdf13428021c5ca47c687fb5365bf82dd2c2c4768736",
+      "original_policy": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1186/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1186/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/completion_audit/cell_1186.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.0154441642687404,
+        "brier": 0.3388713557262566,
+        "pseudo_count": 2.475295506580828
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096800_q4_s3_c0.2",
+      "case_id": "case_03",
+      "method": "pseudo_count",
+      "cell": "cell_1076",
+      "path": "references/case_03/pseudo_count.npz",
+      "sha256": "c753bd0a89e3d7fd569a1c69df6203655ee40f504f47fa08f755a6024aefb544",
+      "model": "references/case_03/model.npz",
+      "model_sha256": "ea7003c1f15f882dfe0dcdf13428021c5ca47c687fb5365bf82dd2c2c4768736",
+      "original_policy": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1076/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1076/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/completion_audit/cell_1076.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.33844841835376727,
+        "brier": 0.11095823353735035,
+        "pseudo_count": 2.675620543977453
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096800_q4_s3_c0.2",
+      "case_id": "case_03",
+      "method": "uniform",
+      "cell": "cell_0509",
+      "path": "references/case_03/uniform.npz",
+      "sha256": "4b8dc2657bacbb30c0dd0e9bbcbf6708530fb2b677de425c49b5c4b5587642cb",
+      "model": "references/case_03/model.npz",
+      "model_sha256": "ea7003c1f15f882dfe0dcdf13428021c5ca47c687fb5365bf82dd2c2c4768736",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0509/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0509/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0509.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.5789495469492096,
+        "brier": 0.18894565973980604,
+        "pseudo_count": 2.5696784782335156
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096800_q4_s3_c0.2",
+      "case_id": "case_03",
+      "method": "weighted128",
+      "cell": "cell_0192",
+      "path": "references/case_03/weighted128.npz",
+      "sha256": "66ea7177fa1f695123ae3209591fa48b68cd7a2b4794c913251eee73d1f86724",
+      "model": "references/case_03/model.npz",
+      "model_sha256": "ea7003c1f15f882dfe0dcdf13428021c5ca47c687fb5365bf82dd2c2c4768736",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0192/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0192/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0192.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.8932712837915748,
+        "brier": 0.29928725080120633,
+        "pseudo_count": 2.516579570383477
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096800_q4_s3_c0.2",
+      "case_id": "case_03",
+      "method": "minimax",
+      "cell": "cell_0261",
+      "path": "references/case_03/minimax.npz",
+      "sha256": "25a5a0fbabb04493c93e2f2489d1b7e84f3615981eaa485a7f7a9cbb93c44f41",
+      "model": "references/case_03/model.npz",
+      "model_sha256": "ea7003c1f15f882dfe0dcdf13428021c5ca47c687fb5365bf82dd2c2c4768736",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0261/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0261/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0261.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 0.8689454216226671,
+        "brier": 0.29212476534377474,
+        "pseudo_count": 2.5143213972242795
+      }
+    },
+    {
+      "case": "delayed_0.25_0.1",
+      "case_id": "case_04",
+      "method": "information",
+      "cell": "cell_0402",
+      "path": "references/case_04/information.npz",
+      "sha256": "5e9b80f08047e6894887f133717647a473950c9477bf9e8d3497d872163509ec",
+      "model": "references/case_04/model.npz",
+      "model_sha256": "7cfc9c9624e3638e6d6a838d87bef799374e01de2bf655d150878ede22092466",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0402/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0402/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0402.json",
+      "replay_residual": 0.0,
+      "rewards": {
+        "information": 0.8624177306350442,
+        "brier": 0.22470136986301376,
+        "pseudo_count": 2.398572477694975
+      }
+    },
+    {
+      "case": "delayed_0.25_0.1",
+      "case_id": "case_04",
+      "method": "brier",
+      "cell": "cell_0208",
+      "path": "references/case_04/brier.npz",
+      "sha256": "4034cd8ccb0d2626035d1187e41172522a160983357fdd2005f207574c3fefc1",
+      "model": "references/case_04/model.npz",
+      "model_sha256": "7cfc9c9624e3638e6d6a838d87bef799374e01de2bf655d150878ede22092466",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0208/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0208/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0208.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.7197262819515857,
+        "brier": 0.26250000000000007,
+        "pseudo_count": 2.6014443484839536
+      }
+    },
+    {
+      "case": "delayed_0.25_0.1",
+      "case_id": "case_04",
+      "method": "pseudo_count",
+      "cell": "cell_1182",
+      "path": "references/case_04/pseudo_count.npz",
+      "sha256": "a54ca677233ed29c7ba2fcde356abf504ba7a87631a4b9a7cbd0cde98d7af2d5",
+      "model": "references/case_04/model.npz",
+      "model_sha256": "7cfc9c9624e3638e6d6a838d87bef799374e01de2bf655d150878ede22092466",
+      "original_policy": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1182/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1182/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/completion_audit/cell_1182.json",
+      "replay_residual": 1.1102230246251565e-16,
+      "rewards": {
+        "information": 0.6642928179032674,
+        "brier": 0.22049161585365862,
+        "pseudo_count": 2.601444348483954
+      }
+    },
+    {
+      "case": "delayed_0.25_0.1",
+      "case_id": "case_04",
+      "method": "uniform",
+      "cell": "cell_0658",
+      "path": "references/case_04/uniform.npz",
+      "sha256": "9cf661702c9d05b14bbfd564445c62c7c91e6477b3fd51d85416406bc4e7da94",
+      "model": "references/case_04/model.npz",
+      "model_sha256": "7cfc9c9624e3638e6d6a838d87bef799374e01de2bf655d150878ede22092466",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0658/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0658/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0658.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.6738762538255982,
+        "brier": 0.19938340294019385,
+        "pseudo_count": 2.547424429764753
+      }
+    },
+    {
+      "case": "delayed_0.25_0.1",
+      "case_id": "case_04",
+      "method": "weighted128",
+      "cell": "cell_0014",
+      "path": "references/case_04/weighted128.npz",
+      "sha256": "62d5ac04532f15802042b70580e9e8e15eb3d97a8dcbc053c24abea745aa55dd",
+      "model": "references/case_04/model.npz",
+      "model_sha256": "7cfc9c9624e3638e6d6a838d87bef799374e01de2bf655d150878ede22092466",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0014/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0014/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0014.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.7415766651559821,
+        "brier": 0.23882849576068332,
+        "pseudo_count": 2.5490242211877474
+      }
+    },
+    {
+      "case": "delayed_0.25_0.1",
+      "case_id": "case_04",
+      "method": "minimax",
+      "cell": "cell_0129",
+      "path": "references/case_04/minimax.npz",
+      "sha256": "e3f2b5e2c2f2a1121f9a0fd17366b201c6d32ecdba5018dc61b1c8487e97aaee",
+      "model": "references/case_04/model.npz",
+      "model_sha256": "7cfc9c9624e3638e6d6a838d87bef799374e01de2bf655d150878ede22092466",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0129/checkpoint_016/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0129/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0129.json",
+      "replay_residual": 0.0,
+      "rewards": {
+        "information": 0.7242132657280567,
+        "brier": 0.2374095297795762,
+        "pseudo_count": 2.5589666819439145
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096801_q4_s3_c0.2",
+      "case_id": "case_05",
+      "method": "information",
+      "cell": "cell_0303",
+      "path": "references/case_05/information.npz",
+      "sha256": "6ea1099a6c4469a5afb93edb4e67ec118d7c6a27d1a30baec9b1d96cc6171ca5",
+      "model": "references/case_05/model.npz",
+      "model_sha256": "710339693772bbf1708cba5bcdc3046ce2c430c4fb861aa9cc4e21c9dec0b8e5",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0303/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0303/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0303.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.0849054638572933,
+        "brier": 0.378819718146301,
+        "pseudo_count": 2.4779093904479392
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096801_q4_s3_c0.2",
+      "case_id": "case_05",
+      "method": "brier",
+      "cell": "cell_0809",
+      "path": "references/case_05/brier.npz",
+      "sha256": "6ea1099a6c4469a5afb93edb4e67ec118d7c6a27d1a30baec9b1d96cc6171ca5",
+      "model": "references/case_05/model.npz",
+      "model_sha256": "710339693772bbf1708cba5bcdc3046ce2c430c4fb861aa9cc4e21c9dec0b8e5",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0809/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0809/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0809.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.0849054638572933,
+        "brier": 0.378819718146301,
+        "pseudo_count": 2.4779093904479392
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096801_q4_s3_c0.2",
+      "case_id": "case_05",
+      "method": "pseudo_count",
+      "cell": "cell_0628",
+      "path": "references/case_05/pseudo_count.npz",
+      "sha256": "30de5724d7436a4511abedb2cc86bcb24afbf287d41c01227dc588d285d2f562",
+      "model": "references/case_05/model.npz",
+      "model_sha256": "710339693772bbf1708cba5bcdc3046ce2c430c4fb861aa9cc4e21c9dec0b8e5",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0628/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0628/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0628.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.9168624060802308,
+        "brier": 0.30846361072364115,
+        "pseudo_count": 2.588707201573174
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096801_q4_s3_c0.2",
+      "case_id": "case_05",
+      "method": "uniform",
+      "cell": "cell_0457",
+      "path": "references/case_05/uniform.npz",
+      "sha256": "f9f2407e22d2a6d23944645afd66e83267a185297c930dd9c68116d830dd2ee4",
+      "model": "references/case_05/model.npz",
+      "model_sha256": "710339693772bbf1708cba5bcdc3046ce2c430c4fb861aa9cc4e21c9dec0b8e5",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0457/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0457/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0457.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 0.7669599158504912,
+        "brier": 0.24841604315199084,
+        "pseudo_count": 2.505713927483908
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096801_q4_s3_c0.2",
+      "case_id": "case_05",
+      "method": "weighted128",
+      "cell": "cell_0008",
+      "path": "references/case_05/weighted128.npz",
+      "sha256": "ff0fc024b4ae84959943f17b85b9336b65378d2731396a382be2dbbb11452a96",
+      "model": "references/case_05/model.npz",
+      "model_sha256": "710339693772bbf1708cba5bcdc3046ce2c430c4fb861aa9cc4e21c9dec0b8e5",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0008/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0008/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0008.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 1.0351415709783875,
+        "brier": 0.35922809450389614,
+        "pseudo_count": 2.4912911809860585
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096801_q4_s3_c0.2",
+      "case_id": "case_05",
+      "method": "minimax",
+      "cell": "cell_0467",
+      "path": "references/case_05/minimax.npz",
+      "sha256": "9687297e3f1e8ac4745b6e4f4ddfcd01d07321fac9661a69f28004d782bfdabd",
+      "model": "references/case_05/model.npz",
+      "model_sha256": "710339693772bbf1708cba5bcdc3046ce2c430c4fb861aa9cc4e21c9dec0b8e5",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0467/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0467/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0467.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.9948836908881928,
+        "brier": 0.3410373318035087,
+        "pseudo_count": 2.479081844783539
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096900_q4_s3_c1.0",
+      "case_id": "case_06",
+      "method": "information",
+      "cell": "cell_0529",
+      "path": "references/case_06/information.npz",
+      "sha256": "7a4d68f6fc3073af9833bcdc09e42326af7fdc5889a6bf19f1bb79f1a4ba0a12",
+      "model": "references/case_06/model.npz",
+      "model_sha256": "a384c1a9ad3ab4532b9c63dd63f8e7253578a32866edafa95f3393ded80e77ae",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0529/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0529/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0529.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.36686252420605503,
+        "brier": 0.12290449653499547,
+        "pseudo_count": 2.5675689933288055
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096900_q4_s3_c1.0",
+      "case_id": "case_06",
+      "method": "brier",
+      "cell": "cell_0567",
+      "path": "references/case_06/brier.npz",
+      "sha256": "bcbe6ae488ece8e676c4d0f5b934a006f9e63d16f9e7da7b9a18be2355bd9a07",
+      "model": "references/case_06/model.npz",
+      "model_sha256": "a384c1a9ad3ab4532b9c63dd63f8e7253578a32866edafa95f3393ded80e77ae",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0567/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0567/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0567.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.3622508874157122,
+        "brier": 0.12322589211516333,
+        "pseudo_count": 2.5633231241062298
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096900_q4_s3_c1.0",
+      "case_id": "case_06",
+      "method": "pseudo_count",
+      "cell": "cell_0871",
+      "path": "references/case_06/pseudo_count.npz",
+      "sha256": "b6f391e007f0740d03ca1496f5d6451851e9c5e6ffe2eed4b216c7d0baecc333",
+      "model": "references/case_06/model.npz",
+      "model_sha256": "a384c1a9ad3ab4532b9c63dd63f8e7253578a32866edafa95f3393ded80e77ae",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0871/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0871/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0871.json",
+      "replay_residual": 1.1102230246251565e-16,
+      "rewards": {
+        "information": 0.2973313169772007,
+        "brier": 0.09557885179108894,
+        "pseudo_count": 2.5794865615753464
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096900_q4_s3_c1.0",
+      "case_id": "case_06",
+      "method": "uniform",
+      "cell": "cell_0701",
+      "path": "references/case_06/uniform.npz",
+      "sha256": "443653bfbdb8dd4e0e2e98f5825cb8079f6121e71fb4bed9f8a24f7c42df5ae8",
+      "model": "references/case_06/model.npz",
+      "model_sha256": "a384c1a9ad3ab4532b9c63dd63f8e7253578a32866edafa95f3393ded80e77ae",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0701/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0701/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0701.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 0.30883922297647093,
+        "brier": 0.10157553863495816,
+        "pseudo_count": 2.5646593714191166
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096900_q4_s3_c1.0",
+      "case_id": "case_06",
+      "method": "weighted128",
+      "cell": "cell_0077",
+      "path": "references/case_06/weighted128.npz",
+      "sha256": "76981f8b241e7b84ba7e72bf1e13145f2dce2dcacc1a68dbe5732640b1f79a38",
+      "model": "references/case_06/model.npz",
+      "model_sha256": "a384c1a9ad3ab4532b9c63dd63f8e7253578a32866edafa95f3393ded80e77ae",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0077/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0077/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0077.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 0.3427420447544516,
+        "brier": 0.11440095881953799,
+        "pseudo_count": 2.565354528945025
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096900_q4_s3_c1.0",
+      "case_id": "case_06",
+      "method": "minimax",
+      "cell": "cell_0116",
+      "path": "references/case_06/minimax.npz",
+      "sha256": "d85af63eec786c259568ffa10c7de86d30efd9e10fa47ca95dbaf63cd5fe02ad",
+      "model": "references/case_06/model.npz",
+      "model_sha256": "a384c1a9ad3ab4532b9c63dd63f8e7253578a32866edafa95f3393ded80e77ae",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0116/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0116/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0116.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.3301583438260256,
+        "brier": 0.10989092678356255,
+        "pseudo_count": 2.5670088356507934
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096901_q4_s3_c1.0",
+      "case_id": "case_07",
+      "method": "information",
+      "cell": "cell_0683",
+      "path": "references/case_07/information.npz",
+      "sha256": "ea2efafe5cfb5bfc29c79954b86325e7b9f2fec62a7468ff9a95b47e24eaf905",
+      "model": "references/case_07/model.npz",
+      "model_sha256": "423eb5ccd1bb3abe8a23087dcdf81904037ea2dd19238aad9a4c58e27d541759",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0683/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0683/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0683.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.3412697012666772,
+        "brier": 0.11470994374166449,
+        "pseudo_count": 2.5449059353068115
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096901_q4_s3_c1.0",
+      "case_id": "case_07",
+      "method": "brier",
+      "cell": "cell_0463",
+      "path": "references/case_07/brier.npz",
+      "sha256": "814388cfc1e9754ab1806df8fc652e3b8419839a4c65eba32fff2f97958d1dfa",
+      "model": "references/case_07/model.npz",
+      "model_sha256": "423eb5ccd1bb3abe8a23087dcdf81904037ea2dd19238aad9a4c58e27d541759",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0463/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0463/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0463.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.3412697012666772,
+        "brier": 0.11470994374166449,
+        "pseudo_count": 2.5449059353068115
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096901_q4_s3_c1.0",
+      "case_id": "case_07",
+      "method": "pseudo_count",
+      "cell": "cell_0498",
+      "path": "references/case_07/pseudo_count.npz",
+      "sha256": "20a78a58e7bf4d663fa5a067bcfba70431c1c8d9020f7e9d846f5fd6f905484c",
+      "model": "references/case_07/model.npz",
+      "model_sha256": "423eb5ccd1bb3abe8a23087dcdf81904037ea2dd19238aad9a4c58e27d541759",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0498/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0498/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0498.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.20535562327338153,
+        "brier": 0.0707013321640021,
+        "pseudo_count": 2.6184253986340593
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096901_q4_s3_c1.0",
+      "case_id": "case_07",
+      "method": "uniform",
+      "cell": "cell_0605",
+      "path": "references/case_07/uniform.npz",
+      "sha256": "c88eb277ae50ebbe4aeba22398064eb2fd5ca008e96449061456c9f3e5f8fd3f",
+      "model": "references/case_07/model.npz",
+      "model_sha256": "423eb5ccd1bb3abe8a23087dcdf81904037ea2dd19238aad9a4c58e27d541759",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0605/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0605/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0605.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 0.24579470911708712,
+        "brier": 0.08225098074030046,
+        "pseudo_count": 2.597843353805766
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096901_q4_s3_c1.0",
+      "case_id": "case_07",
+      "method": "weighted128",
+      "cell": "cell_0142",
+      "path": "references/case_07/weighted128.npz",
+      "sha256": "d9da274496e624b6bdc1c2e48a0be2780935f7dfe71439fb8697caa8bacbddbe",
+      "model": "references/case_07/model.npz",
+      "model_sha256": "423eb5ccd1bb3abe8a23087dcdf81904037ea2dd19238aad9a4c58e27d541759",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0142/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0142/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0142.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.3011846585384337,
+        "brier": 0.10133803883523185,
+        "pseudo_count": 2.577270230407377
+      }
+    },
+    {
+      "case": "fresh_hmm_2026096901_q4_s3_c1.0",
+      "case_id": "case_07",
+      "method": "minimax",
+      "cell": "cell_0249",
+      "path": "references/case_07/minimax.npz",
+      "sha256": "357b98db3dbf011a0eb24b3bb72b3a1567bc2b04ab046c1f7059497ea7c9f882",
+      "model": "references/case_07/model.npz",
+      "model_sha256": "423eb5ccd1bb3abe8a23087dcdf81904037ea2dd19238aad9a4c58e27d541759",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0249/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0249/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0249.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 0.26320497015887234,
+        "brier": 0.08789652119350189,
+        "pseudo_count": 2.583875342146074
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097000_q4_s3_c5.0",
+      "case_id": "case_08",
+      "method": "information",
+      "cell": "cell_0163",
+      "path": "references/case_08/information.npz",
+      "sha256": "536e23c9fec08dd56cebdf6426c73847b802086109bf1f7ae8196f4e12d0e07c",
+      "model": "references/case_08/model.npz",
+      "model_sha256": "6df304576c334712d6839dba6928cfbd69c1e428ffa7c2c473ba14dfbcd49fda",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0163/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0163/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0163.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.03887684219992682,
+        "brier": 0.01326585068584285,
+        "pseudo_count": 2.5950371024076464
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097000_q4_s3_c5.0",
+      "case_id": "case_08",
+      "method": "brier",
+      "cell": "cell_0051",
+      "path": "references/case_08/brier.npz",
+      "sha256": "a0631f6843371045b533f32a84420555f1eff7a180c7c74d30bbb37695cb529e",
+      "model": "references/case_08/model.npz",
+      "model_sha256": "6df304576c334712d6839dba6928cfbd69c1e428ffa7c2c473ba14dfbcd49fda",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0051/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0051/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0051.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.03887684219992682,
+        "brier": 0.01326585068584285,
+        "pseudo_count": 2.5950371024076464
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097000_q4_s3_c5.0",
+      "case_id": "case_08",
+      "method": "pseudo_count",
+      "cell": "cell_0363",
+      "path": "references/case_08/pseudo_count.npz",
+      "sha256": "05a43d03be5878762f941330ca6dddc6ac0c0708beba43cda214820bfedf44b8",
+      "model": "references/case_08/model.npz",
+      "model_sha256": "6df304576c334712d6839dba6928cfbd69c1e428ffa7c2c473ba14dfbcd49fda",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0363/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0363/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0363.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.02885855533136228,
+        "brier": 0.00972830535419994,
+        "pseudo_count": 2.599380561874268
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097000_q4_s3_c5.0",
+      "case_id": "case_08",
+      "method": "uniform",
+      "cell": "cell_0401",
+      "path": "references/case_08/uniform.npz",
+      "sha256": "12ff0792751a58c1af62f7cf0d8b335f63aafbc48089421f575a5170bed7fe3a",
+      "model": "references/case_08/model.npz",
+      "model_sha256": "6df304576c334712d6839dba6928cfbd69c1e428ffa7c2c473ba14dfbcd49fda",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0401/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0401/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0401.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.029117169276669852,
+        "brier": 0.010002935689223613,
+        "pseudo_count": 2.5979308723843717
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097000_q4_s3_c5.0",
+      "case_id": "case_08",
+      "method": "weighted128",
+      "cell": "cell_0465",
+      "path": "references/case_08/weighted128.npz",
+      "sha256": "3c6cafbd9b3d778b69701d962bc3ba465f29be006effe787a37028e57ff36c8f",
+      "model": "references/case_08/model.npz",
+      "model_sha256": "6df304576c334712d6839dba6928cfbd69c1e428ffa7c2c473ba14dfbcd49fda",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0465/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0465/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0465.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.03193983451142035,
+        "brier": 0.011006632803588323,
+        "pseudo_count": 2.5980559413709465
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097000_q4_s3_c5.0",
+      "case_id": "case_08",
+      "method": "minimax",
+      "cell": "cell_0109",
+      "path": "references/case_08/minimax.npz",
+      "sha256": "d99ea7dbb2bf56e996aae492c195c3621eaf712421bf7678e5d0b0f93cb4006d",
+      "model": "references/case_08/model.npz",
+      "model_sha256": "6df304576c334712d6839dba6928cfbd69c1e428ffa7c2c473ba14dfbcd49fda",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0109/checkpoint_008/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0109/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0109.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.0327732935714693,
+        "brier": 0.011304639222474822,
+        "pseudo_count": 2.5983114198472292
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097001_q4_s3_c5.0",
+      "case_id": "case_09",
+      "method": "information",
+      "cell": "cell_1118",
+      "path": "references/case_09/information.npz",
+      "sha256": "cdf0ebdbaeb4de43c3e42bf654c9c530bbc3f0153370c855c501fe31d316fb6b",
+      "model": "references/case_09/model.npz",
+      "model_sha256": "9b7fe2eec03050f7bdfc81f870ad8c69c2f84959b71424f4752d033740fd2961",
+      "original_policy": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1118/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1118/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/completion_audit/cell_1118.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 0.07605534056642371,
+        "brier": 0.02621162454640774,
+        "pseudo_count": 2.5903047193514195
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097001_q4_s3_c5.0",
+      "case_id": "case_09",
+      "method": "brier",
+      "cell": "cell_0356",
+      "path": "references/case_09/brier.npz",
+      "sha256": "b848ef825335743043835a496ec9da602707c8d5284a07f01d43c4797112c673",
+      "model": "references/case_09/model.npz",
+      "model_sha256": "9b7fe2eec03050f7bdfc81f870ad8c69c2f84959b71424f4752d033740fd2961",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0356/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0356/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0356.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.07378208788200613,
+        "brier": 0.02644219276602805,
+        "pseudo_count": 2.5888879066006996
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097001_q4_s3_c5.0",
+      "case_id": "case_09",
+      "method": "pseudo_count",
+      "cell": "cell_0603",
+      "path": "references/case_09/pseudo_count.npz",
+      "sha256": "c2d25f9bd3ce4d2bd6fed4ba062524d475b61ee4791d9d4b915f6f1faf0f12f8",
+      "model": "references/case_09/model.npz",
+      "model_sha256": "9b7fe2eec03050f7bdfc81f870ad8c69c2f84959b71424f4752d033740fd2961",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0603/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0603/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0603.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.06937975100250027,
+        "brier": 0.023932001181564466,
+        "pseudo_count": 2.6042551614970884
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097001_q4_s3_c5.0",
+      "case_id": "case_09",
+      "method": "uniform",
+      "cell": "cell_1160",
+      "path": "references/case_09/uniform.npz",
+      "sha256": "6b97ee9b7b2144ef3eefe9264bacabe2cd1829e36bd7e1dab8259d41edf4faa7",
+      "model": "references/case_09/model.npz",
+      "model_sha256": "9b7fe2eec03050f7bdfc81f870ad8c69c2f84959b71424f4752d033740fd2961",
+      "original_policy": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1160/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1160/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/completion_audit/cell_1160.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.0615385707045677,
+        "brier": 0.0214147585467388,
+        "pseudo_count": 2.596396974388343
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097001_q4_s3_c5.0",
+      "case_id": "case_09",
+      "method": "weighted128",
+      "cell": "cell_0096",
+      "path": "references/case_09/weighted128.npz",
+      "sha256": "11d38de202913f5d172a23cd48331c945a4047f8007d146cc2eb287e16474ec2",
+      "model": "references/case_09/model.npz",
+      "model_sha256": "9b7fe2eec03050f7bdfc81f870ad8c69c2f84959b71424f4752d033740fd2961",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0096/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0096/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0096.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.06551962683956569,
+        "brier": 0.02282650994576363,
+        "pseudo_count": 2.599537362223432
+      }
+    },
+    {
+      "case": "fresh_hmm_2026097001_q4_s3_c5.0",
+      "case_id": "case_09",
+      "method": "minimax",
+      "cell": "cell_0117",
+      "path": "references/case_09/minimax.npz",
+      "sha256": "95474f3e7547286a3c31290467c2a161028475c2abb2a4e0620950a0d5c8e73e",
+      "model": "references/case_09/model.npz",
+      "model_sha256": "9b7fe2eec03050f7bdfc81f870ad8c69c2f84959b71424f4752d033740fd2961",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0117/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0117/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0117.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.06584866726260685,
+        "brier": 0.02294626161199287,
+        "pseudo_count": 2.5993113413925633
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100800_q8_s3_c0.2",
+      "case_id": "case_10",
+      "method": "information",
+      "cell": "cell_0370",
+      "path": "references/case_10/information.npz",
+      "sha256": "433c84a70340d1223354c01d6351c40ad1f82d8a0bed023e80d52708fe0576d0",
+      "model": "references/case_10/model.npz",
+      "model_sha256": "0033fa2e3a1cd538b297aea5c3b3cfa18f78f742446f6c90a08283d202ccdbbb",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0370/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0370/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0370.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.374186417369442,
+        "brier": 0.27827315935126135,
+        "pseudo_count": 2.525939847726891
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100800_q8_s3_c0.2",
+      "case_id": "case_10",
+      "method": "brier",
+      "cell": "cell_0930",
+      "path": "references/case_10/brier.npz",
+      "sha256": "95b7e72a2c92a7d2731e5b21635c6d1d855b8615c27022c7d515bea5eadc98d9",
+      "model": "references/case_10/model.npz",
+      "model_sha256": "0033fa2e3a1cd538b297aea5c3b3cfa18f78f742446f6c90a08283d202ccdbbb",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0930/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0930/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0930.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.374186417369442,
+        "brier": 0.27827315935126135,
+        "pseudo_count": 2.525939847726891
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100800_q8_s3_c0.2",
+      "case_id": "case_10",
+      "method": "pseudo_count",
+      "cell": "cell_0988",
+      "path": "references/case_10/pseudo_count.npz",
+      "sha256": "402ba003228652288a33fd3fe0144dd994f1642b97f33f4233246d22d3930aa0",
+      "model": "references/case_10/model.npz",
+      "model_sha256": "0033fa2e3a1cd538b297aea5c3b3cfa18f78f742446f6c90a08283d202ccdbbb",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0988/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0988/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0988.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.9414937827776351,
+        "brier": 0.16261934493399183,
+        "pseudo_count": 2.6501358544959297
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100800_q8_s3_c0.2",
+      "case_id": "case_10",
+      "method": "uniform",
+      "cell": "cell_0460",
+      "path": "references/case_10/uniform.npz",
+      "sha256": "60c2df79c53ad5bddac5c66c2ffc2325be7fbad9bf56a92163cb34a570fe6640",
+      "model": "references/case_10/model.npz",
+      "model_sha256": "0033fa2e3a1cd538b297aea5c3b3cfa18f78f742446f6c90a08283d202ccdbbb",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0460/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0460/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0460.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.0946766539121646,
+        "brier": 0.21032738845081284,
+        "pseudo_count": 2.5905522625378867
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100800_q8_s3_c0.2",
+      "case_id": "case_10",
+      "method": "weighted128",
+      "cell": "cell_0070",
+      "path": "references/case_10/weighted128.npz",
+      "sha256": "f9375cf15e843215d2e29547cc5881fcd102b2d6d2c15a73adeaa8365daa3a01",
+      "model": "references/case_10/model.npz",
+      "model_sha256": "0033fa2e3a1cd538b297aea5c3b3cfa18f78f742446f6c90a08283d202ccdbbb",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0070/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0070/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_0070/INDEPENDENT_CHECK.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 1.2304117164086001,
+        "brier": 0.25156415107836355,
+        "pseudo_count": 2.57464274409558
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100800_q8_s3_c0.2",
+      "case_id": "case_10",
+      "method": "minimax",
+      "cell": "cell_0410",
+      "path": "references/case_10/minimax.npz",
+      "sha256": "cff428b0a10f4072ae692e2a4bfc8a44d39d5c00068f88d8c99ffb366006daad",
+      "model": "references/case_10/model.npz",
+      "model_sha256": "0033fa2e3a1cd538b297aea5c3b3cfa18f78f742446f6c90a08283d202ccdbbb",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0410/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0410/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0410.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.2242772778194588,
+        "brier": 0.246394374433829,
+        "pseudo_count": 2.562435133318692
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100801_q8_s3_c0.2",
+      "case_id": "case_11",
+      "method": "information",
+      "cell": "cell_0221",
+      "path": "references/case_11/information.npz",
+      "sha256": "336efb3edf24e0f957933358348d573d043c8269aabdb8fe9b12b7fb449a6cdb",
+      "model": "references/case_11/model.npz",
+      "model_sha256": "7877efe58303d6cb94cb181e4729b2d2fe5dc13d7142f54b1e0c3a9040860aee",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0221/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0221/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0221.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.2633903305235015,
+        "brier": 0.26003719386543855,
+        "pseudo_count": 2.5801438026879993
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100801_q8_s3_c0.2",
+      "case_id": "case_11",
+      "method": "brier",
+      "cell": "cell_0368",
+      "path": "references/case_11/brier.npz",
+      "sha256": "f7df849cc7a4eb5cd4c18f6ed0b7993f4d929900834f704488e220b83d7eeafb",
+      "model": "references/case_11/model.npz",
+      "model_sha256": "7877efe58303d6cb94cb181e4729b2d2fe5dc13d7142f54b1e0c3a9040860aee",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0368/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0368/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0368.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.2633903305235015,
+        "brier": 0.26003719386543855,
+        "pseudo_count": 2.5801438026879993
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100801_q8_s3_c0.2",
+      "case_id": "case_11",
+      "method": "pseudo_count",
+      "cell": "cell_0948",
+      "path": "references/case_11/pseudo_count.npz",
+      "sha256": "ef0e9a977aec32f77ff35a003b79d6fccf7aebdd5ff19860203c9a6bdd136476",
+      "model": "references/case_11/model.npz",
+      "model_sha256": "7877efe58303d6cb94cb181e4729b2d2fe5dc13d7142f54b1e0c3a9040860aee",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0948/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0948/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0948.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.0178492259931915,
+        "brier": 0.18356286493854745,
+        "pseudo_count": 2.6522778224857007
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100801_q8_s3_c0.2",
+      "case_id": "case_11",
+      "method": "uniform",
+      "cell": "cell_1009",
+      "path": "references/case_11/uniform.npz",
+      "sha256": "8200e9f45ac98da3d4104c35e7aaf8df3fa4087e65ced099cdfe1988d54c506a",
+      "model": "references/case_11/model.npz",
+      "model_sha256": "7877efe58303d6cb94cb181e4729b2d2fe5dc13d7142f54b1e0c3a9040860aee",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_1009/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_1009/model.npz",
+      "source_verification": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/CHECK.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.0332608834109065,
+        "brier": 0.20072497531921457,
+        "pseudo_count": 2.578755078801855
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100801_q8_s3_c0.2",
+      "case_id": "case_11",
+      "method": "weighted128",
+      "cell": "cell_0425",
+      "path": "references/case_11/weighted128.npz",
+      "sha256": "3cc68ea124f73a658515e079545dedb9a01e87106350945ff15619102a7bd7c0",
+      "model": "references/case_11/model.npz",
+      "model_sha256": "7877efe58303d6cb94cb181e4729b2d2fe5dc13d7142f54b1e0c3a9040860aee",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0425/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0425/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0425.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 1.1716254428962989,
+        "brier": 0.23967299284573007,
+        "pseudo_count": 2.5902140218047567
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100801_q8_s3_c0.2",
+      "case_id": "case_11",
+      "method": "minimax",
+      "cell": "cell_0374",
+      "path": "references/case_11/minimax.npz",
+      "sha256": "9599e3e0f293aadddb15cc176808e2f19744fd27022bf52974735d95d3a87aeb",
+      "model": "references/case_11/model.npz",
+      "model_sha256": "7877efe58303d6cb94cb181e4729b2d2fe5dc13d7142f54b1e0c3a9040860aee",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0374/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0374/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0374.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 1.1896851012506335,
+        "brier": 0.2430689197678758,
+        "pseudo_count": 2.5928601249267835
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100900_q8_s3_c1.0",
+      "case_id": "case_12",
+      "method": "information",
+      "cell": "cell_0044",
+      "path": "references/case_12/information.npz",
+      "sha256": "240bc36d734119b0ad70a5462d6f67427cf52dc025f99d0d0993a45ab30eae01",
+      "model": "references/case_12/model.npz",
+      "model_sha256": "4b2a970e529e361c5148534a8da44628bc18c567a443172180234f9e845cc5fc",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0044/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0044/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0044.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.3802395542625292,
+        "brier": 0.06949640672988772,
+        "pseudo_count": 2.5880488763943728
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100900_q8_s3_c1.0",
+      "case_id": "case_12",
+      "method": "brier",
+      "cell": "cell_0754",
+      "path": "references/case_12/brier.npz",
+      "sha256": "d6c77c1edc036595cfd242c9320dbb081b4c8ab6a256457ac67061456593996e",
+      "model": "references/case_12/model.npz",
+      "model_sha256": "4b2a970e529e361c5148534a8da44628bc18c567a443172180234f9e845cc5fc",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0754/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0754/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0754.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.3802395542625292,
+        "brier": 0.06949640672988772,
+        "pseudo_count": 2.5880488763943728
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100900_q8_s3_c1.0",
+      "case_id": "case_12",
+      "method": "pseudo_count",
+      "cell": "cell_0472",
+      "path": "references/case_12/pseudo_count.npz",
+      "sha256": "ebfc18c7e04e039474e7450e919d16a42c4738244a9278ba1512e7e83ee722c9",
+      "model": "references/case_12/model.npz",
+      "model_sha256": "4b2a970e529e361c5148534a8da44628bc18c567a443172180234f9e845cc5fc",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0472/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0472/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0472.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.24190478209109312,
+        "brier": 0.041887771220363856,
+        "pseudo_count": 2.5938507976957026
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100900_q8_s3_c1.0",
+      "case_id": "case_12",
+      "method": "uniform",
+      "cell": "cell_0212",
+      "path": "references/case_12/uniform.npz",
+      "sha256": "77e7807cf103fde3d6edfc40ff4b17fda56be7f8956c9bdf2291695c4ac84ae7",
+      "model": "references/case_12/model.npz",
+      "model_sha256": "4b2a970e529e361c5148534a8da44628bc18c567a443172180234f9e845cc5fc",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0212/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0212/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0212.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.2929424048220577,
+        "brier": 0.05193855431988953,
+        "pseudo_count": 2.5827660397055805
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100900_q8_s3_c1.0",
+      "case_id": "case_12",
+      "method": "weighted128",
+      "cell": "cell_0022",
+      "path": "references/case_12/weighted128.npz",
+      "sha256": "77e0b45351216903c9259fa36758fa2bdcb74e54b40e1dab5f1c58a3627eb86a",
+      "model": "references/case_12/model.npz",
+      "model_sha256": "4b2a970e529e361c5148534a8da44628bc18c567a443172180234f9e845cc5fc",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0022/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0022/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0022.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.3351745237089947,
+        "brier": 0.06105355179268851,
+        "pseudo_count": 2.582307419829955
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100900_q8_s3_c1.0",
+      "case_id": "case_12",
+      "method": "minimax",
+      "cell": "cell_0125",
+      "path": "references/case_12/minimax.npz",
+      "sha256": "db7614b466c1620b1d76b44bc02d0cfeee1e5ec2f230ef627eb6fed4f842e741",
+      "model": "references/case_12/model.npz",
+      "model_sha256": "4b2a970e529e361c5148534a8da44628bc18c567a443172180234f9e845cc5fc",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0125/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0125/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0125.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 0.32776977059918044,
+        "brier": 0.059585059615265834,
+        "pseudo_count": 2.5829420022341827
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100901_q8_s3_c1.0",
+      "case_id": "case_13",
+      "method": "information",
+      "cell": "cell_0760",
+      "path": "references/case_13/information.npz",
+      "sha256": "c0868f1013b25892390f14b1e74e936b2b36eb3ef113c3ab2e1507191ed47b67",
+      "model": "references/case_13/model.npz",
+      "model_sha256": "097ca26e1cfeef5df6af187cb2d45deb4da168560a6137bcf401d74175e268e3",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0760/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0760/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0760.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.25603672464418814,
+        "brier": 0.04642106126961762,
+        "pseudo_count": 2.5618221943280806
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100901_q8_s3_c1.0",
+      "case_id": "case_13",
+      "method": "brier",
+      "cell": "cell_0275",
+      "path": "references/case_13/brier.npz",
+      "sha256": "c0868f1013b25892390f14b1e74e936b2b36eb3ef113c3ab2e1507191ed47b67",
+      "model": "references/case_13/model.npz",
+      "model_sha256": "097ca26e1cfeef5df6af187cb2d45deb4da168560a6137bcf401d74175e268e3",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0275/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0275/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0275.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.25603672464418814,
+        "brier": 0.04642106126961762,
+        "pseudo_count": 2.5618221943280806
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100901_q8_s3_c1.0",
+      "case_id": "case_13",
+      "method": "pseudo_count",
+      "cell": "cell_0485",
+      "path": "references/case_13/pseudo_count.npz",
+      "sha256": "51b81e6b395bc52109e20f35fde26e3512c2602551a9583b7cefba61a1318b10",
+      "model": "references/case_13/model.npz",
+      "model_sha256": "097ca26e1cfeef5df6af187cb2d45deb4da168560a6137bcf401d74175e268e3",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0485/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0485/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0485.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.21511363421051977,
+        "brier": 0.036533137167262864,
+        "pseudo_count": 2.621441098148571
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100901_q8_s3_c1.0",
+      "case_id": "case_13",
+      "method": "uniform",
+      "cell": "cell_0324",
+      "path": "references/case_13/uniform.npz",
+      "sha256": "ca235cdd0bbbd2523c6ae4da191e5989342ebf31d6a7536a5f6e75a75592e33d",
+      "model": "references/case_13/model.npz",
+      "model_sha256": "097ca26e1cfeef5df6af187cb2d45deb4da168560a6137bcf401d74175e268e3",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0324/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0324/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0324.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.21791018274759866,
+        "brier": 0.03777862522770997,
+        "pseudo_count": 2.5954875528320467
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100901_q8_s3_c1.0",
+      "case_id": "case_13",
+      "method": "weighted128",
+      "cell": "cell_0367",
+      "path": "references/case_13/weighted128.npz",
+      "sha256": "7d530d3a663b16a69d08068203bfba9798e150b8f314bb2936ca664584456294",
+      "model": "references/case_13/model.npz",
+      "model_sha256": "097ca26e1cfeef5df6af187cb2d45deb4da168560a6137bcf401d74175e268e3",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0367/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0367/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0367.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.23638486718484453,
+        "brier": 0.04204077149205354,
+        "pseudo_count": 2.596269382479791
+      }
+    },
+    {
+      "case": "fresh_hmm_2026100901_q8_s3_c1.0",
+      "case_id": "case_13",
+      "method": "minimax",
+      "cell": "cell_0079",
+      "path": "references/case_13/minimax.npz",
+      "sha256": "30bd20a04d1a48df20021dc47d1b31dbd0040a137642455ec502c139e7f44f9a",
+      "model": "references/case_13/model.npz",
+      "model_sha256": "097ca26e1cfeef5df6af187cb2d45deb4da168560a6137bcf401d74175e268e3",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0079/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0079/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0079.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.23542428614732014,
+        "brier": 0.042030681471928705,
+        "pseudo_count": 2.6005044623905853
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101000_q8_s3_c5.0",
+      "case_id": "case_14",
+      "method": "information",
+      "cell": "cell_0110",
+      "path": "references/case_14/information.npz",
+      "sha256": "864a02494a6d45b315f15e7ae21cd5c24c3dc3817d0de8f2c5ed77f4e44b1d68",
+      "model": "references/case_14/model.npz",
+      "model_sha256": "1d64e8bc915b7d4ffd2fece2d987f484eefb06cfaef8ac212dc37e6b2768c381",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0110/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0110/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0110.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.0767417870217093,
+        "brier": 0.014127858917615616,
+        "pseudo_count": 2.5898175239136645
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101000_q8_s3_c5.0",
+      "case_id": "case_14",
+      "method": "brier",
+      "cell": "cell_1064",
+      "path": "references/case_14/brier.npz",
+      "sha256": "95688c10538da1dc63282415b2f918466a51151ebcc8bd171de0121af0d41849",
+      "model": "references/case_14/model.npz",
+      "model_sha256": "1d64e8bc915b7d4ffd2fece2d987f484eefb06cfaef8ac212dc37e6b2768c381",
+      "original_policy": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1064/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1064/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/completion_audit/cell_1064.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 0.07589502637445156,
+        "brier": 0.014311279087851986,
+        "pseudo_count": 2.59694533304532
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101000_q8_s3_c5.0",
+      "case_id": "case_14",
+      "method": "pseudo_count",
+      "cell": "cell_0748",
+      "path": "references/case_14/pseudo_count.npz",
+      "sha256": "97a4fdb6884fdbb3e40d6812f46d4f249bc1f3118a3346f6ebfd198c9be72d26",
+      "model": "references/case_14/model.npz",
+      "model_sha256": "1d64e8bc915b7d4ffd2fece2d987f484eefb06cfaef8ac212dc37e6b2768c381",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0748/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0748/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0748.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.043862546980517614,
+        "brier": 0.00844971158496971,
+        "pseudo_count": 2.603218035379979
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101000_q8_s3_c5.0",
+      "case_id": "case_14",
+      "method": "uniform",
+      "cell": "cell_1089",
+      "path": "references/case_14/uniform.npz",
+      "sha256": "43ea08d5c374d9482228bcab7d729ee3142d77e4be6e48daaab9978621e9c0c4",
+      "model": "references/case_14/model.npz",
+      "model_sha256": "1d64e8bc915b7d4ffd2fece2d987f484eefb06cfaef8ac212dc37e6b2768c381",
+      "original_policy": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1089/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1089/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/completion_audit/cell_1089.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.051435257414808255,
+        "brier": 0.009138262420113452,
+        "pseudo_count": 2.596995661014651
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101000_q8_s3_c5.0",
+      "case_id": "case_14",
+      "method": "weighted128",
+      "cell": "cell_0330",
+      "path": "references/case_14/weighted128.npz",
+      "sha256": "6402b457153229e31ec1932c9f9f80b67ec31b39bebc66b2e563cac9a8493981",
+      "model": "references/case_14/model.npz",
+      "model_sha256": "1d64e8bc915b7d4ffd2fece2d987f484eefb06cfaef8ac212dc37e6b2768c381",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0330/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0330/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0330.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.05990756576485179,
+        "brier": 0.010977156203959337,
+        "pseudo_count": 2.597561704550793
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101000_q8_s3_c5.0",
+      "case_id": "case_14",
+      "method": "minimax",
+      "cell": "cell_0013",
+      "path": "references/case_14/minimax.npz",
+      "sha256": "8ccc64eb66215bd912f85b4fb692218f241efb594e8ec902c4558f7cfb0b0f89",
+      "model": "references/case_14/model.npz",
+      "model_sha256": "1d64e8bc915b7d4ffd2fece2d987f484eefb06cfaef8ac212dc37e6b2768c381",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0013/checkpoint_008/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0013/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0013.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.05543377786613313,
+        "brier": 0.00957815069709983,
+        "pseudo_count": 2.5972045044576433
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101001_q8_s3_c5.0",
+      "case_id": "case_15",
+      "method": "information",
+      "cell": "cell_0036",
+      "path": "references/case_15/information.npz",
+      "sha256": "c4e9c61b00a0686bb2ad7b7fc2688e14d23621aa1766e55705b0853ae692352c",
+      "model": "references/case_15/model.npz",
+      "model_sha256": "15cfaacabf4c82c504acd8c0cf6de300abec0bec1582ae1af45f56263ca51ad7",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0036/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0036/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0036.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.07039471640268014,
+        "brier": 0.011866990043528036,
+        "pseudo_count": 2.589608584492651
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101001_q8_s3_c5.0",
+      "case_id": "case_15",
+      "method": "brier",
+      "cell": "cell_0811",
+      "path": "references/case_15/brier.npz",
+      "sha256": "c4e9c61b00a0686bb2ad7b7fc2688e14d23621aa1766e55705b0853ae692352c",
+      "model": "references/case_15/model.npz",
+      "model_sha256": "15cfaacabf4c82c504acd8c0cf6de300abec0bec1582ae1af45f56263ca51ad7",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0811/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0811/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0811.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.07039471640268014,
+        "brier": 0.011866990043528036,
+        "pseudo_count": 2.589608584492651
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101001_q8_s3_c5.0",
+      "case_id": "case_15",
+      "method": "pseudo_count",
+      "cell": "cell_0438",
+      "path": "references/case_15/pseudo_count.npz",
+      "sha256": "50c266519c1f2e32785b0f716fca969e81044df0c0033a8a8373e5862f64a40f",
+      "model": "references/case_15/model.npz",
+      "model_sha256": "15cfaacabf4c82c504acd8c0cf6de300abec0bec1582ae1af45f56263ca51ad7",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0438/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0438/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0438.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.05226175426942081,
+        "brier": 0.009134730140585245,
+        "pseudo_count": 2.598317507948841
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101001_q8_s3_c5.0",
+      "case_id": "case_15",
+      "method": "uniform",
+      "cell": "cell_0236",
+      "path": "references/case_15/uniform.npz",
+      "sha256": "7dcf4303939634878d267dcbc04ca6c70b64f058ca83e582399de985fb45ee46",
+      "model": "references/case_15/model.npz",
+      "model_sha256": "15cfaacabf4c82c504acd8c0cf6de300abec0bec1582ae1af45f56263ca51ad7",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0236/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0236/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0236.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.0554021779292575,
+        "brier": 0.009507331736332225,
+        "pseudo_count": 2.5955988764652194
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101001_q8_s3_c5.0",
+      "case_id": "case_15",
+      "method": "weighted128",
+      "cell": "cell_0252",
+      "path": "references/case_15/weighted128.npz",
+      "sha256": "8c162c550a3df4ebb9caef830e21e24e429e78c28ce634824f62616b7f8efd9b",
+      "model": "references/case_15/model.npz",
+      "model_sha256": "15cfaacabf4c82c504acd8c0cf6de300abec0bec1582ae1af45f56263ca51ad7",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0252/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0252/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0252.json",
+      "replay_residual": 5.551115123125783e-16,
+      "rewards": {
+        "information": 0.05819882621304728,
+        "brier": 0.010020413717147902,
+        "pseudo_count": 2.596101178866622
+      }
+    },
+    {
+      "case": "fresh_hmm_2026101001_q8_s3_c5.0",
+      "case_id": "case_15",
+      "method": "minimax",
+      "cell": "cell_0054",
+      "path": "references/case_15/minimax.npz",
+      "sha256": "0dfcc0bd254b9567dec2c8f5f049273fad60d3944f3de878ad21a21ce5ab168e",
+      "model": "references/case_15/model.npz",
+      "model_sha256": "15cfaacabf4c82c504acd8c0cf6de300abec0bec1582ae1af45f56263ca51ad7",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0054/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0054/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0054.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.05736747217276683,
+        "brier": 0.00981814420311286,
+        "pseudo_count": 2.5965259392406237
+      }
+    },
+    {
+      "case": "hmm_91501_0.2",
+      "case_id": "case_16",
+      "method": "information",
+      "cell": "cell_0377",
+      "path": "references/case_16/information.npz",
+      "sha256": "6bae25a63e42f808b309f195a5b51fb973cff36ccf89e6477a6a7fa08cd8504b",
+      "model": "references/case_16/model.npz",
+      "model_sha256": "0a8f7d661fdef5a9f5fb7ac445e1e31a38b55a98e57ae616be07f556f5874c27",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0377/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0377/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0377.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 1.1161877606673751,
+        "brier": 0.4013456145180293,
+        "pseudo_count": 2.5975837281493903
+      }
+    },
+    {
+      "case": "hmm_91501_0.2",
+      "case_id": "case_16",
+      "method": "brier",
+      "cell": "cell_0262",
+      "path": "references/case_16/brier.npz",
+      "sha256": "1de8491d36d983bf2f9fafbceef602d85dbe085ebf10773fd3ea177fd29cbaf7",
+      "model": "references/case_16/model.npz",
+      "model_sha256": "0a8f7d661fdef5a9f5fb7ac445e1e31a38b55a98e57ae616be07f556f5874c27",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0262/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0262/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0262.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 1.0997479824967409,
+        "brier": 0.4093091104593546,
+        "pseudo_count": 2.5932574773082107
+      }
+    },
+    {
+      "case": "hmm_91501_0.2",
+      "case_id": "case_16",
+      "method": "pseudo_count",
+      "cell": "cell_0594",
+      "path": "references/case_16/pseudo_count.npz",
+      "sha256": "7fa5b5debdd46021749609bdf15b3ceee091cc252c617781d10a78d3b6106546",
+      "model": "references/case_16/model.npz",
+      "model_sha256": "0a8f7d661fdef5a9f5fb7ac445e1e31a38b55a98e57ae616be07f556f5874c27",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0594/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0594/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0594.json",
+      "replay_residual": 1.1102230246251565e-16,
+      "rewards": {
+        "information": 0.8216324844380063,
+        "brier": 0.2749329201473014,
+        "pseudo_count": 2.624815242787533
+      }
+    },
+    {
+      "case": "hmm_91501_0.2",
+      "case_id": "case_16",
+      "method": "uniform",
+      "cell": "cell_0056",
+      "path": "references/case_16/uniform.npz",
+      "sha256": "ce44de968aa69f1cae0c13ea614027a8614a152c0edc226803403f2afa0fe646",
+      "model": "references/case_16/model.npz",
+      "model_sha256": "0a8f7d661fdef5a9f5fb7ac445e1e31a38b55a98e57ae616be07f556f5874c27",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0056/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0056/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0056.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.8583754485990025,
+        "brier": 0.29095113005385476,
+        "pseudo_count": 2.5151526212266067
+      }
+    },
+    {
+      "case": "hmm_91501_0.2",
+      "case_id": "case_16",
+      "method": "weighted128",
+      "cell": "cell_0217",
+      "path": "references/case_16/weighted128.npz",
+      "sha256": "c9dcc8073f2a3bb78eae247c813c154dc73131f9d9e078af1dda1c22127b85dc",
+      "model": "references/case_16/model.npz",
+      "model_sha256": "0a8f7d661fdef5a9f5fb7ac445e1e31a38b55a98e57ae616be07f556f5874c27",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0217/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0217/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0217.json",
+      "replay_residual": 3.3306690738754696e-16,
+      "rewards": {
+        "information": 1.099680062519586,
+        "brier": 0.4021278029947616,
+        "pseudo_count": 2.5822073419306633
+      }
+    },
+    {
+      "case": "hmm_91501_0.2",
+      "case_id": "case_16",
+      "method": "minimax",
+      "cell": "cell_0181",
+      "path": "references/case_16/minimax.npz",
+      "sha256": "1efc4fa10919d03219739cc3464dc1abd89fee8e8a9472ef99c87102664a8ba8",
+      "model": "references/case_16/model.npz",
+      "model_sha256": "0a8f7d661fdef5a9f5fb7ac445e1e31a38b55a98e57ae616be07f556f5874c27",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0181/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0181/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0181.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 1.0430852790811826,
+        "brier": 0.38730999792957543,
+        "pseudo_count": 2.5605877309313563
+      }
+    },
+    {
+      "case": "hmm_91502_1.0",
+      "case_id": "case_17",
+      "method": "information",
+      "cell": "cell_0172",
+      "path": "references/case_17/information.npz",
+      "sha256": "5e30b054e520b84ee52e33c8f640e54d65023a9c2916c7726e8f4cb89516fa1f",
+      "model": "references/case_17/model.npz",
+      "model_sha256": "82d5e83a654e25f09c12452e4519e5d0039f745e30c8e547d9b6c3cd71ef80fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0172/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0172/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0172.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.14902353874864804,
+        "brier": 0.04510182827769682,
+        "pseudo_count": 2.603739007893628
+      }
+    },
+    {
+      "case": "hmm_91502_1.0",
+      "case_id": "case_17",
+      "method": "brier",
+      "cell": "cell_0154",
+      "path": "references/case_17/brier.npz",
+      "sha256": "891e588104715527e7f4fa5deccec59f9a6a76a48bcd81769b9444d982946d56",
+      "model": "references/case_17/model.npz",
+      "model_sha256": "82d5e83a654e25f09c12452e4519e5d0039f745e30c8e547d9b6c3cd71ef80fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0154/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0154/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0154.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.1470884690969272,
+        "brier": 0.04691835223431973,
+        "pseudo_count": 2.5673086374856195
+      }
+    },
+    {
+      "case": "hmm_91502_1.0",
+      "case_id": "case_17",
+      "method": "pseudo_count",
+      "cell": "cell_0852",
+      "path": "references/case_17/pseudo_count.npz",
+      "sha256": "b2aef1e0715403618dfaa4c6af0bf63345064a493330fcfe7be22d9d85ffbf36",
+      "model": "references/case_17/model.npz",
+      "model_sha256": "82d5e83a654e25f09c12452e4519e5d0039f745e30c8e547d9b6c3cd71ef80fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0852/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0852/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0852.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.125311859747391,
+        "brier": 0.04063892390356627,
+        "pseudo_count": 2.6152950411644227
+      }
+    },
+    {
+      "case": "hmm_91502_1.0",
+      "case_id": "case_17",
+      "method": "uniform",
+      "cell": "cell_1016",
+      "path": "references/case_17/uniform.npz",
+      "sha256": "0423c0334259a501815e7e5a7da1827bdcb6fa47cf41fc98f2c69ba49a831549",
+      "model": "references/case_17/model.npz",
+      "model_sha256": "82d5e83a654e25f09c12452e4519e5d0039f745e30c8e547d9b6c3cd71ef80fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_1016/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_1016/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1016/INDEPENDENT_CHECK.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.11796446622291379,
+        "brier": 0.03910752103866799,
+        "pseudo_count": 2.5831525661451114
+      }
+    },
+    {
+      "case": "hmm_91502_1.0",
+      "case_id": "case_17",
+      "method": "weighted128",
+      "cell": "cell_0041",
+      "path": "references/case_17/weighted128.npz",
+      "sha256": "4924bbc8cc3fc7ccf658594911f88ee88135b96718925a6ab7d8e2becaab4614",
+      "model": "references/case_17/model.npz",
+      "model_sha256": "82d5e83a654e25f09c12452e4519e5d0039f745e30c8e547d9b6c3cd71ef80fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0041/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0041/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0041.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.13129547195875335,
+        "brier": 0.04329236719157559,
+        "pseudo_count": 2.5825895357961457
+      }
+    },
+    {
+      "case": "hmm_91502_1.0",
+      "case_id": "case_17",
+      "method": "minimax",
+      "cell": "cell_0012",
+      "path": "references/case_17/minimax.npz",
+      "sha256": "32066f98c8c30fe32ff42c0ac91cb6fe5e8f525dc83826608fd01f25340b615f",
+      "model": "references/case_17/model.npz",
+      "model_sha256": "82d5e83a654e25f09c12452e4519e5d0039f745e30c8e547d9b6c3cd71ef80fd",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0012/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0012/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0012.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.13170801411763655,
+        "brier": 0.04348448384910575,
+        "pseudo_count": 2.585928592174475
+      }
+    },
+    {
+      "case": "hmm_91503_5.0",
+      "case_id": "case_18",
+      "method": "information",
+      "cell": "cell_0352",
+      "path": "references/case_18/information.npz",
+      "sha256": "175127b6595f51d9dc9e2c9ca580f945c7986eb083ac00ee7e55c26f43ece5e5",
+      "model": "references/case_18/model.npz",
+      "model_sha256": "4c86779dca8ea3abd2007f4c67e68d3065369941e2fd09c398033d662c133f21",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0352/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0352/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0352.json",
+      "replay_residual": 7.771561172376096e-16,
+      "rewards": {
+        "information": 0.21862829310222986,
+        "brier": 0.07038806969376721,
+        "pseudo_count": 2.569676692686154
+      }
+    },
+    {
+      "case": "hmm_91503_5.0",
+      "case_id": "case_18",
+      "method": "brier",
+      "cell": "cell_0710",
+      "path": "references/case_18/brier.npz",
+      "sha256": "175127b6595f51d9dc9e2c9ca580f945c7986eb083ac00ee7e55c26f43ece5e5",
+      "model": "references/case_18/model.npz",
+      "model_sha256": "4c86779dca8ea3abd2007f4c67e68d3065369941e2fd09c398033d662c133f21",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0710/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0710/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0710.json",
+      "replay_residual": 7.771561172376096e-16,
+      "rewards": {
+        "information": 0.21862829310222986,
+        "brier": 0.07038806969376721,
+        "pseudo_count": 2.569676692686154
+      }
+    },
+    {
+      "case": "hmm_91503_5.0",
+      "case_id": "case_18",
+      "method": "pseudo_count",
+      "cell": "cell_0602",
+      "path": "references/case_18/pseudo_count.npz",
+      "sha256": "64a27b040be3c31bb5ceac9a379c2946de5fcc7a46d2a2107f212cf59984cbdc",
+      "model": "references/case_18/model.npz",
+      "model_sha256": "4c86779dca8ea3abd2007f4c67e68d3065369941e2fd09c398033d662c133f21",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0602/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0602/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0602.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.14580109550572384,
+        "brier": 0.04863211231858383,
+        "pseudo_count": 2.6095266716781826
+      }
+    },
+    {
+      "case": "hmm_91503_5.0",
+      "case_id": "case_18",
+      "method": "uniform",
+      "cell": "cell_0986",
+      "path": "references/case_18/uniform.npz",
+      "sha256": "19bc719bddcce31a1e60306185748947c414fee8bd3644959a7ef2f7a47a8683",
+      "model": "references/case_18/model.npz",
+      "model_sha256": "4c86779dca8ea3abd2007f4c67e68d3065369941e2fd09c398033d662c133f21",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0986/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0986/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0986.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.1666617232357186,
+        "brier": 0.05527875681104866,
+        "pseudo_count": 2.5983669868376467
+      }
+    },
+    {
+      "case": "hmm_91503_5.0",
+      "case_id": "case_18",
+      "method": "weighted128",
+      "cell": "cell_0055",
+      "path": "references/case_18/weighted128.npz",
+      "sha256": "50c1c98ee2c392692a59879e060ec2f2c7d809886fd3d0215b65331e08335da2",
+      "model": "references/case_18/model.npz",
+      "model_sha256": "4c86779dca8ea3abd2007f4c67e68d3065369941e2fd09c398033d662c133f21",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0055/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0055/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0055.json",
+      "replay_residual": 0.0,
+      "rewards": {
+        "information": 0.18356870704343353,
+        "brier": 0.0607562957181611,
+        "pseudo_count": 2.604712498054071
+      }
+    },
+    {
+      "case": "hmm_91503_5.0",
+      "case_id": "case_18",
+      "method": "minimax",
+      "cell": "cell_0134",
+      "path": "references/case_18/minimax.npz",
+      "sha256": "2d0ecb4e5580e5490dae6701db664ced3544d962b676de588b52ac7bca3bedb5",
+      "model": "references/case_18/model.npz",
+      "model_sha256": "4c86779dca8ea3abd2007f4c67e68d3065369941e2fd09c398033d662c133f21",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0134/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0134/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0134.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.17792966765588858,
+        "brier": 0.05889992192242688,
+        "pseudo_count": 2.6058067212156755
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.3",
+      "case_id": "case_19",
+      "method": "information",
+      "cell": "cell_0696",
+      "path": "references/case_19/information.npz",
+      "sha256": "b19297e876b6fe18ade91071bc7b7aa3f8ff52ea80864e7cd0ddceecfa358dc7",
+      "model": "references/case_19/model.npz",
+      "model_sha256": "cd8878c69bbcab6b97e6269efb70e1db73577727ccd1d0e0dbc51e9aca525a23",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0696/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0696/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0696.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.8624177306350442,
+        "brier": 0.2247013698630138,
+        "pseudo_count": 2.398572477694975
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.3",
+      "case_id": "case_19",
+      "method": "brier",
+      "cell": "cell_0608",
+      "path": "references/case_19/brier.npz",
+      "sha256": "b19297e876b6fe18ade91071bc7b7aa3f8ff52ea80864e7cd0ddceecfa358dc7",
+      "model": "references/case_19/model.npz",
+      "model_sha256": "cd8878c69bbcab6b97e6269efb70e1db73577727ccd1d0e0dbc51e9aca525a23",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0608/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0608/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0608.json",
+      "replay_residual": 4.440892098500626e-16,
+      "rewards": {
+        "information": 0.8624177306350442,
+        "brier": 0.2247013698630138,
+        "pseudo_count": 2.398572477694975
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.3",
+      "case_id": "case_19",
+      "method": "pseudo_count",
+      "cell": "cell_0024",
+      "path": "references/case_19/pseudo_count.npz",
+      "sha256": "c0c7d327cbb0e48876907f60aa046281c1da84138902989bde3229cd6c437a89",
+      "model": "references/case_19/model.npz",
+      "model_sha256": "cd8878c69bbcab6b97e6269efb70e1db73577727ccd1d0e0dbc51e9aca525a23",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0024/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0024/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0024.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.30532577044931664,
+        "brier": 0.0926702702702702,
+        "pseudo_count": 2.550726380786709
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.3",
+      "case_id": "case_19",
+      "method": "uniform",
+      "cell": "cell_0067",
+      "path": "references/case_19/uniform.npz",
+      "sha256": "ed2b7250244b38156feaf0dd11440a59487834c28e3961442cb6e0c95fafaf95",
+      "model": "references/case_19/model.npz",
+      "model_sha256": "cd8878c69bbcab6b97e6269efb70e1db73577727ccd1d0e0dbc51e9aca525a23",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0067/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0067/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0067.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.5838717505421802,
+        "brier": 0.158685820066642,
+        "pseudo_count": 2.4746494292408414
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.3",
+      "case_id": "case_19",
+      "method": "weighted128",
+      "cell": "cell_0176",
+      "path": "references/case_19/weighted128.npz",
+      "sha256": "9d889b6d6f6d6816d34c07d722027e22e2a2e2f44d70bf53197318179dab6d7b",
+      "model": "references/case_19/model.npz",
+      "model_sha256": "cd8878c69bbcab6b97e6269efb70e1db73577727ccd1d0e0dbc51e9aca525a23",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0176/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0176/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0176.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.8624177306350438,
+        "brier": 0.2247013698630138,
+        "pseudo_count": 2.398572477694975
+      }
+    },
+    {
+      "case": "irreversible_0.1_0.3",
+      "case_id": "case_19",
+      "method": "minimax",
+      "cell": "cell_0128",
+      "path": "references/case_19/minimax.npz",
+      "sha256": "e7cf4c09557810c1c44d83fa4dffc6ad919a1fbb1128095899afc35fc92597db",
+      "model": "references/case_19/model.npz",
+      "model_sha256": "cd8878c69bbcab6b97e6269efb70e1db73577727ccd1d0e0dbc51e9aca525a23",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0128/checkpoint_008/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0128/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0128.json",
+      "replay_residual": 0.0,
+      "rewards": {
+        "information": 0.653139798501781,
+        "brier": 0.17510238535991962,
+        "pseudo_count": 2.4557308222426633
+      }
+    },
+    {
+      "case": "sensors_0.1_0.3",
+      "case_id": "case_20",
+      "method": "information",
+      "cell": "cell_1091",
+      "path": "references/case_20/information.npz",
+      "sha256": "6ff80017b07ae84da9113f357b4d66d48c79ceb76a582c222813b6263146aff8",
+      "model": "references/case_20/model.npz",
+      "model_sha256": "9fce7733d2a358ed394030f44f2410a1280b24ffc1b0111d4315b7622051cf12",
+      "original_policy": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1091/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_followups_2026-09-23/completion_results/cell_1091/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/completion_audit/cell_1091.json",
+      "replay_residual": 0.0,
+      "rewards": {
+        "information": 0.9350081143344788,
+        "brier": 0.2879414634146341,
+        "pseudo_count": 2.5338203915542943
+      }
+    },
+    {
+      "case": "sensors_0.1_0.3",
+      "case_id": "case_20",
+      "method": "brier",
+      "cell": "cell_0592",
+      "path": "references/case_20/brier.npz",
+      "sha256": "845da156dd8296213679758cd09abdc5d67369ddf4e14107a9d2f60201044239",
+      "model": "references/case_20/model.npz",
+      "model_sha256": "9fce7733d2a358ed394030f44f2410a1280b24ffc1b0111d4315b7622051cf12",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0592/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0592/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0592.json",
+      "replay_residual": 0.0,
+      "rewards": {
+        "information": 0.9350081143344788,
+        "brier": 0.2879414634146341,
+        "pseudo_count": 2.5338203915542943
+      }
+    },
+    {
+      "case": "sensors_0.1_0.3",
+      "case_id": "case_20",
+      "method": "pseudo_count",
+      "cell": "cell_0043",
+      "path": "references/case_20/pseudo_count.npz",
+      "sha256": "8c6dfd70191638617508f58a3a1e2d6713476159cdce7362a4046730a436d34f",
+      "model": "references/case_20/model.npz",
+      "model_sha256": "9fce7733d2a358ed394030f44f2410a1280b24ffc1b0111d4315b7622051cf12",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0043/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0043/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0043.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.74902820999982,
+        "brier": 0.26553557611438183,
+        "pseudo_count": 2.584538359251539
+      }
+    },
+    {
+      "case": "sensors_0.1_0.3",
+      "case_id": "case_20",
+      "method": "uniform",
+      "cell": "cell_0689",
+      "path": "references/case_20/uniform.npz",
+      "sha256": "fd9e6c2848aa2466c09c691157bb894ab6329502e17e8524bff71353564a53e4",
+      "model": "references/case_20/model.npz",
+      "model_sha256": "9fce7733d2a358ed394030f44f2410a1280b24ffc1b0111d4315b7622051cf12",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0689/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0689/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0689.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.7499697359987996,
+        "brier": 0.2419632969005966,
+        "pseudo_count": 2.5380468888623975
+      }
+    },
+    {
+      "case": "sensors_0.1_0.3",
+      "case_id": "case_20",
+      "method": "weighted128",
+      "cell": "cell_0106",
+      "path": "references/case_20/weighted128.npz",
+      "sha256": "e6afdb30e8f8dd12fe35be9d3071d2258d8c24cec8e9da979469378ae646b0b8",
+      "model": "references/case_20/model.npz",
+      "model_sha256": "9fce7733d2a358ed394030f44f2410a1280b24ffc1b0111d4315b7622051cf12",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0106/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0106/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0106.json",
+      "replay_residual": 5.551115123125783e-16,
+      "rewards": {
+        "information": 0.7746833172992103,
+        "brier": 0.26726571181621606,
+        "pseudo_count": 2.567576796698118
+      }
+    },
+    {
+      "case": "sensors_0.1_0.3",
+      "case_id": "case_20",
+      "method": "minimax",
+      "cell": "cell_0090",
+      "path": "references/case_20/minimax.npz",
+      "sha256": "0eb8cf9e759d764bdd2693b6072001ee9d70b25fd2453c3aa35c4a8e9fce5fcb",
+      "model": "references/case_20/model.npz",
+      "model_sha256": "9fce7733d2a358ed394030f44f2410a1280b24ffc1b0111d4315b7622051cf12",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0090/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0090/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0090.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.7863741034265401,
+        "brier": 0.26797572446896134,
+        "pseudo_count": 2.564030692337014
+      }
+    },
+    {
+      "case": "sensors_0.25_0.25",
+      "case_id": "case_21",
+      "method": "information",
+      "cell": "cell_0922",
+      "path": "references/case_21/information.npz",
+      "sha256": "e128df829bac543df83cef5950e44ba938b445a94b0fb577cd45832502a27d52",
+      "model": "references/case_21/model.npz",
+      "model_sha256": "2613c239e86c3cfe32430eb9b3789825acabe19b9eef14f9408993ef3ab7ee16",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0922/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0922/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0922.json",
+      "replay_residual": 0.0,
+      "rewards": {
+        "information": 0.5205996295475663,
+        "brier": 0.1875,
+        "pseudo_count": 2.5750287403083054
+      }
+    },
+    {
+      "case": "sensors_0.25_0.25",
+      "case_id": "case_21",
+      "method": "brier",
+      "cell": "cell_0773",
+      "path": "references/case_21/brier.npz",
+      "sha256": "fd10d5f00cfc93556a612ea287b69ef8ccab6a17d9cf6940ea3ffb2662a426aa",
+      "model": "references/case_21/model.npz",
+      "model_sha256": "2613c239e86c3cfe32430eb9b3789825acabe19b9eef14f9408993ef3ab7ee16",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0773/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0773/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0773.json",
+      "replay_residual": 0.0,
+      "rewards": {
+        "information": 0.5205996295475661,
+        "brier": 0.1875,
+        "pseudo_count": 2.575028740308306
+      }
+    },
+    {
+      "case": "sensors_0.25_0.25",
+      "case_id": "case_21",
+      "method": "pseudo_count",
+      "cell": "cell_0767",
+      "path": "references/case_21/pseudo_count.npz",
+      "sha256": "fd10d5f00cfc93556a612ea287b69ef8ccab6a17d9cf6940ea3ffb2662a426aa",
+      "model": "references/case_21/model.npz",
+      "model_sha256": "2613c239e86c3cfe32430eb9b3789825acabe19b9eef14f9408993ef3ab7ee16",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0767/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0767/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0767.json",
+      "replay_residual": 0.0,
+      "rewards": {
+        "information": 0.5205996295475661,
+        "brier": 0.1875,
+        "pseudo_count": 2.575028740308306
+      }
+    },
+    {
+      "case": "sensors_0.25_0.25",
+      "case_id": "case_21",
+      "method": "uniform",
+      "cell": "cell_0102",
+      "path": "references/case_21/uniform.npz",
+      "sha256": "1a980e18f186c0c5c7e46cc51c155b735f8573eb2afc245be16049a405159054",
+      "model": "references/case_21/model.npz",
+      "model_sha256": "2613c239e86c3cfe32430eb9b3789825acabe19b9eef14f9408993ef3ab7ee16",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0102/checkpoint_000/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0102/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0102.json",
+      "replay_residual": 0.0,
+      "rewards": {
+        "information": 0.5020513325523619,
+        "brier": 0.17299107142857145,
+        "pseudo_count": 2.561820936220481
+      }
+    },
+    {
+      "case": "sensors_0.25_0.25",
+      "case_id": "case_21",
+      "method": "weighted128",
+      "cell": "cell_0230",
+      "path": "references/case_21/weighted128.npz",
+      "sha256": "bbd4fb8c007af2200e4bf8f7dfb95c26b67a4eb2607e260787f71269f363fb23",
+      "model": "references/case_21/model.npz",
+      "model_sha256": "2613c239e86c3cfe32430eb9b3789825acabe19b9eef14f9408993ef3ab7ee16",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0230/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0230/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0230.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.5205996295475663,
+        "brier": 0.18749999999999994,
+        "pseudo_count": 2.5750287403083054
+      }
+    },
+    {
+      "case": "sensors_0.25_0.25",
+      "case_id": "case_21",
+      "method": "minimax",
+      "cell": "cell_0183",
+      "path": "references/case_21/minimax.npz",
+      "sha256": "cc3a754d6ad4fcaead330419042d9f34a867255a2759773eb5346e4f96624cd9",
+      "model": "references/case_21/model.npz",
+      "model_sha256": "2613c239e86c3cfe32430eb9b3789825acabe19b9eef14f9408993ef3ab7ee16",
+      "original_policy": "Paper/research/target_selection_2026-09-23/main_results/cell_0183/checkpoint_128/policy.npz",
+      "original_model": "Paper/research/target_selection_2026-09-23/main_results/cell_0183/model.npz",
+      "source_verification": "Paper/research/target_selection_followups_2026-09-23/original_audit/cell_0183.json",
+      "replay_residual": 2.220446049250313e-16,
+      "rewards": {
+        "information": 0.5205996295475663,
+        "brier": 0.1874999999999999,
+        "pseudo_count": 2.5750287403083054
+      }
+    }
+  ]
+}

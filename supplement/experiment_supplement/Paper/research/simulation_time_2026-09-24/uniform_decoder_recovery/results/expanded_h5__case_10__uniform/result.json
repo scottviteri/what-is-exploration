@@ -1,0 +1,156 @@
+{
+  "status": "complete",
+  "phase": "recovery_awaiting_check",
+  "spec": {
+    "id": "expanded_h5__case_10__uniform",
+    "phase": "expanded_h5",
+    "case": "fresh_hmm_2026100800_q8_s3_c0.2",
+    "case_id": "case_10",
+    "t": 5,
+    "method": "uniform",
+    "mode": "plan",
+    "planning_seconds": 600,
+    "job_seconds": 2400
+  },
+  "started_utc": "2026-09-24T03:01:24.784502+00:00",
+  "sources_sha256": "4684f78b757300662b68c95163c77fd78aebeaa843761993d970ffe6deefb0b5",
+  "manifest_sha256": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4",
+  "model_sha256": "0033fa2e3a1cd538b297aea5c3b3cfa18f78f742446f6c90a08283d202ccdbbb",
+  "pid": 4070608,
+  "cpu_affinity": [
+    10
+  ],
+  "audits": [
+    {
+      "reference": "information",
+      "reference_cell": "cell_0370",
+      "lower": 0.179632898946538,
+      "upper": 0.17963289894654316,
+      "bracket": 5.162537064506978e-15,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_information.npz",
+      "witness_sha256": "c039e3ff767ecbb0c7f0fd3e939f3bb9cc9697d53782b96149417a48a53752e7",
+      "seconds": 3.749227331019938,
+      "coarsening_bound": 0.0,
+      "recovery_method": "preserved_original_witness",
+      "optimizer_called": false
+    },
+    {
+      "reference": "brier",
+      "reference_cell": "cell_0930",
+      "lower": 0.179632898946538,
+      "upper": 0.17963289894654316,
+      "bracket": 5.162537064506978e-15,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_brier.npz",
+      "witness_sha256": "c039e3ff767ecbb0c7f0fd3e939f3bb9cc9697d53782b96149417a48a53752e7",
+      "seconds": 0.03539532981812954,
+      "coarsening_bound": 0.0,
+      "recovery_method": "preserved_original_witness",
+      "optimizer_called": false
+    },
+    {
+      "reference": "pseudo_count",
+      "reference_cell": "cell_0988",
+      "lower": 0.07516957891732523,
+      "upper": 0.07516957891735851,
+      "bracket": 3.327893516313907e-14,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_pseudo_count.npz",
+      "witness_sha256": "08fe9272f99d579e45907f16307c8fe36df220a499507f35cc5ece25fe6bcd6c",
+      "seconds": 3.629993244074285,
+      "coarsening_bound": 0.0,
+      "recovery_method": "preserved_original_witness",
+      "optimizer_called": false
+    },
+    {
+      "reference": "uniform",
+      "reference_cell": "cell_0460",
+      "lower": 0.0,
+      "upper": 7.265679214957937e-17,
+      "bracket": 7.265679214957937e-17,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_uniform.npz",
+      "witness_sha256": "7431c6589d077a9cb645d7d710ee756210fba2b0aef90321c7b6498a2f0c4146",
+      "seconds": 0.006593489088118076,
+      "coarsening_bound": 0.0,
+      "recovery_method": "explicit_record_projection",
+      "optimizer_called": false
+    },
+    {
+      "reference": "weighted128",
+      "reference_cell": "cell_0070",
+      "lower": 0.022051281998520578,
+      "upper": 0.022051296238285462,
+      "bracket": 1.4239764884599326e-08,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_weighted128.npz",
+      "witness_sha256": "53daf49e4bd69f6b5f9ce060f28da9bbc6209fb89448c4f5235ecc35c037f773",
+      "seconds": 13.438277376815677,
+      "coarsening_bound": 0.0,
+      "recovery_method": "explicit-witness-ipm",
+      "optimizer_called": true
+    },
+    {
+      "reference": "minimax",
+      "reference_cell": "cell_0410",
+      "lower": 0.03618430754493496,
+      "upper": 0.03618433557655602,
+      "bracket": 2.8031621066015866e-08,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_minimax.npz",
+      "witness_sha256": "9b916e5fecb29d58788b7e65a39b812606f89c39587539618f990d309686e547",
+      "seconds": 12.238965135999024,
+      "coarsening_bound": 0.0,
+      "recovery_method": "explicit-witness-ipm",
+      "optimizer_called": true
+    }
+  ],
+  "planning": {
+    "method": "literal_uniform",
+    "seconds": 0,
+    "scope": "Control, not an optimized objective."
+  },
+  "policy_sha256": "08f4d8b78377bbc039dacd8df91a35586b47b094c9ad54ed29ebf0af095cd132",
+  "rewards": {
+    "information": 1.523754111719569,
+    "brier": 0.3447640197842958,
+    "pseudo_count": 3.8411109360593167
+  },
+  "planning_certified": true,
+  "planning_elapsed_seconds": 0.16106503643095493,
+  "seconds": 67.92289560195059,
+  "peak_rss_mib": 365.75,
+  "finished_utc": "2026-09-24T03:02:32.707411+00:00",
+  "audit_source_sha256": "257befb4a5a927ea1032463cc164ff25918661c856deb0ecafef0c2e7c94eb27",
+  "recovery_started_utc": "2026-09-24T04:49:34.422853+00:00",
+  "historical_failure": {
+    "path": "research/simulation_time_2026-09-24/budget_campaign/results/expanded_h5__case_10__uniform",
+    "result_sha256": "4bdbb2a3b653b336918c8cfdf8de5a157c9ed646d63c0ce4ff11385b109486c1"
+  },
+  "recovery_finished_utc": "2026-09-24T04:50:00.121823+00:00"
+}

@@ -1,0 +1,137 @@
+{
+  "status": "complete",
+  "phase": "awaiting_independent_check",
+  "spec": {
+    "id": "pilot_h4__case_01__uniform",
+    "phase": "pilot_h4",
+    "case": "delayed_0.1_0.1",
+    "case_id": "case_01",
+    "t": 4,
+    "method": "uniform",
+    "mode": "plan",
+    "planning_seconds": 300,
+    "job_seconds": 1500
+  },
+  "started_utc": "2026-09-24T02:27:54.354322+00:00",
+  "sources_sha256": "4684f78b757300662b68c95163c77fd78aebeaa843761993d970ffe6deefb0b5",
+  "manifest_sha256": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4",
+  "model_sha256": "bfacebf019137f34588e216b9ea1abe416e4d3077a483873ac01c14e06991772",
+  "pid": 4057792,
+  "cpu_affinity": [
+    10
+  ],
+  "audits": [
+    {
+      "reference": "information",
+      "reference_cell": "cell_1015",
+      "lower": 0.1955,
+      "upper": 0.19550000000000045,
+      "bracket": 4.440892098500626e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_information.npz",
+      "witness_sha256": "a2b6529b4e0bec2a463efe4dc20ac99271ec8e49b715d445db19afbb06940d8a",
+      "seconds": 0.14734426978975534,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "brier",
+      "reference_cell": "cell_1101",
+      "lower": 0.1955,
+      "upper": 0.19550000000000045,
+      "bracket": 4.440892098500626e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_brier.npz",
+      "witness_sha256": "a2b6529b4e0bec2a463efe4dc20ac99271ec8e49b715d445db19afbb06940d8a",
+      "seconds": 0.0074331266805529594,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "pseudo_count",
+      "reference_cell": "cell_0931",
+      "lower": 0.04549999999969345,
+      "upper": 0.04550000000002602,
+      "bracket": 3.3256730702646564e-13,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_pseudo_count.npz",
+      "witness_sha256": "50dbf9c32659b1cc18f17503e7e988430c35bf9e708be9f4dd15e45c825b3753",
+      "seconds": 0.6530808350071311,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "uniform",
+      "reference_cell": "cell_0130",
+      "lower": 0.0,
+      "upper": 2.1345067640482496e-14,
+      "bracket": 2.1345067640482496e-14,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_uniform.npz",
+      "witness_sha256": "01300e6b673a9f3261a3a826904a1f8e47d11b827d4535cbd9f6e087318fb41e",
+      "seconds": 0.9390123896300793,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "weighted128",
+      "reference_cell": "cell_0329",
+      "lower": 0.15563499638402356,
+      "upper": 0.1556349963840255,
+      "bracket": 1.942890293094024e-15,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_weighted128.npz",
+      "witness_sha256": "3ebc1d4154f8d444c77880f18675b1a755e155b754562ecf0fa29dd8ba7a96ca",
+      "seconds": 1.2701791431754827,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "minimax",
+      "reference_cell": "cell_0219",
+      "lower": 0.1474661583273249,
+      "upper": 0.14746615832745508,
+      "bracket": 1.301736496372996e-13,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_minimax.npz",
+      "witness_sha256": "85443da5c6226e2c6594eef476ec15ed8373d233acde631f1cd2fe7a4ce91bf1",
+      "seconds": 0.07260147668421268,
+      "coarsening_bound": 0.0
+    }
+  ],
+  "planning": {
+    "method": "literal_uniform",
+    "seconds": 0,
+    "scope": "Control, not an optimized objective."
+  },
+  "policy_sha256": "507bc88ab839ec5dfb2009f56777d7e637a256fcd302098fd10d4e28d167c453",
+  "rewards": {
+    "information": 0.9968596148655464,
+    "brier": 0.32424166379074293,
+    "pseudo_count": 3.178946710650636
+  },
+  "planning_certified": true,
+  "planning_elapsed_seconds": 0.02107659261673689,
+  "seconds": 3.166361903771758,
+  "peak_rss_mib": 123.16796875,
+  "finished_utc": "2026-09-24T02:27:57.520695+00:00"
+}

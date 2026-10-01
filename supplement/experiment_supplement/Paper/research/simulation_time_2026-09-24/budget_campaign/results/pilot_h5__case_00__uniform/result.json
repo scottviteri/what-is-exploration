@@ -1,0 +1,137 @@
+{
+  "status": "complete",
+  "phase": "awaiting_independent_check",
+  "spec": {
+    "id": "pilot_h5__case_00__uniform",
+    "phase": "pilot_h5",
+    "case": "sensors_0.1_0.1",
+    "case_id": "case_00",
+    "t": 5,
+    "method": "uniform",
+    "mode": "plan",
+    "planning_seconds": 600,
+    "job_seconds": 2400
+  },
+  "started_utc": "2026-09-24T02:28:55.312670+00:00",
+  "sources_sha256": "4684f78b757300662b68c95163c77fd78aebeaa843761993d970ffe6deefb0b5",
+  "manifest_sha256": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4",
+  "model_sha256": "109da575632e07a90be0941ec41e8e997e87209e735db1fa17d85d6bbf1d29fd",
+  "pid": 4057924,
+  "cpu_affinity": [
+    10
+  ],
+  "audits": [
+    {
+      "reference": "information",
+      "reference_cell": "cell_0626",
+      "lower": 0.009854999999999614,
+      "upper": 0.009855000000000082,
+      "bracket": 4.683753385137379e-16,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_information.npz",
+      "witness_sha256": "084eb6b08e946e7d9de928bb9053a12824ac35ff746525772ae86bef2491adf9",
+      "seconds": 5.029894879087806,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "brier",
+      "reference_cell": "cell_0189",
+      "lower": 0.009854999999999614,
+      "upper": 0.009855000000000082,
+      "bracket": 4.683753385137379e-16,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_brier.npz",
+      "witness_sha256": "084eb6b08e946e7d9de928bb9053a12824ac35ff746525772ae86bef2491adf9",
+      "seconds": 0.026075847446918488,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "pseudo_count",
+      "reference_cell": "cell_0382",
+      "lower": 0.009854999999984293,
+      "upper": 0.00985500000000174,
+      "bracket": 1.7447848721374726e-14,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_pseudo_count.npz",
+      "witness_sha256": "6cb5ac7fa9deec863ceee4e5173ebf3ac30e7e472490581c308f40f77289a23e",
+      "seconds": 0.7877225782722235,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "uniform",
+      "reference_cell": "cell_0856",
+      "lower": 0.0,
+      "upper": 7.952758460452736e-16,
+      "bracket": 7.952758460452736e-16,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_uniform.npz",
+      "witness_sha256": "a3a7e4f513f40788d0464b4a2689b2a1283cd2afc0a900d1b06c49e324446f2f",
+      "seconds": 7.319221337325871,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "weighted128",
+      "reference_cell": "cell_0143",
+      "lower": 0.0,
+      "upper": 2.7184201070729053e-15,
+      "bracket": 2.7184201070729053e-15,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_weighted128.npz",
+      "witness_sha256": "7d4bbf0a96d5651348036c54be0f4571ee1969dab85ed3a5afb07f70f7fb163b",
+      "seconds": 6.874019280076027,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "minimax",
+      "reference_cell": "cell_0004",
+      "lower": 0.0,
+      "upper": 3.62542298699281e-15,
+      "bracket": 3.62542298699281e-15,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_minimax.npz",
+      "witness_sha256": "1831453ba1662e9cbc969579626cfa52a97a724c6663fc65b6916466c77a6d9f",
+      "seconds": 0.7914153514429927,
+      "coarsening_bound": 0.0
+    }
+  ],
+  "planning": {
+    "method": "literal_uniform",
+    "seconds": 0,
+    "scope": "Control, not an optimized objective."
+  },
+  "policy_sha256": "f54722eccbd0fca0dfdaafbdc22531030b74ee377e9b067cf5af19286d4f9767",
+  "rewards": {
+    "information": 1.51666628711258,
+    "brier": 0.5571650463481006,
+    "pseudo_count": 3.677080983065761
+  },
+  "planning_certified": true,
+  "planning_elapsed_seconds": 0.09028004668653011,
+  "seconds": 21.11476207897067,
+  "peak_rss_mib": 333.90625,
+  "finished_utc": "2026-09-24T02:29:16.427442+00:00"
+}

@@ -1,0 +1,56 @@
+{
+  "started_utc": "2026-09-23T21:20:30.923366+00:00",
+  "state": "passed",
+  "cpu": 24,
+  "source_sha256": {
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/finish_supplementary.py": "1dcd1150d4d364ff8d1b807c0222442042ab00475a473ebb32069a0eb9730ff7",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/certificate_refinement/replay.py": "1481a297aca97176500f85bb764cc1dee4f2032d3dc1846301bab89960cd9a8a",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/reward_diagnostics/diagnose.py": "b3023344f89baba3aeecac8812530087711eb4f54a82ed59d37be56c3a32a68c",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/compare_reward_faces.py": "7fcd1c40ef045a7dafe37b64c2ed4334dbd32d06a39814c345cfe545ab50d82d",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/checked_summary.py": "5ad74027ff3cacef6f2d5433484d451b85187b6434c2f069762828b92d74c942"
+  },
+  "steps": [
+    {
+      "command": [
+        "/tmp/exploration-lp-cpu-venv/bin/python",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/certificate_refinement/replay.py",
+        "--audits",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/exhaustive_audits",
+        "--summary",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/summary",
+        "--output",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/certificate_refinement/results",
+        "--cpu",
+        "24"
+      ],
+      "exit": 0,
+      "wall_seconds": 34.009122177027166,
+      "log": "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/supplementary_step_0.log",
+      "log_sha256": "4af4cadec89e6ed11db24315a13dc49f76969a0e17c0953362ab2be4d95bcbef"
+    },
+    {
+      "command": [
+        "/tmp/exploration-lp-cpu-venv/bin/python",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/reward_diagnostics/diagnose.py",
+        "--summary",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/summary/summary.json"
+      ],
+      "exit": 0,
+      "wall_seconds": 5.720276020467281,
+      "log": "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/supplementary_step_1.log",
+      "log_sha256": "201366aa2ad2a50143431f26a0d90be0079079f77110fd2ae643f2b3a64a5ecb"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/compare_reward_faces.py"
+      ],
+      "exit": 0,
+      "wall_seconds": 0.1497527975589037,
+      "log": "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/supplementary_step_2.log",
+      "log_sha256": "484f9e774cd27412eb5f9f6c651fda3d1adef70ba713f23bcbeff818e86a0258"
+    }
+  ],
+  "scope": "Supplementary uniformly applied certificate and reward diagnostics. No optimization, retries, policy selection, or change to primary comparisons.",
+  "finished_utc": "2026-09-23T21:51:55.824806+00:00"
+}

@@ -1,0 +1,397 @@
+{
+  "frozen_utc": "2026-09-23T08:37:59.318870+00:00",
+  "study": "target selection and finite computation",
+  "mode": "main",
+  "workers": 2,
+  "cpu_workers": 3,
+  "gpu_workers": 1,
+  "hours_limit": 2,
+  "per_job_seconds": 1800,
+  "per_solve_seconds": 300,
+  "max_memory_gib_per_worker": 4,
+  "max_output_gib": 6,
+  "gpu_executable": "/tmp/exploration-lp-gpu-venv/bin/python",
+  "source_sha256": {
+    "scaling_core.py": "555d58fe145b78b004622d28d59cf3a3d0e1422245c5480da41c7e05e94d984e",
+    "fast_decoder.py": "4402c535d3e84950b2c528e049984d610510ad0db215bf1c25aaf82deeb761f1",
+    "objective_dp.py": "27a7490897fba458a099388842dd637d04693653a806a6d93bec16a572afdeb3",
+    "extra_objectives.py": "0d7387e57712303b9bdac67432220776defad68e243f8be58daee6e25e6c563b",
+    "gpu_solver.py": "164db826011ed4fdbafc905eb34276d3c5760f3b219dc4b2dd318e3922b73653",
+    "run_queue.py": "3cf42d7ed16d7913ccc8e77271ba428d97ac4c580d31ff832404484451d5310c",
+    "scale_one.py": "296ff35ab73312296e34e0578a8130a01e1bb1e08865d42a8859b9875ec2fec0",
+    "validate.py": "25c75d7b79a478ce8315770f59861f121aed07c370d70c22b2cb871bb4e417f4",
+    "make_manifest.py": "8296ac1736a88a649bf1d568f05346f941dd85b42afb2601edb0ef8872273641",
+    "report_scaling.py": "67f99aef9a6dbbf1ce6825ad5844a5b541c2bf5acd7b7cfa4da762205f776eb0",
+    "certified_decoder.py": "96b2bc3eb84047f2e0551efcc28a6cdc7cc990d5d9b39d76122430b3486234a6",
+    "review_pilots.py": "5fb21f26294adb7ec246521b3d8e4f074648f1b98fb62b14541b61d0f6921bec",
+    "PROTOCOL.md": "55cd0131c7d4178e574a3025d7112b8c034ebed19a1d7da2925c041b28a19f64",
+    "ORIGIN.json": "5d05cd7248b3a90a0a26c2900fd032404ec23b3a74176cb99fd78af333b4782d",
+    "VALIDATION.json": "47be8e47767edacecf23270b0a0e8eb3181d8f581c6e1616d43d6c76af3a40d4",
+    "PILOT_REVIEW.json": "340c2ffdb94a95ce623b8270cb639bfcb59534d1aed1f629e0af19be8a9efc91",
+    "../native_objective_benchmark_2026-09-15/compute.py": "b0ad02ef1c68423bc360cd00e2f9de518d6e9637f5e08bc92d61170524c8d508",
+    "../noisy_diagnostic_transfer_2026-09-13/compute.py": "ef51b462b0932e01fa4486117f60fc7ef1474d4f7cfae1b76e9cace404dbe881"
+  },
+  "cases": [
+    {
+      "case": "sensors_0.1_0.1"
+    },
+    {
+      "case": "sensors_0.1_0.3"
+    },
+    {
+      "case": "sensors_0.25_0.25"
+    },
+    {
+      "case": "delayed_0.1_0.1"
+    },
+    {
+      "case": "delayed_0.25_0.1"
+    },
+    {
+      "case": "irreversible_0.1_0.1"
+    },
+    {
+      "case": "irreversible_0.1_0.3"
+    },
+    {
+      "case": "hmm_91501_0.2"
+    },
+    {
+      "case": "hmm_91502_1.0"
+    },
+    {
+      "case": "hmm_91503_5.0"
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 0.2,
+      "seed": 2026096800
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 0.2,
+      "seed": 2026096801
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 1.0,
+      "seed": 2026096900
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 1.0,
+      "seed": 2026096901
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 5.0,
+      "seed": 2026097000
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 5.0,
+      "seed": 2026097001
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 0.2,
+      "seed": 2026100800
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 0.2,
+      "seed": 2026100801
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 1.0,
+      "seed": 2026100900
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 1.0,
+      "seed": 2026100901
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 5.0,
+      "seed": 2026101000
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 5.0,
+      "seed": 2026101001
+    }
+  ],
+  "source_definition": "Exact supplied-model candidate class; actual world unknown; all history-adaptive policies.",
+  "target_count_checkpoints": [
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "selection_seeds": [
+    923101,
+    923102,
+    923103
+  ],
+  "primary_jobs": 1188,
+  "jobs": [
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 5.0,
+      "seed": 2026101000,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "objective": "brier",
+      "strategy": "baseline",
+      "id": "cell_1064"
+    },
+    {
+      "case": "sensors_0.1_0.3",
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "objective": "information",
+      "strategy": "baseline",
+      "id": "cell_1091"
+    },
+    {
+      "case": "delayed_0.1_0.1",
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "objective": "brier",
+      "strategy": "baseline",
+      "id": "cell_1101"
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 5.0,
+      "seed": 2026097001,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "objective": "information",
+      "strategy": "baseline",
+      "id": "cell_1118"
+    },
+    {
+      "case": "irreversible_0.1_0.1",
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "objective": "information",
+      "strategy": "baseline",
+      "id": "cell_1174"
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 0.2,
+      "seed": 2026096800,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "objective": "brier",
+      "strategy": "baseline",
+      "id": "cell_1186"
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 1.0,
+      "seed": 2026100901,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "objective": "native_minimax",
+      "strategy": "adaptive",
+      "face_objective": "information",
+      "regret": 0.0,
+      "max_targets": 128,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_1023"
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 5.0,
+      "seed": 2026097000,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "objective": "native_minimax",
+      "strategy": "adaptive",
+      "face_objective": "brier",
+      "regret": 0.0,
+      "max_targets": 128,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_1080"
+    },
+    {
+      "case": "hmm_91503_5.0",
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "objective": "native_minimax",
+      "strategy": "adaptive",
+      "face_objective": "brier",
+      "regret": 0.0,
+      "max_targets": 128,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_1098"
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 0.2,
+      "seed": 2026100800,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "objective": "native_minimax",
+      "strategy": "adaptive",
+      "face_objective": "information",
+      "regret": 0.0,
+      "max_targets": 128,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_1116"
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 5.0,
+      "seed": 2026101001,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "objective": "native_minimax",
+      "strategy": "adaptive",
+      "face_objective": "brier",
+      "regret": 0.0,
+      "max_targets": 128,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_1167"
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 0.2,
+      "seed": 2026100801,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "objective": "native_minimax",
+      "strategy": "adaptive",
+      "face_objective": "brier",
+      "regret": 0.0,
+      "max_targets": 128,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_1179"
+    },
+    {
+      "case": "irreversible_0.1_0.3",
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "objective": "native_minimax",
+      "strategy": "adaptive",
+      "face_objective": "brier",
+      "regret": 0.0,
+      "max_targets": 128,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_1184"
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 0.2,
+      "seed": 2026096800,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "objective": "pseudo_count",
+      "strategy": "baseline",
+      "id": "cell_1076"
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 5.0,
+      "seed": 2026101000,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "objective": "uniform",
+      "strategy": "baseline",
+      "id": "cell_1089"
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 5.0,
+      "seed": 2026097001,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "objective": "uniform",
+      "strategy": "baseline",
+      "id": "cell_1160"
+    },
+    {
+      "case": "delayed_0.25_0.1",
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "objective": "pseudo_count",
+      "strategy": "baseline",
+      "id": "cell_1182"
+    }
+  ],
+  "followup_scope": "Finish original registered core/nominal-face/uniform/count jobs. Preserve all original source and outcomes; omit newly removed predictive families from new runs.",
+  "original_manifest_sha256": "9a8a3933588b5173bc2058f96405bd831f149b1bb5a2a3486bbe68ba29348688"
+}

@@ -1,0 +1,43 @@
+{
+  "scope": "Development attempts retained separately from verified scientific conclusions.",
+  "native_count_bound": {
+    "status": "stopped_after_replay_failure",
+    "last_completed_iteration": 11,
+    "reason": "At iteration12, a numerical policy flow near1e-12 had clipped children summing to zero; replay normalization produced NaN and was rejected. The last completed decoder was subsequently certified via the exact native LP.",
+    "scientific_replacement": "native_count_certificate.json"
+  },
+  "native_history_bound": {
+    "status": "iteration_limit_without_convergence",
+    "iteration_limit": 100,
+    "reason": "Unstabilized common decoder master kept a .072 lower value while separation remained above the useful count bound.",
+    "scientific_replacement": "native_history_stable_decoder.json"
+  },
+  "native_history_stable_bound": {
+    "status": "converged_float64_then_exactly_certified_upper",
+    "iterations": 41,
+    "oracle_calls": 4920,
+    "scientific_certificate": "native_history_certificate.json",
+    "equality_claim": false
+  },
+  "native_history_refine_bound": {
+    "status": "stopped_on_numerical_stagnation",
+    "last_completed_iteration": 20,
+    "reason": "Residual separation 5.215e-11 exceeded requested 2e-11 but produced no new cut under 13-decimal deduplication. No exact equality inferred.",
+    "scientific_certificate": null
+  },
+  "larger_bellman_family": {
+    "status": "mathematically_inadequate_relaxation",
+    "reason": "Exact native-suboptimal counterexample has adaptive deficiency at least .1224 despite optimal balanced guessing sum.",
+    "sources": [
+      "theory/theory.tex",
+      "enumerated_plans.json",
+      "bellman_compact_decoder.json"
+    ]
+  },
+  "exact_polishing": {
+    "status": "bounded_attempt_finished_without_exact_sharpness",
+    "details": "polishing_summary.json",
+    "scientific_replacement": null,
+    "retained_scientific_certificate": "native_history_certificate.json"
+  }
+}

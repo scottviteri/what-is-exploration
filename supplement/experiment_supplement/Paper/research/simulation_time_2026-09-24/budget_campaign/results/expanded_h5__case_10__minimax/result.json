@@ -1,0 +1,1669 @@
+{
+  "status": "complete",
+  "phase": "awaiting_independent_check",
+  "spec": {
+    "id": "expanded_h5__case_10__minimax",
+    "phase": "expanded_h5",
+    "case": "fresh_hmm_2026100800_q8_s3_c0.2",
+    "case_id": "case_10",
+    "t": 5,
+    "method": "minimax",
+    "mode": "plan",
+    "planning_seconds": 600,
+    "job_seconds": 2400
+  },
+  "started_utc": "2026-09-24T03:06:26.602395+00:00",
+  "sources_sha256": "4684f78b757300662b68c95163c77fd78aebeaa843761993d970ffe6deefb0b5",
+  "manifest_sha256": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4",
+  "model_sha256": "0033fa2e3a1cd538b297aea5c3b3cfa18f78f742446f6c90a08283d202ccdbbb",
+  "pid": 4072081,
+  "cpu_affinity": [
+    10
+  ],
+  "audits": [
+    {
+      "reference": "information",
+      "reference_cell": "cell_0370",
+      "lower": 0.059339409524395204,
+      "upper": 0.05933940980752783,
+      "bracket": 2.831326284535862e-10,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_information.npz",
+      "witness_sha256": "5421e6320441a412253a8e37fb507ea8df62fd8985410454fa5cac19b00b078d",
+      "seconds": 0.1727887848392129,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "brier",
+      "reference_cell": "cell_0930",
+      "lower": 0.059339409524395204,
+      "upper": 0.05933940980752783,
+      "bracket": 2.831326284535862e-10,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_brier.npz",
+      "witness_sha256": "5421e6320441a412253a8e37fb507ea8df62fd8985410454fa5cac19b00b078d",
+      "seconds": 0.009822527877986431,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "pseudo_count",
+      "reference_cell": "cell_0988",
+      "lower": 0.06793496228679896,
+      "upper": 0.0679349628744263,
+      "bracket": 5.876273356797412e-10,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_pseudo_count.npz",
+      "witness_sha256": "f96b0d821b76fd0e3dade3c7e1ceed28f633ba3bfcb93e1b47be5f4b145ad8bd",
+      "seconds": 1.2180831357836723,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "uniform",
+      "reference_cell": "cell_0460",
+      "lower": 0.00855011528941474,
+      "upper": 0.008550116908316066,
+      "bracket": 1.6189013272299713e-09,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_uniform.npz",
+      "witness_sha256": "4cc7959ae4a1f162823f044fd26bc389a52e36a2baf01e4aed5890a8f2e7e517",
+      "seconds": 5.224594765342772,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "weighted128",
+      "reference_cell": "cell_0070",
+      "lower": 0.018368830787318213,
+      "upper": 0.018368831724855858,
+      "bracket": 9.375376447406936e-10,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_weighted128.npz",
+      "witness_sha256": "795b41a15a0de0df7c8e327dccbc56903b8e6ded13c7847d25848d04fa026403",
+      "seconds": 2.9499189276248217,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "minimax",
+      "reference_cell": "cell_0410",
+      "lower": 0.005846520910533171,
+      "upper": 0.005846521964027306,
+      "bracket": 1.0534941356776795e-09,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_minimax.npz",
+      "witness_sha256": "a2c1f2b54f86da99a202f476e7e00066a9c80a4b3cf9a0382234a4f69e9429de",
+      "seconds": 2.5160238947719336,
+      "coarsening_bound": 0.0
+    }
+  ],
+  "planning": {
+    "status": "converged",
+    "error": null,
+    "seconds": 295.7958929594606,
+    "lower": 0.06948172400775492,
+    "upper": 0.06948190989542408,
+    "gap": 1.858876691601674e-07,
+    "iterations": [
+      {
+        "iteration": 0,
+        "cut_count": 0,
+        "master": {
+          "primal": 0.0,
+          "dual": 0.0,
+          "raw_dual": 0.0,
+          "residuals": {
+            "equality": 0.0,
+            "inequality": 0.0,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 0.0,
+            "gap": 0.0,
+            "repaired_gap": 0.0
+          },
+          "iterations": 0,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 0,
+          "solve_seconds": 0.005890758708119392,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.0003252308815717697,
+          "total_seconds": 0.021468941122293472
+        },
+        "feasible_upper": 0.42077428319410537,
+        "best_upper": 0.42077428319410537,
+        "lower": 0.0,
+        "gap": 0.42077428319410537,
+        "oracle_seconds": 0.5677404534071684,
+        "oracle_solver_seconds": 0.4916058499366045,
+        "decoder_build_seconds": 0.006771105341613293,
+        "decoder_fallbacks": 0,
+        "cuts_added": 127
+      },
+      {
+        "iteration": 1,
+        "cut_count": 127,
+        "master": {
+          "primal": 0.0,
+          "dual": 0.0,
+          "raw_dual": 0.0,
+          "residuals": {
+            "equality": 2.7755575615628914e-17,
+            "inequality": 0.0,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 0.0,
+            "gap": 0.0,
+            "repaired_gap": 0.0
+          },
+          "iterations": 189,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 127,
+          "solve_seconds": 0.060269180685281754,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.028591888025403023,
+          "total_seconds": 0.09258648101240396
+        },
+        "feasible_upper": 0.21934155372785338,
+        "best_upper": 0.21934155372785338,
+        "lower": 0.0,
+        "gap": 0.21934155372785338,
+        "oracle_seconds": 1.363839470781386,
+        "oracle_solver_seconds": 1.2883133795112371,
+        "decoder_build_seconds": 0.006456285715103149,
+        "decoder_fallbacks": 0,
+        "cuts_added": 127
+      },
+      {
+        "iteration": 2,
+        "cut_count": 254,
+        "master": {
+          "primal": 0.03660546397895116,
+          "dual": 0.03660546397712356,
+          "raw_dual": 0.03660546397895126,
+          "residuals": {
+            "equality": 5.204170427930421e-18,
+            "inequality": 5.551115123125783e-16,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 1.827163420564659e-12,
+            "upper_dual_sign": 0.0,
+            "stationarity": 1.942890293094024e-16,
+            "gap": 9.71445146547012e-17,
+            "repaired_gap": 1.8276005708806053e-12
+          },
+          "iterations": 498,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 254,
+          "solve_seconds": 0.14003591053187847,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.05291191581636667,
+          "total_seconds": 0.19698456954210997
+        },
+        "feasible_upper": 0.19100716561385517,
+        "best_upper": 0.19100716561385517,
+        "lower": 0.03660546397712356,
+        "gap": 0.15440170163673161,
+        "oracle_seconds": 2.871016191318631,
+        "oracle_solver_seconds": 2.790739770978689,
+        "decoder_build_seconds": 0.007773916237056255,
+        "decoder_fallbacks": 0,
+        "cuts_added": 125
+      },
+      {
+        "iteration": 3,
+        "cut_count": 379,
+        "master": {
+          "primal": 0.05655099160298388,
+          "dual": 0.05655099160298358,
+          "raw_dual": 0.056550991602983824,
+          "residuals": {
+            "equality": 1.3877787807814457e-17,
+            "inequality": 4.440892098500626e-16,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 2.220446049250313e-16,
+            "gap": 5.551115123125783e-17,
+            "repaired_gap": 2.983724378680108e-16
+          },
+          "iterations": 648,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 379,
+          "solve_seconds": 0.21936500910669565,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.07824918534606695,
+          "total_seconds": 0.30183794256299734
+        },
+        "feasible_upper": 0.097603148681448,
+        "best_upper": 0.097603148681448,
+        "lower": 0.05655099160298358,
+        "gap": 0.041052157078464414,
+        "oracle_seconds": 2.789086234755814,
+        "oracle_solver_seconds": 2.7092844089493155,
+        "decoder_build_seconds": 0.007994833402335644,
+        "decoder_fallbacks": 0,
+        "cuts_added": 84
+      },
+      {
+        "iteration": 4,
+        "cut_count": 463,
+        "master": {
+          "primal": 0.0630523342131115,
+          "dual": 0.06305233421311089,
+          "raw_dual": 0.06305233421311152,
+          "residuals": {
+            "equality": 2.7755575615628914e-17,
+            "inequality": 5.551115123125783e-16,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 1.0408340855860843e-16,
+            "gap": 1.3877787807814457e-17,
+            "repaired_gap": 6.106226635438361e-16
+          },
+          "iterations": 804,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 463,
+          "solve_seconds": 0.28726484067738056,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.09379183780401945,
+          "total_seconds": 0.3854695111513138
+        },
+        "feasible_upper": 0.10722567287637563,
+        "best_upper": 0.097603148681448,
+        "lower": 0.06305233421311089,
+        "gap": 0.034550814468337104,
+        "oracle_seconds": 4.392497386783361,
+        "oracle_solver_seconds": 4.311183102428913,
+        "decoder_build_seconds": 0.00852216873317957,
+        "decoder_fallbacks": 0,
+        "cuts_added": 88
+      },
+      {
+        "iteration": 5,
+        "cut_count": 551,
+        "master": {
+          "primal": 0.06620580334741999,
+          "dual": 0.0662058033474195,
+          "raw_dual": 0.0662058033474201,
+          "residuals": {
+            "equality": 6.938893903907228e-18,
+            "inequality": 6.661338147750939e-16,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 1.1102230246251565e-16,
+            "gap": 1.1102230246251565e-16,
+            "repaired_gap": 4.85722573273506e-16
+          },
+          "iterations": 846,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 551,
+          "solve_seconds": 0.3524945406243205,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.11505995318293571,
+          "total_seconds": 0.4721438018605113
+        },
+        "feasible_upper": 0.08674429348971592,
+        "best_upper": 0.08674429348971592,
+        "lower": 0.0662058033474195,
+        "gap": 0.020538490142296417,
+        "oracle_seconds": 4.068655597046018,
+        "oracle_solver_seconds": 3.9870418179780245,
+        "decoder_build_seconds": 0.008694563992321491,
+        "decoder_fallbacks": 0,
+        "cuts_added": 62
+      },
+      {
+        "iteration": 6,
+        "cut_count": 613,
+        "master": {
+          "primal": 0.0676064514891079,
+          "dual": 0.06760645148910702,
+          "raw_dual": 0.06760645148910782,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 5.551115123125783e-16,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 5.551115123125783e-16,
+            "gap": 8.326672684688674e-17,
+            "repaired_gap": 8.881784197001252e-16
+          },
+          "iterations": 799,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 613,
+          "solve_seconds": 0.3900443594902754,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.12842280883342028,
+          "total_seconds": 0.5231497408822179
+        },
+        "feasible_upper": 0.07911093828918195,
+        "best_upper": 0.07911093828918195,
+        "lower": 0.06760645148910702,
+        "gap": 0.011504486800074931,
+        "oracle_seconds": 3.9180636359378695,
+        "oracle_solver_seconds": 3.836169747635722,
+        "decoder_build_seconds": 0.008908220566809177,
+        "decoder_fallbacks": 0,
+        "cuts_added": 65
+      },
+      {
+        "iteration": 7,
+        "cut_count": 678,
+        "master": {
+          "primal": 0.06831745297813224,
+          "dual": 0.06831745297813122,
+          "raw_dual": 0.0683174529781323,
+          "residuals": {
+            "equality": 2.7755575615628914e-17,
+            "inequality": 1.7419399256368706e-13,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 9.71445146547012e-17,
+            "gap": 5.551115123125783e-17,
+            "repaired_gap": 1.0269562977782698e-15
+          },
+          "iterations": 830,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 678,
+          "solve_seconds": 0.41976215317845345,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.14410183392465115,
+          "total_seconds": 0.5689539909362793
+        },
+        "feasible_upper": 0.07262074581321301,
+        "best_upper": 0.07262074581321301,
+        "lower": 0.06831745297813122,
+        "gap": 0.004303292835081796,
+        "oracle_seconds": 5.190527971833944,
+        "oracle_solver_seconds": 5.106365957297385,
+        "decoder_build_seconds": 0.009569999761879444,
+        "decoder_fallbacks": 0,
+        "cuts_added": 27
+      },
+      {
+        "iteration": 8,
+        "cut_count": 705,
+        "master": {
+          "primal": 0.06878764242999792,
+          "dual": 0.06878764242999656,
+          "raw_dual": 0.06878764242999791,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 1.3067324999838092e-13,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 4.440892098500626e-16,
+            "gap": 1.3877787807814457e-17,
+            "repaired_gap": 1.3600232051658168e-15
+          },
+          "iterations": 926,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 705,
+          "solve_seconds": 0.4757742416113615,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.1507449159398675,
+          "total_seconds": 0.6313637746497989
+        },
+        "feasible_upper": 0.07206427863454398,
+        "best_upper": 0.07206427863454398,
+        "lower": 0.06878764242999656,
+        "gap": 0.00327663620454742,
+        "oracle_seconds": 5.810473210178316,
+        "oracle_solver_seconds": 5.7253894517198205,
+        "decoder_build_seconds": 0.009866108186542988,
+        "decoder_fallbacks": 0,
+        "cuts_added": 33
+      },
+      {
+        "iteration": 9,
+        "cut_count": 738,
+        "master": {
+          "primal": 0.06907223589341871,
+          "dual": 0.06907223589341767,
+          "raw_dual": 0.06907223589341882,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 6.661338147750939e-16,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 2.3592239273284576e-16,
+            "gap": 1.1102230246251565e-16,
+            "repaired_gap": 1.0408340855860843e-15
+          },
+          "iterations": 1017,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 738,
+          "solve_seconds": 0.5166320521384478,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.15986663196235895,
+          "total_seconds": 0.6819864120334387
+        },
+        "feasible_upper": 0.07157303092434165,
+        "best_upper": 0.07157303092434165,
+        "lower": 0.06907223589341767,
+        "gap": 0.0025007950309239857,
+        "oracle_seconds": 7.25753600616008,
+        "oracle_solver_seconds": 7.169806702062488,
+        "decoder_build_seconds": 0.009971431456506252,
+        "decoder_fallbacks": 0,
+        "cuts_added": 25
+      },
+      {
+        "iteration": 10,
+        "cut_count": 763,
+        "master": {
+          "primal": 0.06919476926669818,
+          "dual": 0.06919476926669708,
+          "raw_dual": 0.0691947692666981,
+          "residuals": {
+            "equality": 1.1102230246251565e-16,
+            "inequality": 3.552713678800501e-15,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 2.220446049250313e-16,
+            "gap": 8.326672684688674e-17,
+            "repaired_gap": 1.096345236817342e-15
+          },
+          "iterations": 841,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 763,
+          "solve_seconds": 0.48947559855878353,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.16739049181342125,
+          "total_seconds": 0.6618543602526188
+        },
+        "feasible_upper": 0.06991254987524682,
+        "best_upper": 0.06991254987524682,
+        "lower": 0.06919476926669708,
+        "gap": 0.0007177806085497396,
+        "oracle_seconds": 6.240473292768002,
+        "oracle_solver_seconds": 6.154353278689086,
+        "decoder_build_seconds": 0.010154858231544495,
+        "decoder_fallbacks": 0,
+        "cuts_added": 25
+      },
+      {
+        "iteration": 11,
+        "cut_count": 788,
+        "master": {
+          "primal": 0.06926446658882664,
+          "dual": 0.06926446658882586,
+          "raw_dual": 0.06926446658882679,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 3.164135620181696e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 3.3306690738754696e-16,
+            "gap": 1.5265566588595902e-16,
+            "repaired_gap": 7.771561172376096e-16
+          },
+          "iterations": 779,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 788,
+          "solve_seconds": 0.4955431530252099,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.18470690678805113,
+          "total_seconds": 0.6852516420185566
+        },
+        "feasible_upper": 0.06994207877768435,
+        "best_upper": 0.06991254987524682,
+        "lower": 0.06926446658882586,
+        "gap": 0.000648083286420964,
+        "oracle_seconds": 7.234762164764106,
+        "oracle_solver_seconds": 7.149053466506302,
+        "decoder_build_seconds": 0.01050442736595869,
+        "decoder_fallbacks": 0,
+        "cuts_added": 23
+      },
+      {
+        "iteration": 12,
+        "cut_count": 811,
+        "master": {
+          "primal": 0.06932347710673563,
+          "dual": 0.06932347710673381,
+          "raw_dual": 0.06932347710673559,
+          "residuals": {
+            "equality": 4.85722573273506e-17,
+            "inequality": 2.1538326677728037e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 6.661338147750939e-16,
+            "gap": 4.163336342344337e-17,
+            "repaired_gap": 1.817990202823694e-15
+          },
+          "iterations": 818,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 811,
+          "solve_seconds": 0.516795426607132,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.1834501689299941,
+          "total_seconds": 0.7055183565244079
+        },
+        "feasible_upper": 0.0697447587675974,
+        "best_upper": 0.0697447587675974,
+        "lower": 0.06932347710673381,
+        "gap": 0.00042128166086359553,
+        "oracle_seconds": 6.946677839383483,
+        "oracle_solver_seconds": 6.85983697976917,
+        "decoder_build_seconds": 0.010128597728908062,
+        "decoder_fallbacks": 0,
+        "cuts_added": 24
+      },
+      {
+        "iteration": 13,
+        "cut_count": 835,
+        "master": {
+          "primal": 0.06940021386447076,
+          "dual": 0.06940021386446948,
+          "raw_dual": 0.0694002138644706,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 1.6598944441170715e-12,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 2.220446049250313e-16,
+            "gap": 1.6653345369377348e-16,
+            "repaired_gap": 1.27675647831893e-15
+          },
+          "iterations": 917,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 835,
+          "solve_seconds": 0.5536974277347326,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.19023182429373264,
+          "total_seconds": 0.7490791687741876
+        },
+        "feasible_upper": 0.0698123084587038,
+        "best_upper": 0.0697447587675974,
+        "lower": 0.06940021386446948,
+        "gap": 0.00034454490312792185,
+        "oracle_seconds": 6.7555068684741855,
+        "oracle_solver_seconds": 6.669694805517793,
+        "decoder_build_seconds": 0.010153207927942276,
+        "decoder_fallbacks": 0,
+        "cuts_added": 20
+      },
+      {
+        "iteration": 14,
+        "cut_count": 855,
+        "master": {
+          "primal": 0.06943422653036545,
+          "dual": 0.06943422653036425,
+          "raw_dual": 0.06943422653036546,
+          "residuals": {
+            "equality": 1.1102230246251565e-16,
+            "inequality": 3.3084646133829665e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 2.220446049250313e-16,
+            "gap": 1.3877787807814457e-17,
+            "repaired_gap": 1.1934897514720433e-15
+          },
+          "iterations": 899,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 855,
+          "solve_seconds": 0.5713848248124123,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.1954897753894329,
+          "total_seconds": 0.7721606902778149
+        },
+        "feasible_upper": 0.06966265989535429,
+        "best_upper": 0.06966265989535429,
+        "lower": 0.06943422653036425,
+        "gap": 0.0002284333649900383,
+        "oracle_seconds": 6.97228722833097,
+        "oracle_solver_seconds": 6.884159131906927,
+        "decoder_build_seconds": 0.010233731009066105,
+        "decoder_fallbacks": 0,
+        "cuts_added": 15
+      },
+      {
+        "iteration": 15,
+        "cut_count": 870,
+        "master": {
+          "primal": 0.06944354429289123,
+          "dual": 0.06944354429288982,
+          "raw_dual": 0.06944354429289135,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 2.9531932455029164e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 2.220446049250313e-16,
+            "gap": 1.1102230246251565e-16,
+            "repaired_gap": 1.4155343563970746e-15
+          },
+          "iterations": 937,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 870,
+          "solve_seconds": 0.576801348477602,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.2016167500987649,
+          "total_seconds": 0.7835410851985216
+        },
+        "feasible_upper": 0.06963388739560541,
+        "best_upper": 0.06963388739560541,
+        "lower": 0.06944354429288982,
+        "gap": 0.0001903431027155955,
+        "oracle_seconds": 7.739788945764303,
+        "oracle_solver_seconds": 7.65229822602123,
+        "decoder_build_seconds": 0.010389326140284538,
+        "decoder_fallbacks": 0,
+        "cuts_added": 15
+      },
+      {
+        "iteration": 16,
+        "cut_count": 885,
+        "master": {
+          "primal": 0.06945065511586142,
+          "dual": 0.06945065511585889,
+          "raw_dual": 0.06945065511586135,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 1.509903313490213e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 1.3322676295501878e-15,
+            "gap": 6.938893903907228e-17,
+            "repaired_gap": 2.525757381022231e-15
+          },
+          "iterations": 908,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 885,
+          "solve_seconds": 0.5945675484836102,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.20689030922949314,
+          "total_seconds": 0.8065910339355469
+        },
+        "feasible_upper": 0.06966466555769342,
+        "best_upper": 0.06963388739560541,
+        "lower": 0.06945065511585889,
+        "gap": 0.000183232279746523,
+        "oracle_seconds": 7.081306027248502,
+        "oracle_solver_seconds": 6.995161421597004,
+        "decoder_build_seconds": 0.010419267229735851,
+        "decoder_fallbacks": 0,
+        "cuts_added": 19
+      },
+      {
+        "iteration": 17,
+        "cut_count": 904,
+        "master": {
+          "primal": 0.06945769072268083,
+          "dual": 0.06945769072267892,
+          "raw_dual": 0.06945769072268071,
+          "residuals": {
+            "equality": 2.7755575615628914e-17,
+            "inequality": 1.9206858326015208e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 6.661338147750939e-16,
+            "gap": 1.249000902703301e-16,
+            "repaired_gap": 1.915134717478395e-15
+          },
+          "iterations": 1069,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 904,
+          "solve_seconds": 0.6643699267879128,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.2208535335958004,
+          "total_seconds": 0.8904284602031112
+        },
+        "feasible_upper": 0.06963913302990064,
+        "best_upper": 0.06963388739560541,
+        "lower": 0.06945769072267892,
+        "gap": 0.00017619667292649577,
+        "oracle_seconds": 7.2759773368015885,
+        "oracle_solver_seconds": 7.188927594572306,
+        "decoder_build_seconds": 0.010335284285247326,
+        "decoder_fallbacks": 0,
+        "cuts_added": 15
+      },
+      {
+        "iteration": 18,
+        "cut_count": 919,
+        "master": {
+          "primal": 0.0694626449377618,
+          "dual": 0.06946264493776087,
+          "raw_dual": 0.06946264493776177,
+          "residuals": {
+            "equality": 1.1102230246251565e-16,
+            "inequality": 2.1538326677728037e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 3.3306690738754696e-16,
+            "gap": 2.7755575615628914e-17,
+            "repaired_gap": 9.298117831235686e-16
+          },
+          "iterations": 889,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 919,
+          "solve_seconds": 0.5939126880839467,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.21947123296558857,
+          "total_seconds": 0.8185907592996955
+        },
+        "feasible_upper": 0.06968597740459545,
+        "best_upper": 0.06963388739560541,
+        "lower": 0.06946264493776087,
+        "gap": 0.00017124245784454206,
+        "oracle_seconds": 7.499126929789782,
+        "oracle_solver_seconds": 7.410473453812301,
+        "decoder_build_seconds": 0.010442976839840412,
+        "decoder_fallbacks": 0,
+        "cuts_added": 13
+      },
+      {
+        "iteration": 19,
+        "cut_count": 932,
+        "master": {
+          "primal": 0.0694674873130715,
+          "dual": 0.06946748731306919,
+          "raw_dual": 0.0694674873130714,
+          "residuals": {
+            "equality": 1.1102230246251565e-16,
+            "inequality": 1.1179945857975326e-13,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 8.881784197001252e-16,
+            "gap": 9.71445146547012e-17,
+            "repaired_gap": 2.3037127760972e-15
+          },
+          "iterations": 955,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 932,
+          "solve_seconds": 0.6405772054567933,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.2276974907144904,
+          "total_seconds": 0.8736333400011063
+        },
+        "feasible_upper": 0.06955531585163927,
+        "best_upper": 0.06955531585163927,
+        "lower": 0.06946748731306919,
+        "gap": 8.782853857007555e-05,
+        "oracle_seconds": 7.724366368725896,
+        "oracle_solver_seconds": 7.634977161884308,
+        "decoder_build_seconds": 0.010559511370956898,
+        "decoder_fallbacks": 0,
+        "cuts_added": 12
+      },
+      {
+        "iteration": 20,
+        "cut_count": 944,
+        "master": {
+          "primal": 0.06947036591374332,
+          "dual": 0.0694703659137419,
+          "raw_dual": 0.06947036591374334,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 2.098321516541546e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 2.220446049250313e-16,
+            "gap": 1.3877787807814457e-17,
+            "repaired_gap": 1.429412144204889e-15
+          },
+          "iterations": 1038,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 944,
+          "solve_seconds": 0.6774953445419669,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.22944343462586403,
+          "total_seconds": 0.9125410504639149
+        },
+        "feasible_upper": 0.06954614841837858,
+        "best_upper": 0.06954614841837858,
+        "lower": 0.0694703659137419,
+        "gap": 7.578250463669001e-05,
+        "oracle_seconds": 7.589843153953552,
+        "oracle_solver_seconds": 7.502909682691097,
+        "decoder_build_seconds": 0.010441036894917488,
+        "decoder_fallbacks": 0,
+        "cuts_added": 17
+      },
+      {
+        "iteration": 21,
+        "cut_count": 961,
+        "master": {
+          "primal": 0.06947133842287352,
+          "dual": 0.06947133842287254,
+          "raw_dual": 0.06947133842287334,
+          "residuals": {
+            "equality": 1.1102230246251565e-16,
+            "inequality": 1.9317880628477724e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 1.2212453270876722e-15,
+            "gap": 1.8041124150158794e-16,
+            "repaired_gap": 9.853229343548264e-16
+          },
+          "iterations": 931,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 961,
+          "solve_seconds": 0.6383762583136559,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.23516994901001453,
+          "total_seconds": 0.8791020764037967
+        },
+        "feasible_upper": 0.06953457905891836,
+        "best_upper": 0.06953457905891836,
+        "lower": 0.06947133842287254,
+        "gap": 6.324063604581931e-05,
+        "oracle_seconds": 7.222901816479862,
+        "oracle_solver_seconds": 7.13649183139205,
+        "decoder_build_seconds": 0.010448257438838482,
+        "decoder_fallbacks": 0,
+        "cuts_added": 11
+      },
+      {
+        "iteration": 22,
+        "cut_count": 972,
+        "master": {
+          "primal": 0.06947273730281692,
+          "dual": 0.06947273730281602,
+          "raw_dual": 0.069472737302817,
+          "residuals": {
+            "equality": 1.1102230246251565e-16,
+            "inequality": 1.942890293094024e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 1.3183898417423734e-16,
+            "gap": 8.326672684688674e-17,
+            "repaired_gap": 9.020562075079397e-16
+          },
+          "iterations": 935,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 972,
+          "solve_seconds": 0.6759736686944962,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.23874800745397806,
+          "total_seconds": 0.9201097907498479
+        },
+        "feasible_upper": 0.0695170760172294,
+        "best_upper": 0.0695170760172294,
+        "lower": 0.06947273730281602,
+        "gap": 4.433871441338055e-05,
+        "oracle_seconds": 7.471105730161071,
+        "oracle_solver_seconds": 7.38511842302978,
+        "decoder_build_seconds": 0.01047142781317234,
+        "decoder_fallbacks": 0,
+        "cuts_added": 9
+      },
+      {
+        "iteration": 23,
+        "cut_count": 981,
+        "master": {
+          "primal": 0.06947544231037135,
+          "dual": 0.06947544231036988,
+          "raw_dual": 0.0694754423103715,
+          "residuals": {
+            "equality": 1.1102230246251565e-16,
+            "inequality": 1.9761969838327786e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 4.440892098500626e-16,
+            "gap": 1.5265566588595902e-16,
+            "repaired_gap": 1.4710455076283324e-15
+          },
+          "iterations": 861,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 981,
+          "solve_seconds": 0.6497728144749999,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.2435406632721424,
+          "total_seconds": 0.8986749202013016
+        },
+        "feasible_upper": 0.06954363143086334,
+        "best_upper": 0.0695170760172294,
+        "lower": 0.06947544231036988,
+        "gap": 4.163370685951462e-05,
+        "oracle_seconds": 7.480528457090259,
+        "oracle_solver_seconds": 7.393562622368336,
+        "decoder_build_seconds": 0.010605341754853725,
+        "decoder_fallbacks": 0,
+        "cuts_added": 11
+      },
+      {
+        "iteration": 24,
+        "cut_count": 992,
+        "master": {
+          "primal": 0.06947724299384736,
+          "dual": 0.06947724299384624,
+          "raw_dual": 0.06947724299384739,
+          "residuals": {
+            "equality": 1.1102230246251565e-16,
+            "inequality": 1.9872992140790302e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 4.440892098500626e-16,
+            "gap": 2.7755575615628914e-17,
+            "repaired_gap": 1.124100812432971e-15
+          },
+          "iterations": 1183,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 992,
+          "solve_seconds": 0.7546632084995508,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.2486934196203947,
+          "total_seconds": 1.0088959662243724
+        },
+        "feasible_upper": 0.06953827961020365,
+        "best_upper": 0.0695170760172294,
+        "lower": 0.06947724299384624,
+        "gap": 3.983302338315953e-05,
+        "oracle_seconds": 7.5233723456040025,
+        "oracle_solver_seconds": 7.437101762741804,
+        "decoder_build_seconds": 0.010690434835851192,
+        "decoder_fallbacks": 0,
+        "cuts_added": 10
+      },
+      {
+        "iteration": 25,
+        "cut_count": 1002,
+        "master": {
+          "primal": 0.06947778815531176,
+          "dual": 0.06947778815531057,
+          "raw_dual": 0.06947778815531158,
+          "residuals": {
+            "equality": 2.7755575615628914e-17,
+            "inequality": 1.887379141862766e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 1.1102230246251565e-16,
+            "gap": 1.8041124150158794e-16,
+            "repaired_gap": 1.1934897514720433e-15
+          },
+          "iterations": 1111,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1002,
+          "solve_seconds": 0.7619479801505804,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.25610319431871176,
+          "total_seconds": 1.0236619841307402
+        },
+        "feasible_upper": 0.06949561859243791,
+        "best_upper": 0.06949561859243791,
+        "lower": 0.06947778815531057,
+        "gap": 1.7830437127344667e-05,
+        "oracle_seconds": 7.8469681404531,
+        "oracle_solver_seconds": 7.7579849837347865,
+        "decoder_build_seconds": 0.01053509023040533,
+        "decoder_fallbacks": 0,
+        "cuts_added": 10
+      },
+      {
+        "iteration": 26,
+        "cut_count": 1012,
+        "master": {
+          "primal": 0.06947862008051019,
+          "dual": 0.06947862008050901,
+          "raw_dual": 0.06947862008051009,
+          "residuals": {
+            "equality": 1.1102230246251565e-16,
+            "inequality": 1.8318679906315083e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 6.661338147750939e-16,
+            "gap": 9.71445146547012e-17,
+            "repaired_gap": 1.1796119636642288e-15
+          },
+          "iterations": 857,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1012,
+          "solve_seconds": 0.6642176834866405,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.2738271616399288,
+          "total_seconds": 0.9434918202459812
+        },
+        "feasible_upper": 0.06949684019328699,
+        "best_upper": 0.06949561859243791,
+        "lower": 0.06947862008050901,
+        "gap": 1.6998511928906224e-05,
+        "oracle_seconds": 7.38143568765372,
+        "oracle_solver_seconds": 7.289816506206989,
+        "decoder_build_seconds": 0.010777517221868038,
+        "decoder_fallbacks": 0,
+        "cuts_added": 10
+      },
+      {
+        "iteration": 27,
+        "cut_count": 1022,
+        "master": {
+          "primal": 0.06947994126225757,
+          "dual": 0.06947994126225618,
+          "raw_dual": 0.06947994126225765,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 1.9317880628477724e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 4.440892098500626e-16,
+            "gap": 8.326672684688674e-17,
+            "repaired_gap": 1.3877787807814457e-15
+          },
+          "iterations": 1004,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1022,
+          "solve_seconds": 0.730832745321095,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.265852190554142,
+          "total_seconds": 1.0022604241967201
+        },
+        "feasible_upper": 0.06948947850740592,
+        "best_upper": 0.06948947850740592,
+        "lower": 0.06947994126225618,
+        "gap": 9.53724514973775e-06,
+        "oracle_seconds": 7.414802701212466,
+        "oracle_solver_seconds": 7.32611077465117,
+        "decoder_build_seconds": 0.010885370895266533,
+        "decoder_fallbacks": 0,
+        "cuts_added": 8
+      },
+      {
+        "iteration": 28,
+        "cut_count": 1030,
+        "master": {
+          "primal": 0.06948031609715813,
+          "dual": 0.06948031609715666,
+          "raw_dual": 0.06948031609715788,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 1.9761969838327786e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 2.220446049250313e-16,
+            "gap": 2.498001805406602e-16,
+            "repaired_gap": 1.4710455076283324e-15
+          },
+          "iterations": 922,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1030,
+          "solve_seconds": 0.9952080706134439,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.2699052430689335,
+          "total_seconds": 1.2766713835299015
+        },
+        "feasible_upper": 0.06948977067065965,
+        "best_upper": 0.06948947850740592,
+        "lower": 0.06948031609715666,
+        "gap": 9.162410249258235e-06,
+        "oracle_seconds": 8.533551330678165,
+        "oracle_solver_seconds": 8.37796350568533,
+        "decoder_build_seconds": 0.07238947786390781,
+        "decoder_fallbacks": 0,
+        "cuts_added": 7
+      },
+      {
+        "iteration": 29,
+        "cut_count": 1037,
+        "master": {
+          "primal": 0.06948139945102022,
+          "dual": 0.06948139945101922,
+          "raw_dual": 0.06948139945102005,
+          "residuals": {
+            "equality": 1.1102230246251565e-16,
+            "inequality": 1.9317880628477724e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 4.440892098500626e-16,
+            "gap": 1.6653345369377348e-16,
+            "repaired_gap": 9.992007221626409e-16
+          },
+          "iterations": 877,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1037,
+          "solve_seconds": 0.9401277787983418,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.3103898111730814,
+          "total_seconds": 1.258553353138268
+        },
+        "feasible_upper": 0.06948701755949406,
+        "best_upper": 0.06948701755949406,
+        "lower": 0.06948139945101922,
+        "gap": 5.618108474839123e-06,
+        "oracle_seconds": 10.235155014321208,
+        "oracle_solver_seconds": 10.1182267582044,
+        "decoder_build_seconds": 0.013618242926895618,
+        "decoder_fallbacks": 0,
+        "cuts_added": 8
+      },
+      {
+        "iteration": 30,
+        "cut_count": 1045,
+        "master": {
+          "primal": 0.06948154508209191,
+          "dual": 0.06948154508209052,
+          "raw_dual": 0.0694815450820917,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 1.9095836023552692e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 2.220446049250313e-16,
+            "gap": 2.0816681711721685e-16,
+            "repaired_gap": 1.3877787807814457e-15
+          },
+          "iterations": 1026,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1045,
+          "solve_seconds": 1.043071643449366,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.38866765797138214,
+          "total_seconds": 1.4390123328194022
+        },
+        "feasible_upper": 0.06948274286774611,
+        "best_upper": 0.06948274286774611,
+        "lower": 0.06948154508209052,
+        "gap": 1.1977856555905886e-06,
+        "oracle_seconds": 10.091266016475856,
+        "oracle_solver_seconds": 9.975673584267497,
+        "decoder_build_seconds": 0.012232731096446514,
+        "decoder_fallbacks": 0,
+        "cuts_added": 7
+      },
+      {
+        "iteration": 31,
+        "cut_count": 1052,
+        "master": {
+          "primal": 0.06948158394272957,
+          "dual": 0.06948158394272781,
+          "raw_dual": 0.06948158394272941,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 1.9317880628477724e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 4.440892098500626e-16,
+            "gap": 1.6653345369377348e-16,
+            "repaired_gap": 1.762479051592436e-15
+          },
+          "iterations": 789,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1052,
+          "solve_seconds": 0.9175198320299387,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.3875651052221656,
+          "total_seconds": 1.3123422572389245
+        },
+        "feasible_upper": 0.06948244901503861,
+        "best_upper": 0.06948244901503861,
+        "lower": 0.06948158394272781,
+        "gap": 8.650723107989089e-07,
+        "oracle_seconds": 10.308616894297302,
+        "oracle_solver_seconds": 10.191234298050404,
+        "decoder_build_seconds": 0.014142160303890705,
+        "decoder_fallbacks": 0,
+        "cuts_added": 7
+      },
+      {
+        "iteration": 32,
+        "cut_count": 1059,
+        "master": {
+          "primal": 0.0694816155906279,
+          "dual": 0.0694816155906267,
+          "raw_dual": 0.06948161559062815,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 1.9317880628477724e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 2.220446049250313e-16,
+            "gap": 2.498001805406602e-16,
+            "repaired_gap": 1.2073675392798577e-15
+          },
+          "iterations": 920,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1059,
+          "solve_seconds": 0.9995446819812059,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.39847990591078997,
+          "total_seconds": 1.406005789525807
+        },
+        "feasible_upper": 0.0694840011449799,
+        "best_upper": 0.06948244901503861,
+        "lower": 0.0694816155906267,
+        "gap": 8.334244119140299e-07,
+        "oracle_seconds": 13.454164660535753,
+        "oracle_solver_seconds": 13.337098450399935,
+        "decoder_build_seconds": 0.013427667319774628,
+        "decoder_fallbacks": 0,
+        "cuts_added": 6
+      },
+      {
+        "iteration": 33,
+        "cut_count": 1065,
+        "master": {
+          "primal": 0.06948165683833432,
+          "dual": 0.06948165683833352,
+          "raw_dual": 0.0694816568383344,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 1.9539925233402755e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 1.1796119636642288e-16,
+            "gap": 8.326672684688674e-17,
+            "repaired_gap": 8.049116928532385e-16
+          },
+          "iterations": 1003,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1065,
+          "solve_seconds": 1.036324318498373,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.3962640902027488,
+          "total_seconds": 1.4398555187508464
+        },
+        "feasible_upper": 0.06948396177263548,
+        "best_upper": 0.06948244901503861,
+        "lower": 0.06948165683833352,
+        "gap": 7.921767050944606e-07,
+        "oracle_seconds": 9.838317927904427,
+        "oracle_solver_seconds": 9.723258340731263,
+        "decoder_build_seconds": 0.013273763470351696,
+        "decoder_fallbacks": 0,
+        "cuts_added": 8
+      },
+      {
+        "iteration": 34,
+        "cut_count": 1073,
+        "master": {
+          "primal": 0.06948171661778574,
+          "dual": 0.06948171661778461,
+          "raw_dual": 0.06948171661778568,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 1.9539925233402755e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 2.220446049250313e-16,
+            "gap": 5.551115123125783e-17,
+            "repaired_gap": 1.124100812432971e-15
+          },
+          "iterations": 921,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1073,
+          "solve_seconds": 1.0092039350420237,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.40479021705687046,
+          "total_seconds": 1.421308284625411
+        },
+        "feasible_upper": 0.06948249288159324,
+        "best_upper": 0.06948244901503861,
+        "lower": 0.06948171661778461,
+        "gap": 7.323972539968748e-07,
+        "oracle_seconds": 10.148483604192734,
+        "oracle_solver_seconds": 10.033007270656526,
+        "decoder_build_seconds": 0.013408737257122993,
+        "decoder_fallbacks": 0,
+        "cuts_added": 4
+      },
+      {
+        "iteration": 35,
+        "cut_count": 1077,
+        "master": {
+          "primal": 0.06948172266828001,
+          "dual": 0.06948172266827855,
+          "raw_dual": 0.06948172266828012,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 1.942890293094024e-14,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 5.551115123125783e-16,
+            "gap": 1.1102230246251565e-16,
+            "repaired_gap": 1.457167719820518e-15
+          },
+          "iterations": 954,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1077,
+          "solve_seconds": 1.028165951371193,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.4090938689187169,
+          "total_seconds": 1.4445891818031669
+        },
+        "feasible_upper": 0.06948196934367283,
+        "best_upper": 0.06948196934367283,
+        "lower": 0.06948172266827855,
+        "gap": 2.4667539427758456e-07,
+        "oracle_seconds": 10.75833584740758,
+        "oracle_solver_seconds": 10.641056650318205,
+        "decoder_build_seconds": 0.013526501134037971,
+        "decoder_fallbacks": 0,
+        "cuts_added": 3
+      },
+      {
+        "iteration": 36,
+        "cut_count": 1080,
+        "master": {
+          "primal": 0.06948172400775739,
+          "dual": 0.06948172400775492,
+          "raw_dual": 0.06948172400775765,
+          "residuals": {
+            "equality": 5.551115123125783e-17,
+            "inequality": 3.9305414478718603e-10,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 1.7763568394002505e-15,
+            "gap": 2.636779683484747e-16,
+            "repaired_gap": 2.4702462297909733e-15
+          },
+          "iterations": 947,
+          "variables": 683,
+          "equalities": 341,
+          "inequalities": 1080,
+          "solve_seconds": 1.0555876130238175,
+          "method": "highs",
+          "warnings": [
+            "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+          ],
+          "build_seconds": 0.4111166298389435,
+          "total_seconds": 1.4740685755386949
+        },
+        "feasible_upper": 0.06948190989542408,
+        "best_upper": 0.06948190989542408,
+        "lower": 0.06948172400775492,
+        "gap": 1.858876691601674e-07,
+        "oracle_seconds": 10.351812195964158,
+        "oracle_solver_seconds": 10.236463303677738,
+        "decoder_build_seconds": 0.013336895033717155,
+        "decoder_fallbacks": 0
+      }
+    ],
+    "cut_count": 1080,
+    "master_variables": 683,
+    "total_master_seconds": 31.68373877182603,
+    "total_oracle_seconds": 263.3503706846386,
+    "total_cut_insertion_seconds": 0.04765688721090555,
+    "decoder_calls": 4736,
+    "time_limit": 600,
+    "method": "full_library_dual_cut_LP",
+    "kind": "native_minimax",
+    "targets": 128,
+    "target_horizon": 3
+  },
+  "policy_sha256": "35c5ec0310a76762c5ba08c801e311e57f95a64ab5e0911e62b8e138b2f1d19b",
+  "rewards": {
+    "information": 1.7635387600971704,
+    "brier": 0.4307526795677048,
+    "pseudo_count": 3.8259732995663924
+  },
+  "planning_certified": true,
+  "planning_elapsed_seconds": 296.5038715908304,
+  "seconds": 308.6797578083351,
+  "peak_rss_mib": 276.84765625,
+  "finished_utc": "2026-09-24T03:11:35.282162+00:00"
+}

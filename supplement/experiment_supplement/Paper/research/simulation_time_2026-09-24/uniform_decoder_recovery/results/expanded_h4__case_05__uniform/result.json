@@ -1,0 +1,156 @@
+{
+  "status": "complete",
+  "phase": "recovery_awaiting_check",
+  "spec": {
+    "id": "expanded_h4__case_05__uniform",
+    "phase": "expanded_h4",
+    "case": "fresh_hmm_2026096801_q4_s3_c0.2",
+    "case_id": "case_05",
+    "t": 4,
+    "method": "uniform",
+    "mode": "plan",
+    "planning_seconds": 300,
+    "job_seconds": 1500
+  },
+  "started_utc": "2026-09-24T02:32:10.113517+00:00",
+  "sources_sha256": "4684f78b757300662b68c95163c77fd78aebeaa843761993d970ffe6deefb0b5",
+  "manifest_sha256": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4",
+  "model_sha256": "710339693772bbf1708cba5bcdc3046ce2c430c4fb861aa9cc4e21c9dec0b8e5",
+  "pid": 4058186,
+  "cpu_affinity": [
+    10
+  ],
+  "audits": [
+    {
+      "reference": "information",
+      "reference_cell": "cell_0303",
+      "lower": 0.09169862979572896,
+      "upper": 0.09169862979572922,
+      "bracket": 2.636779683484747e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_information.npz",
+      "witness_sha256": "bf3e22529eb64e10a9c7a3429f025e375533a2dabaf406a6def702a8640a71ea",
+      "seconds": 0.09562793094664812,
+      "coarsening_bound": 0.0,
+      "recovery_method": "preserved_original_witness",
+      "optimizer_called": false
+    },
+    {
+      "reference": "brier",
+      "reference_cell": "cell_0809",
+      "lower": 0.09169862979572896,
+      "upper": 0.09169862979572922,
+      "bracket": 2.636779683484747e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_brier.npz",
+      "witness_sha256": "bf3e22529eb64e10a9c7a3429f025e375533a2dabaf406a6def702a8640a71ea",
+      "seconds": 0.007442627102136612,
+      "coarsening_bound": 0.0,
+      "recovery_method": "preserved_original_witness",
+      "optimizer_called": false
+    },
+    {
+      "reference": "pseudo_count",
+      "reference_cell": "cell_0628",
+      "lower": 0.09019308606551746,
+      "upper": 0.0901930860655174,
+      "bracket": -5.551115123125783e-17,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_pseudo_count.npz",
+      "witness_sha256": "73a39378470a5c09c1dfb0c5448fac4e24a9f73976404485aa766cbaf5a010fe",
+      "seconds": 0.6031823614612222,
+      "coarsening_bound": 0.0,
+      "recovery_method": "preserved_original_witness",
+      "optimizer_called": false
+    },
+    {
+      "reference": "uniform",
+      "reference_cell": "cell_0457",
+      "lower": 0.0,
+      "upper": 6.70291052480218e-17,
+      "bracket": 6.70291052480218e-17,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_uniform.npz",
+      "witness_sha256": "1a1fc8c74d504897def236ca6961c68fa8db95350082eb4ed992719918b99126",
+      "seconds": 0.0027563823387026787,
+      "coarsening_bound": 0.0,
+      "recovery_method": "explicit_record_projection",
+      "optimizer_called": false
+    },
+    {
+      "reference": "weighted128",
+      "reference_cell": "cell_0008",
+      "lower": 0.06801688367074166,
+      "upper": 0.06801688367074256,
+      "bracket": 9.020562075079397e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_weighted128.npz",
+      "witness_sha256": "b7875fb62948280f56035955098e8a91e487fd7754d2cae9ca8121d1effeaea9",
+      "seconds": 0.4525510063394904,
+      "coarsening_bound": 0.0,
+      "recovery_method": "explicit-witness-simplex",
+      "optimizer_called": true
+    },
+    {
+      "reference": "minimax",
+      "reference_cell": "cell_0467",
+      "lower": 0.05141232184911193,
+      "upper": 0.05141232184911237,
+      "bracket": 4.371503159461554e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_minimax.npz",
+      "witness_sha256": "99a2a508905fe3c9efafc11fdd87a2424d665f70ade358a25e34c90b7eed8924",
+      "seconds": 0.7554296059533954,
+      "coarsening_bound": 0.0,
+      "recovery_method": "explicit-witness-simplex",
+      "optimizer_called": true
+    }
+  ],
+  "planning": {
+    "method": "literal_uniform",
+    "seconds": 0,
+    "scope": "Control, not an optimized objective."
+  },
+  "policy_sha256": "057af36b084c0659451744600b2e77c1d74186d6b151baedba9922a81739036c",
+  "rewards": {
+    "information": 0.92050449827958,
+    "brier": 0.31033287864761216,
+    "pseudo_count": 3.1365826774307606
+  },
+  "planning_certified": true,
+  "planning_elapsed_seconds": 0.021454045549035072,
+  "seconds": 60.78867125697434,
+  "peak_rss_mib": 142.78515625,
+  "finished_utc": "2026-09-24T02:33:10.902199+00:00",
+  "audit_source_sha256": "257befb4a5a927ea1032463cc164ff25918661c856deb0ecafef0c2e7c94eb27",
+  "recovery_started_utc": "2026-09-24T04:49:21.754045+00:00",
+  "historical_failure": {
+    "path": "research/simulation_time_2026-09-24/budget_campaign/results/expanded_h4__case_05__uniform",
+    "result_sha256": "788a24e7dfd9e5b1655d8cd04537aafb9b9dc0752ec05027786a606930891970"
+  },
+  "recovery_finished_utc": "2026-09-24T04:49:22.973304+00:00"
+}

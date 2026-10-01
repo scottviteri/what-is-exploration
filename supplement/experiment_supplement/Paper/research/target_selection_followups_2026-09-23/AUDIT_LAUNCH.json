@@ -1,0 +1,28 @@
+{
+  "started_utc": "2026-09-23T18:41:29.712018+00:00",
+  "pid": 3897064,
+  "command": [
+    "timeout",
+    "--signal=TERM",
+    "--kill-after=5",
+    "90m",
+    "prlimit",
+    "--as=5368709120",
+    "--",
+    "taskset",
+    "-c",
+    "0",
+    "/tmp/exploration-lp-cpu-venv/bin/python",
+    "Paper/research/target_selection_followups_2026-09-23/audit_saved.py",
+    "--output",
+    "Paper/research/target_selection_followups_2026-09-23/original_audit"
+  ],
+  "cpu": 0,
+  "memory_limit_GiB": 5,
+  "wall_limit_minutes": 90,
+  "source_sha256": {
+    "common.py": "96e7600c41bae38a6e50088c6a65b0a2fef26b59d2b918e60b93df78b106e895",
+    "audit_saved.py": "790ee1277b2ea8a06dc3ef77ac412711097a024b108cf270cacc5bf55f71c1db"
+  },
+  "scope": "All stored certificates, no optimization; original archive read-only."
+}

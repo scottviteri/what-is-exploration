@@ -1,0 +1,75 @@
+{
+  "checked_utc": "2026-09-24T00:35:20.380032+00:00",
+  "support_entries": [
+    {
+      "path": "Formal/Formal/EmpiricalEndingCertificates.lean",
+      "paper_role": "supporting",
+      "scope": "empirical-ending-finite-certificate-research",
+      "dependency_role": "bridge",
+      "allowed_local_imports": [
+        "Formal.DualCertificate"
+      ],
+      "note": "Research-only rational-to-real finite-experiment certificate helpers: checked decoder and bounded decision-loss witnesses bound the infimum over every real stochastic decoder. No selected manuscript claim, solver verification, policy optimality, target enumeration or archive binding is asserted."
+    },
+    {
+      "path": "Formal/Formal/EmpiricalEndingDelayed.lean",
+      "paper_role": "supporting",
+      "scope": "empirical-ending-finite-certificate-research",
+      "dependency_role": "bridge",
+      "allowed_local_imports": [
+        "Formal.EmpiricalEndingCertificates"
+      ],
+      "note": "Research-only exact bounds for explicitly supplied rational finite experiments reconstructed from a delayed diagnostic. Python physical-model execution and archived-policy correspondence remain external evidence; this is neither an all-optima result nor an eventual or depth-four audit theorem."
+    },
+    {
+      "path": "Formal/Formal/EmpiricalEndingSaved.lean",
+      "paper_role": "supporting",
+      "scope": "empirical-ending-finite-certificate-research",
+      "dependency_role": "bridge",
+      "allowed_local_imports": [
+        "Formal.EmpiricalEndingCertificates"
+      ],
+      "note": "Research-only exact bounds and incomparability for explicit row-normalized rational interpretations of archived binary64 experiment matrices. Parsing, archive bindings and physical execution remain external; no objective-optimality, eventual-order or universal-dominance claim is attributed."
+    }
+  ],
+  "module_entries": [
+    {
+      "module": "Formal.EmpiricalEndingCertificates",
+      "path": "Formal/Formal/EmpiricalEndingCertificates.lean",
+      "tier": "other",
+      "claims": [],
+      "uses": [],
+      "paper_role": "supporting",
+      "scope": "empirical-ending-finite-certificate-research",
+      "dependency_role": "bridge",
+      "unmapped_declarations": []
+    },
+    {
+      "module": "Formal.EmpiricalEndingDelayed",
+      "path": "Formal/Formal/EmpiricalEndingDelayed.lean",
+      "tier": "other",
+      "claims": [],
+      "uses": [],
+      "paper_role": "supporting",
+      "scope": "empirical-ending-finite-certificate-research",
+      "dependency_role": "bridge",
+      "unmapped_declarations": []
+    },
+    {
+      "module": "Formal.EmpiricalEndingSaved",
+      "path": "Formal/Formal/EmpiricalEndingSaved.lean",
+      "tier": "other",
+      "claims": [],
+      "uses": [],
+      "paper_role": "supporting",
+      "scope": "empirical-ending-finite-certificate-research",
+      "dependency_role": "bridge",
+      "unmapped_declarations": []
+    }
+  ],
+  "source_sha256": {
+    "Formal/PAPER_SUPPORT.json": "fec7aa2eb17b15ea74e82fad92191ee6093009ece2dc25b352eabf10566a544a",
+    "Formal/paper_module_map.json": "2e8d956ad7b9755fcd55cf4a78812cdde90d053482e7eba783f9c17ce663a95d"
+  },
+  "scope": "Concurrent integration, read-only snapshot. Supporting research; no selected manuscript claim."
+}

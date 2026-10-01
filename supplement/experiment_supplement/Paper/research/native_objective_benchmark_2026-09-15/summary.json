@@ -1,0 +1,523 @@
+{
+  "status": "complete",
+  "scope": "Finite H=3 all-policy float64 comparison; no training or eventual claim.",
+  "cases": 10,
+  "objective_optima": 60,
+  "decision_endpoints": 720,
+  "comparisons": [
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.0,
+      "wins": 6,
+      "ties": 3,
+      "losses": 1,
+      "family_balanced_difference": 0.011133639667354062,
+      "minimum_case_difference": -0.0007167819020473809,
+      "maximum_case_difference": 0.04436103348381881
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.01,
+      "wins": 5,
+      "ties": 1,
+      "losses": 4,
+      "family_balanced_difference": 0.007874966330374081,
+      "minimum_case_difference": -0.0009923423978640544,
+      "maximum_case_difference": 0.030316897638697937
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.05,
+      "wins": 5,
+      "ties": 1,
+      "losses": 4,
+      "family_balanced_difference": -0.0014121779042840417,
+      "minimum_case_difference": -0.011877467816513665,
+      "maximum_case_difference": 0.0036509608610171274
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.0,
+      "wins": 2,
+      "ties": 4,
+      "losses": 4,
+      "family_balanced_difference": 0.011871981426978165,
+      "minimum_case_difference": -0.006085727631198301,
+      "maximum_case_difference": 0.10399993132537388
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.01,
+      "wins": 1,
+      "ties": 1,
+      "losses": 8,
+      "family_balanced_difference": 0.007740808252940287,
+      "minimum_case_difference": -0.00790366547233945,
+      "maximum_case_difference": 0.08790958525893056
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.05,
+      "wins": 2,
+      "ties": 1,
+      "losses": 7,
+      "family_balanced_difference": -0.0016973956835667028,
+      "minimum_case_difference": -0.030759693665237453,
+      "maximum_case_difference": 0.03985858858084845
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.0,
+      "wins": 0,
+      "ties": 5,
+      "losses": 5,
+      "family_balanced_difference": -0.0027767441243107907,
+      "minimum_case_difference": -0.012631236285446934,
+      "maximum_case_difference": 0.0
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.01,
+      "wins": 0,
+      "ties": 1,
+      "losses": 9,
+      "family_balanced_difference": -0.0068421380292021895,
+      "minimum_case_difference": -0.015275025494641103,
+      "maximum_case_difference": 2.220446049250313e-16
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.05,
+      "wins": 0,
+      "ties": 1,
+      "losses": 9,
+      "family_balanced_difference": -0.01651482451419331,
+      "minimum_case_difference": -0.044640721403812145,
+      "maximum_case_difference": 2.220446049250313e-16
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.0,
+      "wins": 6,
+      "ties": 3,
+      "losses": 1,
+      "family_balanced_difference": 0.04304270251485777,
+      "minimum_case_difference": -0.0030597349252344808,
+      "maximum_case_difference": 0.1914285184608051
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.01,
+      "wins": 6,
+      "ties": 1,
+      "losses": 3,
+      "family_balanced_difference": 0.040409509044524686,
+      "minimum_case_difference": -0.0037702041281294507,
+      "maximum_case_difference": 0.17870566075640326
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.05,
+      "wins": 6,
+      "ties": 1,
+      "losses": 3,
+      "family_balanced_difference": 0.03438723946826083,
+      "minimum_case_difference": -0.009567512766530228,
+      "maximum_case_difference": 0.13657268806698575
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.0,
+      "wins": 7,
+      "ties": 3,
+      "losses": 0,
+      "family_balanced_difference": 0.05086755593880058,
+      "minimum_case_difference": -1.6882480746716055e-08,
+      "maximum_case_difference": 0.1914285184608051
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.01,
+      "wins": 7,
+      "ties": 1,
+      "losses": 2,
+      "family_balanced_difference": 0.04605209971878652,
+      "minimum_case_difference": -0.0031363378263313813,
+      "maximum_case_difference": 0.17870566075640326
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.05,
+      "wins": 7,
+      "ties": 1,
+      "losses": 2,
+      "family_balanced_difference": 0.03335553441875485,
+      "minimum_case_difference": -0.009567511498956627,
+      "maximum_case_difference": 0.13657268806698575
+    }
+  ],
+  "family_comparisons": [
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.0,
+      "family": "delayed",
+      "difference": 0.04060553187319632
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.0,
+      "family": "hmm",
+      "difference": 0.00048526993875097624
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.0,
+      "family": "irreversible",
+      "difference": 0.0029961500025075805
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.0,
+      "family": "sensors",
+      "difference": 0.00044760685496136876
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.01,
+      "family": "delayed",
+      "difference": 0.02926696759030495
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.01,
+      "family": "hmm",
+      "difference": 0.00019391987330652505
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.01,
+      "family": "irreversible",
+      "difference": 0.002496686654079927
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.01,
+      "family": "sensors",
+      "difference": -0.00045770879619507393
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.05,
+      "family": "delayed",
+      "difference": -0.008394013887826124
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.05,
+      "family": "hmm",
+      "difference": -0.0002831427107296373
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.05,
+      "family": "irreversible",
+      "difference": 0.0017593356847191988
+    },
+    {
+      "baseline": "native_minimax",
+      "fraction": 0.05,
+      "family": "sensors",
+      "difference": 0.0012691092967003954
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.0,
+      "family": "delayed",
+      "difference": 0.05199994371665312
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.0,
+      "family": "hmm",
+      "difference": -0.00043498703723106785
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.0,
+      "family": "irreversible",
+      "difference": -0.0020484456569725973
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.0,
+      "family": "sensors",
+      "difference": -0.002028585314536794
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.01,
+      "family": "delayed",
+      "difference": 0.04000295989329555
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.01,
+      "family": "hmm",
+      "difference": -0.0033501998807209756
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.01,
+      "family": "irreversible",
+      "difference": -0.0024974630492400895
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.01,
+      "family": "sensors",
+      "difference": -0.003192063951573343
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.05,
+      "family": "delayed",
+      "difference": 0.0045494474578055
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.05,
+      "family": "hmm",
+      "difference": -0.006055721402264291
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.05,
+      "family": "irreversible",
+      "difference": -0.0030330301939597293
+    },
+    {
+      "baseline": "information",
+      "fraction": 0.05,
+      "family": "sensors",
+      "difference": -0.002250278595848291
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.0,
+      "family": "delayed",
+      "difference": -4.3020860318598864e-08
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.0,
+      "family": "hmm",
+      "difference": -0.007029905700666046
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.0,
+      "family": "irreversible",
+      "difference": -0.0020484448809439115
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.0,
+      "family": "sensors",
+      "difference": -0.0020285828947728866
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.01,
+      "family": "delayed",
+      "difference": -0.011254448678428675
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.01,
+      "family": "hmm",
+      "difference": -0.008727291737875639
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.01,
+      "family": "irreversible",
+      "difference": -0.0024974622732113483
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.01,
+      "family": "sensors",
+      "difference": -0.004889349427293095
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.05,
+      "family": "delayed",
+      "difference": -0.043737648450761946
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.05,
+      "family": "hmm",
+      "difference": -0.00855190453457777
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.05,
+      "family": "irreversible",
+      "difference": -0.003033029417931099
+    },
+    {
+      "baseline": "brier",
+      "fraction": 0.05,
+      "family": "sensors",
+      "difference": -0.010736715653502427
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.0,
+      "family": "delayed",
+      "difference": 0.15285708384926017
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.0,
+      "family": "hmm",
+      "difference": 0.0036764658456410007
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.0,
+      "family": "irreversible",
+      "difference": 0.011380125333012359
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.0,
+      "family": "sensors",
+      "difference": 0.004257135031517552
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.01,
+      "family": "delayed",
+      "difference": 0.13988292331408053
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.01,
+      "family": "hmm",
+      "difference": 0.003204644541520326
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.01,
+      "family": "irreversible",
+      "difference": 0.010796822423998043
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.01,
+      "family": "sensors",
+      "difference": 0.007753645898499843
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.05,
+      "family": "delayed",
+      "difference": 0.10052070403130259
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.05,
+      "family": "hmm",
+      "difference": 0.003398007925643968
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.05,
+      "family": "irreversible",
+      "difference": 0.009724112422135445
+    },
+    {
+      "baseline": "surprisal",
+      "fraction": 0.05,
+      "family": "sensors",
+      "difference": 0.023906133493961312
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.0,
+      "family": "delayed",
+      "difference": 0.15285708321216845
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.0,
+      "family": "hmm",
+      "difference": 0.034975886977450577
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.0,
+      "family": "irreversible",
+      "difference": 0.011380125530551177
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.0,
+      "family": "sensors",
+      "difference": 0.0042571280350321246
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.01,
+      "family": "delayed",
+      "difference": 0.13898787407677454
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.01,
+      "family": "hmm",
+      "difference": 0.03214781734041183
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.01,
+      "family": "irreversible",
+      "difference": 0.010796822423998043
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.01,
+      "family": "sensors",
+      "difference": 0.002275885033961663
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.05,
+      "family": "delayed",
+      "difference": 0.09604546039313977
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.05,
+      "family": "hmm",
+      "difference": 0.027705951926193257
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.05,
+      "family": "irreversible",
+      "difference": 0.009724112422135445
+    },
+    {
+      "baseline": "first_visit",
+      "fraction": 0.05,
+      "family": "sensors",
+      "difference": -5.33870664490473e-05
+    }
+  ],
+  "screen_passed": false,
+  "case_seconds": 490.95726382080466
+}

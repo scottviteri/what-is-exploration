@@ -1,0 +1,56 @@
+{
+  "started_utc": "2026-09-23T20:15:15.125368+00:00",
+  "state": "passed",
+  "source_sha256": {
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/finish_analysis.py": "54f657985d528983be12cf060f24d6acab3d695e975506b2da588252f0b04da8",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/summarize.py": "3c5a8a461555ace48d900d17a0ceeafdbaa3dff16d61ae75da5e7f734bff899c",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/REPORT_TEMPLATE.md": "53b83cbd8f61dd43a17580ec16b4152e1c5f14b60b5c9d8dcf3e42f3475e8ce9",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/check_summary.py": "17dc65f9a79f77037fac37021716c65ba623c7f49d70db870a41e7b640fee623",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/resource_summary.py": "5a05fe80f8066b68f9d0dc957f411f3eb714b0b4e662933d16eed3233c4755be"
+  },
+  "steps": [
+    {
+      "command": [
+        "/usr/bin/python3",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/summarize.py",
+        "--audits",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/exhaustive_audits"
+      ],
+      "exit": 0,
+      "wall_seconds": 18.631821610964835,
+      "log": "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/analysis_step_0.log",
+      "log_sha256": "b1b3103403e1bd59c1b3acb4dfa930ec3664868811238f5da2f1751d4372c45b"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/check_summary.py",
+        "--audits",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/exhaustive_audits",
+        "--summary",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/summary",
+        "--output",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/SUMMARY_CHECK.json"
+      ],
+      "exit": 0,
+      "wall_seconds": 2.7352249892428517,
+      "log": "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/analysis_step_1.log",
+      "log_sha256": "9a198faa906dbb21ba56801b3e1cf245e63d9ae77762e66b51f388ab0325b13f"
+    },
+    {
+      "command": [
+        "/usr/bin/python3",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/resource_summary.py",
+        "--output",
+        "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/RESOURCE_REPORT.json"
+      ],
+      "exit": 0,
+      "wall_seconds": 7.913048351183534,
+      "log": "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/analysis_step_2.log",
+      "log_sha256": "710f7a8b59148263a34472cacba1f73004484ebddf25067d9587d77e4e8b09cb"
+    }
+  ],
+  "scope": "Reporting and independent summary validation only; no numerical retries or selection.",
+  "audit_terminal_state": "finished",
+  "finished_utc": "2026-09-23T21:51:00.280072+00:00"
+}

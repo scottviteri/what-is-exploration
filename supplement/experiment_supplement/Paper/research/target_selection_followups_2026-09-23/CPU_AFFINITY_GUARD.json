@@ -1,0 +1,37 @@
+{
+  "status": "finished",
+  "pid": 3926951,
+  "started_utc": "2026-09-23T20:00:16.165472+00:00",
+  "parent_pid": 3920120,
+  "parent_start_ticks": 768337679,
+  "override_record": "Paper/research/target_selection_followups_2026-09-23/AFFINITY_OVERRIDE_2026-09-23_195815.json",
+  "poll_seconds": 0.1,
+  "cpu_mapping": {
+    "3": 10,
+    "4": 11
+  },
+  "cgroup_cpu_capacity": 10.2,
+  "requested_cpu_equivalents": 2,
+  "scope": "Affinity-only runtime override. Frozen manifest and numerical sources unchanged; both campaigns share the global cgroup quota.",
+  "changes": 166,
+  "updated_utc": "2026-09-23T20:48:12.883568+00:00",
+  "live_processes": [
+    {
+      "pid": 3920120,
+      "cell": null,
+      "target_cpus": [
+        10,
+        11
+      ]
+    },
+    {
+      "pid": 3936522,
+      "cell": "cell_1012",
+      "target_cpus": [
+        11
+      ]
+    }
+  ],
+  "finished_utc": "2026-09-23T20:48:15.925848+00:00",
+  "reason": "Original queue supervisor exited; no PID reuse followed."
+}

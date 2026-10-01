@@ -1,0 +1,137 @@
+{
+  "status": "complete",
+  "phase": "awaiting_independent_check",
+  "spec": {
+    "id": "expanded_h4__case_17__uniform",
+    "phase": "expanded_h4",
+    "case": "hmm_91502_1.0",
+    "case_id": "case_17",
+    "t": 4,
+    "method": "uniform",
+    "mode": "plan",
+    "planning_seconds": 300,
+    "job_seconds": 1500
+  },
+  "started_utc": "2026-09-24T02:48:53.438548+00:00",
+  "sources_sha256": "4684f78b757300662b68c95163c77fd78aebeaa843761993d970ffe6deefb0b5",
+  "manifest_sha256": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4",
+  "model_sha256": "82d5e83a654e25f09c12452e4519e5d0039f745e30c8e547d9b6c3cd71ef80fd",
+  "pid": 4066608,
+  "cpu_affinity": [
+    10
+  ],
+  "audits": [
+    {
+      "reference": "information",
+      "reference_cell": "cell_0172",
+      "lower": 0.0581621730782903,
+      "upper": 0.05816217307829022,
+      "bracket": -8.326672684688674e-17,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_information.npz",
+      "witness_sha256": "184a839412095f8453fcc434f462165d7d99d1b3fc7a8f57cd6491332ebf4ab9",
+      "seconds": 0.11616698559373617,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "brier",
+      "reference_cell": "cell_0154",
+      "lower": 0.05816217307828997,
+      "upper": 0.05816217307829065,
+      "bracket": 6.800116025829084e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_brier.npz",
+      "witness_sha256": "93b48292f2244c23de4f2ad18d6be5512b30e289394e001641b36053252e441d",
+      "seconds": 0.1880759783089161,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "pseudo_count",
+      "reference_cell": "cell_0852",
+      "lower": 0.01647008717804843,
+      "upper": 0.016470087178048754,
+      "bracket": 3.226585665316861e-16,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_pseudo_count.npz",
+      "witness_sha256": "678895c681fc4cb0382c0216bbddb923ff8d646fdf802a3e290f4dc7e5322e0e",
+      "seconds": 1.1428928915411234,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "uniform",
+      "reference_cell": "cell_1016",
+      "lower": 0.0,
+      "upper": 1.2509958347006744e-13,
+      "bracket": 1.2509958347006744e-13,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_uniform.npz",
+      "witness_sha256": "3667526cfaa5726ace72ffd84e050afea84ef80e71989bac113b6b7e71ef25cc",
+      "seconds": 3.1955054961144924,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "weighted128",
+      "reference_cell": "cell_0041",
+      "lower": 0.0038859501593411228,
+      "upper": 0.0038859501593439,
+      "bracket": 2.777292285038868e-15,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_weighted128.npz",
+      "witness_sha256": "0d18ee29bfb45de48df1bf23e6b1df58ac0a4fed771ff1f42323288ebe947433",
+      "seconds": 1.6954425415024161,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "minimax",
+      "reference_cell": "cell_0012",
+      "lower": 0.011873218734024693,
+      "upper": 0.011873218734034397,
+      "bracket": 9.704043124614259e-15,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_minimax.npz",
+      "witness_sha256": "b731c5364e94a672d4f234d8bc7b360b0a1994131b211d565b53d793cd81f484",
+      "seconds": 0.7512159934267402,
+      "coarsening_bound": 0.0
+    }
+  ],
+  "planning": {
+    "method": "literal_uniform",
+    "seconds": 0,
+    "scope": "Control, not an optimized objective."
+  },
+  "policy_sha256": "3e4c633f3dae0393481da59942249072fd70e04e9a7f8d29e6674c887ec2b1ee",
+  "rewards": {
+    "information": 0.15894527542118597,
+    "brier": 0.052891896040908104,
+    "pseudo_count": 3.2437990939858836
+  },
+  "planning_certified": true,
+  "planning_elapsed_seconds": 0.027924347668886185,
+  "seconds": 7.188961511477828,
+  "peak_rss_mib": 129.88671875,
+  "finished_utc": "2026-09-24T02:49:00.627518+00:00"
+}

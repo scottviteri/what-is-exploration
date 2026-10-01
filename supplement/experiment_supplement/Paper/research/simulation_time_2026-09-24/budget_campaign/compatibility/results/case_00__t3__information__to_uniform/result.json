@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "started_utc": "2026-09-24T03:57:42.978249+00:00",
+  "job": {
+    "id": "case_00__t3__information__to_uniform",
+    "case_id": "case_00",
+    "case": "sensors_0.1_0.1",
+    "t": 3,
+    "method": "information",
+    "epsilon": 0.02,
+    "reference": "uniform",
+    "reference_path": "references/case_00/uniform.npz",
+    "model": "references/case_00/model.npz",
+    "primary_id": "reference_replay__case_00__information",
+    "trigger_lower": 0.03382417582403585,
+    "input_sha256": {
+      "results/reference_replay__case_00__information/result.json": "ee2e94fe0cf78c4464d74b00c55d9e5bec1dd731ccc0b6262d5a15c4ea103947",
+      "results/reference_replay__case_00__information/CHECK.json": "95939949bae063386c22bc173841a13c38fadd0f851149459bc2aa8aa39c62c6",
+      "results/reference_replay__case_00__information/reference_uniform.npz": "625651e0b8fbcb143e530bc9bdffba6817553112759f56ac3ce4954c222ae7b4",
+      "references/case_00/model.npz": "109da575632e07a90be0941ec41e8e997e87209e735db1fa17d85d6bbf1d29fd",
+      "references/case_00/uniform.npz": "33c6a4aec3300ad6c7330e8835408a9a2883eebc29fad5f7647c4d6a8795e5c4",
+      "REFERENCES.json": "1a9c92566d013e7324719b3d6347a7ee7fe0a311303527f84d6d923383c7d87a",
+      "MANIFEST.json": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4"
+    }
+  },
+  "sources_sha256": "94d9e1e82830063c31fb9333c0e9af94d645cdc1f93993c6506230d49c5744e9",
+  "method": "information",
+  "t": 3,
+  "epsilon": 0.02,
+  "cap_tightening": 1e-07,
+  "achieved_reward": 1.273090264960436,
+  "constrained_reward_upper": 1.2730902649604363,
+  "cap_upper": 0.0020003048723199043,
+  "cap_dual": -0.0,
+  "lp": {
+    "primal": -1.2730902649604363,
+    "dual": -1.2730902649604363,
+    "raw_dual": -1.2730902649604363,
+    "residuals": {
+      "equality": 1.3600232051658168e-15,
+      "inequality": 2.0643209364124004e-16,
+      "lower": 0.0,
+      "upper": 0.0,
+      "inequality_dual_sign": 0.0,
+      "lower_dual_sign": 0.0,
+      "upper_dual_sign": 0.0,
+      "stationarity": 0.0,
+      "gap": 0.0,
+      "repaired_gap": 0.0
+    },
+    "iterations": 994,
+    "variables": 4395,
+    "equalities": 85,
+    "inequalities": 517,
+    "solve_seconds": 0.12550990749150515,
+    "method": "highs",
+    "warnings": [
+      "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+    ]
+  },
+  "seconds": 0.14581243228167295,
+  "files": {
+    "lp.npz": "640915c8236d55db25fbb9281e059f5c58dc09b825519f6412c57642439de2f8",
+    "policy_decoder.npz": "6b90fc8b39dc56b9303eb84c100fbd8c797db32d9ac9299ee3cc1c669d845bb0"
+  },
+  "finished_utc": "2026-09-24T03:57:43.124568+00:00",
+  "wall_seconds": 0.14633484929800034,
+  "peak_rss_mib": 82.6796875
+}

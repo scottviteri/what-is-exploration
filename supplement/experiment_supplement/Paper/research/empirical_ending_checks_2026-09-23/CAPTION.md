@@ -1,0 +1,24 @@
+# Candidate caption and reading notes
+
+**Different finite objectives select different reusable evidence.** A class contains several supplied candidate environment models; the actual model is unknown. Every collector chooses three actions adaptively from its preceding actions and observations. Its acquired experiment records the resulting distribution of three-interaction records in each candidate world. We evaluate the hardest four-interaction target policy to reproduce from that record:
+
+\[
+ A_{3,4}(\pi)=\max_\sigma\min_G\max_Q
+ \operatorname{TV}(K_{\pi,3}(Q)G,K_{\sigma,4}(Q)).
+\]
+
+The decoder `G` may depend on the target policy but must work in every world without being told which world is actual. Smaller error is better on this audit. All 32,768 deterministic depth-four binary observation trees are evaluated; finite mixture and prefix reductions cover randomized and shorter targets. This is a finite audit, not a test of eventual complete exploration or universal experiment dominance.
+
+In the random-class labels, `Q` is the number of candidate worlds and `α` is the Dirichlet concentration used to generate the hidden-state transition and observation probabilities. The fresh classes use three hidden states and two fixed draws per parameter combination. The named sensor, delay, and irreversible cases retain their original definitions.
+
+(a) Information gain and posterior Brier improvement score the whole unknown world under the uniform prior. Brier here is **world-posterior improvement**, not next-observation squared prediction loss. Categorical pseudo-count uses the declared add-one categorical density specialization, with reward `1/sqrt(1+N(o))` before incrementing the count of the current raw observation label. Uniform actions are a control. Weighted native minimizes the uniform mean of deficiencies to the 128 deterministic depth-three targets; minimax minimizes their largest deficiency. These native objectives use a shorter target horizon than evaluation. Neither is the eventual infinite-rich `J_w`.
+
+(b) **Minimax with a 5%-Brier reward allowance** minimizes that same depth-three maximum subject to `R_B(pi) >= R_max - 0.05*(R_max-R_min) - 1e-10`. It is an additional constrained native optimization; the figure does not claim an arbitrary near-optimal Brier learner selects it. Positive differences favor the native policy. All 22 classes are shown, including losses. Minimax has one comparison whose sign changes across saved representatives; this is neither a numerical tie nor a characterized all-optima result.
+
+(c) Actual Brier sacrifice is `(R_max-R(pi))/(R_max-R_min)`, with extrema computed over the same full-history three-interaction policy space. It is a fraction of the **attainable reward range in that class**, not a fraction of optimal reward or a probability of error. One class has constant Brier reward, so its normalized sacrifice is undefined. The other 21 remain in the summary. The panel exposes the unequal reward concessions in (b). A separate post-design reward-matched diagnostic permits the control at most the selected native reference's sacrifice, with the declared numerical slack.
+
+Bars enclose saved policy representatives and numerical audit intervals. Their midpoints need not be attained. Audit and reward envelopes summarize the same method/class collection separately; their midpoints can describe different policies and must not be read as a jointly attained reward/error point. The matched diagnostic instead pairs each fixed reference with its actual reward and audit. They do not bound every optimizer or statistical uncertainty. The grid mixes ten earlier cases with twelve generated hidden-state classes, rather than 22 independent identically distributed replications. The source, policy, and certificate bindings are saved in `COMPLETE_REWARDS.json`, `COMPLETE_COMPARISON.json`, and `EVIDENCE_CHECK.json`. Newly completed controls retain and independently replay every target witness; old representative envelopes retain their original narrower witness boundary. Reference policies used in the matched diagnostic receive new full-witness audits on both sides.
+
+This is a **post-design presentation and completion of existing data**. It is not fresh-environment confirmation. The earlier failed 16-target broad-benefit screen remains part of the evidence and is not overturned by changing the objective, target library, or reported metric.
+
+The `*_PAPER.pdf` renderings have the selected manuscript's actual 5.5-inch text width; their row labels are 7.3 points. The larger standalone PDFs are inspection versions. The abbreviated class labels keep the original case order and parameters; rows 11–22 are the fresh hidden-state classes. The height is chosen for readability and does not address the manuscript page limit.

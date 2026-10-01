@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "test": "controlled_mass",
+      "status": "rejected_as_expected",
+      "error": "ValueError('Independent arithmetic residual 0.010000000000000009')"
+    },
+    {
+      "test": "master_cost",
+      "status": "rejected_as_expected",
+      "error": "ValueError('Independent arithmetic residual 0.01')"
+    },
+    {
+      "test": "decoder_normalization",
+      "status": "rejected_as_expected",
+      "error": "ValueError('Unsupported exported objective bound')"
+    },
+    {
+      "test": "cached_witness",
+      "status": "rejected_as_expected",
+      "error": "ValueError('Corrupt dual witness')"
+    }
+  ]
+}

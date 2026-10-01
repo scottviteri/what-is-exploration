@@ -1,0 +1,1574 @@
+{
+  "status": "complete",
+  "model": "Paper/research/target_selection_2026-09-23/main_results/cell_1009/model.npz",
+  "policy": "Paper/research/target_selection_2026-09-23/main_results/cell_1009/checkpoint_000/policy.npz",
+  "source_result": "Paper/research/target_selection_2026-09-23/main_results/cell_1009/result.json",
+  "model_name": "fresh_hmm_2026100801_q8_s3_c0.2",
+  "input_sha256": {
+    "Paper/research/target_selection_2026-09-23/main_results/cell_1009/checkpoint_000/policy.npz": "8200e9f45ac98da3d4104c35e7aaf8df3fa4087e65ced099cdfe1988d54c506a",
+    "Paper/research/target_selection_2026-09-23/main_results/cell_1009/model.npz": "7877efe58303d6cb94cb181e4729b2d2fe5dc13d7142f54b1e0c3a9040860aee",
+    "Paper/research/target_selection_2026-09-23/main_results/cell_1009/result.json": "acaf94caf826418798c5946675e0a5b6722eb71147cb53db7754cbeb0e84a6a5",
+    "Paper/research/empirical_ending_checks_2026-09-23/audit.py": "a1053870ecc5e3684288451714b7e025f749cfe9612ccbdc7b5a7eefa255e10a",
+    "Paper/research/target_selection_followups_2026-09-23/common.py": "96e7600c41bae38a6e50088c6a65b0a2fef26b59d2b918e60b93df78b106e895",
+    "Paper/research/target_selection_followups_2026-09-23/recover_saved.py": "6e1ba22f023d0d382403a73d3a0cf536de993b53241130b86d5df874c525d6fd",
+    "Paper/research/target_selection_followups_2026-09-23/recovery_decoder.py": "18f85353c1515b668e7f96854dee8e02ab8fbd3b256b95c082bfa908732d388d",
+    "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/result.json": "51e61bbc63293ac5724139d31c49dc7f033ff7df3503d18a47aa42cf2165fd18"
+  },
+  "source_array_sha256": "d01ce80f79be61a0fd7570898fbda7bf6de05ed854520a53b0d646b764937ffc",
+  "selection_used": false,
+  "collection_horizon": 3,
+  "target_horizon": 4,
+  "target_count": 32768,
+  "completed_targets": 32768,
+  "batches": [
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_00000.npz",
+      "sha256": "125eeeeee998f04ba2b9f81934d0be4147335f261ec8c532f86b8edc11172131",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_00128.npz",
+      "sha256": "cce69a63aee5fdd8978866d1f18897fb2c57770e7fc4c167e43d9d76e59d2c20",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_00256.npz",
+      "sha256": "db7b57f0be8a5f6f8fc139286425534ce162d384907d0e550b7c1eaabbe6da0f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_00384.npz",
+      "sha256": "f4bedef58bc056b03a1735b0082ccf32271f9ac6fb42c99fb9ea764f485c4462",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_00512.npz",
+      "sha256": "e154bd835c24872af0c4d83dec747ed0537b324f52da706284b468e6daf6bd23",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_00640.npz",
+      "sha256": "5a6856c0456688d2b5e761634ae2bf178d75816b543ce65beb6ede1f44468adf",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_00768.npz",
+      "sha256": "e2cd9491e82bfd16875a494bead24499c982836bb1480d3fc0c865bb928a5951",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_00896.npz",
+      "sha256": "9dc88f9b56b57a6db13a3f4561a9cb4559b08ab4ec0db5d0af5d35889f30d2e5",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_01024.npz",
+      "sha256": "4daba767bf0a75e322e6d693c66800c17bf3fe44f4174537945031a519c7ef2a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_01152.npz",
+      "sha256": "89dac3a9e1fab72665b3404f429b916fa5471c71170f48bea5ed4092dd0ca789",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_01280.npz",
+      "sha256": "fe0c955eb1387ab3045e6c8f824942daec05549793b9f96534de888317b08ae0",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_01408.npz",
+      "sha256": "258e2c2268e1132f77a2aa81f6d1774ff939eba3fde1d7cafa4402b9e80b91f4",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_01536.npz",
+      "sha256": "14d38998a8749361d115cb0f1964ce92bc25c5b8d80b9856eadb5a9c5cfa2a37",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_01664.npz",
+      "sha256": "be8c493ecba6cfbe065d176be45e6fa89f0f093329493653ce1e87587bd763b4",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_01792.npz",
+      "sha256": "15a1bfe0b8bea90142f3a648a439817c99bda386edccb4f87559ed8c1c9658b3",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_01920.npz",
+      "sha256": "e3b8d8384c02a245ca880a97fbce373f4dfa13b946e24d4914c91d175f81bd6f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_02048.npz",
+      "sha256": "f57b8063e31eefcd7a3a7d70bedf6d21360920f808f764060dc2df49532482b0",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_02176.npz",
+      "sha256": "4c737c5b9623464d16bbd8e164eee218e6dde6c72fd6035fa93fc5cff020d5a8",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_02304.npz",
+      "sha256": "967b1ff1117289bf38a236a92c0aa055ed839ae2cc6f8b130e4217690325293e",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_02432.npz",
+      "sha256": "3806a2c14c9ecdeba00ede3fc29c2928be101bb3ed5e67039205251520b2bbef",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_02560.npz",
+      "sha256": "c3518daafe022c82544fb7f7a2d08ebdc19c2f93656422617e6cec172f3637b4",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_02688.npz",
+      "sha256": "97f14c90889470b43fb36f969b6ca33598436553a4e6412a49b7ea42af6e2281",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_02816.npz",
+      "sha256": "f90c846fa7f2fcc5492a98567e809d647ac7d80fba1f0757ade909384350360a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_02944.npz",
+      "sha256": "ca6a39b2a9e45464f20993884054d512d368e7c738e7bd202fb0da0c6b145b0b",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_03072.npz",
+      "sha256": "fa1ed798ddf7a0ff380d6608a2560d90334e7384530ca3d6327e96dc57126130",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_03200.npz",
+      "sha256": "317d79eebec7f9731ce4598dbcf9b96785fad345620c458045495c795bed5d67",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_03328.npz",
+      "sha256": "ae041402b562df73ac50fe64363222af27c67727cd3b135a93e9ba55aad0594e",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_03456.npz",
+      "sha256": "433fbbdd490c07a3c03f77b4a2c66f1c7756d826595193ea7a2acef7ff02388a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_03584.npz",
+      "sha256": "0333e2df0eb2bab9349a6d07024ed19a8bc314753a9516fb2e69b63ee3232b7f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_03712.npz",
+      "sha256": "3c40b5b160851d94091386ccab1099a8258d766445df22e5879846bf116ece3d",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_03840.npz",
+      "sha256": "80a8b08e15d2d2ca8906c8c138d5b84d93499d52e3f7adbe471fdbae554214c0",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_03968.npz",
+      "sha256": "ad66f4201ce61dcf78889ad270e8afa4ccb20422b802f15808463b99feda787c",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_04096.npz",
+      "sha256": "d129120f473872e84f8f83628328628ec82a73777320b91bc7011e7f312269a4",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_04224.npz",
+      "sha256": "c600711c146c5ff88d8f2514d909192e20c31f44757accd86d2850c2f9ca5a39",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_04352.npz",
+      "sha256": "bc9730525857bf058dd94c8f094f640258c6f7416ccfc2506019cdb850430696",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_04480.npz",
+      "sha256": "6297ce54971baf44cfb468e66bb15f4453ba4009556f55c6a46f866461c6fa3f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_04608.npz",
+      "sha256": "6381853e430637cd0df21babd81da61fe49959aa016bdd91705391e817836b6e",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_04736.npz",
+      "sha256": "5e7a1e0c86295e5e2bf741e7b495f26817a57605666043df2839fe1ed2cfdafa",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_04864.npz",
+      "sha256": "6aa7d462b00b8438d80d41e6296f54748191b4328a6e61f410bfd0051822a12f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_04992.npz",
+      "sha256": "7da52f3c44379707f8559aea604cd3412b11463bdf4901689bf36e3439234441",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_05120.npz",
+      "sha256": "62f8364b4d9c6bbb7e7f0dde0dc6837cf3085b0920b1b7804c6f8f5a3746b219",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_05248.npz",
+      "sha256": "0f0fb2b8a53e6213b6b11121d2563ded6ee5c9869b2adc7e988b1be195be57a9",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_05376.npz",
+      "sha256": "a9b4f215229e9e66e8fe45d79e1a1540375f30270326a4bf7d4cfbf619a3cdbd",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_05504.npz",
+      "sha256": "cda52b0fe51aa83cb8a5ef5b1ff47a8b54e80f46e6d0a1130370dfead82d4289",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_05632.npz",
+      "sha256": "657276cd498f3b95a99e7fa535c9c7c0bca11d2362c035073777278d3938fc1a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_05760.npz",
+      "sha256": "7dbb3320bee7f50691ec54c577745849b270b4146db7509fcd9c87b24cfff77e",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_05888.npz",
+      "sha256": "8fb6cb146276769945b6b47877d40b558816a17d8877894377020b3ea16f98da",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_06016.npz",
+      "sha256": "788c7a7e4b005be5b3f3b9fee3e454711d32985f0b8348f822d74be983445597",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_06144.npz",
+      "sha256": "7d216c6bdc9f369ec32cfd7ace98a1014ceaf3906292c7d6f35c75a9913a8dcc",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_06272.npz",
+      "sha256": "b2b56124235f437f51faef4174c78ed65b2fe259ba9790a4fdfad2a8687c5b3a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_06400.npz",
+      "sha256": "6ef2baf1666c5235fb7d43c995ceba214162bf88b16990432b02e2e597711c25",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_06528.npz",
+      "sha256": "e91cee7eac4c680a23b18d63709b5d5f8e45617b3fcb3c850a283052db9ef852",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_06656.npz",
+      "sha256": "29b061c583cfb22b26ff735ed231972a151ab14b524d72cd31ef46c62888c4d5",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_06784.npz",
+      "sha256": "4f7c655ff89d477a5ed400397b1bdd9abf132f2e5e697ce5b20585fa3e39e1ff",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_06912.npz",
+      "sha256": "9c5bbf34c604896322bec184422012ab73f5565b0271babf725d58bf0ab8a44b",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_07040.npz",
+      "sha256": "f1401f1021ab7cffb526b06cdd78a6b4ddc882557a75ab80855efb93a3830cdb",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_07168.npz",
+      "sha256": "f3630208caa52f825189adc2e1144304c3e2789f07598a2657e1bb3f286000b6",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_07296.npz",
+      "sha256": "f0ebb89e54b3f38591f9a33d6211548617e8e0ab6654ccacb7f58a432bf699ac",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_07424.npz",
+      "sha256": "7939cccc7f820c6e4e267ea112cdbd232aaa18a8d05011c909cbe56cde59356a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_07552.npz",
+      "sha256": "6ea712cc27f24b0fc46665b49dbe0ebeed524d0373c2faf87a9864556d0bddd2",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_07680.npz",
+      "sha256": "44c95dacdac141f39bfaf9f97cd1f9b301fca006258d392797b028b980add42e",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_07808.npz",
+      "sha256": "8dc7739e8f2c825497cc3fb2db9dfc7abeb9e74ef1e686871cc653e7af6b5f93",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_07936.npz",
+      "sha256": "1fe120accb17e9696a4e69472f9b1431aa4d9e20331290bc574217f27be8cc33",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_08064.npz",
+      "sha256": "abdfc0f1a98d2954afb02cb325a9f89c6baf564e0f0167e997d10e99ce9331f2",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_08192.npz",
+      "sha256": "cdabe30425a8636dbca81e2d7794a37d322ea3aaa6e08091201738869085607f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_08320.npz",
+      "sha256": "a5ce7e89ed160dd383f7be1ae5df410a568f79e03dd93808635659a16ac0707d",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_08448.npz",
+      "sha256": "d9defa49800d733f70db6ba03923b17a6b107517d8e2d43bc05b822a2a7cf242",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_08576.npz",
+      "sha256": "5bf4da97506d17e3c00902bdbdf7625c0bb3938e0fe39a609a1903e5ba756c26",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_08704.npz",
+      "sha256": "c3339db9be0907c44ff44a8efb4756fcf9025c861fc78d59d8817dbaafb4b56d",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_08832.npz",
+      "sha256": "4273bd274f2a849dcabf04e5d2e247dd22f529cdf9c254e964379dfc8cadf0d3",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_08960.npz",
+      "sha256": "d6d577ac032092d414ffe176ed6cc1c4727c83e4126a6e404763c77ba9cde02b",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_09088.npz",
+      "sha256": "2cd5dce57c23fb2996a0405519b491448e9d8a62a94d857b11ef5170a415a7c7",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_09216.npz",
+      "sha256": "76bc75d45cfb87ed95c307ca90aecac817ddc016ef637a63c37f885f053912cd",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_09344.npz",
+      "sha256": "cdd7223dd341236b2307b6b943d035b6a1654bc40a19a70d5f05912dd71788b5",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_09472.npz",
+      "sha256": "8637f7dd3fb00d29b1d901b987036300357ec66fd06c867049999074d8f63d0b",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_09600.npz",
+      "sha256": "7606c245c1883d97537fedddb9030f1bac421307ef06d1982634675e61078151",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_09728.npz",
+      "sha256": "df4eba23d23a408db56d120b38e09c0cde2de9587243b641bc4cf2c373db7e6a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_09856.npz",
+      "sha256": "942e5ed8eda4f7511f3708de11b35020d421ae4057a4717f14ec38ad83206576",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_09984.npz",
+      "sha256": "50f37df61c8a2823e805f9291d36d63afac13800818152d7c18dfa911a491826",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_10112.npz",
+      "sha256": "c8f2578ef44e3cebf1556db2064009af89caf25e551a00ebd6d0be17e760c243",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_10240.npz",
+      "sha256": "e6aa40502363180303a0af7e7ab72929c9e5ccea8979f12877624f2d6273b7a6",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_10368.npz",
+      "sha256": "aff0e3489b154876a3d3a109205fbda18a3b901c6a1f68d577063e0db9dde722",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_10496.npz",
+      "sha256": "72ba37a9bd9e6d1d12c9ade868a1de0ee97b368b1e0b94c7eb5512ffb748cc01",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_10624.npz",
+      "sha256": "9b54f3c51b7aa26330847012b420a9760bd3c1a2af0859084ab5a2bc8b4c35ed",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_10752.npz",
+      "sha256": "cc4bd021c958c5654cd3dfc9134c4aa0577c193b7941c0f0575b9d1f5a75dca0",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_10880.npz",
+      "sha256": "757da60821108126efc205cdf4ce12309658c1a9f9880d02729b7f15e8c28a82",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_11008.npz",
+      "sha256": "2b59d8737a92c959f808c8172fd918b3fc12d6f8a676780200e1f91df1dfda3f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_11136.npz",
+      "sha256": "251ede82269c8a588c8a4cf05560881ad7fe981ae7b07172add45c5857c09897",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_11264.npz",
+      "sha256": "883b44a63fbe82cab43c0ebe47631164dc5e285221b7d47a80f4402b53e9ee37",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_11392.npz",
+      "sha256": "cd2a7e034730ad3fbeed8d3471b9846e499dbc0545e222665e4d87ac392ec493",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_11520.npz",
+      "sha256": "e598adffea1492697dec3b2ccc264a265492544094c421789a29a74da678a7c8",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_11648.npz",
+      "sha256": "e0ecbda7165f6d26f3186d90fa49afddbb3751ad889b05a596e50f73492af6fa",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_11776.npz",
+      "sha256": "f8cd4e032c1c7e2746f19f2571cca7dfe6aee68d92a1a9dfc0929aa2b72fa8a5",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_11904.npz",
+      "sha256": "23e68afc7c391f1f8a7ac90d08cacaed25c68b54bda05ff4e9fd5fc7249d81ba",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_12032.npz",
+      "sha256": "7a621dce3204616a7ff3fbebe9e0453013097d464aa42976c3a1e2d0dd1315ff",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_12160.npz",
+      "sha256": "fb96efc8e8e09d0c9246f573c94827d9119867c200c630ff48072d132e262290",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_12288.npz",
+      "sha256": "28dcd659209463651de176aaca1cea899e7117884ff41aa3deb4d9cbce1815e7",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_12416.npz",
+      "sha256": "81593576503508597f97a1901e56e2ba4323fa53f5eae5c786f2ec74a2edd0c1",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_12544.npz",
+      "sha256": "89876dffabb406467ea9405d46e1c9b84012365e36db8d905a06445473fb0e02",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_12672.npz",
+      "sha256": "c62bb12d42c847ed5a2f1b67f37552674970973b75892422567b29b08fc9ef15",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_12800.npz",
+      "sha256": "5b297ccbfdc9ecd7b364d8e1408aaa059e42c14cd773a02af4da830df229340e",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_12928.npz",
+      "sha256": "4c1d34b5d2b72a32c8943ca2fbb602917aa59bdbbac934ae5033f3d9e8f73374",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_13056.npz",
+      "sha256": "5a8d09a7722f6f84101d586746b70f6779c3e751e28bedc8365286fa48106b39",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_13184.npz",
+      "sha256": "6fea83185b96bc61952ff6cc46def6bcb8e11cfbfd384a07cd8b87b02509afd6",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_13312.npz",
+      "sha256": "6c0a429328e0d93e3dd67ddf6b8ff078e651a0789c17835422de650dd89b22d3",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_13440.npz",
+      "sha256": "a50ebb3ccdf49d15f37dc54c1684d8349fc9961c23c2d8ac32acc6a1a298552b",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_13568.npz",
+      "sha256": "9edcb8170ef0f6123faf6de9eef0fb5347d91b5ef23c0fb52460a76dedcc4013",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_13696.npz",
+      "sha256": "9cf008066eee0b91641c6d45e6bde9a13e9b23b5059ff2cc9447f6aaf9c34800",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_13824.npz",
+      "sha256": "0d8799955c4d7e3c6ea0c43f65f78d0c6a422e036aabce109495969d81b8b034",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_13952.npz",
+      "sha256": "0b9d7a502f91ed97f14bc15f862c3f721944cc61fea06901fe8d0edb778ed6a7",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_14080.npz",
+      "sha256": "c3f3ae96fde09bd60db0378c5dc57ab8dfacb3d0e6a1f19601dc02e64f489b73",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_14208.npz",
+      "sha256": "aff0d546cb3db99416fa10104ba5890dd90cf6e7d52e3c7c12c26cc44b24d2d9",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_14336.npz",
+      "sha256": "8e924e2f30edff67094db0eb85828d8bdd18cff57cc42d724055c767382a81ed",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_14464.npz",
+      "sha256": "cdf4955322ba9780db2855d8de2e6ef266a2d0e7962d4f6dabb484cafff4bdba",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_14592.npz",
+      "sha256": "e46f8fa55a370626fc3b098455b04900525343b60941a03ca802355f4d024276",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_14720.npz",
+      "sha256": "75b79e0e975ef5b1b09b10f173143a17b49f0a9209af61c092a60aade21f2334",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_14848.npz",
+      "sha256": "0c8c834cabf28562c3c99e48907698a3550617e3c70162717337240057b31f1f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_14976.npz",
+      "sha256": "0528bb44e5320601bb2bf145844775e0d123223a970d8e1f44bc0acecf1762e2",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_15104.npz",
+      "sha256": "40954cad89a908ab36b75a12f4b2b3f4a084e31ad102f9eb7d9ccfcd5ee2780f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_15232.npz",
+      "sha256": "68c1f54640bb8702920a3467a9ceceed2ea46287f383474366445c09a86db263",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_15360.npz",
+      "sha256": "befd3772c5eb22d70d3294e388c3ab4ffa62a40638ca4b7bd64b60cb484e88c7",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_15488.npz",
+      "sha256": "d6d4b4712a794125ff955a1c3b4e063099fa49edb0b2d7794a00fccee639a684",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_15616.npz",
+      "sha256": "cc6e48f7356f87f529fafdc6b70cce98ad2ce88c5d7016f9bf328dfc23c6b1af",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_15744.npz",
+      "sha256": "dfa7d452c2e665c0c46b1b47bc32224b085949fa4a16d4acc0fd2933c0ceabce",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_15872.npz",
+      "sha256": "82e22d07e17d515cb494d2c28786b6ec85431bb1b4ebdb92be278f9a1d3d1290",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_16000.npz",
+      "sha256": "c556a1d5eea6b8366540e32bd96ae52133d1e60af8a2e3b5e5fc7b4916c99d90",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_16128.npz",
+      "sha256": "29a97e1f3354c9fc0b8731fbf4e39a0333f4590b727f6e471548635a44e420ef",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_16256.npz",
+      "sha256": "29a2f4b96e24856190aa50e9657c81bd7dc9103b550647b2eddf902e8d955cd6",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_16384.npz",
+      "sha256": "76a65ed36bdc81098510d2b26c98cdb2d36c11f0957caed61cbff2eae4c1a1cf",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_16512.npz",
+      "sha256": "c0befa7a624fe7f589dd39f60abc749052dc27e3aefb14f4f9a99e0a1ac7dbad",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_16640.npz",
+      "sha256": "597f45b31e0b7235b61ab144a5d2d7714948098cef82440e091979cbfcdd25a7",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_16768.npz",
+      "sha256": "4de95f3a21d4b04920ddecd44a107cb92dd4b8db58d5abe5e577fd88cb4f5f1e",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_16896.npz",
+      "sha256": "a2335ee688e5b11091046c9ad8fcacb9dd25acfc0b4571f620a51cbcb44b9ac3",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_17024.npz",
+      "sha256": "d94d8a7ad8d7e8980450b9edd7364c3829ddf3104e2b6413a1e5dc380d13b5da",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_17152.npz",
+      "sha256": "9cae90777a7edf698335b779c6b42b941c333ef7ed476207da2249ff5517582a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_17280.npz",
+      "sha256": "2bcc1837181c42a1e3392a87646f8a92ee033d5a0601da5666c3464ee0b945aa",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_17408.npz",
+      "sha256": "2812a9cd08e5054aea864cdc547061b94e00e5da7be49a328e9ea935ca45247a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_17536.npz",
+      "sha256": "d49e0cdb33dc2e39c09e9dbc0d106e3c471edbec18aaef813eb1e3296e0e409c",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_17664.npz",
+      "sha256": "2fdd3006915ab8aae6c1a86dfc2817cdb33131473b3fa13cb7e2a59fc89997fe",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_17792.npz",
+      "sha256": "fba07a1c9fa07fed30ef4a51c0244229982c43a027aed220017a91b09a695fc9",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_17920.npz",
+      "sha256": "5f7ad9c2975013d841338acfb48be6faefa48d8457f3f7b1f327cd9d6ae7e38a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_18048.npz",
+      "sha256": "1c023d4513b77709d806e41ac58c178f80a9a9eb12b4f1d11711e36b9cc53b64",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_18176.npz",
+      "sha256": "82cc28e1b798d6115010d6d270b40be5f82daf3efbc624e42251ef02a205c425",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_18304.npz",
+      "sha256": "2367e1523f9e82ae72da37b8e99034a81e4ef87822a5d6d74546181d709f20dc",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_18432.npz",
+      "sha256": "dbc22a6388b7e0e66ddb4a9a3b25575aab955c99779bbeca2e1f4969f0e7515e",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_18560.npz",
+      "sha256": "0c425f6353b0303a01bc8873329454bc7c1c405d30805d32ab490168166bae93",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_18688.npz",
+      "sha256": "3c00fb7750d5b1704940c8e2ac6762de50e72a61ae2e944f4bbe2f8efd57d77a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_18816.npz",
+      "sha256": "3d9b12edbf524a3840b1c45182c1109cb07a01f1eedd1c1fdea3ecb375e676c2",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_18944.npz",
+      "sha256": "23cee0813545d19e7b0f916423bb23034c629b39f1eb62ecb71fb6c9d7b4f055",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_19072.npz",
+      "sha256": "a2b99b25c14ae28ff10e06da3dd3069438fa4ec9b571de30236570615f07d59b",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_19200.npz",
+      "sha256": "1316606ec27eff3a6a25aaf2349f91ef950cff5184bd52b8cd974a4df4ee9f6d",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_19328.npz",
+      "sha256": "64e05a021d9cc0e70a521c00129cd0b6e563966a35e1f18eb1ab618a5b648235",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_19456.npz",
+      "sha256": "d188a40de282a299d0569fc3037e19407a1d1e71fb19ad3f2a09eb0c190cfcaf",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_19584.npz",
+      "sha256": "e70a0a2467d80b4d0db58174950de8d19fa287a62403a2bea281d18c9cd7dad6",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_19712.npz",
+      "sha256": "fa25874a10bb893a22a23d449033fc1ca1d3674cf333556a9b7223d6005e6b3d",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_19840.npz",
+      "sha256": "bb4248749660672dff9e6fb1f0dc22116ffd76646de7f3e27d8ecabef311e617",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_19968.npz",
+      "sha256": "a5644f5c5c31e77ac5d81da0eedd63fb4b6c9c88530ded27b05d1d8c8992dfa2",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_20096.npz",
+      "sha256": "0f8019a2eebca9c1b34033a7c5c28d90ecd10fea833bfda87e683daec47b9ae2",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_20224.npz",
+      "sha256": "9df407da5f279477fcb34927558ba5c516e6fc47a9b67a30d1a34c3951c29266",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_20352.npz",
+      "sha256": "a6d65f011d477548927b13b276dca6af9cb4f6840056a1153fefa533d2dea731",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_20480.npz",
+      "sha256": "743fde4b955415559f56a7595f8b12a16859f47c01cae9f0b2e2363bd9842851",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_20608.npz",
+      "sha256": "7cd0c00756a7e6e0dd078e6107ac5e337d891e699aaad05fa84b6ccbe088d05f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_20736.npz",
+      "sha256": "9130c16097a5e81c4687325c7bbad2ea5a063bb50bf6ada9005d571c2a0def24",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_20864.npz",
+      "sha256": "b6838b4bcb7c72dc70e307e6cf30ae0b62f24353ba70311475c11f2ebfa971f1",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_20992.npz",
+      "sha256": "1b1bfe11f15322d0e0c20a27f1e9f1cd834192f0d6c0c3b977be56098b4418d9",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_21120.npz",
+      "sha256": "b2c74760aab9e85c95419be27a4549e3161c51a5d576fcca126f75824a3ee000",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_21248.npz",
+      "sha256": "9a28c3b469c9aa08011edae320c0046af5c8e4433f1477ce6d9cf943723009a8",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_21376.npz",
+      "sha256": "db98f066d9434167c57773085ac34ee46454a05862f951445bbc1ba9c4181cfd",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_21504.npz",
+      "sha256": "2b5fcb3cee8b3c05ca39db1e07b4126cea9ff69d49b122d3320e55f7d049ad22",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_21632.npz",
+      "sha256": "89ce69d713001570de69d815ca49881b569b2b621ece222ef4cae836806b4da2",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_21760.npz",
+      "sha256": "83b523e920baa6213000791776065fe4d7c45ce246e6bacc07373f62a908e88b",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_21888.npz",
+      "sha256": "65108c1c48cd6ea1aff5f3e2c3c7773d8f1d6aad817c91a95caa7616e35728d0",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_22016.npz",
+      "sha256": "4dd1d329c9cae9c987cade2acbbcb6ab3b3a03c13b91585f734cda5ab9453333",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_22144.npz",
+      "sha256": "90ce5784655c188ebd371b45f8413e58eab272a51c0d1291b200d5d4373a538d",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_22272.npz",
+      "sha256": "c2b622567c3dda256d11027f909946794d3b230e6775d851b0039917cdc00a51",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_22400.npz",
+      "sha256": "814c08f1927d5e43ae96d34458e037a83ccbf54ab0bcd4b653f331c5294c6e6f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_22528.npz",
+      "sha256": "a48f30874a568f9c554a6c4dea2d9fa2db995c232cce70205ef1c1630cd3927b",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_22656.npz",
+      "sha256": "edd1109234412b6c86896cf363841d8b8e18a95e39d3bb392b0316dcc845d94a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_22784.npz",
+      "sha256": "9b1cd5cea9dde5bfda115f71095454a061eff9b89159d16b7eea107591e9ebfd",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_22912.npz",
+      "sha256": "5c103b0f683a3acef6942e98e67844c5756f19556dfc9305ace966077806f0b7",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_23040.npz",
+      "sha256": "04a6e811077015858a81513bd19ecc50f21d3e18534d8e543a13f1529c1f802e",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_23168.npz",
+      "sha256": "ee9d9fa044367c71519e630348d7b8c573ecf02025f6766221f5096b15335031",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_23296.npz",
+      "sha256": "ee1fde39f5d8a5a8eff6d0fca2b0aafd723cade9bbf51d78b18cd4130ff6e206",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_23424.npz",
+      "sha256": "6aeae2fda9881bcec6be228ea7eb0e9ff66e7c647817f3f7630d91fd8447c86a",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_23552.npz",
+      "sha256": "52925789671bae816e87a8baad9f55a0f41239ab0f7789e06f9ead89e9cc97b7",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_23680.npz",
+      "sha256": "bb48778530161180e5a5a269d48433aca9c2522e23b9e99059ad0b32b81463ee",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_23808.npz",
+      "sha256": "3577ad5137d62a67b1ba1479d9deeadf2b0ccc0e9430a6885d5a109726d5db23",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_23936.npz",
+      "sha256": "2a1d1c9c61d12e95081746953ed7177b656da1a88c734ece5d2f3492812de666",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_24064.npz",
+      "sha256": "cf6004cf346a0c4c847b8a73e368f24781a7bad8c0208cb2a10f33aa14b67da4",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_24192.npz",
+      "sha256": "b2d60f79652f0672d4e9c8e798e31c00b1c11adff4a8b5d4165bb60e4aaf64fd",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_24320.npz",
+      "sha256": "542734972c40afa2119f6730deabc26873f0f89048b27fc70ee9ccd8d5310de9",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_24448.npz",
+      "sha256": "4dedeb5502ffbde5bddf6f67e2f56c2671f7052952a827daaaac8ba3503d8153",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_24576.npz",
+      "sha256": "914eb61caa76607e159dcfc3d8c74774ed0400fc4aa8b90aa090b47bcf5bfdaf",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_24704.npz",
+      "sha256": "cbbbf84804954fbea744069da0f61eb3c787df88d53aaa58142b2061a82a29c2",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_24832.npz",
+      "sha256": "0b95c40f75ad0f1bde1ddb83130c27558153780b01d8ead67200cc6010597e3c",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_24960.npz",
+      "sha256": "9ada5378e83216778c531b89bf023754c0ebc902cdadbb76fea464091346e3c2",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_25088.npz",
+      "sha256": "d913d60e2923541a326b80b8bbaf34419c4ee36c7081afe3af4bec53505b71aa",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_25216.npz",
+      "sha256": "d9c5fbd603c73910091aec1bda9058fa48eca5871f081a5847b8965dff4dda7e",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_25344.npz",
+      "sha256": "74c56291fb9d73b858a75aa22ffae17658994e38b104ed40989827d7a11e9080",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_25472.npz",
+      "sha256": "56c0dfdfb0328f61a0590e8214c1edf3a0972a68c05f3759fa24717655dc4641",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_25600.npz",
+      "sha256": "db089d59fb50349036cd9a668b4b514d4c33fa6f859f00118a63951193ad208f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_25728.npz",
+      "sha256": "0e389f1728c81c510bebb481df4a4d8059f73e50464e7c9d58e2fa22711f0e36",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_25856.npz",
+      "sha256": "16a7250eab5ed702fb277d68e19f31b4c7f89f79f4eeaac4eade224a3f2230f5",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_25984.npz",
+      "sha256": "55fd87c671fad71c0ba86a7d5e2546fbc66cba136e89e327ac67d023a0161f31",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_26112.npz",
+      "sha256": "cdb416eb4bee8f13dc15a2087d918d37b591e1e21d804dff97a64bfed348978c",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_26240.npz",
+      "sha256": "c424216fa55564e4d49f8c0ed1d19331a3b7571e15774ff4e701ad6cdf12b822",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_26368.npz",
+      "sha256": "d9a06f480a81d8bbb9531b3236b59d596e54ccfaebac19f30d60b9b051f66636",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_26496.npz",
+      "sha256": "53ffab90d50c76c05e2340114884781abd67da8d1e2cf1c96fdd298c118d2bf9",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_26624.npz",
+      "sha256": "40989d9e0dbb73d52f83e46f55154d802aa07136243a60eb741d4fdf987bd3b5",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_26752.npz",
+      "sha256": "ed969cf6515736e0fab938677fa26f7e54da10d44d40682d19c53264c61e514e",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_26880.npz",
+      "sha256": "7b37bd850bae33a328709f4b0ccf246fab4a88e51014448860b1e5b7245417a7",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_27008.npz",
+      "sha256": "232cc305264e8315ca4431aa3fd696ed12baf1fb37698b02426f27767ede8352",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_27136.npz",
+      "sha256": "3bfcbe9aa27828cf4e4bfd20bc79da6cdd801c7b85ced51472d9b6b2be511d2d",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_27264.npz",
+      "sha256": "388b91e786f3f75d191f81cb92003df5c4f8b9e08d14e41c6e5ebb51dcee0bef",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_27392.npz",
+      "sha256": "803869d619e814ab61dc866764990405a295b62453156465145caac21f6745aa",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_27520.npz",
+      "sha256": "0014e2522e4357729ea0664ba679c1c53dbca760c7b00023539140320efb7d65",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_27648.npz",
+      "sha256": "bcd8501d9e40eaa212edd743138c444151af37bc2c86b5b62498a97bc1ab3b6c",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_27776.npz",
+      "sha256": "05f087a7a34202451cad481822b3c863ed786ce48edf2b89b78453c12c607e52",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_27904.npz",
+      "sha256": "89d7ef40df2a103c8be5ab901858f3976e22b791f646f408c50ed00b9fdb7ffa",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_28032.npz",
+      "sha256": "b0367537346f3fe11b619d1573782975f1683cfef3a65f8aa0b2109eaf169d07",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_28160.npz",
+      "sha256": "7d48fda37f5756fc9f71c44199a3a01239408e88b00e64908e36de7a3b42833c",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_28288.npz",
+      "sha256": "9180c60ac8b5c30bebc09d52054e58e448f094f836348a178a281394975541a1",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_28416.npz",
+      "sha256": "c95803425100632fdd28136be1ec98637035d1ab5efbfc1a090b472185e647a2",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_28544.npz",
+      "sha256": "55d6d2978662b46e43cc6223174ef117d17b661d7baeaa8ba1675e6184d89a1f",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_28672.npz",
+      "sha256": "bd83914d37a71b756d06bd42d1341a8407d8383407ce1575e2e8dc2ed0e26f67",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/target_selection_followups_2026-09-23/recovery_results/cell_1009/witnesses_28800.npz",
+      "sha256": "bb0387218aac930808237625594432a0dfc280a9a172b7467dd3a024ef579134",
+      "reused": true,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_28928.npz",
+      "sha256": "f0ee1063389b191596f243737cdc649fe450c0f9142510910a48d58a0730a226",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_29056.npz",
+      "sha256": "a90710aae0a10326c81ed71b651e8b81dedb2a8a4df86ed55da63632814d2ac0",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_29184.npz",
+      "sha256": "dd24400a8ac1bdbe2cc0ad522b1364d1a66eadf3cbe625b423852c0bbd5330f4",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_29312.npz",
+      "sha256": "00a672fe4eb07c2ac5569e5c04ca2b1de84539732e1a7086d9cde2434a5f3c3c",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_29440.npz",
+      "sha256": "22f06c79295345e6be71ce3222831c05967bbd727d74356315980b00704e13ec",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_29568.npz",
+      "sha256": "242ccd1ff4b6dfb5594348e83c8428b8f83ded6029880c6ebf6a4b60ef426684",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_29696.npz",
+      "sha256": "83a6673e1454fe9b20abe760689d8154d55453db57e2ce1dead87c410dc058cc",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_29824.npz",
+      "sha256": "26e7bff15627a0b02b332630948bdfcbb0f141af49fe370637b601f18f65f55e",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_29952.npz",
+      "sha256": "f6a482ac84eab587ae85ae2eeb46ec488def9f8c9f43f8632fb109988e4b579b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_30080.npz",
+      "sha256": "50cbd56f058b92205bbb80c066b16dcfd7ce60bee2964487c5474ce30f67d283",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_30208.npz",
+      "sha256": "2cf15c8259911b6c90d24343c17582acfaf5b887a1c77f8df53c5df3a7627a35",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_30336.npz",
+      "sha256": "cb991b9f69fff1ce0275131cda5ecb8f4e73279d3fd92a0c2f75bb472bf16068",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_30464.npz",
+      "sha256": "8e0f01e8d8e2b441fe5257727ad2ad926b48cac94f747b8af728d2545d9371e3",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_30592.npz",
+      "sha256": "546fdd31125450f3d11c0f88abf7c5c95973eb29cba137d8164323a620794a41",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_30720.npz",
+      "sha256": "7d5cd214cea7058443940e583182bdbf888a62be635bc781d6c5faece3a153d8",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_30848.npz",
+      "sha256": "2c72f0e86017cbcf9f2b328255d344d97e0807d72f03acb3e2585ea168ecc303",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_30976.npz",
+      "sha256": "92aca9f8de94fac07c49d04cc74535d33bec98a95587924bf247f5fb1ac0c59b",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_31104.npz",
+      "sha256": "6dd27ea1efc753ac172acb67c6b01d4734264df3cc26141b24b914b7b942c8d5",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_31232.npz",
+      "sha256": "171478f4c81b2c4dbbd5679db91dc6404ecddff90e2931a3dd796d87d914c276",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_31360.npz",
+      "sha256": "342d7065e56ad76ce78b44629f594592adfbf95df5850696a1b98b536c798e57",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_31488.npz",
+      "sha256": "9eb51cac8799212ebdff12f96a9ca38e4bac16a9daf0dcccee25bc4c6a8bd2c4",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_31616.npz",
+      "sha256": "9bc11faea44d2654c6c2af8ea84467fa0c1b5475c10aadfbffb19aa7a3aef164",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_31744.npz",
+      "sha256": "943292e9c8d3365be9eca09280dd84455590ec86e5029f7ac732cf45839ac8d9",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_31872.npz",
+      "sha256": "25986f4759df0394606eb69dee1eca4acb11f72cf6f3baf3419988c66b313b15",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_32000.npz",
+      "sha256": "78ff14330526ff36bc246826c193005dee54970bb554e4c5a0350df303120971",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_32128.npz",
+      "sha256": "c425308e7f6f0aeef3f818c8a232e8f9a14df551601c29892aa9af551bb1faf2",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_32256.npz",
+      "sha256": "1cb0074eed7104cfa2f6ddb87a917c9ef0368ce8664b3fa9e752d89c71924532",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_32384.npz",
+      "sha256": "1d1faaea09de6701c440b25ce19943477b451f6de6cab7f5aea2b997baf0c6c5",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_32512.npz",
+      "sha256": "f93f25cc0481768753b8be3ac279c87290b1af3b64690f6c104342cf26395750",
+      "reused": false,
+      "targets": 128
+    },
+    {
+      "path": "Paper/research/empirical_ending_checks_2026-09-23/uniform_audit/witnesses_32640.npz",
+      "sha256": "0927ebb65ceaaf4c0f08be7df5128892e2ecc42bf063c7998b02a9456a409e05",
+      "reused": false,
+      "targets": 128
+    }
+  ],
+  "started_utc": "2026-09-23T23:30:12.267999+00:00",
+  "wall_seconds": 1200.0,
+  "reused_targets": 28928,
+  "seconds": 81.7582056261599,
+  "exhaustive": true,
+  "audit": {
+    "lower": 0.2661120863516613,
+    "upper": 0.2661120863516929,
+    "mean_lower": 0.20897921907068195,
+    "mean_upper": 0.20897921909808195,
+    "hardest_target": 13295
+  },
+  "finished_utc": "2026-09-23T23:31:34.018770+00:00"
+}

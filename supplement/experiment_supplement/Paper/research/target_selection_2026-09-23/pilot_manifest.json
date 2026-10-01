@@ -1,0 +1,248 @@
+{
+  "frozen_utc": "2026-09-23T08:17:23.291635+00:00",
+  "study": "target selection and finite computation",
+  "mode": "pilot",
+  "workers": 4,
+  "cpu_workers": 3,
+  "gpu_workers": 1,
+  "hours_limit": 1,
+  "per_job_seconds": 1800,
+  "per_solve_seconds": 300,
+  "max_memory_gib_per_worker": 5,
+  "max_output_gib": 12,
+  "gpu_executable": "/tmp/exploration-lp-gpu-venv/bin/python",
+  "source_sha256": {
+    "scaling_core.py": "555d58fe145b78b004622d28d59cf3a3d0e1422245c5480da41c7e05e94d984e",
+    "fast_decoder.py": "4402c535d3e84950b2c528e049984d610510ad0db215bf1c25aaf82deeb761f1",
+    "objective_dp.py": "27a7490897fba458a099388842dd637d04693653a806a6d93bec16a572afdeb3",
+    "extra_objectives.py": "0d7387e57712303b9bdac67432220776defad68e243f8be58daee6e25e6c563b",
+    "gpu_solver.py": "164db826011ed4fdbafc905eb34276d3c5760f3b219dc4b2dd318e3922b73653",
+    "run_queue.py": "9bf54d8a466895bb8116be080ff02976eac8bf5f9dac872834cc2ed7d90fa011",
+    "scale_one.py": "296ff35ab73312296e34e0578a8130a01e1bb1e08865d42a8859b9875ec2fec0",
+    "validate.py": "39636406f6b7ddb0f45b7cc31319823fef40b0795b25f1f757ab0453ff92babf",
+    "make_manifest.py": "bf5e0da7bcbe02f2c4e414c6b860ad8b505c4718934ee3dc37eff2ad12e12dec",
+    "report_scaling.py": "393bd24d4c43dd5fa95ed62c1f05c9009382ab87912568a60a9a60695ad9d8ad",
+    "certified_decoder.py": "64c66509ccab69fb66e5ba42fbb75b114e48e0a8c5ea247fc44a8bf568084fb5",
+    "PROTOCOL.md": "ad2d7cd71464ca38e9008eb091c2f4a6b54e6295208ae34f192c072199face17",
+    "ORIGIN.json": "5d05cd7248b3a90a0a26c2900fd032404ec23b3a74176cb99fd78af333b4782d",
+    "VALIDATION.json": "5476e76318c4e647c76eb73bff7db997416e3c99aca42ba42018e29580b29bed",
+    "../native_objective_benchmark_2026-09-15/compute.py": "b0ad02ef1c68423bc360cd00e2f9de518d6e9637f5e08bc92d61170524c8d508",
+    "../noisy_diagnostic_transfer_2026-09-13/compute.py": "ef51b462b0932e01fa4486117f60fc7ef1474d4f7cfae1b76e9cace404dbe881"
+  },
+  "cases": [
+    {
+      "case": "sensors_0.1_0.1"
+    },
+    {
+      "case": "sensors_0.1_0.3"
+    },
+    {
+      "case": "sensors_0.25_0.25"
+    },
+    {
+      "case": "delayed_0.1_0.1"
+    },
+    {
+      "case": "delayed_0.25_0.1"
+    },
+    {
+      "case": "irreversible_0.1_0.1"
+    },
+    {
+      "case": "irreversible_0.1_0.3"
+    },
+    {
+      "case": "hmm_91501_0.2"
+    },
+    {
+      "case": "hmm_91502_1.0"
+    },
+    {
+      "case": "hmm_91503_5.0"
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 0.2,
+      "seed": 2026096800
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 0.2,
+      "seed": 2026096801
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 1.0,
+      "seed": 2026096900
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 1.0,
+      "seed": 2026096901
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 5.0,
+      "seed": 2026097000
+    },
+    {
+      "case": "fresh",
+      "worlds": 4,
+      "concentration": 5.0,
+      "seed": 2026097001
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 0.2,
+      "seed": 2026100800
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 0.2,
+      "seed": 2026100801
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 1.0,
+      "seed": 2026100900
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 1.0,
+      "seed": 2026100901
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 5.0,
+      "seed": 2026101000
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 5.0,
+      "seed": 2026101001
+    }
+  ],
+  "source_definition": "Exact supplied-model candidate class; actual world unknown; all history-adaptive policies.",
+  "target_count_checkpoints": [
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "selection_seeds": [
+    923101,
+    923102,
+    923103
+  ],
+  "primary_jobs": 8,
+  "jobs": [
+    {
+      "case": "hmm_91501_0.2",
+      "t": 3,
+      "n": 3,
+      "objective": "native_weighted",
+      "strategy": "random",
+      "max_targets": 128,
+      "target_seed": 923101,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_0000"
+    },
+    {
+      "case": "hmm_91501_0.2",
+      "t": 3,
+      "n": 3,
+      "objective": "native_weighted",
+      "strategy": "random",
+      "max_targets": 128,
+      "target_seed": 923101,
+      "method": "cuopt-pdlp",
+      "executor": "gpu",
+      "id": "cell_0001"
+    },
+    {
+      "case": "hmm_91502_1.0",
+      "t": 4,
+      "n": 3,
+      "objective": "native_weighted",
+      "strategy": "structured",
+      "max_targets": 128,
+      "method": "hybrid",
+      "executor": "gpu",
+      "id": "cell_0002"
+    },
+    {
+      "case": "hmm_91501_0.2",
+      "t": 4,
+      "n": 3,
+      "objective": "native_minimax",
+      "strategy": "adaptive",
+      "face_objective": "information",
+      "regret": 0.01,
+      "max_targets": 32,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_0003"
+    },
+    {
+      "case": "sensors_0.1_0.3",
+      "t": 6,
+      "n": 3,
+      "objective": "native_weighted",
+      "strategy": "baseline",
+      "method": "hybrid",
+      "executor": "gpu",
+      "id": "cell_0004"
+    },
+    {
+      "case": "hmm_91501_0.2",
+      "t": 3,
+      "n": 4,
+      "objective": "native_minimax",
+      "strategy": "adaptive",
+      "max_targets": 32,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_0005"
+    },
+    {
+      "case": "fresh",
+      "worlds": 8,
+      "concentration": 1.0,
+      "seed": 2026100901,
+      "t": 3,
+      "n": 3,
+      "eval_n": 4,
+      "objective": "prediction_error",
+      "strategy": "baseline",
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_0006"
+    },
+    {
+      "case": "sensors_0.1_0.3",
+      "t": 3,
+      "n": 3,
+      "objective": "native_minimax",
+      "strategy": "adaptive",
+      "face_objective": "brier",
+      "regret": 0.0,
+      "max_targets": 32,
+      "method": "highs-ipm",
+      "executor": "cpu",
+      "id": "cell_0007"
+    }
+  ]
+}

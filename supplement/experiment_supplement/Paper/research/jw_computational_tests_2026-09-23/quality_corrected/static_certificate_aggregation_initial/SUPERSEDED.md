@@ -1,0 +1,1 @@
+The metadata-only aggregation was repeated with explicit accepted-iteration and witness-content hash guards. No LP or policy optimization was repeated, and the final certificate rows are required to match this initial result exactly. The executed initial source is preserved here.

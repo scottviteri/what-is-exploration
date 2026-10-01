@@ -1,0 +1,138 @@
+{
+  "status": "complete",
+  "phase": "awaiting_independent_check",
+  "spec": {
+    "id": "reference_replay__case_20__pseudo_count",
+    "phase": "reference_replay",
+    "case": "sensors_0.1_0.3",
+    "case_id": "case_20",
+    "t": 3,
+    "method": "pseudo_count",
+    "mode": "replay",
+    "planning_seconds": 600,
+    "job_seconds": 2400
+  },
+  "started_utc": "2026-09-24T02:27:12.142688+00:00",
+  "sources_sha256": "4684f78b757300662b68c95163c77fd78aebeaa843761993d970ffe6deefb0b5",
+  "manifest_sha256": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4",
+  "model_sha256": "9fce7733d2a358ed394030f44f2410a1280b24ffc1b0111d4315b7622051cf12",
+  "pid": 4057642,
+  "cpu_affinity": [
+    10
+  ],
+  "audits": [
+    {
+      "reference": "information",
+      "reference_cell": "cell_1091",
+      "lower": 0.09299999999999986,
+      "upper": 0.09300000000000005,
+      "bracket": 1.942890293094024e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_information.npz",
+      "witness_sha256": "d7512b1fbd48cf36402d7089af2db8674ad96514c4ea02d343aa9b279dc4781d",
+      "seconds": 0.010034685954451561,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "brier",
+      "reference_cell": "cell_0592",
+      "lower": 0.09299999999999986,
+      "upper": 0.09300000000000005,
+      "bracket": 1.942890293094024e-16,
+      "classification": {
+        "0.05": "not_reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_brier.npz",
+      "witness_sha256": "d7512b1fbd48cf36402d7089af2db8674ad96514c4ea02d343aa9b279dc4781d",
+      "seconds": 0.0023747216910123825,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "pseudo_count",
+      "reference_cell": "cell_0043",
+      "lower": 0.0,
+      "upper": 5.628050109285354e-14,
+      "bracket": 5.628050109285354e-14,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "reproduced"
+      },
+      "witness": "reference_pseudo_count.npz",
+      "witness_sha256": "83df53d4f6faffdc9c1b18714fd237c359dc70d93f5ce839643bd6a5165be86b",
+      "seconds": 0.052853274159133434,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "uniform",
+      "reference_cell": "cell_0689",
+      "lower": 0.030349999999996213,
+      "upper": 0.03035000000002161,
+      "bracket": 2.5396351688300456e-14,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_uniform.npz",
+      "witness_sha256": "4540ecd6d35107f0c7b91bca62c2267b642f0dcd1feb5de6415689688fc2bb43",
+      "seconds": 0.050294095650315285,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "weighted128",
+      "reference_cell": "cell_0106",
+      "lower": 0.01657889273356372,
+      "upper": 0.016578892733567895,
+      "bracket": 4.173744683200198e-15,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_weighted128.npz",
+      "witness_sha256": "5bf8535aaf63c2688b2eced9e8efacc4123f44498ebc8d661d7f22f8fed4ab6c",
+      "seconds": 0.029848221689462662,
+      "coarsening_bound": 0.0
+    },
+    {
+      "reference": "minimax",
+      "reference_cell": "cell_0090",
+      "lower": 0.021191885766402296,
+      "upper": 0.02119188576642128,
+      "bracket": 1.8984813721090177e-14,
+      "classification": {
+        "0.05": "reproduced",
+        "0.02": "not_reproduced",
+        "0.01": "not_reproduced"
+      },
+      "witness": "reference_minimax.npz",
+      "witness_sha256": "be2a099a133d8d0d99eb45a70f18a50b327c83e213d1a878867899ff047da447",
+      "seconds": 0.013185752555727959,
+      "coarsening_bound": 0.0
+    }
+  ],
+  "planning": {
+    "method": "frozen_original_reference",
+    "cell": "cell_0043",
+    "seconds": 0,
+    "scope": "Original selected numerical optimum/control, re-audited as evidence; no new optimizer certificate claimed."
+  },
+  "policy_sha256": "8c6dfd70191638617508f58a3a1e2d6713476159cdce7362a4046730a436d34f",
+  "rewards": {
+    "information": 0.74902820999982,
+    "brier": 0.26553557611438183,
+    "pseudo_count": 2.584538359251539
+  },
+  "planning_certified": true,
+  "planning_elapsed_seconds": 0.006197849288582802,
+  "seconds": 0.18079792242497206,
+  "peak_rss_mib": 81.9921875,
+  "finished_utc": "2026-09-24T02:27:12.323495+00:00"
+}

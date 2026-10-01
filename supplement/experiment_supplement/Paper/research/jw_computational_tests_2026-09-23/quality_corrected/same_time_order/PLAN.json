@@ -1,0 +1,2632 @@
+{
+  "created_utc": "2026-09-23T21:42:24.393077+00:00",
+  "post_design": true,
+  "models": [
+    "q4_a0.2_s926103",
+    "q4_a0.2_s926104",
+    "q4_a1.0_s926103",
+    "q4_a1.0_s926104",
+    "q4_a5.0_s926103",
+    "q4_a5.0_s926104",
+    "q8_a0.2_s926103",
+    "q8_a0.2_s926104",
+    "q8_a1.0_s926103",
+    "q8_a1.0_s926104",
+    "q8_a5.0_s926103",
+    "q8_a5.0_s926104"
+  ],
+  "jobs": [
+    {
+      "job_id": "000",
+      "model": "q4_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "001",
+      "model": "q4_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "002",
+      "model": "q4_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "003",
+      "model": "q4_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "004",
+      "model": "q4_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "005",
+      "model": "q4_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "006",
+      "model": "q4_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "007",
+      "model": "q4_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "008",
+      "model": "q4_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "009",
+      "model": "q4_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "010",
+      "model": "q4_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "011",
+      "model": "q4_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "012",
+      "model": "q4_a0.2_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "013",
+      "model": "q4_a0.2_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "014",
+      "model": "q4_a0.2_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "015",
+      "model": "q4_a0.2_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "016",
+      "model": "q4_a0.2_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "017",
+      "model": "q4_a0.2_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "018",
+      "model": "q4_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "019",
+      "model": "q4_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "020",
+      "model": "q4_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "021",
+      "model": "q4_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "022",
+      "model": "q4_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "023",
+      "model": "q4_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "024",
+      "model": "q4_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "025",
+      "model": "q4_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "026",
+      "model": "q4_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "027",
+      "model": "q4_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "028",
+      "model": "q4_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "029",
+      "model": "q4_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "030",
+      "model": "q4_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "031",
+      "model": "q4_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "032",
+      "model": "q4_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "033",
+      "model": "q4_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "034",
+      "model": "q4_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "035",
+      "model": "q4_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "036",
+      "model": "q4_a0.2_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "037",
+      "model": "q4_a0.2_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "038",
+      "model": "q4_a0.2_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "039",
+      "model": "q4_a0.2_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "040",
+      "model": "q4_a0.2_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "041",
+      "model": "q4_a0.2_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "042",
+      "model": "q4_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "043",
+      "model": "q4_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "044",
+      "model": "q4_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "045",
+      "model": "q4_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "046",
+      "model": "q4_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "047",
+      "model": "q4_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "048",
+      "model": "q4_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "049",
+      "model": "q4_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "050",
+      "model": "q4_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "051",
+      "model": "q4_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "052",
+      "model": "q4_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "053",
+      "model": "q4_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "054",
+      "model": "q4_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "055",
+      "model": "q4_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "056",
+      "model": "q4_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "057",
+      "model": "q4_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "058",
+      "model": "q4_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "059",
+      "model": "q4_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "060",
+      "model": "q4_a1.0_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "061",
+      "model": "q4_a1.0_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "062",
+      "model": "q4_a1.0_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "063",
+      "model": "q4_a1.0_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "064",
+      "model": "q4_a1.0_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "065",
+      "model": "q4_a1.0_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "066",
+      "model": "q4_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "067",
+      "model": "q4_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "068",
+      "model": "q4_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "069",
+      "model": "q4_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "070",
+      "model": "q4_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "071",
+      "model": "q4_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "072",
+      "model": "q4_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "073",
+      "model": "q4_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "074",
+      "model": "q4_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "075",
+      "model": "q4_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "076",
+      "model": "q4_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "077",
+      "model": "q4_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "078",
+      "model": "q4_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "079",
+      "model": "q4_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "080",
+      "model": "q4_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "081",
+      "model": "q4_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "082",
+      "model": "q4_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "083",
+      "model": "q4_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "084",
+      "model": "q4_a1.0_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "085",
+      "model": "q4_a1.0_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "086",
+      "model": "q4_a1.0_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "087",
+      "model": "q4_a1.0_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "088",
+      "model": "q4_a1.0_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "089",
+      "model": "q4_a1.0_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "090",
+      "model": "q4_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "091",
+      "model": "q4_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "092",
+      "model": "q4_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "093",
+      "model": "q4_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "094",
+      "model": "q4_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "095",
+      "model": "q4_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "096",
+      "model": "q4_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "097",
+      "model": "q4_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "098",
+      "model": "q4_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "099",
+      "model": "q4_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "100",
+      "model": "q4_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "101",
+      "model": "q4_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "102",
+      "model": "q4_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "103",
+      "model": "q4_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "104",
+      "model": "q4_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "105",
+      "model": "q4_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "106",
+      "model": "q4_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "107",
+      "model": "q4_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "108",
+      "model": "q4_a5.0_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "109",
+      "model": "q4_a5.0_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "110",
+      "model": "q4_a5.0_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "111",
+      "model": "q4_a5.0_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "112",
+      "model": "q4_a5.0_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "113",
+      "model": "q4_a5.0_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "114",
+      "model": "q4_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "115",
+      "model": "q4_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "116",
+      "model": "q4_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "117",
+      "model": "q4_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "118",
+      "model": "q4_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "119",
+      "model": "q4_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "120",
+      "model": "q4_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "121",
+      "model": "q4_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "122",
+      "model": "q4_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "123",
+      "model": "q4_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "124",
+      "model": "q4_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "125",
+      "model": "q4_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "126",
+      "model": "q4_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "127",
+      "model": "q4_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "128",
+      "model": "q4_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "129",
+      "model": "q4_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "130",
+      "model": "q4_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "131",
+      "model": "q4_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "132",
+      "model": "q4_a5.0_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "133",
+      "model": "q4_a5.0_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "134",
+      "model": "q4_a5.0_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "135",
+      "model": "q4_a5.0_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "136",
+      "model": "q4_a5.0_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "137",
+      "model": "q4_a5.0_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "138",
+      "model": "q4_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "139",
+      "model": "q4_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "140",
+      "model": "q4_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "141",
+      "model": "q4_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "142",
+      "model": "q4_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "143",
+      "model": "q4_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "144",
+      "model": "q8_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "145",
+      "model": "q8_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "146",
+      "model": "q8_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "147",
+      "model": "q8_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "148",
+      "model": "q8_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "149",
+      "model": "q8_a0.2_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "150",
+      "model": "q8_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "151",
+      "model": "q8_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "152",
+      "model": "q8_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "153",
+      "model": "q8_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "154",
+      "model": "q8_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "155",
+      "model": "q8_a0.2_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "156",
+      "model": "q8_a0.2_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "157",
+      "model": "q8_a0.2_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "158",
+      "model": "q8_a0.2_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "159",
+      "model": "q8_a0.2_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "160",
+      "model": "q8_a0.2_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "161",
+      "model": "q8_a0.2_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "162",
+      "model": "q8_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "163",
+      "model": "q8_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "164",
+      "model": "q8_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "165",
+      "model": "q8_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "166",
+      "model": "q8_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "167",
+      "model": "q8_a0.2_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "168",
+      "model": "q8_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "169",
+      "model": "q8_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "170",
+      "model": "q8_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "171",
+      "model": "q8_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "172",
+      "model": "q8_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "173",
+      "model": "q8_a0.2_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "174",
+      "model": "q8_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "175",
+      "model": "q8_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "176",
+      "model": "q8_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "177",
+      "model": "q8_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "178",
+      "model": "q8_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "179",
+      "model": "q8_a0.2_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "180",
+      "model": "q8_a0.2_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "181",
+      "model": "q8_a0.2_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "182",
+      "model": "q8_a0.2_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "183",
+      "model": "q8_a0.2_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "184",
+      "model": "q8_a0.2_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "185",
+      "model": "q8_a0.2_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "186",
+      "model": "q8_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "187",
+      "model": "q8_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "188",
+      "model": "q8_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "189",
+      "model": "q8_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "190",
+      "model": "q8_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "191",
+      "model": "q8_a0.2_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "192",
+      "model": "q8_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "193",
+      "model": "q8_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "194",
+      "model": "q8_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "195",
+      "model": "q8_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "196",
+      "model": "q8_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "197",
+      "model": "q8_a1.0_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "198",
+      "model": "q8_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "199",
+      "model": "q8_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "200",
+      "model": "q8_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "201",
+      "model": "q8_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "202",
+      "model": "q8_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "203",
+      "model": "q8_a1.0_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "204",
+      "model": "q8_a1.0_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "205",
+      "model": "q8_a1.0_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "206",
+      "model": "q8_a1.0_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "207",
+      "model": "q8_a1.0_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "208",
+      "model": "q8_a1.0_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "209",
+      "model": "q8_a1.0_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "210",
+      "model": "q8_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "211",
+      "model": "q8_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "212",
+      "model": "q8_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "213",
+      "model": "q8_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "214",
+      "model": "q8_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "215",
+      "model": "q8_a1.0_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "216",
+      "model": "q8_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "217",
+      "model": "q8_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "218",
+      "model": "q8_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "219",
+      "model": "q8_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "220",
+      "model": "q8_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "221",
+      "model": "q8_a1.0_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "222",
+      "model": "q8_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "223",
+      "model": "q8_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "224",
+      "model": "q8_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "225",
+      "model": "q8_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "226",
+      "model": "q8_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "227",
+      "model": "q8_a1.0_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "228",
+      "model": "q8_a1.0_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "229",
+      "model": "q8_a1.0_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "230",
+      "model": "q8_a1.0_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "231",
+      "model": "q8_a1.0_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "232",
+      "model": "q8_a1.0_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "233",
+      "model": "q8_a1.0_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "234",
+      "model": "q8_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "235",
+      "model": "q8_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "236",
+      "model": "q8_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "237",
+      "model": "q8_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "238",
+      "model": "q8_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "239",
+      "model": "q8_a1.0_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "240",
+      "model": "q8_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "241",
+      "model": "q8_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "242",
+      "model": "q8_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "243",
+      "model": "q8_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "244",
+      "model": "q8_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "245",
+      "model": "q8_a5.0_s926103",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "246",
+      "model": "q8_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "247",
+      "model": "q8_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "248",
+      "model": "q8_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "249",
+      "model": "q8_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "250",
+      "model": "q8_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "251",
+      "model": "q8_a5.0_s926103",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "252",
+      "model": "q8_a5.0_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "253",
+      "model": "q8_a5.0_s926103",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "254",
+      "model": "q8_a5.0_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "255",
+      "model": "q8_a5.0_s926103",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "256",
+      "model": "q8_a5.0_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "257",
+      "model": "q8_a5.0_s926103",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "258",
+      "model": "q8_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "259",
+      "model": "q8_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "260",
+      "model": "q8_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "261",
+      "model": "q8_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "262",
+      "model": "q8_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "263",
+      "model": "q8_a5.0_s926103",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "264",
+      "model": "q8_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "265",
+      "model": "q8_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "266",
+      "model": "q8_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "267",
+      "model": "q8_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "268",
+      "model": "q8_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "269",
+      "model": "q8_a5.0_s926104",
+      "method": "fixed",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "270",
+      "model": "q8_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "271",
+      "model": "q8_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "272",
+      "model": "q8_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "273",
+      "model": "q8_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "274",
+      "model": "q8_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "275",
+      "model": "q8_a5.0_s926104",
+      "method": "tractability",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "276",
+      "model": "q8_a5.0_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "277",
+      "model": "q8_a5.0_s926104",
+      "method": "hard",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "278",
+      "model": "q8_a5.0_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "279",
+      "model": "q8_a5.0_s926104",
+      "method": "hard",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "280",
+      "model": "q8_a5.0_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "281",
+      "model": "q8_a5.0_s926104",
+      "method": "hard",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "282",
+      "model": "q8_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "283",
+      "model": "q8_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "information",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "284",
+      "model": "q8_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "285",
+      "model": "q8_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "brier",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "286",
+      "model": "q8_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "native_to_baseline",
+      "budget_seconds": 40,
+      "collection_length": 3
+    },
+    {
+      "job_id": "287",
+      "model": "q8_a5.0_s926104",
+      "method": "minimax",
+      "baseline": "uniform",
+      "direction": "baseline_to_native",
+      "budget_seconds": 40,
+      "collection_length": 3
+    }
+  ],
+  "source_sha256": {
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/same_time_order/run.py": "0a859c71d394853a3dc61b492909a2758ce0ef6d945948e7a44581cd1b649b87",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/same_time_order/worker.py": "979b14bb3008b5ba7385c785faac1872886a5b73ba1b841e778ff7d3df78e0b3",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/same_time_order/check.py": "4d106c62eca3ffdb502a0bd323fabd40bfa7593f11f1fd3b5fa9d16b9840600f",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/same_time_order/common.py": "f425b4ec8655713f054712b152d0d786300af23c49a4e81bad2d78d9ab8dd638",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/same_time_order/tests.py": "2fbf7c16b3961ed348247545f396525eddad48c7ac3ec4b692cc3a411ad364e4",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/same_time_order/PROTOCOL.md": "15499a7afe4bedf989d4ec1cd3c0bf1a4e903ca9a62b60615eef448808d9dde0",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/checked_summary.py": "5ad74027ff3cacef6f2d5433484d451b85187b6434c2f069762828b92d74c942",
+    "Paper/research/target_selection_2026-09-23/certified_decoder.py": "96b2bc3eb84047f2e0551efcc28a6cdc7cc990d5d9b39d76122430b3486234a6",
+    "Paper/research/target_selection_2026-09-23/fast_decoder.py": "4402c535d3e84950b2c528e049984d610510ad0db215bf1c25aaf82deeb761f1",
+    "Paper/research/target_selection_2026-09-23/scaling_core.py": "555d58fe145b78b004622d28d59cf3a3d0e1422245c5480da41c7e05e94d984e"
+  },
+  "design_input_sha256": {
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/QUEUE.json": "7afaba44c2cb44f0e7749bc5731a12bae1778eecf28500a67b1d607d4412dfec",
+    "Paper/research/jw_computational_tests_2026-09-23/quality_corrected/MODELS.json": "18858ff937e76d5f22cfebe745058033e657e84224ca5b480e7db9a9f504a511"
+  },
+  "cpu": 25,
+  "niceness_minimum": 10,
+  "process_wall_cap_seconds": 30,
+  "scope": "Same-time length-three experiments only; 40-second saved policies; no eventual-order claim"
+}

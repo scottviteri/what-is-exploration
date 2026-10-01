@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "started_utc": "2026-09-24T03:58:49.745788+00:00",
+  "job": {
+    "id": "case_03__t3__information__to_pseudo_count",
+    "case_id": "case_03",
+    "case": "fresh_hmm_2026096800_q4_s3_c0.2",
+    "t": 3,
+    "method": "information",
+    "epsilon": 0.02,
+    "reference": "pseudo_count",
+    "reference_path": "references/case_03/pseudo_count.npz",
+    "model": "references/case_03/model.npz",
+    "primary_id": "reference_replay__case_03__information",
+    "trigger_lower": 0.08380314185033633,
+    "input_sha256": {
+      "results/reference_replay__case_03__information/result.json": "224ce60fad482ad81007cc2023fda5339a039e546274c1dc979057e5fb5e6dfe",
+      "results/reference_replay__case_03__information/CHECK.json": "08a03a9249754a12ba22d2514857ab6b639c858904166104622edefc70ef4ecc",
+      "results/reference_replay__case_03__information/reference_pseudo_count.npz": "af19d69761872172033310c6590e1f2157de0ca33d6b2b200b3366aad1a3a5e4",
+      "references/case_03/model.npz": "ea7003c1f15f882dfe0dcdf13428021c5ca47c687fb5365bf82dd2c2c4768736",
+      "references/case_03/pseudo_count.npz": "c753bd0a89e3d7fd569a1c69df6203655ee40f504f47fa08f755a6024aefb544",
+      "REFERENCES.json": "1a9c92566d013e7324719b3d6347a7ee7fe0a311303527f84d6d923383c7d87a",
+      "MANIFEST.json": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4"
+    }
+  },
+  "sources_sha256": "94d9e1e82830063c31fb9333c0e9af94d645cdc1f93993c6506230d49c5744e9",
+  "method": "information",
+  "t": 3,
+  "epsilon": 0.02,
+  "cap_tightening": 1e-07,
+  "achieved_reward": 0.9671863697335512,
+  "constrained_reward_upper": 0.9671868620634295,
+  "cap_upper": 0.01999990000000017,
+  "cap_dual": -4.923298751582633,
+  "lp": {
+    "primal": -0.9671863697335514,
+    "dual": -0.9671863697335543,
+    "raw_dual": -0.9671863697335514,
+    "residuals": {
+      "equality": 6.661338147750939e-16,
+      "inequality": 4.440892098500626e-16,
+      "lower": 0.0,
+      "upper": 0.0,
+      "inequality_dual_sign": 0.0,
+      "lower_dual_sign": 3.5214886562329184e-16,
+      "upper_dual_sign": 0.0,
+      "stationarity": 4.440892098500626e-16,
+      "gap": 0.0,
+      "repaired_gap": 2.886579864025407e-15
+    },
+    "iterations": 439,
+    "variables": 4395,
+    "equalities": 85,
+    "inequalities": 517,
+    "solve_seconds": 0.562838351354003,
+    "method": "highs",
+    "warnings": [
+      "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+    ]
+  },
+  "seconds": 0.586466639302671,
+  "files": {
+    "lp.npz": "3282f544cc7827e61bfc52002193ade9fb85866f3867673a989af8c50d1fa3ba",
+    "policy_decoder.npz": "4ae89678168ed1c3571e5f97911a23b6fd0d153a467a515d0d4a2e024a18fb1f"
+  },
+  "finished_utc": "2026-09-24T03:58:50.332849+00:00",
+  "wall_seconds": 0.5870787082239985,
+  "peak_rss_mib": 89.01953125
+}

@@ -1,0 +1,457 @@
+{
+  "schema": "jw_adaptive_evidence_inputs/v1",
+  "scope": "Saved compact source inspection and stdlib arithmetic only. Original numerical certificates were not rerun or independently reverified in this pass. These observed results are development evidence, not untouched future validation.",
+  "sources": [
+    {
+      "path": "Paper/research/paper_revision_coordination_2026-09-23/JW_ADAPTIVE_WEIGHTS_WRITING_STYLE_HANDOFF_2026-09-23.md",
+      "bytes": 15779,
+      "sha256": "223434d9ee120157ed0089b9065b430f512c3c8bd08b989e34fbf55866789a82"
+    },
+    {
+      "path": "Paper/research/target_selection_2026-09-23/decomposition_research/README.md",
+      "bytes": 15001,
+      "sha256": "bc79f0c476a702dece53c7ce05caa6255fd3bc128e35e37c4faa14ce543b9978"
+    },
+    {
+      "path": "Paper/research/target_selection_2026-09-23/decomposition_research/SUMMARY.csv",
+      "bytes": 3753,
+      "sha256": "c94659d9e153729ba5e64499cb3449b3c45203a3799b12bc4cef3b1c7ada2398"
+    },
+    {
+      "path": "Paper/research/target_selection_2026-09-23/decomposition_research/DEPENDENCIES.json",
+      "bytes": 568,
+      "sha256": "3dbbea9f5ee1391fdb0b584c018ae9646fd862b57f8293af043c99a7e543b8a6"
+    },
+    {
+      "path": "Paper/research/target_selection_2026-09-23/interim_reports/2026-09-23_120905.md",
+      "bytes": 3969,
+      "sha256": "941be65b1c4197cf678f0be587ecec11f9dce3ee5e6c0e6d97ca1d810a4c52ba"
+    },
+    {
+      "path": "Paper/research/target_selection_2026-09-23/interim_reports/2026-09-23_120905.json",
+      "bytes": 141799,
+      "sha256": "1fcaa3eea6c16f3dafca71bc5b940e04002a3d76e16dce5b036c1d3d2ea5198d"
+    },
+    {
+      "path": "Paper/research/target_selection_2026-09-23/PROTOCOL.md",
+      "bytes": 9005,
+      "sha256": "55cd0131c7d4178e574a3025d7112b8c034ebed19a1d7da2925c041b28a19f64"
+    },
+    {
+      "path": "Paper/research/target_selection_2026-09-23/RESEARCH.md",
+      "bytes": 9533,
+      "sha256": "3ad6a73f3a6e49892f8ca1fb6de8847b67a8a3ee2d703c9d143aa5e0d093a78a"
+    },
+    {
+      "path": "Paper/research/target_selection_2026-09-23/PILOT_REVIEW.json",
+      "bytes": 70300,
+      "sha256": "340c2ffdb94a95ce623b8270cb639bfcb59534d1aed1f629e0af19be8a9efc91"
+    },
+    {
+      "path": "Paper/research/target_selection_2026-09-23/VALIDATION.json",
+      "bytes": 28491,
+      "sha256": "47be8e47767edacecf23270b0a0e8eb3181d8f581c6e1616d43d6c76af3a40d4"
+    },
+    {
+      "path": "Paper/research/native_objective_benchmark_2026-09-15/README.md",
+      "bytes": 7584,
+      "sha256": "a766ef8810f3fbdbbe07646fd735f7e212ceb5d37b97d5791d5bd87f9878902b"
+    },
+    {
+      "path": "Paper/research/native_objective_benchmark_2026-09-15/PROTOCOL.md",
+      "bytes": 6857,
+      "sha256": "28f2f843ad7b49808ca148b1e085c8ac351e2bddcff37c86d72c6970bcacdbe6"
+    },
+    {
+      "path": "Paper/research/noisy_diagnostic_transfer_2026-09-13/README.md",
+      "bytes": 5300,
+      "sha256": "cf158939ee4418dc7ac6c284672221e7375506da8ebfcc1419368703892ab9ae"
+    },
+    {
+      "path": "Paper/research/noisy_diagnostic_transfer_2026-09-13/PROTOCOL.md",
+      "bytes": 10030,
+      "sha256": "c1aa6166882e7ac78497563a880fab5137716d43273e50af4c8b1e5145b5d291"
+    }
+  ],
+  "derived_summary": {
+    "decomposition": {
+      "rows": 16,
+      "statuses": {
+        "compared_passed": 13,
+        "monolithic_comparison_failed": 2,
+        "decomposition_only_converged": 1
+      },
+      "max_saved_gap": 1.9643884311901227e-07,
+      "matched_timing_ratios": [
+        {
+          "case": "sensors_0.1_0.3",
+          "t": "3",
+          "n": "2",
+          "K": "8",
+          "objective": "native_weighted",
+          "monolithic_over_decomposition": 2.444210428587086
+        },
+        {
+          "case": "sensors_0.1_0.3",
+          "t": "3",
+          "n": "2",
+          "K": "8",
+          "objective": "native_minimax",
+          "monolithic_over_decomposition": 1.274668132240031
+        },
+        {
+          "case": "irreversible_0.1_0.1",
+          "t": "3",
+          "n": "2",
+          "K": "8",
+          "objective": "native_weighted",
+          "monolithic_over_decomposition": 3.081980716002041
+        },
+        {
+          "case": "irreversible_0.1_0.1",
+          "t": "3",
+          "n": "2",
+          "K": "8",
+          "objective": "native_minimax",
+          "monolithic_over_decomposition": 2.863659809351147
+        },
+        {
+          "case": "hmm_91501_0.2",
+          "t": "3",
+          "n": "2",
+          "K": "8",
+          "objective": "native_weighted",
+          "monolithic_over_decomposition": 0.6297102894360638
+        },
+        {
+          "case": "hmm_91501_0.2",
+          "t": "3",
+          "n": "2",
+          "K": "8",
+          "objective": "native_minimax",
+          "monolithic_over_decomposition": 0.9981089115257429
+        },
+        {
+          "case": "sensors_0.1_0.3",
+          "t": "3",
+          "n": "3",
+          "K": "16",
+          "objective": "native_weighted",
+          "monolithic_over_decomposition": 4.5511841047711465
+        },
+        {
+          "case": "sensors_0.1_0.3",
+          "t": "3",
+          "n": "3",
+          "K": "16",
+          "objective": "native_minimax",
+          "monolithic_over_decomposition": 18.108174044273362
+        },
+        {
+          "case": "irreversible_0.1_0.1",
+          "t": "3",
+          "n": "3",
+          "K": "16",
+          "objective": "native_weighted",
+          "monolithic_over_decomposition": 10.62043879332133
+        },
+        {
+          "case": "irreversible_0.1_0.1",
+          "t": "3",
+          "n": "3",
+          "K": "16",
+          "objective": "native_minimax",
+          "monolithic_over_decomposition": 11.495677769168173
+        },
+        {
+          "case": "hmm_91501_0.2",
+          "t": "3",
+          "n": "3",
+          "K": "16",
+          "objective": "native_weighted",
+          "monolithic_over_decomposition": 4.368347565240101
+        },
+        {
+          "case": "hmm_91501_0.2",
+          "t": "3",
+          "n": "3",
+          "K": "16",
+          "objective": "native_minimax",
+          "monolithic_over_decomposition": 2.4116716343074156
+        },
+        {
+          "case": "hmm_91501_0.2",
+          "t": "3",
+          "n": "3",
+          "K": "128",
+          "objective": "native_minimax",
+          "monolithic_over_decomposition": 15.665662104487495
+        }
+      ],
+      "slower_rows": [
+        {
+          "case": "hmm_91501_0.2",
+          "t": "3",
+          "n": "2",
+          "K": "8",
+          "objective": "native_weighted",
+          "monolithic_over_decomposition": 0.6297102894360638
+        },
+        {
+          "case": "hmm_91501_0.2",
+          "t": "3",
+          "n": "2",
+          "K": "8",
+          "objective": "native_minimax",
+          "monolithic_over_decomposition": 0.9981089115257429
+        }
+      ]
+    },
+    "interim": {
+      "observed_utc": "2026-09-23T12:09:05.647543+00:00",
+      "registered": 1368,
+      "complete": 414,
+      "complete_fraction": 0.3026315789473684,
+      "failed": 14,
+      "running": 4,
+      "unstarted_or_unrepresented_remainder": 936,
+      "source_record_count": 432,
+      "comparisons": [
+        {
+          "arm": "weighted128",
+          "baseline": "brier",
+          "heldout": false,
+          "cases": 8,
+          "recomputed_counts": {
+            "loss": 2,
+            "win": 6
+          }
+        },
+        {
+          "arm": "weighted128",
+          "baseline": "brier",
+          "heldout": true,
+          "cases": 8,
+          "recomputed_counts": {
+            "loss": 2,
+            "win": 6
+          }
+        },
+        {
+          "arm": "weighted128",
+          "baseline": "information",
+          "heldout": false,
+          "cases": 9,
+          "recomputed_counts": {
+            "win": 9
+          }
+        },
+        {
+          "arm": "weighted128",
+          "baseline": "information",
+          "heldout": true,
+          "cases": 9,
+          "recomputed_counts": {
+            "win": 9
+          }
+        },
+        {
+          "arm": "full_minimax",
+          "baseline": "brier",
+          "heldout": false,
+          "cases": 9,
+          "recomputed_counts": {
+            "win": 8,
+            "tie": 1
+          }
+        },
+        {
+          "arm": "full_minimax",
+          "baseline": "brier",
+          "heldout": true,
+          "cases": 9,
+          "recomputed_counts": {
+            "loss": 1,
+            "win": 7,
+            "tie": 1
+          }
+        },
+        {
+          "arm": "full_minimax",
+          "baseline": "information",
+          "heldout": false,
+          "cases": 10,
+          "recomputed_counts": {
+            "win": 10
+          }
+        },
+        {
+          "arm": "full_minimax",
+          "baseline": "information",
+          "heldout": true,
+          "cases": 10,
+          "recomputed_counts": {
+            "win": 10
+          }
+        },
+        {
+          "arm": "weighted128",
+          "baseline": "native_weighted",
+          "heldout": false,
+          "cases": 11,
+          "recomputed_counts": {
+            "tie": 2,
+            "loss": 3,
+            "win": 6
+          }
+        },
+        {
+          "arm": "weighted128",
+          "baseline": "native_weighted",
+          "heldout": true,
+          "cases": 11,
+          "recomputed_counts": {
+            "win": 5,
+            "loss": 6
+          }
+        },
+        {
+          "arm": "full_minimax",
+          "baseline": "brier_face_0.0",
+          "heldout": false,
+          "cases": 5,
+          "recomputed_counts": {
+            "win": 4,
+            "tie": 1
+          }
+        },
+        {
+          "arm": "full_minimax",
+          "baseline": "brier_face_0.0",
+          "heldout": true,
+          "cases": 5,
+          "recomputed_counts": {
+            "win": 5
+          }
+        },
+        {
+          "arm": "full_minimax",
+          "baseline": "information_face_0.0",
+          "heldout": false,
+          "cases": 5,
+          "recomputed_counts": {
+            "win": 5
+          }
+        },
+        {
+          "arm": "full_minimax",
+          "baseline": "information_face_0.0",
+          "heldout": true,
+          "cases": 5,
+          "recomputed_counts": {
+            "win": 5
+          }
+        }
+      ],
+      "paired_outcome_mismatches": [],
+      "delayed_depth_reversal": [
+        {
+          "heldout": false,
+          "arm": [
+            0.08565751583797299,
+            0.08565751583814223
+          ],
+          "brier": [
+            0.09374999999999978,
+            0.09375000000001102
+          ]
+        },
+        {
+          "heldout": true,
+          "arm": [
+            0.16621672425929457,
+            0.1662167242594429
+          ],
+          "brier": [
+            0.14323846153846165,
+            0.14323846153848244
+          ]
+        }
+      ],
+      "selection_pairs": 22,
+      "selection_case_count": 14,
+      "selection_counts": {
+        "fewer": 16,
+        "equal": 5,
+        "only_structured_certified": 1
+      },
+      "both_closed": 21,
+      "median_structured_k": 8,
+      "median_random_k": 64,
+      "structured_slower_count_among_both": 2,
+      "failure_classes": {
+        "GPU and CPU planner failure": 10,
+        "CPU planner timeout": 1,
+        "decoder solve/certificate failure": 3
+      }
+    },
+    "saved_validation": {
+      "pilot_rows": 8,
+      "pilot_complete": 7,
+      "pilot_failed": 1,
+      "pilot_reported_checks": 644,
+      "pilot_reported_max_error": 1.6239252412668978e-08,
+      "validation_status": "passed",
+      "validation_count": 281,
+      "validation_maximum_error": 1.8388068845354155e-15
+    }
+  },
+  "helper": {
+    "libraries": "Python standard library only",
+    "max_cpu_seconds": 5,
+    "max_wall_seconds": 5,
+    "address_space_limit_bytes": 268435456,
+    "solver_calls": 0,
+    "bulk_certificate_reads": 0,
+    "wall_seconds_before_final_serialization": 0.00408665556460619,
+    "cpu_seconds_before_final_serialization": 0.0031008329999999973,
+    "observed_wall_seconds_including_serialization": 0.01960246078670025,
+    "observed_cpu_seconds_including_serialization": 0.004518124999999998,
+    "observed_peak_rss_kib": 16948,
+    "manual_review_correction": "The helper initially grouped four Time limit reached errors together. Saved compact error strings distinguish decoder failures in cells 0070, 0081 and 0251 from the highs-ipm planner timeout in cell 0244; failure_classes reflects that manual review. No original failure was rerun."
+  },
+  "supplementary_inspection": {
+    "snapshot": "2026-09-23T13:43:37Z",
+    "scope": "Read-only interpretation of four compact reports; no aggregation, plot, policy or decoder audit rerun.",
+    "sources": [
+      {
+        "path": "Paper/research/target_selection_2026-09-23/interim_reports/2026-09-23_figure_assessment/README.md",
+        "bytes": 2825,
+        "sha256": "c9e416c27a07ff4fd0f9a61b0c4a91376c5255cf5e65003cfef04407999109c4"
+      },
+      {
+        "path": "Paper/research/target_selection_2026-09-23/interim_reports/2026-09-23_figure_assessment/ASSESSMENT.md",
+        "bytes": 13459,
+        "sha256": "04dfa5915da220236a960f2ec79f69a75ed852082c32648a99b32ebb09ab5390"
+      },
+      {
+        "path": "Paper/research/target_selection_2026-09-23/interim_reports/2026-09-23_figure_assessment/RESULTS.md",
+        "bytes": 5119,
+        "sha256": "eacde2dd764f703a53dbc2a94249806f7f1838b9bf3907a85c40853732e88a2d"
+      },
+      {
+        "path": "Paper/research/target_selection_2026-09-23/interim_reports/2026-09-23_figure_assessment/AFTER_RUN.md",
+        "bytes": 8536,
+        "sha256": "3d9038596c23cb900d504c9061f1bca421e079b0022b4d1b03f9c3923b6d7b29"
+      }
+    ]
+  },
+  "optimum_selection_inspection": {
+    "scope": "Read supplied README only; did not rerun the all-case analysis or numerical certificates.",
+    "source": {
+      "path": "Paper/research/target_selection_2026-09-23/interim_reports/2026-09-23_optimum_selection/README.md",
+      "bytes": 9241,
+      "sha256": "1f5cb8e5c089ca9d9b931a3b3d2214afd4090f5e7b517c105e72e94dde69658f"
+    }
+  }
+}

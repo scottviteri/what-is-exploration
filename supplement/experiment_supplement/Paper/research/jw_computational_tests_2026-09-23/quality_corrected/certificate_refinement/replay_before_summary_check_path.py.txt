@@ -1,0 +1,580 @@
+#!/usr/bin/env python3
+"""Replay post-design fixed-prefix certificates; never optimize or compare methods.
+
+Use --self-test before outcomes. Actual execution requires a final primary report
+and its passing independent SUMMARY_CHECK.json. Only eligible fixed, tractability,
+and hard primary checkpoints receive refined certificates. All 108 planned rows,
+including unavailable or failed rows, remain visible.
+"""
+from __future__ import annotations
+
+import argparse
+import csv
+import datetime
+from fractions import Fraction as F
+import hashlib
+import io
+import itertools
+import json
+import math
+import os
+from pathlib import Path
+import re
+import time
+import unittest
+
+# One thread; there is no solver, GPU, planner, or audit-producer import.
+for name in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS", "NUMEXPR_NUM_THREADS"):
+    os.environ[name] = "1"
+import numpy as np
+
+HERE = Path(__file__).resolve().parent
+ARMS = ("fixed", "tractability", "hard")
+EPSILON = F(1, 20)
+TOL = 2e-7
+INPUT_TOL = 1e-10
+WITNESS_TOL = 1e-12
+
+
+def require(condition, message):
+    if not condition:
+        raise ValueError(message)
+
+
+def norm(array):
+    return float(np.max(np.abs(array), initial=0.0))
+
+
+def positive(array):
+    return float(np.max(np.maximum(array, 0.0), initial=0.0))
+
+
+def array_hash(array):
+    a = np.ascontiguousarray(array)
+    h = hashlib.sha256()
+    h.update(json.dumps({"shape": a.shape, "dtype": a.dtype.str}, sort_keys=True).encode())
+    h.update(b"\0")
+    h.update(a.tobytes())
+    return h.hexdigest()
+
+
+def fraction_value(value):
+    return F.from_float(float(value))
+
+
+def target_info(key):
+    match = re.fullmatch(r"rational-native-v1/a2o2/n(\d+)/d(\d+)/r(\d+)", key)
+    require(match is not None, "Unsupported target identity")
+    n, d, rank = map(int, match.groups())
+    require(d >= 1, "Nonpositive rational denominator")
+    rows = (4 ** n - 1) // 3
+    count = (d + 1) ** rows
+    require(0 <= rank < count, "Rational target rank out of range")
+    return n, d, rank, F(1, 2 ** (n + 1 + d) * count)
+
+
+def levels(depth):
+    alphabet = tuple(itertools.product(range(2), repeat=2))
+    return [list(itertools.product(alphabet, repeat=d)) for d in range(depth + 1)]
+
+
+def expected_target_keys():
+    histories = sum(levels(3)[:-1], [])
+    keys = []
+    for tree in range(128):
+        actions = [(tree >> bit) & 1 for bit in range(6, -1, -1)]
+        rank = 0
+        for h in histories:
+            node = 0
+            for _, observation in h:
+                node = 2 * node + 1 + observation
+            rank = 2 * rank + 1 - actions[node]
+        keys.append(f"rational-native-v1/a2o2/n3/d1/r{rank}")
+    for n in (1, 2, 3):
+        rank = sum(3 ** i for i in range((4 ** n - 1) // 3))
+        keys.append(f"rational-native-v1/a2o2/n{n}/d2/r{rank}")
+    return keys
+
+
+def partition(keys):
+    require(len(keys) == 131 and len(set(keys)) == 131, "Wrong target multiplicity")
+    require(set(keys) == set(expected_target_keys()), "Wrong literal target pool")
+    captured = sum((target_info(key)[3] for key in keys), F(0))
+    zero = EPSILON / 2
+    short = EPSILON * (F(7, 16) - captured)
+    long = EPSILON / 16
+    beta = EPSILON * (1 - captured)
+    require(zero + short + long == beta and short >= 0, "Invalid tail partition")
+    return dict(captured=captured, beta=beta, zero=zero, short=short, long=long)
+
+
+def controlled_laws(T, Z, depth):
+    """Direct per-world physical-state propagation of every controlled history."""
+    histories = levels(depth)
+    result = {}
+    for h in sum(histories, []):
+        values = []
+        for world in range(len(T)):
+            state = np.zeros(T.shape[-1])
+            state[0] = 1.0
+            for action, observation in h:
+                state = (state @ T[world, action]) * Z[world, action, :, observation]
+            values.append(float(state.sum()))
+        result[h] = np.asarray(values)
+    return histories, result
+
+
+def replay_policy(policy, histories, laws):
+    rows = policy["rows"]
+    decisions = sum(histories[:-1], [])
+    require(rows.shape == (len(decisions), 2), "Policy row shape")
+    require(np.isfinite(rows).all(), "Nonfinite policy")
+    require(norm(rows.sum(1) - 1) <= INPUT_TOL and positive(-rows) <= INPUT_TOL,
+            "Invalid policy probabilities")
+    lookup = dict(zip(decisions, rows))
+    columns, leaves = [], []
+    for h in histories[-1]:
+        weight = 1.0
+        for i, (action, _) in enumerate(h):
+            weight *= lookup[h[:i]][action]
+        leaves.append(weight)
+        columns.append(laws[h] * weight)
+    replayed = np.stack(columns, axis=1)
+    require(replayed.shape == policy["E"].shape, "Acquired experiment shape")
+    residual = max(norm(replayed - policy["E"]), norm(np.asarray(leaves) - policy["leaf"]),
+                   norm(replayed.sum(1) - 1), positive(-replayed))
+    require(residual <= INPUT_TOL, "Original policy/model replay failed")
+    return residual
+
+
+def target_kernel(key, histories, laws):
+    n, denominator, rank, _ = target_info(key)
+    decisions = sum(histories[:n], [])
+    digits = [0] * len(decisions)
+    for i in range(len(digits) - 1, -1, -1):
+        rank, digits[i] = divmod(rank, denominator + 1)
+    require(rank == 0, "Target rank did not decode")
+    table = {h: (F(v, denominator), F(denominator - v, denominator))
+             for h, v in zip(decisions, digits)}
+    columns = []
+    for h in histories[n]:
+        weight = F(1)
+        for i, (action, _) in enumerate(h):
+            weight *= table[h[:i]][action]
+        columns.append(laws[h] * float(weight))
+    result = np.stack(columns, axis=1)
+    require(norm(result.sum(1) - 1) <= INPUT_TOL and positive(-result) <= INPUT_TOL,
+            "Target does not define original probability rows")
+    return result
+
+
+def decoder_replay(E, target, G, alpha, b, saved_lower, saved_upper, feasibility_tol):
+    require(G.shape == (E.shape[1], target.shape[1]), "Decoder shape")
+    require(alpha.shape == (len(E),) and b.shape == target.shape, "Dual shape")
+    require(all(np.isfinite(x).all() for x in (E, target, G, alpha, b)), "Nonfinite witness")
+    feasibility = max(norm(G.sum(1) - 1), positive(-G), abs(float(alpha.sum()) - 1),
+                      positive(-alpha), positive(-b), positive(b - alpha[:, None]))
+    require(feasibility <= feasibility_tol, "Infeasible original-probability witness")
+    upper = float(np.abs(E @ G - target).sum(1).max() / 2)
+    lower = float((target * b).sum() - np.max(E.T @ b, axis=1).sum())
+    disagreement = max(abs(upper - float(saved_upper)), abs(lower - float(saved_lower)))
+    require(disagreement <= WITNESS_TOL, "Saved/replayed decoder interval mismatch")
+    require(lower <= upper + 1e-10 and upper - lower <= TOL, "Unclosed decoder interval")
+    return dict(upper=upper, lower=lower, feasibility=feasibility,
+                disagreement=disagreement, gap=upper - lower)
+
+
+def refined_bounds(U, B, R, D3, masses):
+    require(all(math.isfinite(x) for x in (U, B, R, D3)), "Nonfinite certificate")
+    require(U >= B - TOL, "Retained upper below lower")
+    require(-WITNESS_TOL <= R <= 1 + WITNESS_TOL and -TOL <= D3 <= 1 + TOL,
+            "Decoder upper outside probability range")
+    R = max(0.0, min(1.0, R))
+    C3 = max(0.0, min(1.0, D3, R))
+    beta = float(masses["beta"])
+    identity_tail = beta * R
+    partition_tail = float(masses["short"]) * C3 + float(masses["long"]) * R
+    require(partition_tail <= identity_tail + WITNESS_TOL <= beta + 2 * WITNESS_TOL,
+            "Refinement enlarged the tail")
+    return dict(identity_R=R, depth3_D=D3, depth3_C=C3,
+                identity_tail_upper=identity_tail, partition_tail_upper=partition_tail,
+                identity_full_prefix_loss_upper=U + identity_tail,
+                partition_full_prefix_loss_upper=U + partition_tail,
+                identity_full_prefix_regret_upper=max(0.0, U + identity_tail - B),
+                partition_full_prefix_regret_upper=max(0.0, U + partition_tail - B))
+
+
+class Evidence:
+    def __init__(self):
+        self.hashes = {}
+        self.json_cache = {}
+
+    def digest(self, path):
+        path = Path(path).resolve()
+        h = hashlib.sha256()
+        with path.open("rb") as stream:
+            for data in iter(lambda: stream.read(1024 * 1024), b""):
+                h.update(data)
+        value = h.hexdigest()
+        if str(path) in self.hashes:
+            require(self.hashes[str(path)] == value, "Evidence changed: " + str(path))
+        self.hashes[str(path)] = value
+        return value
+
+    def read(self, path):
+        path = Path(path).resolve()
+        self.digest(path)
+        if path not in self.json_cache:
+            self.json_cache[path] = json.loads(path.read_text())
+        return self.json_cache[path]
+
+    def arrays(self, path):
+        self.digest(path)
+        with np.load(path, allow_pickle=False) as data:
+            return {key: data[key] for key in data.files}
+
+    def bound(self, path, expected):
+        require(self.digest(path) == expected, "File binding mismatch: " + str(path))
+
+    def run_file(self, folder, relative, manifest):
+        path = folder / relative
+        require(relative in manifest, "Run manifest does not cover " + relative)
+        self.bound(path, manifest[relative])
+        return path
+
+
+def resolve(path, base):
+    path = Path(path)
+    return (path if path.is_absolute() else base / path).resolve()
+
+
+def checkpoint(row, study, audits, inventory, bindings, frozen, evidence):
+    started = time.perf_counter()
+    mid, arm, budget = row["model"], row["method"], int(row["budget_seconds"])
+    folder = study / "runs" / mid / arm
+    endpoint = f"checkpoint_{budget}"
+    binding = bindings[(mid, arm, endpoint)]
+    require(row["secondary"] == "False" and row["arm"] == arm and row["endpoint"] == endpoint,
+            "Wrong method/endpoint scope")
+    require(binding["status"] == "queued" and binding.get("audit_id"), "No bound audit")
+    require(row["audit_id"] == binding["audit_id"], "Primary/audit identity mismatch")
+    for relative in ("FILES.json", "PLANNING_CHECK.json"):
+        path = folder / relative
+        evidence.bound(path, frozen[str(path.resolve())])
+    manifest = evidence.read(folder / "FILES.json")
+    check = evidence.read(folder / "PLANNING_CHECK.json")
+    require(check["status"] == "passed", "Planning audit did not pass")
+    metadata = evidence.read(evidence.run_file(folder, "metadata.json", manifest))
+    require(metadata["arm"] == arm and metadata["kind"] == "native_weighted"
+            and not metadata.get("face") and metadata["t"] == 3, "Wrong weighted setting")
+    model_path = resolve(inventory[mid]["path"], study)
+    evidence.bound(model_path, inventory[mid]["sha256"])
+    require(metadata["model_sha256"] == binding["model_sha256"] == inventory[mid]["sha256"],
+            "Model identity mismatch")
+    model = evidence.arrays(model_path)
+    T, Z = model["T"], model["Z"]
+    require(T.ndim == 4 and T.shape[1] == 2 and T.shape[2] == T.shape[3]
+            and Z.shape == (*T.shape[:3], 2), "Physical model dimensions")
+    require(all(np.isfinite(x).all() and positive(-x) <= INPUT_TOL
+                and norm(x.sum(-1) - 1) <= INPUT_TOL for x in (T, Z)), "Invalid physical model")
+    policy_path = evidence.run_file(folder, endpoint + "/policy.npz", manifest)
+    metadata_path = evidence.run_file(folder, endpoint + "/policy.json", manifest)
+    evidence.bound(policy_path, binding["policy_sha256"])
+    evidence.bound(metadata_path, binding["policy_metadata_sha256"])
+    polmeta, policy = evidence.read(metadata_path), evidence.arrays(policy_path)
+    E = policy["E"]
+    require(array_hash(E) == binding["exact_E_sha256"], "Exact acquired-E identity")
+    require(row["exact_E_sha256"] == binding["exact_E_sha256"], "Primary acquired-E identity")
+    require(float(polmeta["available_seconds"]) <= budget and
+            float(row["available_seconds"]) == polmeta["available_seconds"], "Late or changed endpoint")
+    iteration = int(polmeta["iteration"])
+    require(int(row["iteration"]) == iteration, "Primary iteration mismatch")
+    round_relative = f"round_{iteration:03d}"
+    record = evidence.read(evidence.run_file(folder, round_relative + "/record.json", manifest))
+    round_policy = evidence.arrays(evidence.run_file(folder, round_relative + "/policy.npz", manifest))
+    require(record["iteration"] == iteration and record["available_seconds"] == polmeta["available_seconds"],
+            "Round binding or deadline mismatch")
+    require(all(np.array_equal(round_policy[key], policy[key]) for key in ("rows", "leaf", "E")),
+            "Checkpoint and round policies differ")
+    matches = [x for x in check["endpoints"] if x["budget"] == budget]
+    require(len(matches) == 1 and matches[0]["iteration"] == iteration
+            and matches[0]["available_seconds"] == polmeta["available_seconds"], "Planning certificate endpoint mismatch")
+    histories, laws = controlled_laws(T, Z, 3)
+    policy_residual = replay_policy(policy, histories, laws)
+    keys = [entry["key"] for entry in metadata["target_specs"]]
+    require(all(entry["kind"] == "rational" for entry in metadata["target_specs"]), "Nonliteral target")
+    masses = partition(keys)
+    require(F(metadata["background_epsilon"]) == EPSILON and
+            F(metadata["omitted_mass"]) == F(polmeta["omitted_mass"]) == masses["beta"], "Tail binding")
+    exact_weights = list(map(F, record["weights"]))
+    emphasis = list(map(F, record["emphasis"]))
+    require(len(exact_weights) == len(emphasis) == 131 and sum(emphasis) == 1
+            and all(w >= 0 for w in emphasis), "Invalid current emphasis")
+    intended = [(1 - EPSILON) * v + EPSILON * target_info(k)[3]
+                for v, k in zip(emphasis, keys)]
+    require(exact_weights == intended and sum(exact_weights) + masses["beta"] == 1, "Wrong current objective")
+    if arm == "fixed":
+        require(all(v == F(1, 131) for v in emphasis), "Changed fixed objective")
+    master = evidence.arrays(evidence.run_file(folder, round_relative + "/master.npz", manifest))
+    require(np.array_equal(master["cost"], np.r_[np.zeros(42), list(map(float, exact_weights))]),
+            "Master objective/current-weight mismatch")
+    U, B = float(polmeta["selected_upper"]), float(polmeta["selected_lower"])
+    require(abs(U - record["upper"]) <= WITNESS_TOL and abs(B - record["lower"]) <= WITNESS_TOL,
+            "Retained bounds do not belong to the selected round")
+    for key, value in (("selected_upper", U), ("selected_lower", B), ("selected_gap", U - B)):
+        require(abs(float(row[key]) - value) <= WITNESS_TOL and
+                abs(float(polmeta[key]) - value) <= WITNESS_TOL, "Primary retained bound mismatch")
+    require(abs(matches[0]["selected_gap"] - (U - B)) <= WITNESS_TOL, "Planning gap binding")
+
+    # Replay all 131 original-target witnesses, including the exact deterministic
+    # subset selected by identity; target order is intentionally not assumed.
+    decoders = evidence.arrays(evidence.run_file(folder, round_relative + "/decoders.npz", manifest))
+    require(decoders["lower"].shape == decoders["upper"].shape == (131,), "Training interval coverage")
+    keep_expected = np.flatnonzero(np.max(E, axis=0) > 0)
+    uppers, decoder_checks = [], []
+    for j, key in enumerate(keys):
+        target = target_kernel(key, histories, laws)
+        prefix = f"witness_{j}_"
+        keep = decoders[prefix + "source_indices"]
+        require(np.array_equal(keep, keep_expected), "Dropped nonzero source column")
+        checked = decoder_replay(E[:, keep], target, decoders[prefix + "decoder"],
+                                 decoders[prefix + "alpha"], decoders[prefix + "b"],
+                                 decoders["lower"][j], decoders["upper"][j], TOL)
+        uppers.append(checked["upper"])
+        decoder_checks.append(checked)
+    exact_numerical_upper = sum((w * fraction_value(u) for w, u in zip(exact_weights, uppers)), F(0))
+    replay_upper = float(exact_numerical_upper)
+    require(abs(replay_upper - U) <= TOL, "Retained decoder upper does not match objective")
+    # Preserve the primary U and its original beta certificate. The secondary
+    # version allows only an explicitly reported upward rounding adjustment.
+    refined_U = max(U, replay_upper)
+    deterministic = [j for j, key in enumerate(keys) if target_info(key)[:2] == (3, 1)]
+    require(len(deterministic) == 128, "Missing deterministic depth-three target")
+    D3 = max(uppers[j] for j in deterministic)
+
+    ad = audits / "audits" / binding["audit_id"]
+    validation = evidence.read(ad / "validation.json")
+    require(validation.get("status") == "passed", "Held-out audit validation did not pass")
+    provenance = evidence.read(ad / "provenance.json")
+    evidence.bound(ad / "model.npz", inventory[mid]["sha256"])
+    evidence.bound(ad / "policy.npz", provenance["input_sha256"][provenance["policy_source"]])
+    representative = evidence.arrays(ad / "policy.npz")
+    require(array_hash(representative["E"]) == binding["exact_E_sha256"],
+            "Identity witness uses a different acquired experiment")
+    replay_policy(representative, histories, laws)
+    identity_path = ad / "full_revelation_witness.npz"
+    identity_evidence = "universal TV bound; no identity witness"
+    identity_checked = None
+    R = 1.0
+    if identity_path.exists():
+        identity = evidence.arrays(identity_path)
+        require(np.array_equal(identity["F"], np.eye(len(T))), "Identity target is not Id_Theta")
+        identity_checked = decoder_replay(E, identity["F"], identity["G"], identity["alpha"],
+                                          identity["b"], identity["lower"], identity["upper"], WITNESS_TOL)
+        R = min(1.0, identity_checked["upper"])
+        identity_evidence = str(identity_path)
+    result = refined_bounds(refined_U, B, R, D3, masses)
+    primary_regret = max(0.0, U - B) + float(masses["beta"])
+    require(abs(float(row["selected_gap_plus_omitted_tail"]) - primary_regret) <= WITNESS_TOL,
+            "Primary beta certificate changed")
+    result.update(
+        status="refined", iteration=iteration, audit_id=binding["audit_id"],
+        model_sha256=inventory[mid]["sha256"], exact_E_sha256=binding["exact_E_sha256"],
+        policy_sha256=binding["policy_sha256"], selected_lower=B, original_selected_upper=U,
+        original_selected_gap=U - B, original_beta=str(masses["beta"]),
+        original_gap_plus_beta=primary_regret, original_U_plus_beta=U + float(masses["beta"]),
+        refined_retained_upper=refined_U, retained_upper_upward_adjustment=refined_U - U,
+        replayed_retained_upper_exact_from_float_endpoints=str(exact_numerical_upper),
+        omitted_zero_mass=str(masses["zero"]), omitted_short_mass=str(masses["short"]),
+        omitted_long_mass=str(masses["long"]), current_weights=[str(w) for w in exact_weights],
+        current_weight_binding_sha256=hashlib.sha256(json.dumps(
+            {"target_keys": keys, "weights": [str(w) for w in exact_weights]},
+            sort_keys=True, separators=(",", ":")).encode()).hexdigest(),
+        identity_witness=identity_evidence, identity_replay=identity_checked,
+        training_decoder_count=131, deterministic_depth3_count=128,
+        maximum_training_feasibility=max(c["feasibility"] for c in decoder_checks),
+        maximum_training_replay_disagreement=max(c["disagreement"] for c in decoder_checks),
+        policy_replay_residual=policy_residual,
+        additional_checkpoint_certification_seconds=time.perf_counter() - started,
+        prefix_scope="Full countable target loss at collection time 3 and this checkpoint's current weights; regret against the same fixed-time causal-policy family, not eventual J_w.",
+    )
+    return result
+
+
+def run(study, audits, summary, out):
+    start = time.perf_counter()
+    require(not out.exists() or not any(out.iterdir()), "Use a new or empty refinement output directory")
+    evidence = Evidence()
+    queue = evidence.read(study / "QUEUE.json")
+    require(len(queue["models"]) == 12 and queue["checkpoints"] == [2, 10, 40], "Wrong prospective queue")
+    primary = evidence.read(summary / "summary.json")
+    summary_check = evidence.read(summary / "SUMMARY_CHECK.json")
+    require(primary["metadata"]["status"] == "final_snapshot" and summary_check["status"] == "passed",
+            "Final independently checked primary report required")
+    for path, expected in summary_check["input_sha256"].items():
+        evidence.bound(resolve(path, study), expected)
+    require(evidence.read(audits / "FINAL_INPUT_CHECK.json")["status"] == "passed", "Final audit input check failed")
+    require(evidence.read(audits / "STATUS.json")["state"] == "finished", "Audit queue still active")
+    aq = evidence.read(audits / "AUDIT_QUEUE.json")
+    evidence.bound(audits / "BINDINGS.json", aq["bindings_sha256"])
+    binding_rows = evidence.read(audits / "BINDINGS.json")["bindings"]
+    bindings = {(r["model"], r["arm"], r["endpoint"]): r for r in binding_rows}
+    require(len(bindings) == len(binding_rows), "Duplicate bindings")
+    inventory = {r["id"]: r for r in evidence.read(study / "MODELS.json")["models"]}
+    evidence.digest(summary / "endpoints.csv")
+    with (summary / "endpoints.csv").open(newline="") as stream:
+        csv_rows = list(csv.DictReader(stream))
+    rows = {(r["model"], r["method"], int(r["budget_seconds"])): r for r in csv_rows}
+    require(len(rows) == len(csv_rows) == 540, "Primary coverage changed")
+    outputs = []
+    for model in queue["models"]:
+        for arm in ARMS:
+            for budget in queue["checkpoints"]:
+                key = (model["id"], arm, budget)
+                require(key in rows, "Missing planned weighted endpoint")
+                row = rows[key]
+                result = dict(model=key[0], method=arm, budget_seconds=budget,
+                              primary_endpoint_status=row["endpoint_status"],
+                              original_selected_upper=row["selected_upper"],
+                              selected_lower=row["selected_lower"],
+                              original_selected_gap=row["selected_gap"],
+                              original_beta=row["omitted_mass"],
+                              original_gap_plus_beta=row["selected_gap_plus_omitted_tail"])
+                if row["comparison_eligible"] != "True":
+                    result.update(status="primary_unavailable", reason=row["endpoint_status"])
+                else:
+                    try:
+                        result.update(checkpoint(row, study, audits, inventory, bindings,
+                                                 aq["frozen_files"], evidence))
+                    except Exception as error:
+                        result.update(status="refinement_failed", error=repr(error))
+                outputs.append(result)
+    require(len(outputs) == 108, "Refinement omitted a planned row")
+    hashes = dict(evidence.hashes)
+    for path, expected in hashes.items():
+        evidence.bound(path, expected)
+    failures = sum(r["status"] == "refinement_failed" for r in outputs)
+    report = dict(
+        status="failed" if failures else "passed",
+        created_utc=datetime.datetime.now(datetime.timezone.utc).isoformat(),
+        expected_weighted_checkpoints=108,
+        refined_checkpoints=sum(r["status"] == "refined" for r in outputs),
+        primary_unavailable=sum(r["status"] == "primary_unavailable" for r in outputs),
+        refinement_failures=failures,
+        post_design=True, additional_certification_seconds=time.perf_counter() - start,
+        timing_scope="Sequential CPU replay and provenance checks after planning and primary auditing; excluded from original 2/10/40-second budgets.",
+        excluded=["All adaptive averages: no certificate supplied here for a separately matched objective.",
+                  "Information/Brier reward objectives, uniform control, minimax, and reward-face controls: no native weighted regret claims."],
+        mathematical_scope="Full countable native target sum at fixed collection time 3, same current weights and causal-policy family. B is a finite-stage optimum lower bound, not an eventual-optimum lower bound.",
+        proof_boundary="Existing Lean data-processing and finite-horizon universality ingredients; new written partition/weighted packaging. Numerical witnesses are floating-point, not exact/outward-rounded.",
+        numerical_scope="Original probabilities; identity feasibility/replay 1e-12, training feasibility/gap 2e-7, original causal replay 1e-10. Fraction arithmetic certifies coefficients and mass partition, not floating probability products.",
+        checker_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        input_sha256=hashes, checkpoints=outputs,
+    )
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "CERTIFICATES.json").write_text(json.dumps(report, indent=2, allow_nan=False) + "\n")
+    fields = list(dict.fromkeys(k for row in outputs for k in row))
+    with (out / "certificates.csv").open("w", newline="") as stream:
+        writer = csv.DictWriter(stream, fieldnames=fields)
+        writer.writeheader()
+        for row in outputs:
+            writer.writerow({k: json.dumps(v, sort_keys=True) if isinstance(v, (dict, list)) else v
+                             for k, v in row.items()})
+    return report
+
+
+class SyntheticTests(unittest.TestCase):
+    def test_exact_partition_and_key_order(self):
+        keys = expected_target_keys()
+        masses = partition(keys)
+        self.assertEqual(partition(list(reversed(keys))), masses)
+        self.assertEqual(masses["zero"], F(1, 40))
+        self.assertEqual(masses["long"], F(1, 320))
+        self.assertEqual(masses["short"], F(2284383287201101, 109684753201889280))
+        self.assertEqual(masses["beta"], F(5369266971004237, 109684753201889280))
+        self.assertEqual(sum(masses[k] for k in ("zero", "short", "long")), masses["beta"])
+        with self.assertRaises(ValueError):
+            partition(keys[:-1] + [keys[0]])
+
+    def test_bounds_and_uniform_zero_block_improvement(self):
+        masses = partition(expected_target_keys())
+        r = refined_bounds(.2, .19, .4, .1, masses)
+        self.assertAlmostEqual(r["identity_tail_upper"], float(masses["beta"]) * .4)
+        self.assertAlmostEqual(r["partition_tail_upper"], float(masses["short"]) * .1 + .003125 * .4)
+        self.assertLessEqual(r["partition_full_prefix_regret_upper"], r["identity_full_prefix_regret_upper"])
+        fallback = refined_bounds(.2, .19, 1., 1., masses)
+        self.assertAlmostEqual(fallback["partition_tail_upper"], float(masses["beta"]) - .025)
+        zero = refined_bounds(0., 0., 0., .2, masses)
+        self.assertEqual(zero["partition_full_prefix_loss_upper"], 0.)
+        with self.assertRaises(ValueError):
+            refined_bounds(.1, .2, .3, .2, masses)
+
+    def test_identity_witness_and_corruption_rejection(self):
+        E = np.asarray([[.75, .25], [.25, .75]])
+        identity = np.eye(2)
+        alpha = np.asarray([.5, .5])
+        b = .5 * identity
+        checked = decoder_replay(E, identity, identity, alpha, b, .25, .25, WITNESS_TOL)
+        self.assertEqual(checked["upper"], .25)
+        bad = identity.copy()
+        bad[0, 0] = .9
+        with self.assertRaises(ValueError):
+            decoder_replay(E, identity, bad, alpha, b, .25, .25, WITNESS_TOL)
+        with self.assertRaises(ValueError):
+            decoder_replay(E, identity, identity, alpha, b, .25, .1, WITNESS_TOL)
+
+    def test_native_laws_and_null_source_columns(self):
+        T = np.ones((2, 2, 1, 1))
+        Z = np.asarray([[[[.75, .25]], [[.5, .5]]],
+                        [[[.25, .75]], [[.5, .5]]]])
+        histories, laws = controlled_laws(T, Z, 3)
+        rows = np.zeros((21, 2)); rows[:, 0] = 1
+        lookup = dict(zip(sum(histories[:-1], []), rows))
+        leaves = [math.prod(lookup[h[:i]][a] for i, (a, _) in enumerate(h)) for h in histories[3]]
+        E = np.stack([laws[h] * p for h, p in zip(histories[3], leaves)], axis=1)
+        policy = dict(rows=rows, leaf=np.asarray(leaves), E=E)
+        self.assertLessEqual(replay_policy(policy, histories, laws), INPUT_TOL)
+        self.assertEqual(len(np.flatnonzero(np.max(E, axis=0) > 0)), 8)
+        uniform = target_kernel("rational-native-v1/a2o2/n1/d2/r1", histories, laws)
+        self.assertTrue(np.allclose(uniform.sum(1), 1))
+        self.assertTrue(np.allclose(uniform[:, :2], np.asarray([[.375, .125], [.125, .375]])))
+        empty = target_kernel("rational-native-v1/a2o2/n0/d1/r0", histories, laws)
+        self.assertTrue(np.array_equal(empty, np.ones((2, 1))))
+        zero = decoder_replay(E, empty, np.ones((64, 1)), np.asarray([.5, .5]),
+                              np.zeros((2, 1)), 0., 0., WITNESS_TOL)
+        self.assertEqual(zero["upper"], 0.)
+        original = array_hash(E)
+        changed = E.copy(); changed[0, 0] += 1e-8
+        self.assertNotEqual(original, array_hash(changed))
+        with self.assertRaises(ValueError):
+            replay_policy(dict(policy, E=changed), histories, laws)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--study", type=Path, default=HERE.parent)
+    parser.add_argument("--audits", type=Path)
+    parser.add_argument("--summary", type=Path)
+    parser.add_argument("--output", type=Path)
+    parser.add_argument("--cpu", type=int)
+    parser.add_argument("--self-test", action="store_true")
+    args = parser.parse_args()
+    if args.cpu is not None:
+        os.sched_setaffinity(0, {args.cpu})
+    if args.self_test:
+        tested = unittest.TextTestRunner(verbosity=2).run(
+            unittest.defaultTestLoader.loadTestsFromTestCase(SyntheticTests))
+        raise SystemExit(0 if tested.wasSuccessful() else 1)
+    if args.audits is None or args.summary is None or args.output is None:
+        parser.error("--audits, --summary and a new --output directory are required")
+    require(args.output.resolve() not in (args.study.resolve(), args.audits.resolve(), args.summary.resolve(), HERE),
+            "Refinement must not overwrite primary or source directories")
+    report = run(args.study.resolve(), args.audits.resolve(), args.summary.resolve(), args.output.resolve())
+    print(json.dumps({k: report[k] for k in ("status", "expected_weighted_checkpoints",
+                     "refined_checkpoints", "primary_unavailable", "refinement_failures",
+                     "additional_certification_seconds")}, indent=2))
+    raise SystemExit(0 if report["status"] == "passed" else 1)
+
+
+if __name__ == "__main__":
+    main()

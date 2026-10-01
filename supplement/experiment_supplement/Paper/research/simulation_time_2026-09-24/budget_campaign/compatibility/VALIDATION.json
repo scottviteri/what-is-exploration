@@ -1,0 +1,113 @@
+{
+  "status": "passed",
+  "created_utc": "2026-09-24T03:06:13.673736+00:00",
+  "seconds": 0.06763891410082579,
+  "tests": [
+    {
+      "test": "information_analytic_positive_cost",
+      "expected": 0.4455458139098171,
+      "unconstrained_optimum": 1.0,
+      "constrained_reward_lower": 0.5544540688412845,
+      "constrained_reward_upper": 0.5544541860901827,
+      "reward_regret_lower": 0.4455458139098173,
+      "reward_regret_upper": 0.44554593115871555,
+      "classification": "positive_reward_cost",
+      "cap_upper": 0.01999989999999998,
+      "epsilon": 0.02,
+      "physical_residual": 0.0,
+      "binding_residual": 0.0,
+      "lp": {
+        "lower": -0.5544540688412843,
+        "upper": -0.5544540688412843,
+        "residual": 0.0
+      },
+      "scope": "Float64 replay and box-repaired LP dual bounds; existential, reference-aware compatibility, not all-optima or formal exact arithmetic."
+    },
+    {
+      "test": "brier_analytic_positive_cost",
+      "expected": 0.08549999999999999,
+      "unconstrained_optimum": 0.25,
+      "constrained_reward_lower": 0.1644999775,
+      "constrained_reward_upper": 0.16450000000000006,
+      "reward_regret_lower": 0.08549999999999994,
+      "reward_regret_upper": 0.0855000225,
+      "classification": "positive_reward_cost",
+      "cap_upper": 0.01999989999999998,
+      "epsilon": 0.02,
+      "physical_residual": 0.0,
+      "binding_residual": 0.0,
+      "lp": {
+        "lower": -0.16449997750000006,
+        "upper": -0.16449997750000003,
+        "residual": 2.7755575615628914e-17
+      },
+      "scope": "Float64 replay and box-repaired LP dual bounds; existential, reference-aware compatibility, not all-optima or formal exact arithmetic."
+    },
+    {
+      "test": "symmetric_zero_cost",
+      "unconstrained_optimum": 1.0,
+      "constrained_reward_lower": 1.0,
+      "constrained_reward_upper": 1.0,
+      "reward_regret_lower": 0.0,
+      "reward_regret_upper": 0.0,
+      "classification": "compatible_within_numerical_tolerance",
+      "cap_upper": 0.0,
+      "epsilon": 0.02,
+      "physical_residual": 0.0,
+      "binding_residual": 0.0,
+      "lp": {
+        "lower": -1.0,
+        "upper": -1.0,
+        "residual": 0.0
+      },
+      "scope": "Float64 replay and box-repaired LP dual bounds; existential, reference-aware compatibility, not all-optima or formal exact arithmetic."
+    },
+    {
+      "test": "singleton_vacuity",
+      "unconstrained_optimum": 0.0,
+      "constrained_reward_lower": 0.0,
+      "constrained_reward_upper": -0.0,
+      "reward_regret_lower": 0.0,
+      "reward_regret_upper": 0.0,
+      "classification": "compatible_within_numerical_tolerance",
+      "cap_upper": 0.0,
+      "epsilon": 0.02,
+      "physical_residual": 0.0,
+      "binding_residual": 0.0,
+      "lp": {
+        "lower": 0.0,
+        "upper": 0.0,
+        "residual": 2.7755575615628914e-17
+      },
+      "scope": "Float64 replay and box-repaired LP dual bounds; existential, reference-aware compatibility, not all-optima or formal exact arithmetic."
+    },
+    {
+      "test": "corrupt_decoder",
+      "status": "rejected_as_expected"
+    },
+    {
+      "test": "corrupt_cost",
+      "status": "rejected_as_expected"
+    },
+    {
+      "test": "wrong_target_binding",
+      "status": "rejected_as_expected"
+    }
+  ],
+  "file_sha256": {
+    "validation/brier/lp.npz": "49eff085a50e7aa4f8935697c5efa1698e03d8ea29ba9a285f72be5ad89935ed",
+    "validation/brier/policy_decoder.npz": "23ec2c00c8be510c066fe0db7f95fa2c1a0db69b1d1ff1ab86f5491824777444",
+    "validation/corrupt_cost/lp.npz": "963461f4d47178f5ae6fe85bf05a6890ccf546eee891dc1ae62493e01837761e",
+    "validation/corrupt_cost/policy_decoder.npz": "23ec2c00c8be510c066fe0db7f95fa2c1a0db69b1d1ff1ab86f5491824777444",
+    "validation/corrupt_decoder/lp.npz": "c4ee57580cc32590885a08ba6ebce61740ff831c104117ee60f2230467e869bf",
+    "validation/corrupt_decoder/policy_decoder.npz": "e099053a363e7df9269ecc6879e11a123d718b0ab1cc590777b9e99d3a9b4dc8",
+    "validation/information/lp.npz": "c4ee57580cc32590885a08ba6ebce61740ff831c104117ee60f2230467e869bf",
+    "validation/information/policy_decoder.npz": "23ec2c00c8be510c066fe0db7f95fa2c1a0db69b1d1ff1ab86f5491824777444",
+    "validation/singleton_vacuity/lp.npz": "a230e64cb6ccc0893ab981e064f80f8e8d90c63af691ffaf204e93e2c7affacd",
+    "validation/singleton_vacuity/policy_decoder.npz": "d1f33c877f8cfcc549ee5fd1a308b64636390640dce66e469b445746698e6036",
+    "validation/symmetric_zero_cost/lp.npz": "c01fc4f4ee9a4ba277b3ebc35cd2edcec3db2e3179fb7d16b04c49fbdbbc896f",
+    "validation/symmetric_zero_cost/policy_decoder.npz": "bd46b4b719f9b7a24585aea8819b71e1ea90fb39f3aa5f1d9637c38a7bc07e59",
+    "validation/wrong_target_binding/lp.npz": "c4ee57580cc32590885a08ba6ebce61740ff831c104117ee60f2230467e869bf",
+    "validation/wrong_target_binding/policy_decoder.npz": "23ec2c00c8be510c066fe0db7f95fa2c1a0db69b1d1ff1ab86f5491824777444"
+  }
+}

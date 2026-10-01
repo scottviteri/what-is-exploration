@@ -1,0 +1,65 @@
+{
+  "lower": 0.03653310906554752,
+  "upper": 0.03653310906554752,
+  "bracket": 0.0,
+  "residuals": {
+    "decoder_normalization": 2.220446049250313e-16,
+    "decoder_nonnegative": 0.0,
+    "alpha_normalization": 0.0,
+    "alpha_nonnegative": 0.0,
+    "loss_nonnegative": 0.0,
+    "loss_bounded": 0.0,
+    "interval_order": 0.0,
+    "interval_gap": 0.0
+  },
+  "raw_decoder_row_residual": 1.1102230246251565e-16,
+  "raw_decoder_negative": 0.0,
+  "decoder_repair_max": 1.1102230246251565e-16,
+  "lp_stationarity_diagnostic": 3.6397265409937596e-12,
+  "explicit_witness_acceptance": true,
+  "simplex_iterations": 0,
+  "ipm_iterations": 49,
+  "method": "explicit-witness-ipm",
+  "attempts": [
+    {
+      "mode": "retained",
+      "solver": "simplex",
+      "status": "Time limit reached",
+      "success": false,
+      "error": "RuntimeError('Time limit reached')",
+      "seconds": 1.0020114397630095
+    },
+    {
+      "mode": "cold",
+      "solver": "simplex",
+      "status": "Time limit reached",
+      "success": false,
+      "error": "RuntimeError('Time limit reached')",
+      "seconds": 3.0731420908123255
+    },
+    {
+      "mode": "cold",
+      "solver": "ipm",
+      "status": "Optimal",
+      "success": true,
+      "seconds": 1.2642499459907413
+    }
+  ],
+  "fallback_used": true,
+  "total_seconds": 5.34033958427608,
+  "solve_seconds": 5.339403476566076,
+  "coarse_lower": 0.03653310906554752,
+  "coarse_upper": 0.03653310906554752,
+  "merged_source_columns": 0,
+  "coarsening_bound": 0.0,
+  "certificate_scope": "Decoder and dual evaluated on original nonzero source columns",
+  "residuals_scope": "Feasible decoder/decision-loss bounds; LP diagnostics retained separately.",
+  "optimizer_called": true,
+  "attempted_known_decoders": [
+    {
+      "method": "explicit_record_projection",
+      "upper": 0.7005829252111169
+    }
+  ],
+  "total_seconds_with_shortcuts": 5.507757184095681
+}

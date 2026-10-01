@@ -1,0 +1,482 @@
+{
+  "status": "complete",
+  "started_utc": "2026-09-23T15:46:59.644258+00:00",
+  "arguments": {
+    "case": "fresh",
+    "t": 3,
+    "n": 3,
+    "eval_n": 4,
+    "worlds": 8,
+    "seed": 2026100800,
+    "concentration": 0.2,
+    "objective": "brier",
+    "strategy": "baseline",
+    "target_seed": 923101,
+    "max_targets": 128,
+    "face_objective": "none",
+    "regret": 0.0,
+    "method": "highs-ipm",
+    "max_variables": 1200000,
+    "solve_limit": 300.0,
+    "output": "Paper/research/target_selection_2026-09-23/main_results/cell_0930"
+  },
+  "manifest_sha256": "9a8a3933588b5173bc2058f96405bd831f149b1bb5a2a3486bbe68ba29348688",
+  "job_sha256": "8a4ce945a8b078ae51c331922dea6ad6e536eb5c67c402eaeb420633a44bc448",
+  "source_sha256": {
+    "scaling_core.py": "555d58fe145b78b004622d28d59cf3a3d0e1422245c5480da41c7e05e94d984e",
+    "fast_decoder.py": "4402c535d3e84950b2c528e049984d610510ad0db215bf1c25aaf82deeb761f1",
+    "objective_dp.py": "27a7490897fba458a099388842dd637d04693653a806a6d93bec16a572afdeb3",
+    "extra_objectives.py": "0d7387e57712303b9bdac67432220776defad68e243f8be58daee6e25e6c563b",
+    "gpu_solver.py": "164db826011ed4fdbafc905eb34276d3c5760f3b219dc4b2dd318e3922b73653",
+    "run_queue.py": "3cf42d7ed16d7913ccc8e77271ba428d97ac4c580d31ff832404484451d5310c",
+    "scale_one.py": "296ff35ab73312296e34e0578a8130a01e1bb1e08865d42a8859b9875ec2fec0",
+    "validate.py": "25c75d7b79a478ce8315770f59861f121aed07c370d70c22b2cb871bb4e417f4",
+    "make_manifest.py": "8296ac1736a88a649bf1d568f05346f941dd85b42afb2601edb0ef8872273641",
+    "report_scaling.py": "67f99aef9a6dbbf1ce6825ad5844a5b541c2bf5acd7b7cfa4da762205f776eb0",
+    "certified_decoder.py": "96b2bc3eb84047f2e0551efcc28a6cdc7cc990d5d9b39d76122430b3486234a6",
+    "review_pilots.py": "5fb21f26294adb7ec246521b3d8e4f074648f1b98fb62b14541b61d0f6921bec"
+  },
+  "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]",
+  "numpy": "2.1.2",
+  "pid": 3847037,
+  "model_name": "fresh_hmm_2026100800_q8_s3_c0.2",
+  "worlds": 8,
+  "source_histories": 64,
+  "target_count": 128,
+  "geometry_seconds": 0.0011200755834579468,
+  "checkpoints": [
+    {
+      "status": "complete",
+      "k": 0,
+      "selected_targets": [],
+      "planning": {
+        "objective": 0.27827315935126135,
+        "optimal_objective": 0.27827315935126135,
+        "checks": {
+          "bellman_max_residual": 0.0,
+          "source_stochastic_residual": 2.220446049250313e-16,
+          "expected_reward_replay_residual": 0.0,
+          "local_global_gap_residual": 0.0,
+          "objective_gap": 0.0,
+          "negative_objective_gap": 0.0,
+          "action_row_sum_residual": 0.0
+        },
+        "numerical_tied_histories": 0,
+        "seconds": 0.001957360655069351,
+        "method": "exact_tree_dp",
+        "reward": 0.27827315935126135,
+        "tie_break": "uniform over exactly tied float64 action values"
+      },
+      "optimization_seconds": 0.0019985921680927277,
+      "training_seconds": 0.010783536359667778,
+      "reward_face": null,
+      "audit": {
+        "lower": 0.4736271317622931,
+        "upper": 0.4736271317623069,
+        "global_upper": 0.4736271317623069,
+        "full_revelation_upper": 0.5732154506782315,
+        "full_revelation_report": {
+          "primal": -0.5732154506782312,
+          "dual": -0.5732154506782313,
+          "raw_dual": -0.5732154506782313,
+          "residuals": {
+            "equality": 0.0,
+            "inequality": 6.938893903907228e-18,
+            "lower": 0.0,
+            "upper": 0.0,
+            "inequality_dual_sign": 0.0,
+            "lower_dual_sign": 0.0,
+            "upper_dual_sign": 0.0,
+            "stationarity": 1.4432899320127035e-15,
+            "gap": 1.1102230246251565e-16,
+            "free_variable_reduced_cost": 0.0
+          },
+          "iterations": 36,
+          "variables": 80,
+          "equalities": 1,
+          "inequalities": 128,
+          "lower": 0.5732154506782312,
+          "upper": 0.5732154506782315,
+          "bracket": 3.3306690738754696e-16,
+          "raw_decoder_row_residual": 1.4432899320127035e-15,
+          "raw_decoder_negative": 0.0,
+          "decoder_repair_max": 8.881784197001252e-16,
+          "alpha_repair_max": 0.0,
+          "b_repair_max": 6.938893903907228e-18,
+          "simplex_iterations": 36,
+          "ipm_iterations": 0,
+          "method": "native-simplex",
+          "solve_seconds": 0.0019353600218892097,
+          "update_seconds": 2.7441419661045074e-05,
+          "verify_seconds": 0.0007535526528954506,
+          "total_seconds": 0.002794417552649975,
+          "attempts": [
+            {
+              "mode": "retained",
+              "solver": "simplex",
+              "update_seconds": 2.7441419661045074e-05,
+              "prior_solver_run_seconds": 0.0,
+              "solve_seconds": 0.0019353600218892097,
+              "status": "Optimal",
+              "success": true,
+              "verify_seconds": 0.0007535526528954506
+            }
+          ],
+          "fallback_used": false,
+          "call_index": 1,
+          "import_reports": [
+            {
+              "status": "HighsStatus.kOk",
+              "input_nonzeros": 712,
+              "stored_nonzeros": 712,
+              "small_matrix_value": 1e-12
+            }
+          ],
+          "backend_version": "1.15.1",
+          "coarse_lower": 0.5732154506782312,
+          "coarse_upper": 0.5732154506782315,
+          "merged_source_columns": 0,
+          "coarsening_bound": 0.0,
+          "certificate_scope": "Decoder and dual evaluated on original nonzero source columns",
+          "residuals_scope": "KKT residuals refer to the coarsened numerical LP, not the original LP"
+        },
+        "bound_scope": "full_target_class",
+        "backend": "native-simplex",
+        "fallbacks": [],
+        "hardest_target": 58,
+        "source_coarsening": {
+          "merged_columns": 0,
+          "worldwise_mass_bound": 0.0,
+          "original_source_bounds": true
+        },
+        "lp_residual_scope": "KKT of the numerical coarsened LP; decoder and dual bounds checked on original source",
+        "model_imports": [
+          {
+            "status": "HighsStatus.kOk",
+            "input_nonzeros": 712,
+            "stored_nonzeros": 712,
+            "small_matrix_value": 1e-12
+          }
+        ],
+        "exhaustive": true,
+        "target_count": 128,
+        "evaluated": 128,
+        "seconds": 0.2584832450374961,
+        "solve_seconds": 0.1755032343789935,
+        "decoder_build_seconds": 0.007165613584220409,
+        "max_lp_residual": 1.3743090776507927e-08,
+        "total_seconds": 0.2628186084330082,
+        "mean_lower": 0.35129539085744194,
+        "mean_upper": 0.3512953909989339
+      },
+      "offline_audit_seconds": 0.2628186084330082,
+      "end_to_end_seconds": 0.27470789942890406
+    }
+  ],
+  "setup_seconds": 0.00878494419157505,
+  "phase": "complete",
+  "progress": {
+    "path": "checkpoint_000",
+    "target_horizon": 4,
+    "targets_done": 32768,
+    "seconds": 106.14320073276758
+  },
+  "latest_checkpoint": "checkpoint_000",
+  "held_out_horizon": {
+    "n": 4,
+    "selection_used": false,
+    "audit": {
+      "lower": 0.49544205475842096,
+      "upper": 0.4954420548331768,
+      "global_upper": 0.4954420548331768,
+      "full_revelation_upper": 0.5732154506782315,
+      "full_revelation_report": {
+        "primal": -0.5732154506782312,
+        "dual": -0.5732154506782313,
+        "raw_dual": -0.5732154506782313,
+        "residuals": {
+          "equality": 0.0,
+          "inequality": 6.938893903907228e-18,
+          "lower": 0.0,
+          "upper": 0.0,
+          "inequality_dual_sign": 0.0,
+          "lower_dual_sign": 0.0,
+          "upper_dual_sign": 0.0,
+          "stationarity": 1.4432899320127035e-15,
+          "gap": 1.1102230246251565e-16,
+          "free_variable_reduced_cost": 0.0
+        },
+        "iterations": 36,
+        "variables": 80,
+        "equalities": 1,
+        "inequalities": 128,
+        "lower": 0.5732154506782312,
+        "upper": 0.5732154506782315,
+        "bracket": 3.3306690738754696e-16,
+        "raw_decoder_row_residual": 1.4432899320127035e-15,
+        "raw_decoder_negative": 0.0,
+        "decoder_repair_max": 8.881784197001252e-16,
+        "alpha_repair_max": 0.0,
+        "b_repair_max": 6.938893903907228e-18,
+        "simplex_iterations": 36,
+        "ipm_iterations": 0,
+        "method": "native-simplex",
+        "solve_seconds": 0.0011034449562430382,
+        "update_seconds": 1.4959834516048431e-05,
+        "verify_seconds": 0.0004195738583803177,
+        "total_seconds": 0.0015923501923680305,
+        "attempts": [
+          {
+            "mode": "retained",
+            "solver": "simplex",
+            "update_seconds": 1.4959834516048431e-05,
+            "prior_solver_run_seconds": 0.0,
+            "solve_seconds": 0.0011034449562430382,
+            "status": "Optimal",
+            "success": true,
+            "verify_seconds": 0.0004195738583803177
+          }
+        ],
+        "fallback_used": false,
+        "call_index": 1,
+        "import_reports": [
+          {
+            "status": "HighsStatus.kOk",
+            "input_nonzeros": 712,
+            "stored_nonzeros": 712,
+            "small_matrix_value": 1e-12
+          }
+        ],
+        "backend_version": "1.15.1",
+        "coarse_lower": 0.5732154506782312,
+        "coarse_upper": 0.5732154506782315,
+        "merged_source_columns": 0,
+        "coarsening_bound": 0.0,
+        "certificate_scope": "Decoder and dual evaluated on original nonzero source columns",
+        "residuals_scope": "KKT residuals refer to the coarsened numerical LP, not the original LP"
+      },
+      "bound_scope": "full_target_class",
+      "backend": "native-simplex",
+      "fallbacks": [
+        {
+          "target": 14458,
+          "attempts": [
+            {
+              "mode": "retained",
+              "solver": "simplex",
+              "update_seconds": 2.0481646060943604e-05,
+              "prior_solver_run_seconds": 26.21016526222229,
+              "solve_seconds": 0.0011981669813394547,
+              "status": "Optimal",
+              "success": false,
+              "error": "RuntimeError(\"LP numerical certificate failed: {'equality': 1.1102230246251565e-16, 'inequality': 4.17344710734735e-07, 'lower': 4.5522026338964806e-11, 'upper': 0.0, 'inequality_dual_sign': 0.0, 'lower_dual_sign': 0.0, 'upper_dual_sign': 0.0, 'stationarity': 5.46229728115577e-14, 'gap': 6.876182956361276e-11}\")"
+            },
+            {
+              "mode": "cold",
+              "solver": "simplex",
+              "update_seconds": 0.0005022156983613968,
+              "prior_solver_run_seconds": 0.0,
+              "solve_seconds": 0.008161094039678574,
+              "status": "Optimal",
+              "success": true,
+              "verify_seconds": 0.00046018417924642563
+            }
+          ]
+        },
+        {
+          "target": 22085,
+          "attempts": [
+            {
+              "mode": "retained",
+              "solver": "simplex",
+              "update_seconds": 2.0750798285007477e-05,
+              "prior_solver_run_seconds": 13.120132207870483,
+              "solve_seconds": 0.0012202076613903046,
+              "status": "Unknown",
+              "success": false,
+              "error": "RuntimeError('Unknown')"
+            },
+            {
+              "mode": "cold",
+              "solver": "simplex",
+              "update_seconds": 0.0005020853132009506,
+              "prior_solver_run_seconds": 0.0,
+              "solve_seconds": 0.00661939661949873,
+              "status": "Optimal",
+              "success": true,
+              "verify_seconds": 0.0004496239125728607
+            }
+          ]
+        },
+        {
+          "target": 25403,
+          "attempts": [
+            {
+              "mode": "retained",
+              "solver": "simplex",
+              "update_seconds": 2.0891427993774414e-05,
+              "prior_solver_run_seconds": 9.394351720809937,
+              "solve_seconds": 0.0024116048589348793,
+              "status": "Optimal",
+              "success": false,
+              "error": "RuntimeError(\"LP numerical certificate failed: {'equality': 0.0, 'inequality': 2.5432284802006126e-07, 'lower': 6.077384767169827e-11, 'upper': 0.0, 'inequality_dual_sign': 0.0, 'lower_dual_sign': 0.0, 'upper_dual_sign': 0.0, 'stationarity': 3.430589146091734e-14, 'gap': 7.838157900508236e-11}\")"
+            },
+            {
+              "mode": "cold",
+              "solver": "simplex",
+              "update_seconds": 0.0005082963034510612,
+              "prior_solver_run_seconds": 0.0,
+              "solve_seconds": 0.007585425861179829,
+              "status": "Optimal",
+              "success": true,
+              "verify_seconds": 0.0004622833803296089
+            }
+          ]
+        },
+        {
+          "target": 26092,
+          "attempts": [
+            {
+              "mode": "retained",
+              "solver": "simplex",
+              "update_seconds": 2.0230188965797424e-05,
+              "prior_solver_run_seconds": 1.9301347732543945,
+              "solve_seconds": 0.003698265179991722,
+              "status": "Optimal",
+              "success": false,
+              "error": "RuntimeError(\"LP numerical certificate failed: {'equality': 4.440892098500626e-16, 'inequality': 3.0005856693771094e-07, 'lower': 2.5045558434992772e-11, 'upper': 0.0, 'inequality_dual_sign': 0.0, 'lower_dual_sign': 0.0, 'upper_dual_sign': 0.0, 'stationarity': 4.0190073491430667e-14, 'gap': 2.1332863253675782e-10}\")"
+            },
+            {
+              "mode": "cold",
+              "solver": "simplex",
+              "update_seconds": 0.0005154665559530258,
+              "prior_solver_run_seconds": 0.0,
+              "solve_seconds": 0.008927907794713974,
+              "status": "Optimal",
+              "success": true,
+              "verify_seconds": 0.00043284427374601364
+            }
+          ]
+        },
+        {
+          "target": 29622,
+          "attempts": [
+            {
+              "mode": "retained",
+              "solver": "simplex",
+              "update_seconds": 2.0691193640232086e-05,
+              "prior_solver_run_seconds": 12.875989198684692,
+              "solve_seconds": 0.006050659343600273,
+              "status": "Optimal",
+              "success": false,
+              "error": "RuntimeError(\"LP numerical certificate failed: {'equality': 1.1102230246251565e-16, 'inequality': 7.741461875987454e-07, 'lower': 3.488787229956077e-10, 'upper': 0.0, 'inequality_dual_sign': 0.0, 'lower_dual_sign': 0.0, 'upper_dual_sign': 0.0, 'stationarity': 1.2378986724570495e-13, 'gap': 1.7132573137956797e-10}\")"
+            },
+            {
+              "mode": "cold",
+              "solver": "simplex",
+              "update_seconds": 0.0005059046670794487,
+              "prior_solver_run_seconds": 0.0,
+              "solve_seconds": 0.008467152714729309,
+              "status": "Optimal",
+              "success": true,
+              "verify_seconds": 0.00058008823543787
+            }
+          ]
+        },
+        {
+          "target": 32469,
+          "attempts": [
+            {
+              "mode": "retained",
+              "solver": "simplex",
+              "update_seconds": 2.090074121952057e-05,
+              "prior_solver_run_seconds": 15.200126647949219,
+              "solve_seconds": 0.006151331588625908,
+              "status": "Optimal",
+              "success": false,
+              "error": "RuntimeError(\"LP numerical certificate failed: {'equality': 0.0, 'inequality': 2.3369553362742867e-07, 'lower': 0.0, 'upper': 0.0, 'inequality_dual_sign': 0.0, 'lower_dual_sign': 0.0, 'upper_dual_sign': 0.0, 'stationarity': 5.4313810393669115e-12, 'gap': 2.945729213332804e-08}\")"
+            },
+            {
+              "mode": "cold",
+              "solver": "simplex",
+              "update_seconds": 0.0004965458065271378,
+              "prior_solver_run_seconds": 0.0,
+              "solve_seconds": 0.0070384591817855835,
+              "status": "Optimal",
+              "success": true,
+              "verify_seconds": 0.0004508141428232193
+            }
+          ]
+        }
+      ],
+      "hardest_target": 12509,
+      "source_coarsening": {
+        "merged_columns": 0,
+        "worldwise_mass_bound": 0.0,
+        "original_source_bounds": true
+      },
+      "lp_residual_scope": "KKT of the numerical coarsened LP; decoder and dual bounds checked on original source",
+      "model_imports": [
+        {
+          "status": "HighsStatus.kOk",
+          "input_nonzeros": 1416,
+          "stored_nonzeros": 1416,
+          "small_matrix_value": 1e-12
+        },
+        {
+          "status": "HighsStatus.kOk",
+          "input_nonzeros": 1416,
+          "stored_nonzeros": 1416,
+          "small_matrix_value": 1e-12
+        },
+        {
+          "status": "HighsStatus.kOk",
+          "input_nonzeros": 1416,
+          "stored_nonzeros": 1416,
+          "small_matrix_value": 1e-12
+        },
+        {
+          "status": "HighsStatus.kOk",
+          "input_nonzeros": 1416,
+          "stored_nonzeros": 1416,
+          "small_matrix_value": 1e-12
+        },
+        {
+          "status": "HighsStatus.kOk",
+          "input_nonzeros": 1416,
+          "stored_nonzeros": 1416,
+          "small_matrix_value": 1e-12
+        },
+        {
+          "status": "HighsStatus.kOk",
+          "input_nonzeros": 1416,
+          "stored_nonzeros": 1416,
+          "small_matrix_value": 1e-12
+        },
+        {
+          "status": "HighsStatus.kOk",
+          "input_nonzeros": 1416,
+          "stored_nonzeros": 1416,
+          "small_matrix_value": 1e-12
+        }
+      ],
+      "exhaustive": true,
+      "target_count": 32768,
+      "evaluated": 32768,
+      "seconds": 106.19007326196879,
+      "solve_seconds": 80.8295074570924,
+      "decoder_build_seconds": 0.006034008227288723,
+      "max_lp_residual": 1.12562726571871e-07,
+      "total_seconds": 106.22983172070235,
+      "mean_lower": 0.40760807402652527,
+      "mean_upper": 0.4076080741288923
+    },
+    "policy_checkpoint": "checkpoint_000"
+  },
+  "training_seconds": 0.010783536359667778,
+  "offline_current_depth_audit_seconds": 0.2628186084330082,
+  "scope": "Supplied-class finite planning, selected numerical optima, no training on sampled episodes or complete-return J_w.",
+  "seconds": 106.5092509360984,
+  "peak_rss_kib": 90176,
+  "finished_utc": "2026-09-23T15:48:46.154582+00:00"
+}

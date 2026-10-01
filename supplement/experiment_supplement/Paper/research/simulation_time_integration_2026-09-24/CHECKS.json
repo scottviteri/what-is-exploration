@@ -1,0 +1,52 @@
+[
+  {
+    "command": [
+      "python3",
+      "scripts/repo_context.py",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output": "Context pointers passed: 23 topics, 41 experiments.\nNavigation and ledger attribution only; this command does not verify proofs, reproduce experiments, or establish that PDFs match their sources.\n"
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/check_documentation_freshness.py"
+    ],
+    "exit_code": 0,
+    "output": "Documentation freshness checks passed: 8 live count summaries and results-index coverage. Semantic prose review remains a human task.\n"
+  },
+  {
+    "command": [
+      "python3",
+      "Formal/scripts/check_paper_support.py"
+    ],
+    "exit_code": 1,
+    "output": "paper-support audit FAILED\n  - unclassified Lean module: Formal/Formal/PosteriorMovementBayes.lean\n"
+  },
+  {
+    "command": [
+      "python3",
+      "Formal/scripts/check_reader_formalization.py"
+    ],
+    "exit_code": 1,
+    "output": "Reader formalization manifest is stale. Review the scope changes, then run python3 Formal/scripts/check_reader_formalization.py --write\n"
+  },
+  {
+    "command": [
+      "python3",
+      "scripts/check_full_text_citations.py"
+    ],
+    "exit_code": 0,
+    "output": "Original-text review: 32/32 completed source readings; 59 citation-key assessments.\nCoverage and freshness checks passed; this does not independently verify source reading or entailment.\n"
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output": ""
+  }
+]

@@ -1,0 +1,599 @@
+{
+  "status": "passed",
+  "scope": "Independent float64 controls, literal policy replay, and LP certificates; not interval proofs.",
+  "check_count": 4316,
+  "independent_decoder_LPs": 207,
+  "decoder_cache_hits": 225,
+  "max_errors": {
+    "independent_target_kernel": 0.0,
+    "target_manifest_weight": 0.0,
+    "literal_target_manifest": 0.0,
+    "policy_row_sum": 1.1102230246251565e-16,
+    "negative_policy_probability": 0.0,
+    "record_row_sum": 2.220446049250313e-16,
+    "saved_source_kernel": 1.1102230246251565e-16,
+    "saved_realization_weights": 0.0,
+    "independent_decoder_rows": 7.220335440649706e-11,
+    "independent_decoder_error": 1.6127620072747817e-12,
+    "independent_decoder_dual_gap": 1.5270840147962872e-12,
+    "independent_decoder_stationarity": 1.7614942837695935e-10,
+    "saved_decoder_source_mass": 4.440892098500626e-16,
+    "saved_decoder_rows": 2.220446049250313e-16,
+    "saved_decoder_nonnegative": 0.0,
+    "saved_decision_prior": 2.240430063693566e-13,
+    "saved_decision_prior_nonnegative": 0.0,
+    "saved_decision_payoff_nonnegative": 7.077671781985372e-13,
+    "saved_decision_payoff_upper": 4.3961747822310014e-12,
+    "saved_decoder_reported_upper": 1.1102230246251565e-16,
+    "saved_decision_reported_lower": 2.220446049250313e-16,
+    "saved_decoder_decision_bracket": 2.338679250257769e-11,
+    "saved_vs_independent_deficiency": 2.615685446016869e-12,
+    "saved_target_deficiency": 2.615685446016869e-12,
+    "saved_purpose_value": 2.220446049250313e-16,
+    "independent_purpose_Bellman": 1.1102230246251565e-16,
+    "saved_actual_cost": 4.016058319233906e-14,
+    "independent_Bellman_optimum": 1.1102230246251565e-16,
+    "saved_global_range": 1.1102230246251565e-16,
+    "saved_primal_equality": 3.7969627442180354e-14,
+    "saved_primal_inequality": 5.814793091474257e-15,
+    "saved_primal_lower": 1.0599275203005363e-14,
+    "saved_primal_upper": 1.1102230246251565e-15,
+    "saved_dual_ub_sign": 0.0,
+    "saved_dual_lower_sign": 1.0402650962859638e-13,
+    "saved_dual_upper_sign": 0.0,
+    "saved_stationarity": 1.2623582734683225e-14,
+    "saved_unbounded_lower_dual": 0.0,
+    "saved_unbounded_upper_dual": 0.0,
+    "saved_dual_gap": 1.3322676295501878e-15,
+    "saved_objective": 2.220446049250313e-16,
+    "saved_ub_complementarity": 2.1023551289489097e-15,
+    "saved_lower_complementarity": 0.0,
+    "saved_upper_complementarity": 0.0,
+    "saved_eta": 8.673617379884035e-19,
+    "near_optimal_feasibility": 2.4771851236948805e-15,
+    "optimum_lower_bound": 3.9652309213877857e-14,
+    "saved_actual_gap": 4.016058319233906e-14,
+    "saved_selected_purpose": 1.1102230246251565e-16,
+    "saved_absolute_eta": 0.0
+  },
+  "elapsed_seconds": 12.500325234606862,
+  "audit_source_sha256": "935669f1fefe13f554492aaaaa227cf49324500ea1ad89094c7057fef8ca0540",
+  "production_status": "passed_development_smoke",
+  "source_hash_matches": {
+    "compute.py": true,
+    "PROTOCOL.md": true
+  },
+  "production_rows": 20,
+  "production_optima": 4,
+  "checked_planning_certificates": 24,
+  "rows": [
+    {
+      "id": "H3_e0p1_0p1_information_q0.01",
+      "actual_cost": -0.8624177306350441,
+      "purpose_values": {
+        "U": 0.5000000000000001,
+        "V": 0.9720000000000002,
+        "world": 0.4860000000000001,
+        "parity": 0.5000000000000001,
+        "U_asymmetric": 0.7500000000000001
+      },
+      "target_deficiencies": {
+        "L": 0.39999999999999997,
+        "R": 0.0,
+        "tagged": 0.2,
+        "LR": 0.4,
+        "LLL": 0.47200000000000003,
+        "RRR": 0.0,
+        "LLR": 0.4000000000000001,
+        "LRR": 0.4,
+        "adaptive_L": 0.43600000000000005
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_singles_qNone",
+      "actual_cost": 0.0,
+      "purpose_values": {
+        "U": 0.9000000000000001,
+        "V": 0.9000000000000001,
+        "world": 0.81,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.9000000000000001
+      },
+      "target_deficiencies": {
+        "L": 0.0,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.0,
+        "LLL": 0.07200000000000008,
+        "RRR": 0.07200000000000004,
+        "LLR": 0.07200000000000002,
+        "LRR": 0.0,
+        "adaptive_L": 0.07200000000000001
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_repeats_qNone",
+      "actual_cost": 0.014400000000000045,
+      "purpose_values": {
+        "U": 0.9000000000000002,
+        "V": 0.9000000000000001,
+        "world": 0.81,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.9349242738687981
+      },
+      "target_deficiencies": {
+        "L": 0.0,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.0,
+        "LLL": 0.07200000000000051,
+        "RRR": 0.07199999999999994,
+        "LLR": 0.03252531179735796,
+        "LRR": 0.07080121778852616,
+        "adaptive_L": 0.08834093633321871
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_minimax_qNone",
+      "actual_cost": 0.07199999999999984,
+      "purpose_values": {
+        "U": 0.9000000000000002,
+        "V": 0.9000000000000001,
+        "world": 0.8100000000000002,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.9028351594200692
+      },
+      "target_deficiencies": {
+        "L": 0.0,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.0,
+        "LLL": 0.07199999999999984,
+        "RRR": 0.07199999999999951,
+        "LLR": 0.07031474087020137,
+        "LRR": 0.01204825601034979,
+        "adaptive_L": 0.062708397151386
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_information_q0.01_f0.0_U",
+      "actual_cost": -0.8624177306350441,
+      "purpose_values": {
+        "U": 0.5000000000000001,
+        "V": 0.9720000000000002,
+        "world": 0.4860000000000001,
+        "parity": 0.5000000000000001,
+        "U_asymmetric": 0.7500000000000001
+      },
+      "target_deficiencies": {
+        "L": 0.39999999999999997,
+        "R": 0.0,
+        "tagged": 0.2,
+        "LR": 0.4,
+        "LLL": 0.47200000000000003,
+        "RRR": 0.0,
+        "LLR": 0.4000000000000001,
+        "LRR": 0.4,
+        "adaptive_L": 0.43600000000000005
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_information_q0.01_f0.0_world",
+      "actual_cost": -0.8624177306350441,
+      "purpose_values": {
+        "U": 0.5000000000000001,
+        "V": 0.9720000000000002,
+        "world": 0.4860000000000001,
+        "parity": 0.5000000000000001,
+        "U_asymmetric": 0.7500000000000001
+      },
+      "target_deficiencies": {
+        "L": 0.39999999999999997,
+        "R": 0.0,
+        "tagged": 0.2,
+        "LR": 0.4,
+        "LLL": 0.47200000000000003,
+        "RRR": 0.0,
+        "LLR": 0.4000000000000001,
+        "LRR": 0.4,
+        "adaptive_L": 0.43600000000000005
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_information_q0.01_f0.01_U",
+      "actual_cost": -0.8537935533286937,
+      "purpose_values": {
+        "U": 0.5000000000000001,
+        "V": 0.9720000000000001,
+        "world": 0.48600000000000004,
+        "parity": 0.5000000000000001,
+        "U_asymmetric": 0.7500000000000001
+      },
+      "target_deficiencies": {
+        "L": 0.4,
+        "R": 0.0,
+        "tagged": 0.20000000000000004,
+        "LR": 0.4000000000000001,
+        "LLL": 0.4720000000000002,
+        "RRR": 0.0055069951082020886,
+        "LLR": 0.4,
+        "LRR": 0.4,
+        "adaptive_L": 0.4360000000000002
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_information_q0.01_f0.01_world",
+      "actual_cost": -0.8537935533286937,
+      "purpose_values": {
+        "U": 0.5000000000000001,
+        "V": 0.9655034985004025,
+        "world": 0.48275174925020126,
+        "parity": 0.5000000000000001,
+        "U_asymmetric": 0.7500000000000001
+      },
+      "target_deficiencies": {
+        "L": 0.4000000000000001,
+        "R": 0.0,
+        "tagged": 0.20000000000000004,
+        "LR": 0.40000000000000013,
+        "LLL": 0.4720000000000001,
+        "RRR": 0.006496501499597623,
+        "LLR": 0.4000000000000001,
+        "LRR": 0.39999999999999997,
+        "adaptive_L": 0.4360000000000001
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_singles_qNone_f0.0_U",
+      "actual_cost": 0.0,
+      "purpose_values": {
+        "U": 0.9000000000000001,
+        "V": 0.9000000000000001,
+        "world": 0.81,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.9000000000000001
+      },
+      "target_deficiencies": {
+        "L": 0.0,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.0,
+        "LLL": 0.07199999999999995,
+        "RRR": 0.07199999999999569,
+        "LLR": 0.07199999999999979,
+        "LRR": 0.06480000000000072,
+        "adaptive_L": 0.0654545454545469
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_singles_qNone_f0.0_world",
+      "actual_cost": 0.0,
+      "purpose_values": {
+        "U": 0.9000000000000001,
+        "V": 0.9000000000000001,
+        "world": 0.81,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.9225000000000002
+      },
+      "target_deficiencies": {
+        "L": 0.0,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.0,
+        "LLL": 0.07200000000000001,
+        "RRR": 0.07199999999999991,
+        "LLR": 0.07200000000000002,
+        "LRR": 0.06480000000000018,
+        "adaptive_L": 0.12319120879120883
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_singles_qNone_f0.01_U",
+      "actual_cost": 0.0016000000000000254,
+      "purpose_values": {
+        "U": 0.8919999999999999,
+        "V": 0.9080000000000003,
+        "world": 0.81,
+        "parity": 0.8200000000000002,
+        "U_asymmetric": 0.897
+      },
+      "target_deficiencies": {
+        "L": 0.008000000000000127,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.008000000000000075,
+        "LLL": 0.08000000000000007,
+        "RRR": 0.06399999999999942,
+        "LLR": 0.07200000000000002,
+        "LRR": 0.032399999999999964,
+        "adaptive_L": 0.04400000000000013
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_singles_qNone_f0.01_world",
+      "actual_cost": 0.0015999999999999877,
+      "purpose_values": {
+        "U": 0.8920000000000001,
+        "V": 0.9000000000000004,
+        "world": 0.8020975609756099,
+        "parity": 0.8121951219512198,
+        "U_asymmetric": 0.9190500000000001
+      },
+      "target_deficiencies": {
+        "L": 0.007999999999999938,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.007999999999999887,
+        "LLL": 0.08000000000000006,
+        "RRR": 0.07200000000000004,
+        "LLR": 0.07184195121951109,
+        "LRR": 0.06337756097560972,
+        "adaptive_L": 0.12176876976681665
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_singles_qNone_absolute0.005_U",
+      "actual_cost": 0.004999999999999974,
+      "purpose_values": {
+        "U": 0.8750000000000001,
+        "V": 0.925,
+        "world": 0.81,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.8906250000000001
+      },
+      "target_deficiencies": {
+        "L": 0.02499999999999987,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.024999999999999925,
+        "LLL": 0.09700000000000006,
+        "RRR": 0.04700000000000013,
+        "LLR": 0.07200000000000004,
+        "LRR": 0.034815789473684244,
+        "adaptive_L": 0.06100000000009451
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_singles_qNone_absolute0.005_world",
+      "actual_cost": 0.004999999999999897,
+      "purpose_values": {
+        "U": 0.8750000000000007,
+        "V": 0.9000000000000001,
+        "world": 0.785304878048781,
+        "parity": 0.7956097560975616,
+        "U_asymmetric": 0.9117187500000005
+      },
+      "target_deficiencies": {
+        "L": 0.02499999999999948,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.024999999999999478,
+        "LLL": 0.09699999999999938,
+        "RRR": 0.07199999999999988,
+        "LLR": 0.07150609756097556,
+        "LRR": 0.060354878048780605,
+        "adaptive_L": 0.11874608683998926
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_repeats_qNone_f0.0_U",
+      "actual_cost": 0.014400000000000008,
+      "purpose_values": {
+        "U": 0.9000000000000001,
+        "V": 0.9000000000000001,
+        "world": 0.81,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.9000000000000001
+      },
+      "target_deficiencies": {
+        "L": 0.0,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.0,
+        "LLL": 0.07200000000000004,
+        "RRR": 0.07200000000000004,
+        "LLR": 0.07199999999999993,
+        "LRR": 0.0071121951219510005,
+        "adaptive_L": 0.07120975609756108
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_repeats_qNone_f0.0_world",
+      "actual_cost": 0.014399999999960333,
+      "purpose_values": {
+        "U": 0.9000000000000001,
+        "V": 0.9000000000000001,
+        "world": 0.81,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.9261900000000001
+      },
+      "target_deficiencies": {
+        "L": 0.0,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.0,
+        "LLL": 0.07199999999999972,
+        "RRR": 0.0719999999996036,
+        "LLR": 0.030096000000000376,
+        "LRR": 0.06251040000000002,
+        "adaptive_L": 0.06029337280296031
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_repeats_qNone_f0.01_U",
+      "actual_cost": 0.017759999999999967,
+      "purpose_values": {
+        "U": 0.8888000000000001,
+        "V": 0.9111999999999998,
+        "world": 0.81,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.8958000000000002
+      },
+      "target_deficiencies": {
+        "L": 0.011199999999999882,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.011199999999999863,
+        "LLL": 0.08319999999999983,
+        "RRR": 0.060800000000000215,
+        "LLR": 0.07200000000000002,
+        "LRR": 0.01705263157894154,
+        "adaptive_L": 0.07064
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_repeats_qNone_f0.01_world",
+      "actual_cost": 0.01775999999999997,
+      "purpose_values": {
+        "U": 0.899897247706422,
+        "V": 0.8916770642201837,
+        "world": 0.8016770642201837,
+        "parity": 0.8117798165137617,
+        "U_asymmetric": 0.9286419073749154
+      },
+      "target_deficiencies": {
+        "L": 0.00010275229357800503,
+        "R": 0.00832293577981637,
+        "tagged": 0.0,
+        "LR": 0.008322935779816389,
+        "LLL": 0.07210275229357804,
+        "RRR": 0.08032293577981652,
+        "LLR": 0.03167894999382321,
+        "LRR": 0.06964321137184645,
+        "adaptive_L": 0.06597489890297922
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_repeats_qNone_absolute0.005_U",
+      "actual_cost": 0.0194,
+      "purpose_values": {
+        "U": 0.8833333333333335,
+        "V": 0.9166666666666667,
+        "world": 0.81,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.89375
+      },
+      "target_deficiencies": {
+        "L": 0.016666666666666604,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.016666666666666635,
+        "LLL": 0.0886666666666667,
+        "RRR": 0.05533333333333344,
+        "LLR": 0.07199999999999904,
+        "LRR": 0.017052631578997664,
+        "adaptive_L": 0.07173333333333295
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_repeats_qNone_absolute0.005_world",
+      "actual_cost": 0.019400000000000008,
+      "purpose_values": {
+        "U": 0.8998470948012234,
+        "V": 0.8876146788990827,
+        "world": 0.7976146788990828,
+        "parity": 0.8077675840978595,
+        "U_asymmetric": 0.927902611643532
+      },
+      "target_deficiencies": {
+        "L": 0.00015290519877687005,
+        "R": 0.012385321100917336,
+        "tagged": 0.0,
+        "LR": 0.012385321100917288,
+        "LLL": 0.07215290519877685,
+        "RRR": 0.0843853211009175,
+        "LLR": 0.036771848625321096,
+        "LRR": 0.06962907117831606,
+        "adaptive_L": 0.06621421359619292
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_minimax_qNone_f0.0_U",
+      "actual_cost": 0.07199999999999951,
+      "purpose_values": {
+        "U": 0.9000000000000001,
+        "V": 0.9,
+        "world": 0.81,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.9024695121951221
+      },
+      "target_deficiencies": {
+        "L": 0.0,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.0,
+        "LLL": 0.0719999999999964,
+        "RRR": 0.07199999999999951,
+        "LLR": 0.07120975609756343,
+        "LRR": 0.007902439024390593,
+        "adaptive_L": 0.06417475207719149
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_minimax_qNone_f0.0_world",
+      "actual_cost": 0.07200000000000017,
+      "purpose_values": {
+        "U": 0.9000000000000001,
+        "V": 0.9000000000000001,
+        "world": 0.8100000000000002,
+        "parity": 0.8200000000000001,
+        "U_asymmetric": 0.923889026298484
+      },
+      "target_deficiencies": {
+        "L": 0.0,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.0,
+        "LLL": 0.07199999999999998,
+        "RRR": 0.07200000000000017,
+        "LLR": 0.07120975609757993,
+        "LRR": 0.061688200617682834,
+        "adaptive_L": 0.11398619417760614
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_minimax_qNone_f0.01_U",
+      "actual_cost": 0.07688000000000236,
+      "purpose_values": {
+        "U": 0.8951199999999988,
+        "V": 0.9008784000000003,
+        "world": 0.8060471999999992,
+        "parity": 0.8160959999999992,
+        "U_asymmetric": 0.8990411217610811
+      },
+      "target_deficiencies": {
+        "L": 0.004879999999999991,
+        "R": 0.0,
+        "tagged": 0.0,
+        "LR": 0.004879999999999977,
+        "LLL": 0.07688000000000236,
+        "RRR": 0.0711215999999998,
+        "LLR": 0.07172124103644499,
+        "LRR": 0.007212176946091341,
+        "adaptive_L": 0.0691919999999995
+      }
+    },
+    {
+      "id": "H3_e0p1_0p1_native_minimax_qNone_f0.01_world",
+      "actual_cost": 0.07688000000000013,
+      "purpose_values": {
+        "U": 0.8951200000000001,
+        "V": 0.8951200000000009,
+        "world": 0.8003590243902451,
+        "parity": 0.810478048780489,
+        "U_asymmetric": 0.9196925609756099
+      },
+      "target_deficiencies": {
+        "L": 0.004879999999999881,
+        "R": 0.004879999999999045,
+        "tagged": 0.0,
+        "LR": 0.009640975609755062,
+        "LLL": 0.07688000000000013,
+        "RRR": 0.07687999999997205,
+        "LLR": 0.0697836097560981,
+        "LRR": 0.05960546341465009,
+        "adaptive_L": 0.11590787906727414
+      }
+    }
+  ]
+}

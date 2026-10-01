@@ -1,0 +1,225 @@
+{
+  "status": "passed",
+  "scope": "Exact certificate feasibility and numerical independent controls, not certificate-search optimality or fresh policy optimization.",
+  "audit_source_sha256": "71c35ba67581b92ccf3039b27faed811752334e04d302c0fb883fcb6671a8ded",
+  "protocol_sha256": "99e944620a3e1abab87a9495491e40487d6d16b207039790598b1b393c886bc4",
+  "exact_event_checks": 640,
+  "event_support_LPs": 24,
+  "control_decoder_LPs": 0,
+  "max_errors": {
+    "event_primal_value": 5.273559366969494e-16,
+    "event_primal_mass": 0.0,
+    "event_primal_nonnegative": 0.0,
+    "event_dual_feasibility": 4.3520742565306136e-14,
+    "certificate_event_primal_dual": 4.6351811278100286e-15,
+    "certificate_event_bound": 0.0
+  },
+  "elapsed_seconds": 0.15023449901491404,
+  "index_sha256": "6deda1f1dda2d2592cf72b792c1c2a992960be6303e3057461c32214d246919b",
+  "certificate_inputs": [
+    {
+      "path": "smoke_compressed_certificates/majority3_e1d10_1d10_LR_s0.json",
+      "sha256": "2f438ba3233adb111ca4256eac83c6d38be572ee7e6c2348dd317951f929a51b"
+    },
+    {
+      "path": "smoke_compressed_certificates/majority3_e1d10_1d10_LRR_s1d100.json",
+      "sha256": "bd3dfbeafb5d99277cd6511197598e6e11f7f7f0ead04fb5cd952314ea65f110"
+    },
+    {
+      "path": "smoke_compressed_certificates/count3_e1d10_1d10_LR_s0.json",
+      "sha256": "b43009cf567b91d7ec075d30f74a9426c3f07d1af55e702bcd49fd4ae1b2143c"
+    },
+    {
+      "path": "smoke_compressed_certificates/count3_e1d10_1d10_LRR_s1d100.json",
+      "sha256": "69b4087e9519c3722b52c3c8ed38d1a017c56d39240d15a57aea55f6f30e17b7"
+    }
+  ],
+  "certificate_count": 4,
+  "details": [
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "majority3",
+      "word": "LR",
+      "at_loss": "0",
+      "compression_checks": {
+        "full_columns": 4,
+        "compressed_columns": 4,
+        "exact_partition": true,
+        "exact_mutual_garblings": true,
+        "exact_TV_isometry": true
+      },
+      "exact_event_checks": 64,
+      "numerical_events": [
+        {
+          "mask": 1,
+          "primal": 0.8154915254237288,
+          "dual": 0.8154915254237289,
+          "certified_upper": "4891/5900"
+        },
+        {
+          "mask": 5,
+          "primal": 0.8865084745762711,
+          "dual": 0.8865084745762712,
+          "certified_upper": "2711/2950"
+        },
+        {
+          "mask": 14,
+          "primal": 0.20402305084745756,
+          "dual": 0.20402305084745787,
+          "certified_upper": "1233/5900"
+        }
+      ],
+      "intercept": "66079743279201/3480986476315000",
+      "slope": "3096/413",
+      "bound": "66079743279201/3480986476315000"
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "majority3",
+      "word": "LRR",
+      "at_loss": "1/100",
+      "compression_checks": {
+        "full_columns": 8,
+        "compressed_columns": 6,
+        "exact_partition": true,
+        "exact_mutual_garblings": true,
+        "exact_TV_isometry": true
+      },
+      "exact_event_checks": 256,
+      "numerical_events": [
+        {
+          "mask": 1,
+          "primal": 0.7280115254237288,
+          "dual": 0.7280115254237288,
+          "certified_upper": "1104733/1475000"
+        },
+        {
+          "mask": 21,
+          "primal": 0.748,
+          "dual": 0.7479999999999999,
+          "certified_upper": "45/59"
+        },
+        {
+          "mask": 62,
+          "primal": 0.2909715254237288,
+          "dual": 0.2909715254237286,
+          "certified_upper": "429183/1475000"
+        }
+      ],
+      "intercept": "556125530733/27845921577500",
+      "slope": "98/59",
+      "bound": "1018651007783/27845921577500"
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "count3",
+      "word": "LR",
+      "at_loss": "0",
+      "compression_checks": {
+        "full_columns": 4,
+        "compressed_columns": 4,
+        "exact_partition": true,
+        "exact_mutual_garblings": true,
+        "exact_TV_isometry": true
+      },
+      "exact_event_checks": 64,
+      "numerical_events": [
+        {
+          "mask": 1,
+          "primal": 0.8206088569941007,
+          "dual": 0.8206088569941034,
+          "certified_upper": "943237989802067266817203687800947656902682323097294375133/1145765531981558624030793611261083590293688837674204700000"
+        },
+        {
+          "mask": 5,
+          "primal": 0.9024543511205868,
+          "dual": 0.902454351120587,
+          "certified_upper": "311394541566782434233344705515031034903334401321783668719/340978433625404588881416733784676166374602196643657094400"
+        },
+        {
+          "mask": 14,
+          "primal": 0.19330157568310244,
+          "dual": 0.19330157568310707,
+          "certified_upper": "8658961488664622341249935030410860830426935766742539330826189490829/42604983530244251949980814078762317933821570172576255778818997655000"
+        }
+      ],
+      "intercept": "206417692768725839014719202324892091089327347457/15592543386924085085538359291077895104541477535600",
+      "slope": "51682228397/652900230",
+      "bound": "206417692768725839014719202324892091089327347457/15592543386924085085538359291077895104541477535600"
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "count3",
+      "word": "LRR",
+      "at_loss": "1/100",
+      "compression_checks": {
+        "full_columns": 8,
+        "compressed_columns": 6,
+        "exact_partition": true,
+        "exact_mutual_garblings": true,
+        "exact_TV_isometry": true
+      },
+      "exact_event_checks": 256,
+      "numerical_events": [
+        {
+          "mask": 1,
+          "primal": 0.7343536299765703,
+          "dual": 0.7343536299765703,
+          "certified_upper": "1418534530820610211426379/1907503061507920713816000"
+        },
+        {
+          "mask": 21,
+          "primal": 0.7573211900424921,
+          "dual": 0.7573211900424935,
+          "certified_upper": "1450308236584674886542448741841609/1881903100299179030133753159558000"
+        },
+        {
+          "mask": 62,
+          "primal": 0.28566042154567806,
+          "dual": 0.2856604215456779,
+          "certified_upper": "3293312865656801/11528768486151000"
+        }
+      ],
+      "intercept": "27605451769445942091388139371/1882991678130071549926965033500",
+      "slope": "792/427",
+      "bound": "62531199054668814867551050531/1882991678130071549926965033500"
+    }
+  ],
+  "matched_design_comparisons": [
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "word": "LR",
+      "at_loss": "0",
+      "majority_bound": "66079743279201/3480986476315000",
+      "count_bound": "206417692768725839014719202324892091089327347457/15592543386924085085538359291077895104541477535600",
+      "count_minus_majority": -0.005744819749006855
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "word": "LRR",
+      "at_loss": "1/100",
+      "majority_bound": "1018651007783/27845921577500",
+      "count_bound": "62531199054668814867551050531/1882991678130071549926965033500",
+      "count_minus_majority": -0.003373264001362941
+    }
+  ],
+  "count_search_monotonicity_violations": []
+}

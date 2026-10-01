@@ -1,0 +1,961 @@
+{
+  "status": "passed",
+  "scope": "Exact certificate feasibility and numerical independent controls, not certificate-search optimality or fresh policy optimization.",
+  "audit_source_sha256": "71c35ba67581b92ccf3039b27faed811752334e04d302c0fb883fcb6671a8ded",
+  "protocol_sha256": "99e944620a3e1abab87a9495491e40487d6d16b207039790598b1b393c886bc4",
+  "exact_event_checks": 0,
+  "event_support_LPs": 96,
+  "control_decoder_LPs": 6,
+  "max_errors": {
+    "control_decoder_rows": 2.220446049250313e-16,
+    "control_decoder_value": 4.85722573273506e-17,
+    "control_decoder_duality": 5.551115123125783e-17,
+    "majority_count_exact_value": 5.551115123125783e-17,
+    "event_primal_value": 2.7755575615628914e-16,
+    "event_primal_mass": 2.220446049250313e-16,
+    "event_primal_nonnegative": 0.0,
+    "event_dual_feasibility": 2.220446049250313e-16,
+    "event_primal_dual": 4.440892098500626e-16
+  },
+  "elapsed_seconds": 0.17588144633919,
+  "count_equivalence_controls": [
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "bit": 0,
+      "count_to_full_decoder": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/3",
+          "1/3",
+          "0",
+          "1/3",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "1/3",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "exact_count_full_equivalence": true,
+      "exact_majority_garbling": true,
+      "majority_to_count_deficiency": 0.019439999999999957,
+      "exact_majority_to_count_deficiency": "243/12500",
+      "exact_decoder": [
+        [
+          "73/100",
+          "2943/11800",
+          "243/11800",
+          "0"
+        ],
+        [
+          "0",
+          "243/11800",
+          "2943/11800",
+          "73/100"
+        ]
+      ],
+      "exact_matching_bayes_advantage": "243/12500"
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "bit": 1,
+      "count_to_full_decoder": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/3",
+          "1/3",
+          "0",
+          "1/3",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "1/3",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "exact_count_full_equivalence": true,
+      "exact_majority_garbling": true,
+      "majority_to_count_deficiency": 0.019440000000000013,
+      "exact_majority_to_count_deficiency": "243/12500",
+      "exact_decoder": [
+        [
+          "73/100",
+          "2943/11800",
+          "243/11800",
+          "0"
+        ],
+        [
+          "0",
+          "243/11800",
+          "2943/11800",
+          "73/100"
+        ]
+      ],
+      "exact_matching_bayes_advantage": "243/12500"
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "bit": 0,
+      "count_to_full_decoder": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/3",
+          "1/3",
+          "0",
+          "1/3",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "1/3",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "exact_count_full_equivalence": true,
+      "exact_majority_garbling": true,
+      "majority_to_count_deficiency": 0.052734374999999944,
+      "exact_majority_to_count_deficiency": "27/512",
+      "exact_decoder": [
+        [
+          "7/16",
+          "171/352",
+          "27/352",
+          "0"
+        ],
+        [
+          "0",
+          "27/352",
+          "171/352",
+          "7/16"
+        ]
+      ],
+      "exact_matching_bayes_advantage": "27/512"
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "bit": 1,
+      "count_to_full_decoder": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/3",
+          "1/3",
+          "0",
+          "1/3",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "1/3",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "exact_count_full_equivalence": true,
+      "exact_majority_garbling": true,
+      "majority_to_count_deficiency": 0.052734374999999944,
+      "exact_majority_to_count_deficiency": "27/512",
+      "exact_decoder": [
+        [
+          "7/16",
+          "171/352",
+          "27/352",
+          "0"
+        ],
+        [
+          "0",
+          "27/352",
+          "171/352",
+          "7/16"
+        ]
+      ],
+      "exact_matching_bayes_advantage": "27/512"
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "bit": 0,
+      "count_to_full_decoder": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/3",
+          "1/3",
+          "0",
+          "1/3",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "1/3",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "exact_count_full_equivalence": true,
+      "exact_majority_garbling": true,
+      "majority_to_count_deficiency": 0.019439999999999957,
+      "exact_majority_to_count_deficiency": "243/12500",
+      "exact_decoder": [
+        [
+          "73/100",
+          "2943/11800",
+          "243/11800",
+          "0"
+        ],
+        [
+          "0",
+          "243/11800",
+          "2943/11800",
+          "73/100"
+        ]
+      ],
+      "exact_matching_bayes_advantage": "243/12500"
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "bit": 1,
+      "count_to_full_decoder": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1/3",
+          "1/3",
+          "0",
+          "1/3",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/3",
+          "0",
+          "1/3",
+          "1/3",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "exact_count_full_equivalence": true,
+      "exact_majority_garbling": true,
+      "majority_to_count_deficiency": 0.05291999999999997,
+      "exact_majority_to_count_deficiency": "1323/25000",
+      "exact_decoder": [
+        [
+          "37/100",
+          "7623/14200",
+          "1323/14200",
+          "0"
+        ],
+        [
+          "0",
+          "1323/14200",
+          "7623/14200",
+          "37/100"
+        ]
+      ],
+      "exact_matching_bayes_advantage": "1323/25000"
+    }
+  ],
+  "event_support_controls": [
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "0",
+      "primal": 0.8,
+      "dual": 0.8
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "0",
+      "primal": 0.8,
+      "dual": 0.8
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "1/10",
+      "primal": 0.7,
+      "dual": 0.7
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "1/10",
+      "primal": 0.7,
+      "dual": 0.7
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "1",
+      "primal": 0.6542000000000001,
+      "dual": 0.6542
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "1",
+      "primal": 0.5126,
+      "dual": 0.5126
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "4",
+      "primal": 0.407,
+      "dual": 0.4069999999999999
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "4",
+      "primal": 0.643,
+      "dual": 0.6429999999999998
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "0",
+      "primal": 0.9,
+      "dual": 0.9
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "0",
+      "primal": 0.9,
+      "dual": 0.9
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "1/10",
+      "primal": 0.8635999999999999,
+      "dual": 0.8635999999999999
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "1/10",
+      "primal": 0.9135,
+      "dual": 0.9134999999999998
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "1",
+      "primal": 0.26675,
+      "dual": 0.26675000000000015
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "1",
+      "primal": 0.6173,
+      "dual": 0.6173000000000001
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "4",
+      "primal": 0.31334999999999996,
+      "dual": 0.3133499999999999
+    },
+    {
+      "noise": [
+        "1/10",
+        "1/10"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "4",
+      "primal": 0.57645,
+      "dual": 0.5764500000000005
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "0",
+      "primal": 0.9,
+      "dual": 0.9
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "0",
+      "primal": 0.9,
+      "dual": 0.9
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "1/10",
+      "primal": 0.7999999999999999,
+      "dual": 0.7999999999999999
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "1/10",
+      "primal": 0.7999999999999999,
+      "dual": 0.7999999999999999
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "1",
+      "primal": 0.6125,
+      "dual": 0.6125
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "1",
+      "primal": 0.8875,
+      "dual": 0.8875
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "4",
+      "primal": 0.934375,
+      "dual": 0.9343750000000002
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "4",
+      "primal": 0.865625,
+      "dual": 0.8656250000000001
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "0",
+      "primal": 1.0,
+      "dual": 1.0
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "0",
+      "primal": 1.0,
+      "dual": 1.0
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "1/10",
+      "primal": 0.92265625,
+      "dual": 0.92265625
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "1/10",
+      "primal": 0.94296875,
+      "dual": 0.9429687499999999
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "1",
+      "primal": 0.7578125,
+      "dual": 0.7578125000000001
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "1",
+      "primal": 0.6171875,
+      "dual": 0.6171874999999999
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "4",
+      "primal": 0.57890625,
+      "dual": 0.5789062500000002
+    },
+    {
+      "noise": [
+        "1/4",
+        "1/4"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "4",
+      "primal": 0.76015625,
+      "dual": 0.7601562500000001
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "0",
+      "primal": 0.65,
+      "dual": 0.65
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "0",
+      "primal": 0.65,
+      "dual": 0.65
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "1/10",
+      "primal": 0.9378,
+      "dual": 0.9377999999999999
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "1/10",
+      "primal": 0.8622,
+      "dual": 0.8622
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "1",
+      "primal": 0.6365999999999999,
+      "dual": 0.6366
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "1",
+      "primal": 0.372,
+      "dual": 0.37200000000000005
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "majority3",
+      "world": 0,
+      "slope": "4",
+      "primal": 0.24759999999999996,
+      "dual": 0.24760000000000001
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "majority3",
+      "world": 3,
+      "slope": "4",
+      "primal": 0.4554,
+      "dual": 0.4553999999999999
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "0",
+      "primal": 1.0,
+      "dual": 1.0
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "0",
+      "primal": 1.0,
+      "dual": 1.0
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "1/10",
+      "primal": 0.93785,
+      "dual": 0.9378500000000001
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "1/10",
+      "primal": 0.93925,
+      "dual": 0.9392499999999999
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "1",
+      "primal": 0.68325,
+      "dual": 0.6832499999999999
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "1",
+      "primal": 0.63715,
+      "dual": 0.6371499999999999
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "count3",
+      "world": 0,
+      "slope": "4",
+      "primal": 0.3354999999999998,
+      "dual": 0.3355000000000001
+    },
+    {
+      "noise": [
+        "1/10",
+        "3/10"
+      ],
+      "source": "count3",
+      "world": 3,
+      "slope": "4",
+      "primal": 0.5765499999999999,
+      "dual": 0.5765499999999999
+    }
+  ]
+}

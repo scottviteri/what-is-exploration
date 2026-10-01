@@ -1,0 +1,127 @@
+{
+  "status": "complete",
+  "k": 0,
+  "selected_targets": [],
+  "planning": {
+    "objective": 0.27827315935126135,
+    "optimal_objective": 0.27827315935126135,
+    "checks": {
+      "bellman_max_residual": 0.0,
+      "source_stochastic_residual": 2.220446049250313e-16,
+      "expected_reward_replay_residual": 0.0,
+      "local_global_gap_residual": 0.0,
+      "objective_gap": 0.0,
+      "negative_objective_gap": 0.0,
+      "action_row_sum_residual": 0.0
+    },
+    "numerical_tied_histories": 0,
+    "seconds": 0.001957360655069351,
+    "method": "exact_tree_dp",
+    "reward": 0.27827315935126135,
+    "tie_break": "uniform over exactly tied float64 action values"
+  },
+  "optimization_seconds": 0.0019985921680927277,
+  "training_seconds": 0.010783536359667778,
+  "reward_face": null,
+  "audit": {
+    "lower": 0.4736271317622931,
+    "upper": 0.4736271317623069,
+    "global_upper": 0.4736271317623069,
+    "full_revelation_upper": 0.5732154506782315,
+    "full_revelation_report": {
+      "primal": -0.5732154506782312,
+      "dual": -0.5732154506782313,
+      "raw_dual": -0.5732154506782313,
+      "residuals": {
+        "equality": 0.0,
+        "inequality": 6.938893903907228e-18,
+        "lower": 0.0,
+        "upper": 0.0,
+        "inequality_dual_sign": 0.0,
+        "lower_dual_sign": 0.0,
+        "upper_dual_sign": 0.0,
+        "stationarity": 1.4432899320127035e-15,
+        "gap": 1.1102230246251565e-16,
+        "free_variable_reduced_cost": 0.0
+      },
+      "iterations": 36,
+      "variables": 80,
+      "equalities": 1,
+      "inequalities": 128,
+      "lower": 0.5732154506782312,
+      "upper": 0.5732154506782315,
+      "bracket": 3.3306690738754696e-16,
+      "raw_decoder_row_residual": 1.4432899320127035e-15,
+      "raw_decoder_negative": 0.0,
+      "decoder_repair_max": 8.881784197001252e-16,
+      "alpha_repair_max": 0.0,
+      "b_repair_max": 6.938893903907228e-18,
+      "simplex_iterations": 36,
+      "ipm_iterations": 0,
+      "method": "native-simplex",
+      "solve_seconds": 0.0019353600218892097,
+      "update_seconds": 2.7441419661045074e-05,
+      "verify_seconds": 0.0007535526528954506,
+      "total_seconds": 0.002794417552649975,
+      "attempts": [
+        {
+          "mode": "retained",
+          "solver": "simplex",
+          "update_seconds": 2.7441419661045074e-05,
+          "prior_solver_run_seconds": 0.0,
+          "solve_seconds": 0.0019353600218892097,
+          "status": "Optimal",
+          "success": true,
+          "verify_seconds": 0.0007535526528954506
+        }
+      ],
+      "fallback_used": false,
+      "call_index": 1,
+      "import_reports": [
+        {
+          "status": "HighsStatus.kOk",
+          "input_nonzeros": 712,
+          "stored_nonzeros": 712,
+          "small_matrix_value": 1e-12
+        }
+      ],
+      "backend_version": "1.15.1",
+      "coarse_lower": 0.5732154506782312,
+      "coarse_upper": 0.5732154506782315,
+      "merged_source_columns": 0,
+      "coarsening_bound": 0.0,
+      "certificate_scope": "Decoder and dual evaluated on original nonzero source columns",
+      "residuals_scope": "KKT residuals refer to the coarsened numerical LP, not the original LP"
+    },
+    "bound_scope": "full_target_class",
+    "backend": "native-simplex",
+    "fallbacks": [],
+    "hardest_target": 58,
+    "source_coarsening": {
+      "merged_columns": 0,
+      "worldwise_mass_bound": 0.0,
+      "original_source_bounds": true
+    },
+    "lp_residual_scope": "KKT of the numerical coarsened LP; decoder and dual bounds checked on original source",
+    "model_imports": [
+      {
+        "status": "HighsStatus.kOk",
+        "input_nonzeros": 712,
+        "stored_nonzeros": 712,
+        "small_matrix_value": 1e-12
+      }
+    ],
+    "exhaustive": true,
+    "target_count": 128,
+    "evaluated": 128,
+    "seconds": 0.2584832450374961,
+    "solve_seconds": 0.1755032343789935,
+    "decoder_build_seconds": 0.007165613584220409,
+    "max_lp_residual": 1.3743090776507927e-08,
+    "total_seconds": 0.2628186084330082,
+    "mean_lower": 0.35129539085744194,
+    "mean_upper": 0.3512953909989339
+  },
+  "offline_audit_seconds": 0.2628186084330082,
+  "end_to_end_seconds": 0.27470789942890406
+}

@@ -1,0 +1,73 @@
+{
+  "status": "bounded_polishing_finished_without_exact_sharpness",
+  "scope": "Development probes are not replacement upper certificates. The independently audited native_history_certificate.json remains the established result.",
+  "proved_lower": "9/125",
+  "proved_clean_upper": "72000001123/1000000000000",
+  "exact_equality_proved": false,
+  "pivot_projection": {
+    "status": "failed",
+    "reason": "An arbitrary-coordinate exact projection worsened other event constraints and eventually made a decoder coordinate negative.",
+    "runtime_seconds": 24.54760832246393
+  },
+  "minimum_norm_projection": {
+    "status": "candidate_only",
+    "boundary_cuts_recovered": 54,
+    "iterations": 9,
+    "runtime_seconds": 48.649358860217035,
+    "numeric_separation_upper": 0.07200000000947744,
+    "limitation": "Rational stochasticity and selected exact cut equalities do not certify all policy/world/event inequalities. These probes do not export all intermediate exact primal point vectors, so they are not an independently audited proof artifact."
+  },
+  "exact_basis_probe": {
+    "status": "partial_three_event_checks_only",
+    "event_upper_values": [
+      0.07200000019400496,
+      0.07200000003385963,
+      0.07200000002062826
+    ],
+    "limitation": "Exact dual reconstruction still left a strictly positive gap above9/125. Only three events were checked; no global upper is inferred from these partial values."
+  },
+  "optional_probe_dependencies": {
+    "location": "/tmp/native_exact_polish",
+    "packages": [
+      "python-flint",
+      "highspy",
+      "swiglpk"
+    ],
+    "scope": "Temporary development dependencies only; the audited main certificate verification does not require them."
+  },
+  "next_mathematical_obligation": "Produce a fully stochastic exact decoder with all128 event support upper bounds at most target_mass+9/125, or a larger exact policy deficiency witness. No further algorithm branch was launched after the bounded stop instruction.",
+  "artifacts": {
+    "polish_history_probe.py": {
+      "sha256": "423e626ad21de1ae2fd7bb1814f5d12b0b81f61e9f542d16afe28711ef5692e9",
+      "bytes": 6527
+    },
+    "history_polish_probe_results.json": {
+      "sha256": "f133ee9b2bf21e72c78f58451fad44624b0c31117ed8d25ec5f67c8c542f3b5b",
+      "bytes": 10748
+    },
+    "polish_history_minnorm.py": {
+      "sha256": "285c9877b9be9fd4ec1e27d9fd70fc9b990930572c2f5fa83147c2fcdc579a83",
+      "bytes": 7207
+    },
+    "history_minnorm_probe_results.json": {
+      "sha256": "50466f535a43d12f0dee09ba839d58171499e588400d6dbbfbb55e3f94ce0094",
+      "bytes": 9159
+    },
+    "native_history_minnorm_candidate.json": {
+      "sha256": "36f8a67be1ffe911ad771f338e19e0a1428ff6b093c44d2c32d2c8f8bc4644ac",
+      "bytes": 2058580
+    },
+    "exact_basis_probe.py": {
+      "sha256": "da67d72968caa33c00e694f28261783802f8b9c40f452203211ceb9a00e31285",
+      "bytes": 4665
+    },
+    "exact_basis_probe_results.json": {
+      "sha256": "1757497bc1f23637e006bc08e8d59c19d27995313c697c12010f5ed70de8c34d",
+      "bytes": 12004758
+    },
+    "native_history_certificate.json": {
+      "sha256": "f9efb36fbd0e1bbfbdb71a370c36daf2cad6074ccaadbe0269b1ae44afda13ee",
+      "bytes": 12738322
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "scope": "Planner invocation runtimes recorded from completed command output; independent audit time excluded",
+  "source_sha256": "ef51b462b0932e01fa4486117f60fc7ef1474d4f7cfae1b76e9cace404dbe881",
+  "protocol_sha256": "c1aa6166882e7ac78497563a880fab5137716d43273e50af4c8b1e5145b5d291",
+  "stages": [
+    {
+      "mode": "smoke",
+      "H": 3,
+      "tolerances": "all",
+      "output": "smoke_final",
+      "seconds": 5.686664504930377,
+      "optima": 4,
+      "envelopes": 20
+    },
+    {
+      "mode": "production",
+      "H": 3,
+      "tolerances": "primary",
+      "output": "results",
+      "seconds": 75.08375399466604,
+      "new_optima": 27,
+      "new_envelopes": 405
+    },
+    {
+      "mode": "production",
+      "H": 3,
+      "tolerances": "secondary",
+      "output": "results",
+      "seconds": 13.847076267935336,
+      "new_optima": 0,
+      "new_envelopes": 60
+    },
+    {
+      "mode": "production",
+      "H": 4,
+      "tolerances": "primary",
+      "output": "results_h4",
+      "seconds": 455.9221823439002,
+      "new_optima": 27,
+      "new_envelopes": 405
+    },
+    {
+      "mode": "production",
+      "H": 4,
+      "tolerances": "secondary",
+      "output": "results_h4",
+      "seconds": 84.39925730228424,
+      "new_optima": 0,
+      "new_envelopes": 60
+    }
+  ],
+  "production_seconds_sum": 629.2522699087858
+}

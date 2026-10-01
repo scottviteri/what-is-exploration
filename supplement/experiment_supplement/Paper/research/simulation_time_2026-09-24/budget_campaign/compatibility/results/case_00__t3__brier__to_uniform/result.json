@@ -1,0 +1,69 @@
+{
+  "status": "complete",
+  "started_utc": "2026-09-24T03:57:38.054889+00:00",
+  "job": {
+    "id": "case_00__t3__brier__to_uniform",
+    "case_id": "case_00",
+    "case": "sensors_0.1_0.1",
+    "t": 3,
+    "method": "brier",
+    "epsilon": 0.02,
+    "reference": "uniform",
+    "reference_path": "references/case_00/uniform.npz",
+    "model": "references/case_00/model.npz",
+    "primary_id": "reference_replay__case_00__brier",
+    "trigger_lower": 0.03382417582403585,
+    "input_sha256": {
+      "results/reference_replay__case_00__brier/result.json": "1568c5c2f8c80ba2c0c6ce7bcbdaa591e19b79db8bbae7960294859ae084f928",
+      "results/reference_replay__case_00__brier/CHECK.json": "75e6f522cc4871381b71461774ef8c9898d56a523064b2720535a60bf0929a6a",
+      "results/reference_replay__case_00__brier/reference_uniform.npz": "625651e0b8fbcb143e530bc9bdffba6817553112759f56ac3ce4954c222ae7b4",
+      "references/case_00/model.npz": "109da575632e07a90be0941ec41e8e997e87209e735db1fa17d85d6bbf1d29fd",
+      "references/case_00/uniform.npz": "33c6a4aec3300ad6c7330e8835408a9a2883eebc29fad5f7647c4d6a8795e5c4",
+      "REFERENCES.json": "1a9c92566d013e7324719b3d6347a7ee7fe0a311303527f84d6d923383c7d87a",
+      "MANIFEST.json": "de91b86583e8396a41ad21c5372db327ffdcd632237e9e23eb00178e871ce7b4"
+    }
+  },
+  "sources_sha256": "94d9e1e82830063c31fb9333c0e9af94d645cdc1f93993c6506230d49c5744e9",
+  "method": "brier",
+  "t": 3,
+  "epsilon": 0.02,
+  "cap_tightening": 1e-07,
+  "achieved_reward": 0.4800000000000002,
+  "constrained_reward_upper": 0.4800000000000001,
+  "cap_upper": 0.0020006022247749016,
+  "cap_dual": -0.0,
+  "lp": {
+    "primal": -0.4800000000000001,
+    "dual": -0.4800000000000001,
+    "raw_dual": -0.48000000000000004,
+    "residuals": {
+      "equality": 1.5543122344752192e-15,
+      "inequality": 8.326672684688674e-17,
+      "lower": 0.0,
+      "upper": 0.0,
+      "inequality_dual_sign": 0.0,
+      "lower_dual_sign": 0.0,
+      "upper_dual_sign": 0.0,
+      "stationarity": 1.3877787807814457e-17,
+      "gap": 5.551115123125783e-17,
+      "repaired_gap": 0.0
+    },
+    "iterations": 868,
+    "variables": 4395,
+    "equalities": 85,
+    "inequalities": 517,
+    "solve_seconds": 0.1139276260510087,
+    "method": "highs",
+    "warnings": [
+      "Unrecognized options detected: {'threads': 1}. These will be passed to HiGHS verbatim."
+    ]
+  },
+  "seconds": 0.13466106355190277,
+  "files": {
+    "lp.npz": "0d837081a1d0a49789290210d69c1a0fbd54a8731ade82ea86a4d34c1c329f55",
+    "policy_decoder.npz": "0a7bc227d74e9455d4e586328ac35b629516b0c3380dc3123d356af39d12c20c"
+  },
+  "finished_utc": "2026-09-24T03:57:38.190095+00:00",
+  "wall_seconds": 0.13522125221788883,
+  "peak_rss_mib": 82.671875
+}

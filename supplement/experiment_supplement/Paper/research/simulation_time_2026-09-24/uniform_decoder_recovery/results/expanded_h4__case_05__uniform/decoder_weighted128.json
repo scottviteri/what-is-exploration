@@ -1,0 +1,49 @@
+{
+  "lower": 0.06801688367074166,
+  "upper": 0.06801688367074256,
+  "bracket": 9.020562075079397e-16,
+  "residuals": {
+    "decoder_normalization": 1.1102230246251565e-16,
+    "decoder_nonnegative": 0.0,
+    "alpha_normalization": 0.0,
+    "alpha_nonnegative": 0.0,
+    "loss_nonnegative": 0.0,
+    "loss_bounded": 0.0,
+    "interval_order": 0.0,
+    "interval_gap": 9.020562075079397e-16
+  },
+  "raw_decoder_row_residual": 2.220446049250313e-16,
+  "raw_decoder_negative": 0.0,
+  "decoder_repair_max": 1.1102230246251565e-16,
+  "lp_stationarity_diagnostic": 1.2921955172551236e-14,
+  "explicit_witness_acceptance": true,
+  "simplex_iterations": 1565,
+  "ipm_iterations": 0,
+  "method": "explicit-witness-simplex",
+  "attempts": [
+    {
+      "mode": "retained",
+      "solver": "simplex",
+      "status": "Optimal",
+      "success": true,
+      "seconds": 0.3950743256136775
+    }
+  ],
+  "fallback_used": false,
+  "total_seconds": 0.3951916182413697,
+  "solve_seconds": 0.3950743256136775,
+  "coarse_lower": 0.06801688367074166,
+  "coarse_upper": 0.06801688367074256,
+  "merged_source_columns": 0,
+  "coarsening_bound": 0.0,
+  "certificate_scope": "Decoder and dual evaluated on original nonzero source columns",
+  "residuals_scope": "Feasible decoder/decision-loss bounds; LP diagnostics retained separately.",
+  "optimizer_called": true,
+  "attempted_known_decoders": [
+    {
+      "method": "explicit_record_projection",
+      "upper": 0.700582925211117
+    }
+  ],
+  "total_seconds_with_shortcuts": 0.44921324495226145
+}

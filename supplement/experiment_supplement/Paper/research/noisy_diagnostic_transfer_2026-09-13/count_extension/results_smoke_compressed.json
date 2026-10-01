@@ -1,0 +1,250 @@
+{
+  "schema_version": 1,
+  "mode": "smoke",
+  "status": "passed_development_smoke",
+  "started_utc": "2026-09-13T01:08:54.941468+00:00",
+  "source_sha256": "8e7e41112d542a23ed160d72810755d19c83fdae1ba8353bdf869429a8122979",
+  "protocol_sha256": "99e944620a3e1abab87a9495491e40487d6d16b207039790598b1b393c886bc4",
+  "parent_inputs": {
+    "../theory/certificates.json": "3063f5b1991c76b72ba17d789fc6f29ad991a2e402ba1939ce6a502b702811a4",
+    "../theory/certificates.py": "5124055bd339e55e33cd16d85c61f4301910c3fc3124a202c1fb3f271974878e"
+  },
+  "versions": {
+    "python": "3.12.3 (main, Aug 14 2025, 17:47:21) [GCC 13.3.0]",
+    "numpy": "2.1.2",
+    "scipy": "1.18.1",
+    "platform": "Linux-6.8.0-117-generic-x86_64-with-glibc2.39"
+  },
+  "solver_method": "highs-ipm",
+  "solver_options": {
+    "primal_feasibility_tolerance": 1e-09,
+    "dual_feasibility_tolerance": 1e-09,
+    "ipm_optimality_tolerance": 1e-10
+  },
+  "numerical_control_tolerance": 2e-07,
+  "rational_denominator_limit": 1000000000,
+  "representation_controls": {
+    "exact_checks": 312,
+    "full_record_count_equivalence": true,
+    "majority_garbling": true,
+    "exact_target_compressions_checked": 18,
+    "disjoint_uniform_lift_TV_isometry": true
+  },
+  "intended_cases": 4,
+  "certificates": [
+    {
+      "eps": [
+        "1/10",
+        "1/10"
+      ],
+      "diagnostic_source": "majority3",
+      "word": "LR",
+      "at_loss": "0",
+      "intercept": "66079743279201/3480986476315000",
+      "slope": "3096/413",
+      "bound": "66079743279201/3480986476315000",
+      "bound_float": 0.018983050847457914,
+      "search": {
+        "variables": 338,
+        "equalities": 4,
+        "inequalities": 832,
+        "nonzeros": 2704,
+        "build_seconds": 0.0028687790036201477,
+        "solve_seconds": 0.015146780759096146,
+        "iterations": 11,
+        "solver_status": 0,
+        "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs-ipm",
+        "warnings": [],
+        "search_objective": 0.01898305084745767,
+        "search_intercept": 0.01898305084745767,
+        "search_slope": 7.496368038740954,
+        "search_dual_value": 0.01898305084745766,
+        "numerical_residuals": {
+          "equalities": 0.0,
+          "inequalities": 4.9960036108132044e-15,
+          "stationarity": 1.1102230246251565e-16,
+          "duality_gap": 1.0408340855860843e-17
+        },
+        "reconstruct_seconds": 0.006080458872020245,
+        "search_to_exact_gap": 2.42861286636753e-16
+      },
+      "exact_checks": {
+        "decoder_rows": 4,
+        "event_world_pairs": 64,
+        "corner_inequalities": 256,
+        "potential_box_inequalities": 512,
+        "intercept_inequalities": 64
+      },
+      "all_exact_checks_pass": true,
+      "lp_lower_candidate": 0.01898305084745767,
+      "id": "majority3_e1d10_1d10_LR_s0",
+      "certificate_path": "smoke_compressed_certificates/majority3_e1d10_1d10_LR_s0.json",
+      "parent_majority_control": {
+        "parent_word": "LR",
+        "parent_search_objective": 0.018983050847457644,
+        "search_objective_difference": 2.7755575615628914e-17,
+        "parent_rational_bound": "28/1475",
+        "new_rational_bound": "66079743279201/3480986476315000"
+      }
+    },
+    {
+      "eps": [
+        "1/10",
+        "1/10"
+      ],
+      "diagnostic_source": "majority3",
+      "word": "LRR",
+      "at_loss": "1/100",
+      "intercept": "556125530733/27845921577500",
+      "slope": "98/59",
+      "bound": "1018651007783/27845921577500",
+      "bound_float": 0.036581694915282965,
+      "search": {
+        "variables": 1306,
+        "equalities": 4,
+        "inequalities": 3328,
+        "nonzeros": 11800,
+        "build_seconds": 0.008045029826462269,
+        "solve_seconds": 0.0865479800850153,
+        "iterations": 20,
+        "solver_status": 0,
+        "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs-ipm",
+        "warnings": [],
+        "search_objective": 0.036581694915254266,
+        "search_intercept": 0.019971525423728834,
+        "search_slope": 1.661016949152543,
+        "search_dual_value": 0.036581694915254266,
+        "numerical_residuals": {
+          "equalities": 1.1102230246251565e-15,
+          "inequalities": 3.375077994860476e-14,
+          "stationarity": 2.220446049250313e-16,
+          "duality_gap": 0.0
+        },
+        "reconstruct_seconds": 0.018971300683915615,
+        "search_to_exact_gap": 2.8699265186560297e-14
+      },
+      "exact_checks": {
+        "decoder_rows": 4,
+        "event_world_pairs": 256,
+        "corner_inequalities": 1024,
+        "potential_box_inequalities": 2048,
+        "intercept_inequalities": 256
+      },
+      "all_exact_checks_pass": true,
+      "lp_lower_candidate": 0.036581694915254266,
+      "id": "majority3_e1d10_1d10_LRR_s1d100",
+      "certificate_path": "smoke_compressed_certificates/majority3_e1d10_1d10_LRR_s1d100.json",
+      "parent_majority_control": {
+        "parent_word": "LRR",
+        "parent_search_objective": 0.03658169491525352,
+        "search_objective_difference": 7.494005416219807e-16,
+        "parent_rational_bound": "8193916462773458563/223989524815150400000",
+        "new_rational_bound": "1018651007783/27845921577500"
+      }
+    },
+    {
+      "eps": [
+        "1/10",
+        "1/10"
+      ],
+      "diagnostic_source": "count3",
+      "word": "LR",
+      "at_loss": "0",
+      "intercept": "206417692768725839014719202324892091089327347457/15592543386924085085538359291077895104541477535600",
+      "slope": "51682228397/652900230",
+      "bound": "206417692768725839014719202324892091089327347457/15592543386924085085538359291077895104541477535600",
+      "bound_float": 0.01323823109845106,
+      "search": {
+        "variables": 642,
+        "equalities": 16,
+        "inequalities": 2112,
+        "nonzeros": 7872,
+        "build_seconds": 0.004773377440869808,
+        "solve_seconds": 0.05321464408189058,
+        "iterations": 20,
+        "solver_status": 0,
+        "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs-ipm",
+        "warnings": [],
+        "search_objective": 0.013238231098430791,
+        "search_intercept": 0.013238231098430791,
+        "search_slope": 79.1579264675707,
+        "search_dual_value": 0.013238231098430697,
+        "numerical_residuals": {
+          "equalities": 1.1102230246251565e-16,
+          "inequalities": 1.5650675200262754e-14,
+          "stationarity": 1.1102230246251565e-16,
+          "duality_gap": 9.367506770274758e-17
+        },
+        "reconstruct_seconds": 0.01378063764423132,
+        "search_to_exact_gap": 2.0268509093313014e-14
+      },
+      "exact_checks": {
+        "decoder_rows": 16,
+        "event_world_pairs": 64,
+        "corner_inequalities": 1024,
+        "potential_box_inequalities": 1024,
+        "intercept_inequalities": 64
+      },
+      "all_exact_checks_pass": true,
+      "lp_lower_candidate": 0.013238231098430791,
+      "id": "count3_e1d10_1d10_LR_s0",
+      "certificate_path": "smoke_compressed_certificates/count3_e1d10_1d10_LR_s0.json"
+    },
+    {
+      "eps": [
+        "1/10",
+        "1/10"
+      ],
+      "diagnostic_source": "count3",
+      "word": "LRR",
+      "at_loss": "1/100",
+      "intercept": "27605451769445942091388139371/1882991678130071549926965033500",
+      "slope": "792/427",
+      "bound": "62531199054668814867551050531/1882991678130071549926965033500",
+      "bound_float": 0.03320843091392003,
+      "search": {
+        "variables": 2402,
+        "equalities": 16,
+        "inequalities": 8448,
+        "nonzeros": 35424,
+        "build_seconds": 0.018942398950457573,
+        "solve_seconds": 0.32475425209850073,
+        "iterations": 24,
+        "solver_status": 0,
+        "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "method": "highs-ipm",
+        "warnings": [],
+        "search_objective": 0.03320843091334902,
+        "search_intercept": 0.014660421545667324,
+        "search_slope": 1.8548009367681697,
+        "search_dual_value": 0.03320843091334896,
+        "numerical_residuals": {
+          "equalities": 0.0,
+          "inequalities": 5.916378498227459e-13,
+          "stationarity": 2.220446049250313e-16,
+          "duality_gap": 5.551115123125783e-17
+        },
+        "reconstruct_seconds": 0.04942021518945694,
+        "search_to_exact_gap": 5.710085182464297e-13
+      },
+      "exact_checks": {
+        "decoder_rows": 16,
+        "event_world_pairs": 256,
+        "corner_inequalities": 4096,
+        "potential_box_inequalities": 4096,
+        "intercept_inequalities": 256
+      },
+      "all_exact_checks_pass": true,
+      "lp_lower_candidate": 0.03320843091334902,
+      "id": "count3_e1d10_1d10_LRR_s1d100",
+      "certificate_path": "smoke_compressed_certificates/count3_e1d10_1d10_LRR_s1d100.json"
+    }
+  ],
+  "failures": [],
+  "warnings": [],
+  "updated_utc": "2026-09-13T01:08:55.579518+00:00",
+  "run_seconds": 0.6405939478427172
+}

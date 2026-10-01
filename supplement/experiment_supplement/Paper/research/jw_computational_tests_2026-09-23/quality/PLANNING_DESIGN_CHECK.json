@@ -1,0 +1,326 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "folder": "Paper/research/jw_computational_tests_2026-09-23/quality/design_preflight/fixed_v2",
+      "result": {
+        "status": "passed",
+        "arm": "fixed",
+        "residual": 9.148821630833304e-10,
+        "rounds": 13,
+        "accepted_rounds": 13,
+        "cuts": 1694,
+        "averages": 0,
+        "endpoints": [
+          {
+            "budget": 2,
+            "iteration": 2,
+            "selected_gap": 0.042675329832756716,
+            "available_seconds": 1.3148762173950672
+          },
+          {
+            "budget": 10,
+            "iteration": 12,
+            "selected_gap": 1.8580514862809316e-07,
+            "available_seconds": 9.37991566490382
+          },
+          {
+            "budget": 40,
+            "iteration": 12,
+            "selected_gap": 1.8580514862809316e-07,
+            "available_seconds": 9.37991566490382
+          }
+        ],
+        "weight_rule_checks": 12,
+        "cost_rule_checks": 0,
+        "omitted_mass": "5369266971004237/109684753201889280",
+        "seconds": 4.606977155432105,
+        "scope": "Independent finite numerical replay; no eventual, all-optima or certified floating MW guarantee"
+      }
+    },
+    {
+      "folder": "Paper/research/jw_computational_tests_2026-09-23/quality/design_preflight/v3_baseline",
+      "result": {
+        "status": "passed",
+        "kind": "baseline",
+        "residual": 2.220446049250313e-16,
+        "rows": [
+          {
+            "method": "information",
+            "optimum": 0.366862524206055,
+            "attained": 0.3668625242060549
+          },
+          {
+            "method": "brier",
+            "optimum": 0.12322589211516337,
+            "attained": 0.12322589211516337
+          },
+          {
+            "method": "uniform"
+          }
+        ],
+        "scope": "Independent posterior formula, Bellman and causal policy replay"
+      }
+    },
+    {
+      "folder": "Paper/research/jw_computational_tests_2026-09-23/quality/design_preflight/v3_brier_face0",
+      "result": {
+        "status": "passed",
+        "arm": "brier_face0",
+        "residual": 1.1712793738377636e-09,
+        "rounds": 2,
+        "accepted_rounds": 2,
+        "cuts": 261,
+        "averages": 0,
+        "endpoints": [
+          {
+            "budget": 2,
+            "iteration": 1,
+            "selected_gap": 3.858025010572419e-15,
+            "available_seconds": 1.923187505453825
+          },
+          {
+            "budget": 10,
+            "iteration": 1,
+            "selected_gap": 3.858025010572419e-15,
+            "available_seconds": 1.923187505453825
+          },
+          {
+            "budget": 40,
+            "iteration": 1,
+            "selected_gap": 3.858025010572419e-15,
+            "available_seconds": 1.923187505453825
+          }
+        ],
+        "weight_rule_checks": 1,
+        "cost_rule_checks": 0,
+        "omitted_mass": "5369266971004237/109684753201889280",
+        "seconds": 0.9505621222779155,
+        "scope": "Independent finite numerical replay; no eventual, all-optima or certified floating MW guarantee"
+      }
+    },
+    {
+      "folder": "Paper/research/jw_computational_tests_2026-09-23/quality/design_preflight/v3_brier_face5",
+      "result": {
+        "status": "passed",
+        "arm": "brier_face5",
+        "residual": 5.254813251198698e-11,
+        "rounds": 5,
+        "accepted_rounds": 5,
+        "cuts": 651,
+        "averages": 0,
+        "endpoints": [
+          {
+            "budget": 2,
+            "iteration": 1,
+            "selected_gap": 0.00647956888601707,
+            "available_seconds": 1.7940211342647672
+          },
+          {
+            "budget": 10,
+            "iteration": 4,
+            "selected_gap": 1.9901339014249952e-07,
+            "available_seconds": 3.2161824256181717
+          },
+          {
+            "budget": 40,
+            "iteration": 4,
+            "selected_gap": 1.9901339014249952e-07,
+            "available_seconds": 3.2161824256181717
+          }
+        ],
+        "weight_rule_checks": 4,
+        "cost_rule_checks": 0,
+        "omitted_mass": "5369266971004237/109684753201889280",
+        "seconds": 1.7706463020294905,
+        "scope": "Independent finite numerical replay; no eventual, all-optima or certified floating MW guarantee"
+      }
+    },
+    {
+      "folder": "Paper/research/jw_computational_tests_2026-09-23/quality/design_preflight/v3_hard",
+      "result": {
+        "status": "passed",
+        "arm": "hard",
+        "residual": 9.501722290916614e-10,
+        "rounds": 9,
+        "accepted_rounds": 8,
+        "cuts": 1044,
+        "averages": 8,
+        "endpoints": [
+          {
+            "budget": 2,
+            "iteration": 2,
+            "selected_gap": 0.04243923369013819,
+            "available_seconds": 1.8131380341947079
+          },
+          {
+            "budget": 10,
+            "iteration": 6,
+            "selected_gap": 0.0015372251494986458,
+            "available_seconds": 8.530667970888317
+          },
+          {
+            "budget": 40,
+            "iteration": 7,
+            "selected_gap": 0.0004999989713950562,
+            "available_seconds": 10.820524515584111
+          }
+        ],
+        "weight_rule_checks": 8,
+        "cost_rule_checks": 0,
+        "omitted_mass": "5369266971004237/109684753201889280",
+        "seconds": 3.796036122366786,
+        "scope": "Independent finite numerical replay; no eventual, all-optima or certified floating MW guarantee"
+      }
+    },
+    {
+      "folder": "Paper/research/jw_computational_tests_2026-09-23/quality/design_preflight/v3_information_face0",
+      "result": {
+        "status": "passed",
+        "arm": "information_face0",
+        "residual": 2.5134323407283166e-09,
+        "rounds": 2,
+        "accepted_rounds": 2,
+        "cuts": 261,
+        "averages": 0,
+        "endpoints": [
+          {
+            "budget": 2,
+            "iteration": 1,
+            "selected_gap": 8.465450562766819e-16,
+            "available_seconds": 1.0196889387443662
+          },
+          {
+            "budget": 10,
+            "iteration": 1,
+            "selected_gap": 8.465450562766819e-16,
+            "available_seconds": 1.0196889387443662
+          },
+          {
+            "budget": 40,
+            "iteration": 1,
+            "selected_gap": 8.465450562766819e-16,
+            "available_seconds": 1.0196889387443662
+          }
+        ],
+        "weight_rule_checks": 1,
+        "cost_rule_checks": 0,
+        "omitted_mass": "5369266971004237/109684753201889280",
+        "seconds": 0.9487662650644779,
+        "scope": "Independent finite numerical replay; no eventual, all-optima or certified floating MW guarantee"
+      }
+    },
+    {
+      "folder": "Paper/research/jw_computational_tests_2026-09-23/quality/design_preflight/v3_information_face1",
+      "result": {
+        "status": "passed",
+        "arm": "information_face1",
+        "residual": 4.778709372654788e-11,
+        "rounds": 3,
+        "accepted_rounds": 3,
+        "cuts": 391,
+        "averages": 0,
+        "endpoints": [
+          {
+            "budget": 2,
+            "iteration": 0,
+            "selected_gap": 0.08444709677612919,
+            "available_seconds": 1.2438902221620083
+          },
+          {
+            "budget": 10,
+            "iteration": 2,
+            "selected_gap": 4.8987744416528756e-11,
+            "available_seconds": 2.940397468395531
+          },
+          {
+            "budget": 40,
+            "iteration": 2,
+            "selected_gap": 4.8987744416528756e-11,
+            "available_seconds": 2.940397468395531
+          }
+        ],
+        "weight_rule_checks": 2,
+        "cost_rule_checks": 0,
+        "omitted_mass": "5369266971004237/109684753201889280",
+        "seconds": 1.1808119425550103,
+        "scope": "Independent finite numerical replay; no eventual, all-optima or certified floating MW guarantee"
+      }
+    },
+    {
+      "folder": "Paper/research/jw_computational_tests_2026-09-23/quality/design_preflight/v3_minimax",
+      "result": {
+        "status": "passed",
+        "arm": "minimax",
+        "residual": 1.983135877736686e-11,
+        "rounds": 13,
+        "accepted_rounds": 13,
+        "cuts": 1691,
+        "averages": 0,
+        "endpoints": [
+          {
+            "budget": 2,
+            "iteration": 2,
+            "selected_gap": 0.05323521933999986,
+            "available_seconds": 1.445055560208857
+          },
+          {
+            "budget": 10,
+            "iteration": 12,
+            "selected_gap": 1.035768693036232e-13,
+            "available_seconds": 8.400981733575463
+          },
+          {
+            "budget": 40,
+            "iteration": 12,
+            "selected_gap": 1.035768693036232e-13,
+            "available_seconds": 8.400981733575463
+          }
+        ],
+        "weight_rule_checks": 12,
+        "cost_rule_checks": 0,
+        "omitted_mass": "5369266971004237/109684753201889280",
+        "seconds": 4.6176661206409335,
+        "scope": "Independent finite numerical replay; no eventual, all-optima or certified floating MW guarantee"
+      }
+    },
+    {
+      "folder": "Paper/research/jw_computational_tests_2026-09-23/quality/design_preflight/v3_tractability",
+      "result": {
+        "status": "passed",
+        "arm": "tractability",
+        "residual": 2.866075744789587e-10,
+        "rounds": 8,
+        "accepted_rounds": 8,
+        "cuts": 1044,
+        "averages": 7,
+        "endpoints": [
+          {
+            "budget": 2,
+            "iteration": 2,
+            "selected_gap": 0.04258952928601438,
+            "available_seconds": 1.7884036786854267
+          },
+          {
+            "budget": 10,
+            "iteration": 6,
+            "selected_gap": 0.001529738780461587,
+            "available_seconds": 9.532316115684807
+          },
+          {
+            "budget": 40,
+            "iteration": 7,
+            "selected_gap": 0.0004152664883791124,
+            "available_seconds": 11.310804923065007
+          }
+        ],
+        "weight_rule_checks": 0,
+        "cost_rule_checks": 0,
+        "omitted_mass": "5369266971004237/109684753201889280",
+        "seconds": 4.732634286396205,
+        "scope": "Independent finite numerical replay; no eventual, all-optima or certified floating MW guarantee"
+      }
+    }
+  ],
+  "checker_sha256": "cfa5180341d40c6eaf90831771f71ba7057357c097f4425e0e7bfe0a50d9a17a"
+}
