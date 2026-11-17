@@ -1,0 +1,182 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,enumitem,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,linkcolor=blue}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+\setlist{nosep,leftmargin=*}
+\title{Learning to collect evidence against adversarial tests}
+\author{Experiment explainer and protocol}
+\date{17 November 2026}
+\begin{document}
+\maketitle
+
+\textbf{Question.} Can a learned generator find interactions that expose missing
+information, and thereby help a collector acquire more reusable evidence than
+adding random target interactions? This pilot tests that idea on small environments
+where an independent calculation can distinguish learning failure from an
+unavoidable information tradeoff.
+
+\section{The algorithm should accommodate tradeoffs}
+Suppose an environment has two hidden bits but allows reading only one of them.
+A collector that reads the left bit can reproduce another left-bit reading
+exactly. A right-bit target exposes information that collector lacks. Reading
+right instead loses the previous capability; no collector can reproduce both
+targets exactly. Randomly choosing which bit to read balances the errors, but
+still reveals only one bit on each run.
+
+We will therefore minimize the \emph{largest simulation error} across retained
+targets. Each error is measured using the best available randomized decoder,
+required to work across the possible worlds. The algorithm may trade a smaller
+error on one target for a larger error on another. Positive error can be the best
+feasible result. Earlier targets remain in the archive so that their losses
+remain visible and continue to enter the objective.
+
+\section{Why maximum and the reference score differ}
+The paper's reference score $J_w$ subtracts a positively weighted average of
+eventual target errors from one. A decrease in any error, with none increasing,
+strictly improves that weighted score. A largest-error score can stay unchanged
+when a smaller error decreases. Its preference for balancing the hardest targets
+is a reasonable additional choice, but does not retain every strict improvement.
+
+For a concrete native example, let three hidden bits vary independently across
+eight worlds. One irreversible action reveals the first bit, another reveals
+the first two bits, and a third reveals the last bit. No later observation gives
+information. Reading two bits strictly improves on reading the first bit alone,
+yet both collectors have worst native simulation error $1/2$: neither reveals
+the last bit. Mixing the three available target actions cannot increase that
+bound. Thus taking the supremum over all native targets still allows this tie.
+
+A finite maximum is continuous as a function of its finite vector of errors,
+although ties can make it nondifferentiable. An infinite supremum need not be
+continuous under coordinatewise convergence. The eventual collection-time limit
+introduces another issue. This pilot uses finite budgets and finitely many
+targets; it does not approximate the numerical value of $J_w$ with a proved error
+bound.
+
+\section{The small environments and available data}
+Each world specifies two bits, giving four possible worlds. There are three
+actions: read left, read right, and request a fresh fair coin. Every observation
+is binary. A collector receives two action--observation pairs on each evaluated
+run. Target interactions also last two steps.
+
+We will use three environments:
+\begin{enumerate}
+\item \textbf{Compatible readings.} Reading an indicated bit is exact and can be
+repeated. The collector can read both bits within the budget. The coin action
+has no effect on later readings.
+\item \textbf{Irreversible choice.} The first action returns the chosen bit or
+a fair coin. Every second observation is zero. The two reading targets compete;
+their best balanced error is $1/4$.
+\item \textbf{Noisy readings.} Each bit reading is independently correct with
+probability $0.85$. The coin action remains independent of the world. At this
+finite budget, information can remain missing even after the best collection.
+\end{enumerate}
+
+The training procedure receives reset episodes from each of the four labelled
+worlds, with uniformly random actions. From those samples it estimates the
+observation probabilities after each history and proposed action. Training then
+uses these empirical response tables. The trainer knows which world generated
+each episode; the collector and decoder receive no world label. Each evaluated
+record contains only the two interactions of the frozen collector. Training
+episodes are not silently added to that record.
+
+This is a sampled-data, model-based pilot with strong access assumptions:
+repeatable resets and labelled training access to every world. It does not model
+learning from one irreversible encounter with an unknown environment. The true
+response probabilities and exact optimization routines are reserved for
+evaluation, not used for learner updates or target selection.
+
+\section{The three learned components}
+A deterministic two-step target chooses an initial action and a second action
+for each of the two possible first observations. There are $3^3=27$ such target
+policies. The generator learns three categorical action distributions and uses
+them to propose these contingent policies. This finite parameterization is a
+deliberate first test; it supplies no generalization to longer programs.
+
+The collector is a stochastic table over the seven decision histories: the
+empty history and the six possible first action--observation pairs. The decoder
+is a stochastic table whose input is one of the 36 possible full collected
+histories. For each target, the decoder outputs one of its four observation
+strings. The known deterministic target reconstructs its own actions from those
+observations, so this output represents the full target history exactly.
+
+Let $E_\pi(\theta,h)$ be the empirical probability of collected history $h$
+under collector $\pi$ in world $\theta$. For a target $\tau$, let
+$F_\tau(\theta,y)$ be the empirical probability of its observation string $y$.
+The decoder $G_\tau(y\mid h)$ gives the probability of simulated output $y$
+after collected history $h$. Its achieved error is
+\[
+ d(\pi,G_\tau,\tau)=\max_\theta\frac12\sum_y
+ \left|\sum_h E_\pi(\theta,h)G_\tau(y\mid h)-F_\tau(\theta,y)\right|.
+\]
+Minimizing this error over all stochastic decoders gives finite-experiment
+deficiency. A fitted decoder can have higher error because training is
+imperfect. We will report that difference separately.
+
+The collector and its decoder bank train to reduce the largest achieved error
+over the retained targets. Updates alternate between fitting
+decoders for the current collector and improving the collector with the
+decoders held fixed. Categorical probabilities are represented by trainable
+parameters; gradients of the finite empirical distribution loss provide the
+updates. This optimization may find a local solution or fail to settle.
+Each collector action retains probability at least $0.005$. We report both the
+unrestricted reference optimum and the optimum with this same probability
+floor, so the imposed randomization is not mistaken for failed optimization.
+
+\section{One iteration and its comparison}
+Both methods start with the repeated-left target and the same collector
+initialization. At each iteration:
+\begin{enumerate}
+\item Fit decoders and update the collector against every archived target.
+\item Freeze the collector and propose a bounded batch of omitted targets.
+Fit their decoders with a separate fixed training budget.
+\item The adversarial generator uses fitted simulation errors to update its
+action probabilities and adds a difficult candidate. The random control samples
+uniformly and adds a random candidate. Both receive the same number of candidate
+queries and decoder updates; generator overhead and wall time are reported.
+\item Refit the collector against the enlarged archive. Save the collector,
+decoders, generator, losses and random seed, then perform the independent audit.
+\end{enumerate}
+
+A fair-coin target should be simulable by generating a fresh fair coin. Comparing
+distributions makes that possible; predicting the specific random outcome of a
+separate run would reward the wrong behavior. An undertrained decoder can still
+make noise look difficult, so decoder fitting is part of the experiment rather
+than an assumption that all observed error is missing information.
+
+An additional control samples candidates uniformly but retains the candidate
+with largest fitted error. This separates learning the proposal distribution
+from selecting a difficult member of a random batch. A further diagnostic
+trains against all 27 targets from the start. That diagnostic receives the same
+number of collector updates but more decoder work, so it is not an equal-cost
+competitor.
+
+\section{Evaluation and the meaning of success}
+The independent audit computes true-world deficiencies to all 27 targets using
+linear programming. A separate optimization supplies the best finite minimax
+collector, and numerical feasibility and dual bounds check the reference. These
+calculations do not choose targets or train the learned collector.
+
+We will compare adversarial and random target additions using paired seeds,
+identical training samples, collection budgets, candidate budgets and collector
+update counts. The primary measure is the true largest target deficiency after
+each archive expansion. We also retain every target error, achieved decoder
+error, distance above the reference optimum, action probabilities, selected
+targets and computational cost. The main comparison includes every registered
+seed and environment, including failures. Improvements on individual targets
+will not be described as universal dominance.
+
+Mechanics checks precede the main runs: normalized experiments; correct action
+reconstruction; identical decoder and full-history evaluations; zero deficiency
+for world-independent noise; the analytic irreversible bound; and agreement
+between separate numerical evaluators. Development runs are labelled separately.
+The final run configuration and source hashes will be frozen before the paired
+main runs. Changes after inspecting main results require a separate recorded run.
+
+The useful outcome could be better target discovery, an informative failure of
+the learned loss, or evidence that the extra adversarial search is unnecessary
+on these cases. We will not treat failure to find a new challenge as a convergence
+certificate. This experiment supplies no universal stopping rule for the eventual
+score, sample-efficiency theorem, or guarantee on unseen world classes.
+\end{document}

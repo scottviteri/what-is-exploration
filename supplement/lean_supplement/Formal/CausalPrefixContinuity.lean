@@ -5,9 +5,11 @@ import Formal.DominatedPrefix
 /-!
 # Finite-class prefix continuity on the causal path space
 
-**Relevance:** direct current-paper support for `prop:l1-prefix` (finite-class
-specialization) and the finite-prefix half of `thm:finite-recovery` in
-`Paper/draft/main.tex`.
+This is the finite-class specialization of prefix continuity and the
+finite-prefix step in finite-class recovery. The canonical full reader is
+`Paper/draft/exploration_long.tex`; current short-paper use is recorded in
+`Formal/PAPER_SUPPORT.json`. The finite-class convergence theorem below does
+not extend to arbitrary infinite classes without additional regularity.
 
 `DominatedPrefix.lean` proves prefix continuity for an abstract filtration on
 an abstract standard-Borel space, with the prefix experiment encoded as the

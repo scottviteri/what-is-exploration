@@ -1,0 +1,114 @@
+Independent audit of the adversarial native-learning pilot
+17 November 2026
+
+Scope
+
+This audit checks the finite experiment semantics, numerical evaluation,
+training/evaluation separation, reproducibility, and saved evidence. It does not
+prove convergence of the learner, approximation to the eventual J_w score,
+sample efficiency, or generalization beyond the declared worlds and budgets.
+All LP bounds are floating-point numerical evidence, not exact rational or Lean
+certificates. Their residuals, dual corrections, and rounding allowances remain
+visible in the saved oracle outputs.
+
+Independent mechanics checks: PASSED
+
+Command:
+  python3 test_pilot.py --output independent-checks.json
+
+The test source uses an independently written observation-law evaluator rather
+than the pilot's table builder. It checks 87 source/target channel constructions
+and probability normalization. Fifteen decoder-LP comparisons confirm that
+decoding the deterministic target's observation string is equivalent to decoding
+its reconstructed full action-observation history. All 27 target laws are also
+checked directly against full-history execution.
+
+Analytic examples verify the exact irreversible error curve: a collector reading
+left with probability s has errors (1-s)/2 and s/2 on the two bit targets. The
+fair mixture therefore has errors 1/4 and 1/4. In the compatible environment,
+reading both bits exactly simulates all 27 targets. The pure-noise target has
+zero deficiency in all three environments, including the noisy-reading case.
+
+The three-bit counterexample gives profiles (0,1/2,1/2) for reading the first
+bit and (0,0,1/2) for reading the first two. The second record strictly improves
+the first while their largest native errors agree. This supports the explainer's
+distinction between the finite minimax preference and the weighted reference
+score's strictness property; the numerical checks do not constitute a new Lean
+formalization of that example.
+
+Numerical oracle checks
+
+The pilot's sparse decoder LP is compared with the older independently authored
+dense deficiency LP in Experiments/src/idexp/lp.py on 18 source/target pairs.
+Every unrestricted and per-action-floor reference collector is replayed against
+all 27 targets with that independent evaluator. Compatible and irreversible
+unrestricted optima agree with their analytic values 0 and 1/4. The learned
+parameterization imposes a .005 lower bound on each action probability, so the
+separate floor-constrained reference is necessary when attributing residual loss
+to training. Twenty-five deliberately nonoptimal dual choices check that the
+box-corrected weak-duality formula remains a lower bound on an elementary LP
+with known optimum 2.1.
+
+Training and selection checks
+
+The learner receives empirical response tables only. Its policy has seven
+history-indexed action rows, and its decoder inputs have 36 full collected
+histories; neither has a world-indexed input. World labels enter the training
+loss because the protocol explicitly grants labelled resets to every world.
+Fail-fast replacements of the true-table and exact-oracle functions do not
+interrupt learner runs. Input tables remain unchanged.
+
+Repeated seeded runs are identical apart from timing fields. A callback that
+mutates its supplied policy, decoder and archive and returns a replacement does
+not alter training. Each callback receives a deep copy and its return is ignored.
+The supplied runner evaluates true and empirical models only after run_training
+returns, providing an additional separation from selection and learning.
+
+Adversarial, random, and hardest_uniform methods have identical initial
+collectors, paired first candidate batches, and matching non-generator update
+and candidate-query budgets. The learned generator's extra updates are counted.
+Random selection is reconstructed from its separate RNG stream and does not use
+fitted errors. Both hardest-target methods select the largest fitted candidate
+error; hardest_uniform leaves its generator uniform and performs no generator
+updates. Selection-time candidate decoders are retained so that their errors can
+be replayed before the accepted decoder is refit.
+
+Development replay: PASSED
+
+Command:
+  python3 test_pilot.py --results development/initial --allow-legacy-candidates \
+    --output development-replay.json
+
+All nine development runs, 36 checkpoints, and six reference policies passed.
+The audit independently recomputed 1,674 decoder-LP values and reproduced all
+sampled datasets from the frozen sampling source. This older development run
+predates saved candidate-decoder witnesses. Eighteen candidate-score replay
+checks are explicitly skipped; the recorded selection scores and RNG choices
+remain checked. The legacy exemption is not permitted for the main cohort.
+
+Main cohort replay: PASSED
+
+Command:
+  python3 test_pilot.py --results main --output main-independent-replay.json
+
+All 72 registered runs and 432 saved checkpoints passed. The checker verified
+every frozen source hash, regenerated all 18 sampled datasets, and replayed all
+1,080 selection-time candidate scores from saved decoder witnesses. There were
+no skipped candidate-witness checks. The independent dense LP computed 15,228
+decoder values across 564 distinct source profiles, covering every saved true
+and empirical target profile. Six saved reference collectors also passed
+independent replay. Archived decoder errors, fitted empirical losses, paired
+budgets, target acceptance, and score-independent random choices agreed with
+the saved records.
+
+The largest distance of a dense-LP value outside the corresponding sparse-LP
+numerical interval was 1.98e-9, below the comparison tolerance of 2e-8. This
+small discrepancy is retained in main-independent-replay.json; the intervals
+are numerical estimates and do not have an exact enclosure guarantee. The full
+suite, including the mechanics and learner checks above, completed in 61.3
+seconds with no failures. The replay record retains hashes of the independent
+test source, the older dense-LP source, and each saved training and audit file.
+
+Evidence files:
+  main-independent-replay.json
+  main-independent-replay.log

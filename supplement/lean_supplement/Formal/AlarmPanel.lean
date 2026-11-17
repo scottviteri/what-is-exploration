@@ -2,7 +2,13 @@ import Formal.CausalBehaviorExperiment
 import Formal.DeterministicDeficiency
 
 /-!
-# The shared alarm and panel controlled interface
+# Historical alternating alarm and panel interface
+
+This is the original four-observation law, with random startup displays and
+alternating display/monitor rounds. It is not the current paper's response law.
+The current deterministic-startup paired law is `Formal.PairedAlarm`; its final
+objective comparisons are in `Formal.PairedAlarmComparison`. Older results in
+this namespace keep the response law and horizon conventions defined here.
 
 Three actions, four raw observations and a countable alarm-time class. The
 first action alone selects the mode. All policies retain every monitor tick.

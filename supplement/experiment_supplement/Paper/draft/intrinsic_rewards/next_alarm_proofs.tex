@@ -1,0 +1,294 @@
+% Authored appendix for the next draft. The source is deliberately independent
+% of the main paper's private notation macros.
+\section{The alarm construction and specified objectives}
+\label{app:alarm}
+
+This appendix supplies the literal reward definitions behind the comparison.
+All returns below are expectations under the same geometric prior,
+$\alpha(\infty)=1/2$ and $\alpha(k)=2^{-(k+2)}$, except where a fixed-world
+quantity is explicitly used before averaging. The native comparison takes a
+supremum over worlds and does not use this prior. Logarithmic rewards are reported in bits.
+For nonnegative rewards, the complete return is the limit of the finite returns. A discounted return includes the startup decision with weight one.
+These aggregation conventions are part of each objective.
+
+\subsection{The interface and its exact native error}
+Use the interface defined in Section~\ref{sec:alarm}, abbreviating INSPECT,
+PLAY$_0$, and PLAY$_1$ by $\mathsf I,\mathsf P_0,\mathsf P_1$. We retain every
+action and observation in the history. Let $b(\theta)$ be the inspection answer
+in world $\theta$, and let $g(a)$ be the active display's digit after action $a$.
+Thus $b(\theta)=\mathbf1\{\theta<\infty\}$ and
+$g(a)=\mathbf1\{a=\mathsf P_1\}$.
+
+Let $s=\pi(\mathsf I\mid\varnothing)$ and let $T_{\mathsf I}$ denote the
+actual one-observation inspection experiment, with observation $(2b(\theta),0)$
+(written $F$ in Section~\ref{sec:alarm}).
+For a target experiment $T$, write $\delta(K_{\pi,t},T)$ for its deficiency
+from the length-$t$ history acquired by $\pi$. The depth-$n$ native audit is the
+supremum of this deficiency over the finite interventions of length at most
+$n$ available on the interface.
+
+\begin{theorem}[The common audit]\label{thm:next-alarm-audit}
+For every randomized history policy $\pi$ and every $t\ge1$,
+\[
+ \delta(K_{\pi,t},T_{\mathsf I})=\frac{1-s}{2}.
+\]
+For every $t\ge n\ge1$, the depth-$n$ native audit has the same value.
+Inspection simulates every policy's experiment at the same positive horizon.
+Consequently $\pi$ is natively sufficient exactly when $s=1$; when $s<1$, an
+inspection policy strictly dominates $\pi$ in the finitary process preorder.
+\end{theorem}
+\begin{proof}
+Fix $t$ and compare $\infty$ with a finite world whose pulse comes after $t$.
+Conditional on a play startup, their history laws agree, including the adaptive
+action factors. Conditional on inspection, their root observations are respectively
+$(0,0)$ and $(2,0)$. Since the initial action remains in the history, the total variation
+distance of the two source rows is exactly $s$. The corresponding target rows
+have distance one. If a decoder has error at most $\varepsilon$ in each world,
+contraction and the triangle inequality give $1\le s+2\varepsilon$.
+
+For the upper bound, extract the alarm coordinates in the source history. An inspected
+history also gives the correct bit $b$. On a play history, guess $b$ fairly.
+Choose a world consistent with the bit and the recorded alarm prefix, and
+simulate the target with its own policy randomness and the fresh color bits
+required on a play branch. If the
+guessed bit is consistent and correct, all worlds still compatible with this
+summary have identical target laws through depth $n\le t$. An impossible
+summary can be filled arbitrarily. Thus inspection is exact, and the play
+branch contributes error at most $1/2$. This proves the audit upper bound;
+the startup target gives equality. The same decoder at $s=1$ proves
+same-horizon sufficiency. A positive startup deficit at every source horizon
+prevents reverse finitary domination.
+\end{proof}
+
+The lower bound concerns uniform simulation across worlds: the late-alarm world
+may change with $t$, so the argument does not require one fixed finite alarm to
+remain hidden forever. The upper bound likewise concerns simulated observations;
+regenerating the display's random outputs from retained evidence does not make
+the inspecting agent's physical display responsive again.
+
+\subsection{Continuing pseudo-count bonuses at arbitrarily large horizons}
+Let $O=\{0,1,2,3\}\times\{0,1\}$ be the raw observation alphabet, and
+let $N_h(o)$ count occurrences of the whole pair $o\in O$ in a length-$t$
+history $h$. A categorical probability model assigns one adjustable count
+to each label. With initial count one on each of the eight labels, its probability
+before and after one further occurrence of $o$ is
+\[
+ \rho_h(o)=\frac{N_h(o)+1}{t+8},\qquad
+ \rho'_h(o)=\frac{N_h(o)+2}{t+9}.
+\]
+The density-update construction of \citet[Equations (1)--(2)]{bellemare2016unifying}
+defines the effective count by
+\[
+ \widehat N_h(o)=\frac{\rho_h(o)(1-\rho'_h(o))}{\rho'_h(o)-\rho_h(o)}
+               =N_h(o)+1.
+\]
+We reward $1/\sqrt{\widehat N_h(o)}$ before updating the model. This is the
+inverse-square-root specialization with unit scale and the stated initialization;
+it does not use their learned image model or numerical bonus offset. Let $S(n)$
+be the cumulative bonus from $n$ occurrences of one label:
+$S(n)=\sum_{j=1}^n j^{-1/2}$ and $S(0)=0$. Let $N_H(o)$ be the counts in a
+length-$H$ history. Write $R_H$ for its cumulative reward and
+$J_H^{\rm pseudo}(\pi)$ for its expected value under policy $\pi$. Then
+\[
+ R_H=\sum_{o\in O} S(N_{H}(o)),\qquad J_H^{\rm pseudo}(\pi)=\mathbb E R_H.
+\]
+Expectation includes the prior, observations, and policy randomization.
+
+\begin{proposition}[Continuing count bonus]\label{prop:alarm-pseudocount}
+On the fixed alarm interface, for every integer $H\ge64$, the objective
+$J_H^{\rm pseudo}$ has an attained global maximum over all randomized history
+policies. Every maximizer skips initial inspection. Every extension of a maximizing
+length-$H$ policy has inspection-target deficiency $1/2$ at every positive collection
+time and eventually, and is strictly finitarily dominated by sufficient inspection.
+\end{proposition}
+\begin{proof}
+The elementary bounds
+\[
+ 2\sqrt{n+1}-2\le S(n)\le2\sqrt n,\qquad S(a+b)\le S(a)+S(b)
+\]
+follow by telescoping square-root increments and decreasing summands.
+On any inspection branch at most two observations differ from $(0,0)$: the startup
+answer $(2,0)$ and the single possible alarm pulse $(0,1)$. All others are $(0,0)$,
+regardless of subsequent actions. Hence every such branch satisfies
+\[
+ R_H\le S(H)+2\le2\sqrt H+2.
+\]
+By contrast, start with PLAY and then alternate PLAY$_0$ and PLAY$_1$.
+Let $n_0$ and $n_1$ count the later PLAY$_0$ and PLAY$_1$ actions, respectively.
+Among the $H-1$ later steps, $n_0=\lceil(H-1)/2\rceil$ and
+$n_1=\lfloor(H-1)/2\rfloor$. There are at least $n_0-1$ observations in
+$\{(0,0),(1,0)\}$ and at least $n_1-1$ in
+$\{(2,0),(3,0)\}$, because at most one alarm coordinate is nonzero.
+For $H\ge64$, subadditivity therefore gives, on every supported history,
+\[
+ R_H\ge S(n_0-1)+S(n_1-1)\ge4\sqrt{n_1}-4
+ \ge2\sqrt{2H-4}-4>2\sqrt H+2.
+\]
+These bounds survive prior expectation. Finite alphabets and a finite reward horizon
+make the objective a finite multilinear function of policy rows, so a deterministic
+finite plan attains the global maximum. The displayed PLAY policy strictly outperforms
+every inspection policy. Splitting any policy by the initial action therefore shows
+that a maximizer assigns zero probability to inspection. Changing the maximizer's actions after
+$H$ cannot change this conclusion. The native deficiency and strict domination follow
+from Theorem~\ref{thm:next-alarm-audit}.
+\end{proof}
+
+Unlike finite returns at horizons $H\ge64$, the complete and long-run average
+returns tie all policies. For every
+length-$H$ observation sequence, subadditivity and the square-root bounds give
+\[
+ \sqrt H\le S(H)\le R_H\le2\sum_{o\in O}\sqrt{N_H(o)}\le4\sqrt{2H}.
+\]
+Thus $J_H^{\rm pseudo}(\pi)\to+\infty$ and
+$J_H^{\rm pseudo}(\pi)/H\to0$ for every policy, including sufficient inspection.
+Both limiting objectives tie all policies. This does not negate the proposition's
+strict exclusion of inspection from every sufficiently long finite-horizon optimum.
+The threshold $64$ is a convenient sufficient bound, not an optimal threshold.
+
+\subsection{Information and Brier returns}
+Here the world label $\theta$ is drawn from $\alpha$. Write $\beta_t$ for the
+actual posterior over the countable world labels given the complete length-$t$
+history. The information objective at horizon $t$
+is $I(\theta;H_t)$; its complete value is $\sup_t I(\theta;H_t)$.
+The Brier return sums
+$\mathbb E\|\beta_{t+1}-\beta_t\|_2^2$. It uses posterior probabilities
+of individual worlds, without replacing the geometric tail by one label.
+The name comes from the category-summed quadratic forecast loss of
+\citet[Equations (2)--(4)]{brier1950verification}, whose optimal expected loss
+at a distribution $p$ is $1-\|p\|_2^2$. Expected reductions in this optimal loss
+give the posterior-movement identity used here:
+\[
+ \sum_{j<t}\mathbb E\|\beta_{j+1}-\beta_j\|_2^2
+ =\mathbb E\|\beta_t\|_2^2-\|\alpha\|_2^2.
+\]
+Here $H(\alpha)=2$ bits and $\|\alpha\|_2^2=1/3$.
+Every policy's history yields its alarm prefix by deterministic extraction.
+The information of those prefixes converges to two bits and their expected
+squared posterior norm converges to one. Since the full history determines its
+alarm prefix, these prefix values give lower bounds for each policy. Prior
+entropy and the unit bound on the squared posterior norm supply the matching
+upper bounds. Summing the successive expected score changes therefore
+gives, for every policy,
+\begin{equation}\label{eq:next-complete-posterior}
+ \sup_t I(\theta;H_t)=2,\qquad
+ \sum_{t\ge0}\mathbb E\|\beta_{t+1}-\beta_t\|_2^2=\frac23.
+\end{equation}
+Both complete objectives tie sufficient inspection with incomplete policies.
+
+At each fixed positive finite horizon, however, inspection maximizes both
+information and Brier returns, and equality holds exactly for
+$s=1$. Theorem~\ref{thm:next-alarm-audit} supplies a same-horizon garbling
+from inspection and rules out the reverse garbling when $s<1$. Strictness
+of the actual full-support atomic information and Brier functionals gives
+the strict preference. This positive result concerns the same countable
+class; the change is from a complete return to a fixed finite horizon.
+
+The entire infinite alarm stream determines the world: a pulse identifies its
+finite delay, and an entirely silent stream identifies the never-alarm world.
+The inspection answer can therefore be recovered from that infinite stream.
+Every finite silent play record, however, is still compatible with a later alarm
+and with no alarm. The uniform error in Theorem~\ref{thm:next-alarm-audit}
+therefore persists at every finite collection time.
+
+\subsection{Actual-world block empowerment with complete return}\label{app:alarm-empowerment}
+A two-step probe just after startup sees two display--alarm pairs. In play mode,
+each pair reveals the selected digit and adds an independent fair color, while
+the alarm coordinates depend only on the world. The two controllable digits
+give two bits of capacity; inspection instead makes both responses independent
+of the actions and leaves zero capacity.
+
+Fix a world $\theta$, a collected history $h$, and a positive integer $n$.
+For an imposed action sequence $u\in A^n$ and raw observation sequence $y\in O^n$,
+let $W_{\theta,h,n}(y\mid u)$ be the probability of $y$ when executing $u$
+from $h$ under the actual response law. The probe does not adapt to intermediate
+outputs. Its input distribution $\nu$ ranges over distributions on $A^n$.
+Let $U$ and $Y$ denote the proposed action and resulting observation blocks.
+Their joint law and the observation marginal are
+\[
+ P_{\nu,\theta,h,n}(u,y)=\nu(u)W_{\theta,h,n}(y\mid u),\qquad
+ m_{\nu,\theta,h,n}(y)=\sum_u\nu(u)W_{\theta,h,n}(y\mid u).
+\]
+Define the physical channel capacity, in bits, by
+\[
+ C_{\theta,n}(h)=\max_\nu\sum_{u,y}\nu(u)W_{\theta,h,n}(y\mid u)
+       \log_2\frac{W_{\theta,h,n}(y\mid u)}{m_{\nu,\theta,h,n}(y)}.
+\]
+Zero-probability terms contribute zero. Finite alphabets make the maximum
+attainable and give $0\le C_{\theta,n}(h)\le n\log_2|A|$.
+There is no posterior mixture inside this channel. The maximizing probe
+law may differ between worlds, because capacity describes the physical
+channel; the collecting policy remains one world-independent history rule.
+The same world governs every step of a probe and the entire collected run.
+
+At any nonempty history, every one of the next $n$ observations contains a display.
+Consequently
+\[
+ C_{\theta,n}(h)=n\,\mathbf1\{h\text{ started in play mode}\}.
+\]
+Indeed, the observation block reveals the vector of proposed digit bits at
+its $n$ steps. Conditional on that vector, the remaining randomness is
+independent fair color; the alarm sequence is fixed by $\theta$ and the clock.
+The channel factors through the digit vector, so its mutual information is at
+most that vector's entropy, bounded by $n$ bits. Independent fair choices
+of PLAY$_0$ and PLAY$_1$ at every step attain the bound. After inspection
+all outputs are action-independent, hence capacity is zero. This also proves
+that the full-block capacity at a nonempty history equals the sum of the
+terminal-sensor capacities for probe lengths $1,\ldots,n$ on this particular
+interface; that equality is not a general channel identity.
+
+Write $s=\pi(\mathrm{INSPECT}\mid\varnothing)$ and
+$b_n=\mathbb E_{\theta\sim\alpha}C_{\theta,n}(\varnothing)$.
+The uniform bound on capacity makes $b_n$ finite and nonnegative.
+For every randomized history policy and every $T\ge1$, the actual finite
+expected return is
+\begin{equation}\label{eq:actual-block-finite}
+ R_{n,T}(\pi):=\mathbb E_{\alpha,\pi}\sum_{t=0}^{T-1}C_{\theta,n}(H_t)
+ =b_n+n(1-s)(T-1).
+\end{equation}
+The expectation averages world-specific capacities after their evaluation,
+and arbitrary policy and response randomness. Startup contributes the same
+$b_n$ for every collecting policy. Each of the $T-1$ later histories contributes
+$n$ in play mode and zero in inspection mode.
+
+\begin{proposition}[Complete actual-world empowerment]\label{prop:actual-block-complete}
+For each fixed positive probe length $n$, the nonnegative cumulative objective
+$J_{{\rm emp},n}(\pi)=\sup_T R_{n,T}(\pi)$ satisfies
+\[
+ J_{{\rm emp},n}(\pi)=
+ \begin{cases}b_n,&s=1,\\+\infty,&s<1.\end{cases}
+\]
+Its maximum is attained, and a policy maximizes it if and only if $s<1$.
+Every maximizer is strictly finitarily dominated by inspection. Its deficiency
+at every positive collection time and its eventual inspection deficiency are
+$(1-s)/2$, and the set of optimal deficiencies is exactly $(0,1/2]$.
+\end{proposition}
+\begin{proof}
+The coefficient of $1-s$ in~\eqref{eq:actual-block-finite} is unbounded for
+every $n\ge1$, since it equals $n(T-1)$.
+If $s=1$, every positive-horizon return is $b_n$. Otherwise the finite sums
+diverge to infinity. A policy that always plays attains this infinite maximum.
+The common audit gives $(1-s)/2$ and strict inspection domination whenever
+$s<1$. Every value in $(0,1/2]$ is realized by randomizing at startup as follows: for a desired deficiency $d\in(0,1/2]$, choose $s=1-2d$. There is no positive uniform
+lower bound on the deficiencies of all optimal policies.
+\end{proof}
+
+No time average, discount, or infinite-probe capacity is substituted into this
+objective. At each fixed finite reward horizon $T\ge2$, the maximizers instead
+have $s=0$; taking the complete sum introduces the additional infinite ties.
+The full observation block is explicitly permitted by
+\citet[Section~2.2, paragraph after Equation~(3)]{klyubin2005empowerment}.
+The undiscounted cumulative return is the comparison chosen here; it is not
+attributed to the source's learning or evolutionary algorithm.
+
+The argument above is a written proof for the stated response law.
+The formalization boundary, including the full-block capacity calculation and
+the startup expectation, is recorded in Appendix~\ref{app:verification}.
+
+\subsection{The native score on this interface}
+Inspection is sufficient by Theorem~\ref{thm:next-alarm-audit}.
+For the rich target family and strictly positive weights of
+Theorem~\ref{thm:strict-finitary-objective}, the maximizing policies are therefore
+exactly the sufficient policies:
+\[
+ \pi\in\operatorname*{arg\,max}J_w\quad\Longleftrightarrow\quad s=1.
+\]

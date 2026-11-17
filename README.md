@@ -3,51 +3,55 @@
 Scott W Viteri, Laura Gomezjurado Gonzalez, and Clark Barrett — Stanford University.
 Contact: scottviteri@gmail.com.
 
-Repository: [what-is-exploration](https://github.com/scottviteri/what-is-exploration).
-Evidence snapshot: [arxiv-v1](https://github.com/scottviteri/what-is-exploration/tree/arxiv-v1).
-The tag identifies the companion snapshot prepared for the first arXiv submission;
-it does not assert that arXiv has announced the paper. Later paper versions will
-have their own tags in this same repository.
+This is the companion artifact for the current rebuttal revision, published on
+the dated snapshot branch
+[rebuttal-2026-11-16](https://github.com/scottviteri/what-is-exploration/tree/rebuttal-2026-11-16).
+It contains the named-author manuscript, selected Lean proofs, experiment code
+and retained evidence. Publishing this snapshot does not submit a revised paper
+to ICLR or arXiv. The original [arxiv-v1 snapshot](https://github.com/scottviteri/what-is-exploration/tree/arxiv-v1)
+remains fixed.
 
-The manuscript and source ZIP on `main` include the 1 October 2026 layout
-correction: appendix figures and captions fit within the page, the history
-formula is displayed, and the final paragraph flows into the acknowledgements
-without a nearly empty page. This reduces the PDF from 46 to 45 pages. Scientific
-content and the code/data supplement are unchanged. The already-published
-`arxiv-v1` tag retains its original manuscript and source ZIP.
+The paper compares intrinsic rewards by the counterfactual evidence acquired by
+their maximizing policies. This revision uses deterministic startup and paired
+observations in the alarm example, full observation blocks for empowerment, and
+the specified Bayesian prediction-gain comparison. The proof package distinguishes
+these results from historical constructions and supporting lemmas.
 
-This companion artifact contains the manuscript, the Lean sources selected for
-its claims and their dependencies, and the experiment code and selected evidence.
-The paper compares intrinsic rewards by the counterfactual information acquired
-by their optimal policies. The finite study evaluates selected policies under
-supplied response laws; it does not train agents from sampled experience.
+The 22-class study uses supplied-model planning. A separate two-bit pilot trains
+collector, decoder and target-generator probability tables using labelled reset
+samples. Its finite numerical results do not establish a convergence, scalability
+or eventual native-score approximation guarantee. Favorable controls, adverse
+findings, decoder limitations and data-access assumptions are retained.
 
 ## Read and reproduce
 
-- [Paper with mathematical appendices](paper/paper.pdf).
-- [Self-contained manuscript sources](paper/arxiv-source.zip): compile `paper.tex`
-  with pdfLaTeX. The bibliography output is included.
-- [Lean instructions](supplement/lean_supplement/README.md): the pinned toolchain,
-  selected claim records, module dependencies, and build commands are included.
-- [Experiment instructions](supplement/experiment_supplement/README.md): restore
-  duplicate data paths with `python3 materialize.py`, install the pinned CPU
-  requirements, and run `python3 Experiments/supplement_smoke.py` from that folder.
-- [Combined supplement scope](supplement/README.md) and
-  [file hashes](RELEASE_MANIFEST.json).
+- [Paper and mathematical appendices](paper/paper.pdf).
+- [Standalone manuscript source](paper/arxiv-source.zip): compile `paper.tex`
+  with pdfLaTeX; the bibliography output is included.
+- [Lean instructions](supplement/lean_supplement/README.md): pinned toolchain,
+  selected claim records, dependencies and build commands.
+- [Experiment instructions](supplement/experiment_supplement/README.md): run
+  `python3 materialize.py` there to restore duplicate data paths, install the
+  pinned CPU requirements, and run `python3 Experiments/supplement_smoke.py`.
+  The separate learning pilot requires the documented PyTorch dependency.
+- [Combined supplement scope](supplement/README.md) and [file hashes](RELEASE_MANIFEST.json).
 
-The scientific supplement is the frozen anonymous-review export, preserved byte
-for byte. Its internal references to anonymity describe that packaging step.
-The public manuscript supplies the authorship and acknowledgements. Selection is
-by proof-module dependency closure and experiment study, so some supporting code
-and research notes remain. The working repository's curriculum, conversation
-catalog, literature PDF collection, and unrelated explorations are not included.
+The Lean claims retain their exact hypotheses. Numerical experiments remain
+numerical evidence, apart from the explicitly identified rational-table proof.
+Exhaustive four-step decoder banks, large native-planning certificates and raw
+learning-pilot decoder banks require regeneration. Compact summaries, source
+code, configurations and independent audit records are included.
 
-The package retains claim qualifications and unfavorable results. Its numerical
-certificates are not Lean proofs. Exhaustive four-step target decoder banks and
-large native-planning master/decomposition certificates require regeneration or
-separately supplied bulk outputs. The Lean supplement has not received an
-independent clean build. Hash verification establishes artifact integrity, not
-scientific correctness or complete end-to-end reproduction.
+The source package is selected by proof dependency and experiment study, so some
+supporting code and research notes remain. Internal references to anonymous
+packaging describe the supplement export; authorship is provided by this named
+manuscript. Private repository history, curriculum, conversations, literature
+PDFs and unrelated research are not part of this public snapshot.
+
+The source bytes are checked against the tested Lean package, and the extracted
+experiment smoke checks and learning-pilot mechanics are checked for this release.
+These checks establish their stated build, integrity and bounded-test results;
+they are not a rerun of the numerical campaigns or a proof of training convergence.
 
 ## Acknowledgements and licensing
 
@@ -55,7 +59,6 @@ This work was supported in part by the Stanford Center for Automated Reasoning.
 Scott W Viteri also acknowledges support through Manifund for earlier exploratory
 research that helped shape the ideas in this paper.
 
-The authors have not yet selected an additional reuse license for this artifact.
+The authors have not selected an additional reuse license for this artifact.
 The manuscript's arXiv license is a separate decision. Third-party dependencies
 retain their own licenses and are obtained through their package managers.
-The public arXiv article link will be added after announcement.

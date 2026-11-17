@@ -5,10 +5,14 @@ import Mathlib.Probability.Kernel.IonescuTulcea.Traj
 /-!
 # Path laws for arbitrary causal response kernels
 
-**Relevance:** direct current-paper support (`Paper/draft/main.tex`, causal path laws in Sections 2
-and 3 and the proof map).  Unlike `PathLaw.lean` and `PathLawExists.lean`, this module uses the
-paper's current primitive directly: arbitrary history-dependent causal response kernels, histories
-in `(A × O)^{<∞}`, and paths in `(A × O)^ℕ`.
+This module constructs the path law induced by a policy and a valid
+history-dependent response presentation, with histories in `(A × O)^{<∞}`
+and paths in `(A × O)^ℕ`. The semantic primitive is the controlled-prefix
+behavior; a raw response kernel presents that behavior and is identified
+modulo controlled-trace equivalence. This path construction does not assert
+that raw kernels are the primitive or that actions have a policy-free law.
+See `CausalBehavior.lean` for the representation bridge and
+`Formal/PAPER_SUPPORT.json` for current paper attribution.
 
 The construction uses one independent dummy coordinate internally so that Mathlib's homogeneous
 Ionescu--Tulcea trajectory API can generate the first real action--observation pair with the same

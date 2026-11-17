@@ -1,0 +1,678 @@
+{
+  "status": "passed",
+  "scope": "independent finite-model semantics; floating-point numerical LP checks",
+  "checks": {
+    "channels": {
+      "status": "passed",
+      "independent_channel_comparisons": 87
+    },
+    "target_history_equivalence": {
+      "status": "passed",
+      "independent_LP_history_equivalences": 15
+    },
+    "analytic_examples": {
+      "status": "passed",
+      "irreversible_analytic_pairs": [
+        {
+          "left_probability": 0.0,
+          "losses": [
+            0.5,
+            0.0
+          ]
+        },
+        {
+          "left_probability": 0.2,
+          "losses": [
+            0.3999999999999999,
+            0.09999999999999995
+          ]
+        },
+        {
+          "left_probability": 0.5,
+          "losses": [
+            0.25,
+            0.25
+          ]
+        },
+        {
+          "left_probability": 0.8,
+          "losses": [
+            0.09999999999999999,
+            0.4
+          ]
+        },
+        {
+          "left_probability": 1.0,
+          "losses": [
+            0.0,
+            0.5
+          ]
+        }
+      ],
+      "compatible_targets_exact": 27,
+      "world_independent_noise_cases": 3
+    },
+    "maximum_tie": {
+      "status": "passed",
+      "profiles": [
+        [
+          0.0,
+          0.5,
+          0.5
+        ],
+        [
+          0.0,
+          0.0,
+          0.5
+        ]
+      ],
+      "interpretation": "strict refinement; same worst native target error"
+    },
+    "sampled_models": {
+      "status": "passed",
+      "sampled_tables": [
+        {
+          "case": "compatible",
+          "uniform_collector_TV_to_true_law": 0.0071708143121327495,
+          "episodes": 32768
+        },
+        {
+          "case": "irreversible",
+          "uniform_collector_TV_to_true_law": 0.0030193236714975875,
+          "episodes": 32768
+        },
+        {
+          "case": "noisy",
+          "uniform_collector_TV_to_true_law": 0.018408831820167823,
+          "episodes": 32768
+        }
+      ],
+      "identical_seed_replay": true
+    },
+    "oracles": {
+      "status": "passed",
+      "independent_decoder_LP_comparisons": 18,
+      "reference_collectors": [
+        {
+          "case": "compatible",
+          "floor": 0.0,
+          "lower": 0.0,
+          "upper": 2e-10
+        },
+        {
+          "case": "compatible",
+          "floor": 0.005,
+          "lower": 0.007481247398503699,
+          "upper": 0.007481250200000074
+        },
+        {
+          "case": "irreversible",
+          "floor": 0.0,
+          "lower": 0.24999999805,
+          "upper": 0.2500000002
+        },
+        {
+          "case": "irreversible",
+          "floor": 0.005,
+          "lower": 0.25124999834975,
+          "upper": 0.2512500002000002
+        },
+        {
+          "case": "noisy",
+          "floor": 0.0,
+          "lower": 0.07760869397561865,
+          "upper": 0.07760869585217701
+        },
+        {
+          "case": "noisy",
+          "floor": 0.005,
+          "lower": 0.07799633809240006,
+          "upper": 0.07799633987392554
+        }
+      ],
+      "arbitrary_dual_checks": 25
+    },
+    "learner": {
+      "status": "passed",
+      "deterministic_replays": 3,
+      "callback_mutation_isolation": true,
+      "no_true_model_or_oracle_calls": true,
+      "candidate_errors_replayed": true,
+      "matched_counters_except_generator": {
+        "collector_gradient_steps": 21,
+        "decoder_optimizer_steps": 63,
+        "decoder_target_steps": 138,
+        "candidate_queries": 6,
+        "candidate_fit_calls": 2,
+        "candidate_target_steps": 36,
+        "generator_gradient_steps": 6,
+        "archive_training_calls": 3
+      },
+      "random_additions_independent_of_scores": true,
+      "hardest_uniform_uses_argmax_without_generator_updates": true
+    },
+    "saved_results": {
+      "status": "passed",
+      "directory": "/tmp/WhatIsExploration-rebuttal/Paper/research/adversarial_native_learning_2026-11-17/main",
+      "phase": "frozen paired pilot; main results",
+      "frozen_source_hashes_verified": true,
+      "sampled_data_strata_replayed": 18,
+      "runs": [
+        {
+          "case": "compatible",
+          "seed": 2101,
+          "method": "adversarial",
+          "training_sha256": "7497dafc06c835dce4475a7f5506a1c4ef868369e55b45765c1b6f6fdbe9f6bd",
+          "audits_sha256": "71d268eccb2b37f8c080d13b83c7efb64316119ba483e6c2c31897c7302d9c78"
+        },
+        {
+          "case": "compatible",
+          "seed": 2101,
+          "method": "random",
+          "training_sha256": "1aae82f764e30631f3d35a6b166e087da7dc72af7b5b2704ceddfe764ef08a2c",
+          "audits_sha256": "0d5b23f67b6317ae45a5e3a28a17ed92d1ff0c0773f1fc3692b744ac9755cc90"
+        },
+        {
+          "case": "compatible",
+          "seed": 2101,
+          "method": "hardest_uniform",
+          "training_sha256": "af3ef53b45c1ec5c78b63ce5c0020ec627417074d8de8482b5183eb2338310ef",
+          "audits_sha256": "1b1cef3b020e452a5a1626288e6281422da08c5bf6d0d1c3feb8abced125b220"
+        },
+        {
+          "case": "compatible",
+          "seed": 2101,
+          "method": "all_targets",
+          "training_sha256": "873bdc202a090c182379c4b604f8af2f4845915ad9a7903c80548d5bde19a179",
+          "audits_sha256": "759cf7a0b64335bcb52f286f4df06dfe8699e8a70d410c082ec668bb92f52d4f"
+        },
+        {
+          "case": "compatible",
+          "seed": 2102,
+          "method": "adversarial",
+          "training_sha256": "9390b6f883860be3d16d9bf980194204ea6258bb5600e5829545179ce2e8857e",
+          "audits_sha256": "058f4d75e32550db07ffcfa17f551c06b352b56b7e9cf16dfac9bbdd67d37a89"
+        },
+        {
+          "case": "compatible",
+          "seed": 2102,
+          "method": "random",
+          "training_sha256": "aecf2f072256684b4c9665ba2338b3b9e9ae17461e1c3a0ee8af6525261fe795",
+          "audits_sha256": "c72baac12b81d15144e8aaec680962b60e43b6a3dbdf66f818373a9872b27a3b"
+        },
+        {
+          "case": "compatible",
+          "seed": 2102,
+          "method": "hardest_uniform",
+          "training_sha256": "bdc48f3aa282a1d98ab897b594cf858f199aeadf71ef643a16cf300ca3058146",
+          "audits_sha256": "25ecf7c70a0b0bba9f1e969e4f33cdd9caf73b85c4faa732c86fb514f4e89bc2"
+        },
+        {
+          "case": "compatible",
+          "seed": 2102,
+          "method": "all_targets",
+          "training_sha256": "a885b83e0a017a88e6959b5638249431027f5ca07a367a0bfb08adf98d160fe1",
+          "audits_sha256": "76eceebdc199fd3a9f508d3a630b7a8baf404acd4144db570dc9707affc475b3"
+        },
+        {
+          "case": "compatible",
+          "seed": 2103,
+          "method": "adversarial",
+          "training_sha256": "22384aaa34dff7a48aa0865ed15acce89426c4a01d64a9e11e3e1a0924befb76",
+          "audits_sha256": "0624fc4d8f8e232ac551abcd3258212bfffd585a9edc758176aead044bdf7cb5"
+        },
+        {
+          "case": "compatible",
+          "seed": 2103,
+          "method": "random",
+          "training_sha256": "8636068bb9df1a5ddf5f1bdee9c58f83ecdc0dbe4675265afcdc5de0138ca371",
+          "audits_sha256": "a7be6804ce9cc5acdc453d62fc9d99bc594fdd00ba43ffdc38860826024f14e2"
+        },
+        {
+          "case": "compatible",
+          "seed": 2103,
+          "method": "hardest_uniform",
+          "training_sha256": "2d2b19a9a895c37a3a75ee15662329628e6b907ee68a5b222672ce321f56f027",
+          "audits_sha256": "f2fc25f09d72405362e7f1e7a8d507f2a2fe49e0de4a5491a47299c6315ca27f"
+        },
+        {
+          "case": "compatible",
+          "seed": 2103,
+          "method": "all_targets",
+          "training_sha256": "afb23b8ae358cdec6db10c26df684c12b964df5f600c5c7c657837c9053989d5",
+          "audits_sha256": "64fdfc1876923b41cbb403f0a151b2247d68e4790883a4834ccf0e2e5d684948"
+        },
+        {
+          "case": "compatible",
+          "seed": 2104,
+          "method": "adversarial",
+          "training_sha256": "8f3eae262f6024c711bea0443817d7bfcf13627fb59b98fafb4faf0e3ea2d7cd",
+          "audits_sha256": "4a98c22fcab24338f0514053bd7b2c33c6a61d45be2c966c29b8bc6e93dbc749"
+        },
+        {
+          "case": "compatible",
+          "seed": 2104,
+          "method": "random",
+          "training_sha256": "6d67951ef5212f2c44c24585b3642f3b73d44ef49cd5dadefb6d64f5814d77d5",
+          "audits_sha256": "c88a91e3f07c6dde4bd7c2c5b62f052efa5faafc545201bb19cecc79de91c55e"
+        },
+        {
+          "case": "compatible",
+          "seed": 2104,
+          "method": "hardest_uniform",
+          "training_sha256": "387c9ced3f37b2709e33e41ace33c1abdb228a203da4d819205df44df70eb752",
+          "audits_sha256": "9f154de0b6b167e619e0d2ac386eb4151ea5d435d44760162ea7ec99dc16d9b0"
+        },
+        {
+          "case": "compatible",
+          "seed": 2104,
+          "method": "all_targets",
+          "training_sha256": "c4e9a006088ac46928b72a0e9232a8daaac1e1c04fddf232ba546f126f7c4fbd",
+          "audits_sha256": "88886352c2b9e13b4b4475535b9871bc350a6449d01884eee22d4826f9f5ceff"
+        },
+        {
+          "case": "compatible",
+          "seed": 2105,
+          "method": "adversarial",
+          "training_sha256": "5f97cfc7215d5f0995ea661cf30966b85a8169ef75b668753e88200a78ca85e5",
+          "audits_sha256": "5a73473af453841bd7f442974cf67311b266afa79d3134f3252d0449ed6251b1"
+        },
+        {
+          "case": "compatible",
+          "seed": 2105,
+          "method": "random",
+          "training_sha256": "8abf4c6ae7ef845c5ffd02d8bf4bf7b1890257d91b58e46803cfe5ee6562b317",
+          "audits_sha256": "e486b621d1291fd8a4b723a4ab746b5402c5767dc9d7361cdcaeabf058eb3337"
+        },
+        {
+          "case": "compatible",
+          "seed": 2105,
+          "method": "hardest_uniform",
+          "training_sha256": "66d0541f4ed7e0665636d6eb6b8271a80cdc06cfda117991e8f3660786fdc2d5",
+          "audits_sha256": "ea66ffc882c85115c1a6c0efa4d717cf94062ebab9e2dc20574fd997f63e65d8"
+        },
+        {
+          "case": "compatible",
+          "seed": 2105,
+          "method": "all_targets",
+          "training_sha256": "3e48827c9ede984879ddea49ffaeea6d02e88cb1680ec3af382d317b11b7cd3a",
+          "audits_sha256": "da562e8efb3ba4c1bc664465aa16c741e1eb4e32de040cd14f47bd9b79476741"
+        },
+        {
+          "case": "compatible",
+          "seed": 2106,
+          "method": "adversarial",
+          "training_sha256": "ef9c7d0465182d50c2c9b873620b5d6323c0d0a61c3888adc0d676ad9e0ecd6a",
+          "audits_sha256": "beb37066cddbca88d3676f0c86a7d82a1810f9517b02a44c845f016cfd6df8aa"
+        },
+        {
+          "case": "compatible",
+          "seed": 2106,
+          "method": "random",
+          "training_sha256": "2e0734218161f84478fae561f6739f858399b078dc0f80a80d1878b7e214cc15",
+          "audits_sha256": "4928e8cd2e1c56ddc97dbbd2eb1a3172bd7ca7d6dcdaaf19ebea2e1a800652e4"
+        },
+        {
+          "case": "compatible",
+          "seed": 2106,
+          "method": "hardest_uniform",
+          "training_sha256": "091f49e88fbb5cbcf58e346372ce22aa5b28d357bd0fa3111dd93dc7b4a716a5",
+          "audits_sha256": "b36bd604c5024c5dda0f8e3f64c4b5ad9f251fe0de223806ade462b7d20caca4"
+        },
+        {
+          "case": "compatible",
+          "seed": 2106,
+          "method": "all_targets",
+          "training_sha256": "d4dce981a9ef973e3e98d1125fc4872a8e3ffad865465c88d95e46e531b24835",
+          "audits_sha256": "5d10d1a1a0f35da5af7c2f9d65670d233e88c5506f6622526b09c450fa741a23"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2101,
+          "method": "adversarial",
+          "training_sha256": "ec098c29144a31258728de583e5e5a8408d067ed0e9d27ec52127700f79b4f7e",
+          "audits_sha256": "cedd4a018a1f88273f15caa9f4a01442a355ae0812dc4e1b1947577177670d68"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2101,
+          "method": "random",
+          "training_sha256": "3356be68c8a4bf9baeb89e51bd96d0d3f58f2514de94ff0caead97a92d06d926",
+          "audits_sha256": "88ced016bc25d82b361eaa9135c4a62c2017838a513ecc42fc3a26ee5c8ccaff"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2101,
+          "method": "hardest_uniform",
+          "training_sha256": "b216a60d0d88593483645a2db646150ac01acebf04de21aa3f8e5c2b1915fce4",
+          "audits_sha256": "b4d934ada3d80ea6ffc26a740f941f539b336f41f39ea54f45aac19e07567280"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2101,
+          "method": "all_targets",
+          "training_sha256": "4389be493364d3de38e953967973f472edce4ac58e6be9d3f17fac3107fb489c",
+          "audits_sha256": "0e1aaad8d3eec63856bc15daccca7831f8339e4c58a89c3a05f4cb2b71f1a44b"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2102,
+          "method": "adversarial",
+          "training_sha256": "7e1371b530c39e446d646bee1d63f72adf7bb2ae9d267fbf81e822bdd8c89def",
+          "audits_sha256": "215a947d362d85624c9e1671b743c9e377680d6c6b4466a904f6af3bac36dfd7"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2102,
+          "method": "random",
+          "training_sha256": "fec39408c6c314c5b10cf7e30319312dba4d2da3317dbb379913593da2dc8f05",
+          "audits_sha256": "9052b9bb16255453b8203ee5db424407f0e7a6233cc0b9b13557a2b975f241a1"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2102,
+          "method": "hardest_uniform",
+          "training_sha256": "4cd5775ef0c753e00b68af7f472f7eba0056c7f7e16bc98bfabf4acfb980a320",
+          "audits_sha256": "e9789a760c50134d0112fa4e090981801f21c9689e7ed629cc9bd14c98ff6e9a"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2102,
+          "method": "all_targets",
+          "training_sha256": "9c22c8ebdf92b63944a89fb20b60a987eb4f728111e574078ab53cb82e3bc8d0",
+          "audits_sha256": "41183fe3da2102f3bcf3526390c294b2241ac1103d2011299dcf4e05398039ed"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2103,
+          "method": "adversarial",
+          "training_sha256": "1608f7150655f17a955469881ac546e8781a30c16db7e2823119fe08e99a9127",
+          "audits_sha256": "a70090cafe893c059f7e41eeb37a358516e27c594bb7bd88ea609e54d265a843"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2103,
+          "method": "random",
+          "training_sha256": "cbf8523af58999cb77f1d95c902b9c20b5cf6eab00a6e041474b8e9797b09974",
+          "audits_sha256": "31fbe6682aa778062703a86fba42293c58816d36641752f419db8edb51bbfff4"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2103,
+          "method": "hardest_uniform",
+          "training_sha256": "f6edf188134ade765553db1daed5805b7a2af2703cebda299695a228e9508314",
+          "audits_sha256": "4b10dd339906399984e336dd7e4a4ffd9e7e9c1e87c086379636ce225bffc9c1"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2103,
+          "method": "all_targets",
+          "training_sha256": "98c221871b664abe48d260b10f7c57a890c01c25f86707a1b94cf0d31fc15a2f",
+          "audits_sha256": "28753c8ae390ca028eb1e8e27f1c92264edabd2bfbe2df8d708b79653e35a82a"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2104,
+          "method": "adversarial",
+          "training_sha256": "90f163db78f2f8db026e7bdba67a98542a4583528a48563a1da2404df1e66f71",
+          "audits_sha256": "bf37a9cb262fd483f04e8856652d818acdf6450d147ac5ab852e5a41cc70c978"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2104,
+          "method": "random",
+          "training_sha256": "3b61425f6b88cb1b91ac312dc28f0c2a468d6cbce742e13f7e2b3ff97211d982",
+          "audits_sha256": "8dc8203a2c06e45fa97a949a0db96f7f803804c226bbad01237534d028da115c"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2104,
+          "method": "hardest_uniform",
+          "training_sha256": "2f3d790b2462ff77fa3905dfd65dddb070bace4d774173b1237b2d0547ddf17e",
+          "audits_sha256": "5679cb7587abcdd42c8b3126463e8658a9a9297cde228687ee406622c07041e4"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2104,
+          "method": "all_targets",
+          "training_sha256": "fbdd647cc4b1ee120014ab1713e59a49fcf8b049b4c9418b85d4fa5c6a325b97",
+          "audits_sha256": "7cc86eb39705e4b07942dd0f17be3a4ccca60d0d9019b39c7eb535633ccba094"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2105,
+          "method": "adversarial",
+          "training_sha256": "25ce1796178bd9d2c84c7397ba270493bae17cfc89dfcb1a21fc50a09cd06fd7",
+          "audits_sha256": "eb6a5575c9ad8add3ddba24a94c402cb99ad17ee74dd43e800ea7353546ba50f"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2105,
+          "method": "random",
+          "training_sha256": "5aafb59375c11abd1a42756fddb0e81c900ed8934245c2abe4a5544950379268",
+          "audits_sha256": "91f2498e7081d40e503c661263696134e07432ff97867ff662e6cdeccbe2188c"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2105,
+          "method": "hardest_uniform",
+          "training_sha256": "97bd8475da89bfd610f109922df5666f86318eda71ddfe0ffc35106eb3aeca27",
+          "audits_sha256": "ffd119cd20485e4b744e2b67aef4665449d75283124409db87fe74ee1209ae5b"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2105,
+          "method": "all_targets",
+          "training_sha256": "eaafeec79c232fb55b1e7821b5bc8ef688116be28a55539e9902e24770718161",
+          "audits_sha256": "d4443d25f4fbdfa730ed22e30168c9feb4bdf6093197c275fcd19d58a9d02ffb"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2106,
+          "method": "adversarial",
+          "training_sha256": "7c3f78a96b5bf4d90882715158c0d76c39afe0602d8abf13e1a74afcf01d03a2",
+          "audits_sha256": "e140bf016fe446fc877e0aee76b72738496af4279754f37cf440fe17db6ac9de"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2106,
+          "method": "random",
+          "training_sha256": "d40f5b319dadbcc17ea4d4a1256a02f5bb18351125a67ddfb169810487656066",
+          "audits_sha256": "614a8772bb56acff9cdb6bc50a95816c2ab38fda8375c74e9396ac9f66c13e78"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2106,
+          "method": "hardest_uniform",
+          "training_sha256": "495ce134fe1638890a03d0c498d02e6a9fbef2c1824a4d6542e07306b9f4ff2c",
+          "audits_sha256": "cceda5da15ba633515cffce531a9e019a55795de7e9fa4267eb081246767fc62"
+        },
+        {
+          "case": "irreversible",
+          "seed": 2106,
+          "method": "all_targets",
+          "training_sha256": "a868a2e41220c297ca228b59e92cb33aaaf13430cf101b66589b8f7c81405b33",
+          "audits_sha256": "e930fb950e123d1a60db5c0cf638a988c2abdcbf32337a03844f51834e3b4924"
+        },
+        {
+          "case": "noisy",
+          "seed": 2101,
+          "method": "adversarial",
+          "training_sha256": "ae41d81b6db7e9965d3165570f0ec493c3392cf7bd3bd1642c7caab2e5814128",
+          "audits_sha256": "7cfc7e0d6482e1921e3c8433649a72838e15b92e50871283b9bea8b4d7d03a4c"
+        },
+        {
+          "case": "noisy",
+          "seed": 2101,
+          "method": "random",
+          "training_sha256": "85efe0e207e6d2c2708d4ef6b63e8ceaf2096ffec182e82a84e9350b0aaff2c5",
+          "audits_sha256": "4a80bbd50e4b3b0dd1c98ca72961021e0b9896df629877d08c23e11918d1b4df"
+        },
+        {
+          "case": "noisy",
+          "seed": 2101,
+          "method": "hardest_uniform",
+          "training_sha256": "ce0292d42998ae8c9933df430a56b3773f0e8c7a0122876c1f37b066931377c5",
+          "audits_sha256": "f7211c47a67febb36401e98ff5721867fa9d5adf41b13ce2eab9fbeefbf52f19"
+        },
+        {
+          "case": "noisy",
+          "seed": 2101,
+          "method": "all_targets",
+          "training_sha256": "af66e62b463baf76b2c80d8a3df81deaf659a9431fffcb6d64e7c0a46a08032f",
+          "audits_sha256": "4caa211529a1fdfcb24fdfe398cf55cf8da274b006ff7b3653014db80b2b752c"
+        },
+        {
+          "case": "noisy",
+          "seed": 2102,
+          "method": "adversarial",
+          "training_sha256": "695ced021258b6dc7354dcd8f0295fc6a2ba2bc89cee805fa139fd76f3e761ff",
+          "audits_sha256": "ec872195317c2a3fbbe8bad77741f948bae1c0b2f2ec1020ccd3b1e406b88819"
+        },
+        {
+          "case": "noisy",
+          "seed": 2102,
+          "method": "random",
+          "training_sha256": "c5e3397f464067401f7a3d53e72dd1d568b6cd8efd025eaeddc95eac48ab5acb",
+          "audits_sha256": "777dedd217c5fad9e45c5c7b205e428bf093b522001587774fb213ae62d94f5c"
+        },
+        {
+          "case": "noisy",
+          "seed": 2102,
+          "method": "hardest_uniform",
+          "training_sha256": "a223eedaaa3e64e8a8ecb5ee8b6a8999d169ef3cb544abeda1bbdbc386608469",
+          "audits_sha256": "7bc6b6e40649ca31a0866f284c6e600d58b6510648d279bbd208361e31a2ec5d"
+        },
+        {
+          "case": "noisy",
+          "seed": 2102,
+          "method": "all_targets",
+          "training_sha256": "0af47542f4f37e126f1031cd8c66f05282c04122371b6e7333c4698dd3dd7aa3",
+          "audits_sha256": "f3c5e4bf2641097c1a3531e4e4138a961d11a9d49373f48b8f497a046dfb6da4"
+        },
+        {
+          "case": "noisy",
+          "seed": 2103,
+          "method": "adversarial",
+          "training_sha256": "14016ecface45a451e2394d58920bc3416199502cb9ae22cf960c25b10960b89",
+          "audits_sha256": "5514abbfd4d9e480e45b58cae1844066c6fdee7b8318e4ba6f0f9fb451d7dbf6"
+        },
+        {
+          "case": "noisy",
+          "seed": 2103,
+          "method": "random",
+          "training_sha256": "7546c4734e3af4ce45d2fa33c09e82e0cbea9284c8eb6bd6d1a3a588aebcc752",
+          "audits_sha256": "6a426bd4e29231fd49e796c90737d0afef9d998a0865e142718d4c8bac0ad07b"
+        },
+        {
+          "case": "noisy",
+          "seed": 2103,
+          "method": "hardest_uniform",
+          "training_sha256": "a08000301a9d06f68cf69ce739dac39a2c5c27f4530f942806ce73200677e672",
+          "audits_sha256": "1adc8aad5457a7d1be1568ebf496656197737cc464b9ee5f6bf9e631912723a2"
+        },
+        {
+          "case": "noisy",
+          "seed": 2103,
+          "method": "all_targets",
+          "training_sha256": "dbbdbe31868121a98087356f0cd5ebb73502257ae0102f1363f687442ec49bdf",
+          "audits_sha256": "7f4e3f6334f42ea48e59a682e2948c171ff916d6f5b004b4955fb9290edb6b9a"
+        },
+        {
+          "case": "noisy",
+          "seed": 2104,
+          "method": "adversarial",
+          "training_sha256": "3a71dda7e9d1cf9c89d096a65ad49cd04a07b17f2348c0d42632a37ded72c9b9",
+          "audits_sha256": "e15f9185f56e544c8b58676234bd2cd283a6b45b50cdd0dd6089e3a0557aabef"
+        },
+        {
+          "case": "noisy",
+          "seed": 2104,
+          "method": "random",
+          "training_sha256": "a1194920fc19e79fff5683a72fbb453478d5155b138bac7bcf3ee6c82cb5d555",
+          "audits_sha256": "be8bfdd82b291b5f7d420924f3f1baa95a558675dd11fbfabcad741d9ef81585"
+        },
+        {
+          "case": "noisy",
+          "seed": 2104,
+          "method": "hardest_uniform",
+          "training_sha256": "353f7ed2f2166680a0ed0365520d0dedf2627492779b42c5557b00741c0c985f",
+          "audits_sha256": "afcc2647e3c4be96a62d0a1a851139075e74f551e8c5759ec625e5609ed3bd3e"
+        },
+        {
+          "case": "noisy",
+          "seed": 2104,
+          "method": "all_targets",
+          "training_sha256": "3f05d7f56f174a06ead9778fd2d84f9440e5a8e52f2115bab12129445a4be119",
+          "audits_sha256": "99baebcf72e6c1292c8f0eeb9c71f237315a1685d4f63d8249d678fa2ae9b19b"
+        },
+        {
+          "case": "noisy",
+          "seed": 2105,
+          "method": "adversarial",
+          "training_sha256": "0b1360023eab0478ac573e83478ff93165d3afa022e5a12724c02862274d43b9",
+          "audits_sha256": "4d6f6c5ca2290ee95a9301837d0153dd598cadeda26cb894a71ae327aab67133"
+        },
+        {
+          "case": "noisy",
+          "seed": 2105,
+          "method": "random",
+          "training_sha256": "79b7ebccdffaf0b2b251bc765c579a13d219dbe5c1f93b855cee8c51ec01a081",
+          "audits_sha256": "e58df86b0070977df7269318de0e0e1f352261b1ab47e44e31d907a3c743b791"
+        },
+        {
+          "case": "noisy",
+          "seed": 2105,
+          "method": "hardest_uniform",
+          "training_sha256": "b16d6dfdeb125492ec38fd2b8aff199b72fa18ddde38b902cc6f582f34823823",
+          "audits_sha256": "05404863b09de15fbac82353318383d997a241341542b77bbb6d8cf85b8bec17"
+        },
+        {
+          "case": "noisy",
+          "seed": 2105,
+          "method": "all_targets",
+          "training_sha256": "5ec29b7974d4368b35c437586eb08ed23fdf303872f56ee6eff22fe1a2663333",
+          "audits_sha256": "c79afdd360a609bcd267af55b5f72668ed568b7993235f2dc167d07d830d1dad"
+        },
+        {
+          "case": "noisy",
+          "seed": 2106,
+          "method": "adversarial",
+          "training_sha256": "a3b2eccc6718674fdfefe64d178c4d976cc8ebe0179b7ec2a8a6137823b30bb1",
+          "audits_sha256": "c225eb55773e7b0d5e04a8cb8fccf9443addc314986a044b4ae5278c47c9514a"
+        },
+        {
+          "case": "noisy",
+          "seed": 2106,
+          "method": "random",
+          "training_sha256": "c826a131a1957f656cdfb150f7b93348edc86cd1b5e1a341214f3972fad593b8",
+          "audits_sha256": "b335bf5f300d4939c8352f59ecc5539b9f39c36aeee1278fec606761ecea0c6a"
+        },
+        {
+          "case": "noisy",
+          "seed": 2106,
+          "method": "hardest_uniform",
+          "training_sha256": "72238f542e525dc062484dcfe57f4d485e1e96d53555f8d0d4f2551519f35104",
+          "audits_sha256": "e5b2b9fdbe8b095e0b5d789d6372cd6083c30e4ce184b06ca6fcdee59748cd95"
+        },
+        {
+          "case": "noisy",
+          "seed": 2106,
+          "method": "all_targets",
+          "training_sha256": "555177217183ea1dd23fa6aa6a40ddf0d3146d5ab0a7749eb7133daa02fa8d5a",
+          "audits_sha256": "7b6969c15612a21e676d761b0e8ba693b82a3def1c1c567eb8cade6969c0d7db"
+        }
+      ],
+      "checkpoints": 432,
+      "candidate_scores_replayed": 1080,
+      "legacy_candidate_witness_checks_skipped": 0,
+      "independent_source_profiles": 564,
+      "independent_decoder_LP_values": 15228,
+      "saved_reference_policies_replayed": 6,
+      "largest_bound_discrepancy": 1.9821982388812387e-09,
+      "test_source_sha256": "97dd076276109293b6e7d13a394aea80e4f22f948de2b8c19b4b4b6d9607ffe4",
+      "independent_LP_source_sha256": "18c147f3d3a1c7b6a97ec909bd4943d199dd217817e856d5f9c34cd96ce12c2d"
+    }
+  },
+  "seconds": 61.31522583030164
+}

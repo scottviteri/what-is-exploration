@@ -1,0 +1,63 @@
+{
+  "phase": "frozen paired pilot; main results",
+  "config": {
+    "phase": "frozen paired pilot; main results",
+    "cases": [
+      "compatible",
+      "irreversible",
+      "noisy"
+    ],
+    "seeds": [
+      2101,
+      2102,
+      2103,
+      2104,
+      2105,
+      2106
+    ],
+    "methods": [
+      "adversarial",
+      "random",
+      "hardest_uniform",
+      "all_targets"
+    ],
+    "episodes_per_world": 4096,
+    "reference_min_action_probability": 0.005,
+    "learner": {
+      "rounds": 5,
+      "candidates": 4,
+      "decoder_steps": 200,
+      "collector_steps": 250,
+      "decoder_refit_steps": 200,
+      "candidate_steps": 250,
+      "decoder_lr": 0.08,
+      "collector_lr": 0.04,
+      "generator_lr": 0.08,
+      "generator_steps": 15,
+      "generator_entropy": 0.01,
+      "exploration": 0.2,
+      "probability_floor": 0.005,
+      "init_scale": 0.03,
+      "lr_final_fraction": 0.15
+    }
+  },
+  "config_sha256": "41864199ab851627cb963af4bf3889c888dfed699a936ee50b57df21f93c41da",
+  "source_sha256": {
+    "models.py": "73aef36ab331505089f9a817787d584ff4a0a5f21343954de51ad3674a0a91f4",
+    "learner.py": "126daaada57db6e8250983949f337c15c7adb43946918f99569eb0e6b1544782",
+    "oracle.py": "de462262cf2a2a8530ff7170b3258542a57e4a917d496ec9d8218122bcd82c3f",
+    "run_pilot.py": "ee9886eed07a1294c97e308b61df80f0e314c65066ce9ad0b254eaba3513c4e6",
+    "EXPLAINER.tex": "8ed681b0be56e2a14d05cf2f7f559ed69dfea7377d671009cdec38066cee458c"
+  },
+  "versions": {
+    "python": "3.12.3",
+    "numpy": "2.1.2",
+    "scipy": "1.18.1",
+    "torch": "2.8.0+cu128"
+  },
+  "audit_access": "Exact true-model audits are performed only after run_training returns; no audit feedback.",
+  "status": "complete",
+  "started_unix": 1794889167.6329536,
+  "finished_unix": 1794889668.1414156,
+  "runs": 72
+}

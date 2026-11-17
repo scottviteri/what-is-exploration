@@ -1,0 +1,53 @@
+Reproducing the finite learned-target pilot
+
+Run commands from Paper/research/adversarial_native_learning_2026-11-17/.
+The programs require Python, NumPy, SciPy, Torch and Matplotlib. Exact installed
+versions are recorded in main/manifest.json; training uses CPU float64 and one
+Torch thread. No downloaded model, GPU, service or credentials are needed.
+
+1. Read EXPLAINER.pdf and DEVELOPMENT.txt for the objective, access assumptions,
+   controls and separation of development from registered main outcomes.
+
+2. Run the independent semantic checks:
+   OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 test_pilot.py
+
+3. Reproduce all main runs into a NEW output directory:
+   OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 run_pilot.py \
+       --config main_config.json --output reproduced-main
+
+   The runner refuses to overwrite an existing manifest. It snapshots and
+   hashes the sources before execution and refuses a mixture of source versions.
+   main/source/ preserves the code used for the original run. main/manifest.json
+   also contains the complete configuration and dependency versions.
+
+4. Replay the saved data, policies, decoder scores and LP profiles independently:
+   OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python3 test_pilot.py \
+       --results reproduced-main --output reproduced-main-independent-replay.json
+
+5. Generate figures and machine-readable summaries:
+   python3 report_results.py --input reproduced-main --output reproduced-report
+
+6. Rebuild the authored explainer and results explanation:
+   latexmk -pdf -interaction=nonstopmode -halt-on-error EXPLAINER.tex
+   latexmk -pdf -interaction=nonstopmode -halt-on-error RESULTS.tex
+
+Each data.json stores sampled-response counts and hashes of the original episode
+bytes. The seed and sampler reconstruct those episodes; no training data are
+silently omitted. training.json stores all collector/decoder/generator states
+needed for checkpoint evaluation, including candidate decoders at proposal time.
+audits.json stores separate true-law and empirical-law LP profiles and witnesses.
+
+Adversarial, random and hardest_uniform have matched candidate-fitting and
+collector-update budgets. Generator updates have their own counts and overhead.
+all_targets is a diagnostic with extra decoder work, not an equal-cost baseline.
+The world labels available to the trainer are absent from every collector and
+decoder input. Only each frozen collector's two-step record is evaluated.
+
+The main study is empirical evidence on these three fixed world classes.
+Numerical LP residuals and dual checks are not interval proofs or Lean proofs.
+No convergence certificate follows from search stagnation, and this pilot makes
+no numerical-approximation claim for the eventual reference objective J_w.
+
+Raw per-run payloads and the detailed SUMMARY.json are kept locally but excluded
+from Git. The smaller COMPACT_SUMMARY.json retains all group metrics and signed
+paired differences. Fresh clones need step 3 before replaying saved runs.

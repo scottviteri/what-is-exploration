@@ -2,8 +2,8 @@
 
 This source-only snapshot contains the Lean modules attributed to the selected
 paper edition `primary_intrinsic_rewards_20260925` and all their local imports:
-141 directly attributed modules and
-179 dependency modules.
+130 directly attributed modules and
+169 dependency modules.
 
 ## Build
 

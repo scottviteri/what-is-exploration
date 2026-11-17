@@ -1,0 +1,25 @@
+{
+  "phase": "development; mechanics and training reliability, excluded from main results",
+  "cases": ["compatible", "irreversible", "noisy"],
+  "seeds": [1901],
+  "methods": ["adversarial", "random", "all_targets"],
+  "episodes_per_world": 4096,
+  "reference_min_action_probability": 0.005,
+  "learner": {
+    "rounds": 3,
+    "candidates": 4,
+    "decoder_steps": 200,
+    "collector_steps": 250,
+    "decoder_refit_steps": 200,
+    "candidate_steps": 250,
+    "decoder_lr": 0.08,
+    "collector_lr": 0.04,
+    "generator_lr": 0.08,
+    "generator_steps": 15,
+    "generator_entropy": 0.01,
+    "exploration": 0.2,
+    "probability_floor": 0.005,
+    "init_scale": 0.03,
+    "lr_final_fraction": 0.15
+  }
+}

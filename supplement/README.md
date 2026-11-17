@@ -23,9 +23,10 @@ budget-reference decoder certificates, and the bounded additional evidence liste
 in the experiment README. Exhaustive four-step target decoder banks and large
 native-planning master/decomposition certificates are excluded. Full replay of
 those checks requires regeneration or separately supplied bulk artifacts.
-The Lean package has not received an independent clean build. Automated archive
-integrity and known-identity checks run before publication; they do not establish
-scientific correctness or completeness of every historical evidence path.
+Combining does not run a clean Lean build. Automated archive integrity and
+known-identity checks run before publication; they do not establish scientific
+correctness or completeness of every historical evidence path. Use the component
+instructions to build and check the extracted sources.
 
 To combine the two original component ZIPs again, run
 `python3 scripts/combine_supplements.py` in the source repository, or supply

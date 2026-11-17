@@ -1,0 +1,37 @@
+Development record, written before the main paired pilot
+
+The explainer was built and shared before any implementation began. An
+independent design review checked the native maximum/supremum counterexample
+and recommended a finite two-step, three-action, four-world training interface.
+
+development/initial contains nine development runs using seed1901: all three
+environments, adversarial/random/all_targets, three archive additions, 4096
+uniform reset episodes per world. Every run completed and retained its frozen
+source snapshot. The tests found no semantic channel or training-access defect.
+
+The original learning rates, iteration counts, probability floor and smoothing
+settings were retained. The main experiment uses the originally proposed five
+additions and six new paired seeds. Early development curves showed improvement
+for both target-selection methods without a clear uniform advantage; no main
+seed or environment has been selected based on its outcome.
+
+Two changes after the development run are recorded explicitly:
+1. Checkpoints additionally save the candidate decoders used at proposal time,
+   allowing independent replay of the target-selection scores. This changes
+   saved evidence only.
+2. The hardest_uniform ablation samples candidates uniformly and retains the
+   largest fitted error, without learning the proposal distribution. This
+   separates learned proposals from choosing a difficult random candidate.
+
+The main training configuration is main_config.json. The runner snapshots and
+hashes it and all relevant training code before execution, checks source
+identity before each run, and refuses to overwrite an existing run manifest.
+The independent test source and report renderer may be extended after freezing;
+they cannot influence training. Every final checkpoint is audited after the
+learner returns, with no oracle feedback.
+
+The collector has a per-action probability floor .005. All-target diagnostic
+training uses the same collector-update count but extra decoder-target updates.
+The exact minimax reference is reported both with and without the floor.
+Numerical LP certificates use feasibility residuals and corrected duals, not
+formal proofs or interval arithmetic. No main result is a theorem.

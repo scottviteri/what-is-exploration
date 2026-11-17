@@ -6,8 +6,10 @@ import Formal.QuadraticReverseBound
 /-!
 # Near-optimal complete posterior gain preserves native targets
 
-This assembles the main paper's posterior calibration corollary on its literal
-feasible-family supremum. It retains ordinary squared-posterior Brier gain,
+This assembles posterior calibration on the literal feasible-family supremum
+and the feasible-maximizer characterization used by the selected paper.
+Claim locations, including results retained in the full reader, are recorded
+in `Formal/PAPER_SUPPORT.json`. It retains ordinary squared-posterior Brier gain,
 the prior floor in each constant, and the order of the uniform quantifiers.
 The controlled-behavior wrappers discharge response validity.
 -/
