@@ -5,9 +5,9 @@ Contact: scottviteri@gmail.com.
 
 This is the companion artifact for the current rebuttal revision, published on
 the dated snapshot branch
-[rebuttal-2026-11-16](https://github.com/scottviteri/what-is-exploration/tree/rebuttal-2026-11-16).
-It contains the named-author manuscript, selected Lean proofs, experiment code
-and retained evidence. Publishing this snapshot does not submit a revised paper
+[rebuttal-2026-11-17](https://github.com/scottviteri/what-is-exploration/tree/rebuttal-2026-11-17).
+It contains the anonymous ICLR PDF and supplement ZIP, the named-author preprint,
+selected Lean proofs, experiment code and retained evidence. Publishing this snapshot does not submit a revised paper
 to ICLR or arXiv. The original [arxiv-v1 snapshot](https://github.com/scottviteri/what-is-exploration/tree/arxiv-v1)
 remains fixed.
 
@@ -25,7 +25,12 @@ findings, decoder limitations and data-access assumptions are retained.
 
 ## Read and reproduce
 
-- [Paper and mathematical appendices](paper/paper.pdf).
+- **ICLR upload files:** [anonymous paper PDF](iclr-rebuttal/paper.pdf) and
+  [anonymous supplement ZIP and reconstruction instructions](iclr-rebuttal/README.md).
+  The ZIP is stored in verified parts because the publication connector limits
+  individual transfers. Upload the PDF and reconstructed ZIP directly to the review system. This GitHub repository identifies the
+  authors, so its URL is not an anonymous review link.
+- [Named-author preprint and mathematical appendices](paper/paper.pdf).
 - [Standalone manuscript source](paper/arxiv-source.zip): compile `paper.tex`
   with pdfLaTeX; the bibliography output is included.
 - [Lean instructions](supplement/lean_supplement/README.md): pinned toolchain,
@@ -43,9 +48,9 @@ learning-pilot decoder banks require regeneration. Compact summaries, source
 code, configurations and independent audit records are included.
 
 The source package is selected by proof dependency and experiment study, so some
-supporting code and research notes remain. Internal references to anonymous
-packaging describe the supplement export; authorship is provided by this named
-manuscript. Private repository history, curriculum, conversations, literature
+supporting code and research notes remain. The ICLR files have been checked for known author identifiers, identifying
+links and supported metadata; two saved checkout paths were made relative.
+The named preprint and its source archive retain author information. Private repository history, curriculum, conversations, literature
 PDFs and unrelated research are not part of this public snapshot.
 
 The source bytes are checked against the tested Lean package, and the extracted
